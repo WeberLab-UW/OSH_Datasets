@@ -1,0 +1,143 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red66\green179\blue255;
+\red193\green193\blue193;\red202\green202\blue202;\red194\green126\blue101;\red70\green137\blue204;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;\cssrgb\c30980\c75686\c100000;
+\cssrgb\c80000\c80000\c80000;\cssrgb\c83137\c83137\c83137;\cssrgb\c80784\c56863\c47059;\cssrgb\c33725\c61176\c83922;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 SYSTEM_PROMPT\strokec5  \strokec6 =\strokec5  \strokec7 """\strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec7 You are an electrical engineering or mechanical engineering graduate student that is extremely knowledgeable about hardware development and documentation best practices. Your task is to rate the technical completeness of hardware project documentation by analyzing the directory structure outline and README file of a GitHub repository.\strokec5 \
+\
+\strokec7 When assessing documentation completeness, you will take on the persona of a core hardware developer who would need to understand, reproduce, and modify the project. Use file names, extensions, and directory structure to infer the presence of required documentation elements. Be sure to follow the procedure and always respond with XML formatted rating information.\strokec5 \
+\strokec7 """\strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 USER_PROMPT_TEMPLATE\strokec5  \strokec6 =\strokec5  \strokec7 """\strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec7 ### Calculating Scores\strokec5 \
+\strokec7 Rate the technical completeness of hardware project documentation given the directory structure outline and the README file content.\strokec5 \
+\
+\strokec7 The RTF file contains the directory structure and README content of a hardware project repository \strokec5 \
+\strokec7 \'95 The directory structure will be contained between <directory_structure> and </directory_structure>\strokec5 \
+\strokec7 \'95 The README content will be contained between <file path="README.md"> and the subsequent </file>\strokec5 \
+\
+\strokec7 Your task is to:\strokec5 \
+\strokec7 - Extract the text between <directory_structure> and </directory_structure> and treat that as the directory structure.\strokec5 \
+\strokec7 - Extract the text between <file path="README.md"> and the subsequent </file> and treat that as the README content.\strokec5 \
+\
+\strokec7 Use these extracted sections in your analysis as specified.\strokec5 \
+\
+\
+\strokec7 Each documentation element is worth 1 point when present Calculate: \strokec5 \
+\strokec7 \'95 Overall Completeness Score: 0-9 points total\strokec5 \
+\strokec7 \'95 Process Openness Score: 0-5 points (Repository Management Files)\strokec5 \
+\strokec7 \'95 Product Openness Score: 0-4 points (hardware componenets + software components)\strokec5 \
+\
+\
+\strokec7 Overall Rating Scale:\strokec5 \
+\strokec7 \'95 8-9 points (Excellent): Comprehensive documentation with all or nearly all essential elements present\strokec5 \
+\strokec7 \'95 7-5 points (Good): Most essential elements present with minor gaps\strokec5 \
+\strokec7 \'95 4-2 points (Fair): Basic documentation present but missing several important elements\strokec5 \
+\strokec7 \'95 1-0 points (Poor): Minimal documentation with significant gaps\strokec5 \
+\
+\
+\strokec7 Product Openness Rating Scale: \strokec5 \
+\strokec7 \'95 4 points (Fully Open): all required technical documentation is present\strokec5 \
+\strokec7 \'95 3 points(Mostly Open): most required technical documentation is present\strokec5 \
+\strokec7 \'95 2 points (Minimally Open): minimal required technical documentation is present\strokec5 \
+\strokec7 \'95 1 point (Not Open): most required technical documentation is not present\strokec5 \
+\
+\strokec7 ### Scoring Criteria\strokec5 \
+\strokec7 Evaluate the presence of the following elements by analyzing file names and extensions:\strokec5 \
+\
+\strokec7 Repository Management Files (up to 5 points):\strokec5 \
+\strokec7 \'95 README file (README*, readme*)\strokec5 \
+\strokec7 \'95 License file (LICENSE*, COPYING*, license*)\strokec5 \
+\strokec7 \'95 License mention in README (check README content)\strokec5 \
+\strokec7 \'95 Contributing guidelines (CONTRIBUTING*, contributing*)\strokec5 \
+\strokec7 \'95 GitHub issue templates (.github/ISSUE_TEMPLATE/*)\strokec5 \
+\
+\strokec7 Hardware Design Files (up to 3 points):\strokec5 \
+\strokec7 \'95 Bill of Materials (*.csv, *.xlsx, *.pdf with "BOM" or "bill" in name)\strokec5 \
+\strokec7 \'95 Assembly instructions (*.pos, *.cpl, assembly*)\strokec5 \
+\strokec7 \'95 Design files, such as hardware ((*.brd, *.sch, *.kicad_pcb, *.kicad_sch, *.lib, *.dcm, *.pro, *.zzz, *.svg, *.fzz) and/or mechanical design files (*.stl, *.obj, *.step, *.stp, *.dxf, *.dwg, *.3mf))\strokec5 \
+\
+\strokec7 Software Components (up to 1 point):\strokec5 \
+\strokec7 \'95 Software requirements (requirements.txt, setup.py, environment.yml, Pipfile, package.json, Cargo.toml)\strokec5 \
+\
+\strokec7 ###License Extraction \strokec5 \
+\strokec7 From the README file, extract the hardware license, software license, and the documentation license. Extract license names by looking for phrases like: \'91licensed under\'92, \'91this project uses the\'92, or similar. Capture the exact name (e.g., MIT, Apache 2.0, CERN OHL). If these values are not present, return N/A. \strokec5 \
+\
+\strokec7 ### Output Requirements\strokec5 \
+\strokec7 For each of the elements marked, provide the matching filename or state that is was found in the README. \strokec5 \
+\strokec7 If absent, state that no matching file of content was found. \strokec5 \
+\strokec7 Follow the XML structure exactly. \strokec5 \
+\
+\strokec7 Directory Structure and README Content:\strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec8 \{rtf_content\}\strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec7 Please provide your evaluation in the following XML format:\strokec5 \
+\
+\strokec7 <hardware_documentation_evaluation>\strokec5 \
+\strokec7   <project_name>Project Name</project_name>\strokec5 \
+\strokec7   <overall_score>X/17</overall_score>\strokec5 \
+\strokec7   <overall_rating>Excellent/Good/Fair/Poor</overall_rating>\strokec5 \
+\strokec7   <overall_assessment>Brief summary of overall completeness</overall_assessment>\strokec5 \
+\
+\strokec7   <process_openness_score>X/5</process_openness_score>\strokec5 \
+\strokec7   <process_openness_assessment>Brief summary of process openness</process_openness_assessment>\strokec5 \
+\
+\strokec7   <product_openness_score>X/4</product_openness_score>\strokec5 \
+\strokec7   <product_openness_rating>Fully Open/Mostly Open/Minimally Open/ Not Open</product_openness_rating>\strokec5 \
+\strokec7   <product_openness_assessment>Brief summary of product openness</product_openness_assessment>\strokec5 \
+\
+\strokec7   <license_information>\strokec5 \
+\strokec7       <hardware_license present="true/false">License Name or N/A</hardware_license>\strokec5 \
+\strokec7       <software_license present="true/false">License Name or N/A</software_license>\strokec5 \
+\strokec7       <documentation_license present="true/false">License Name or N/A</documentation_license>\strokec5 \
+\strokec7   </license_information>\strokec5 \
+\
+\strokec7   <documentation_elements>\strokec5 \
+\strokec7     <repository_management>\strokec5 \
+\strokec7       <readme_file present="true/false">Details if present</readme_file>\strokec5 \
+\strokec7       <license_in_readme present="true/false">Details if present</license_in_readme>\strokec5 \
+\strokec7       <license_file present="true/false">Filename if present</license_file>\strokec5 \
+\strokec7       <contributing_guidelines present="true/false">Filename if present</contributing_guidelines>\strokec5 \
+\strokec7       <issue_templates present="true/false">Details if present</issue_templates>\strokec5 \
+\strokec7     \strokec5 \
+\strokec7     <hardware_componenets>\strokec5 \
+\strokec7       <bill_of_materials present="true/false">Filename if present</bill_of_materials>\strokec5 \
+\strokec7       <assembly_instructions present="true/false">Filename if present</assembly_instructions>\strokec5 \
+\strokec7       <design_files present="true/false">File types/names if present</design_files>\strokec5 \
+\strokec7     </hardware_design>\strokec5 \
+\strokec7     \strokec5 \
+\strokec7     <software_components>\strokec5 \
+\strokec7       <requirements_files present="true/false">Filename if present</requirements_files>\strokec5 \
+\strokec7     </software_components>\strokec5 \
+\strokec7   </documentation_elements>\strokec5 \
+\strokec7   \strokec5 \
+\strokec7   <strengths>\strokec5 \
+\strokec7     <strength>Key strength 1</strength>\strokec5 \
+\strokec7     <strength>Key strength 2</strength>\strokec5 \
+\strokec7   </strengths>\strokec5 \
+\strokec7   \strokec5 \
+\strokec7   <improvement_areas>\strokec5 \
+\strokec7     <area>Missing element 1</area>\strokec5 \
+\strokec7     <area>Missing element 2</area>\strokec5 \
+\strokec7   </improvement_areas>\strokec5 \
+\strokec7   \strokec5 \
+\strokec7   <recommendations>\strokec5 \
+\strokec7     Brief recommendations for improving documentation completeness\strokec5 \
+\strokec7   </recommendations>\strokec5 \
+\strokec7 </hardware_documentation_evaluation>\strokec5 \
+\strokec7 """
+\f1 \cf5 \cb1 \strokec5 \
+}
