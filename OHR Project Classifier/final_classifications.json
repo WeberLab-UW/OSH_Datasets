@@ -1,0 +1,3971 @@
+[
+  {
+    "project_id": 68878307,
+    "name": "Hdlmake",
+    "path": "ohwr/Lacsapix/hdl-make",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68878115,
+    "name": "adc-lib",
+    "path": "ohwr/mmalczak/adc-lib",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68878085,
+    "name": "urv-core",
+    "path": "ohwr/cgentsos/urv-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68878056,
+    "name": "AIDA-2020 TLU - Gateware",
+    "path": "ohwr/yiliu/fmc-mtlu-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68878021,
+    "name": "ZIO",
+    "path": "ohwr/dlampridis/zio",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877941,
+    "name": "FMC Software Support",
+    "path": "ohwr/dlampridis/fmc-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877917,
+    "name": "nomemires",
+    "path": "ohwr/dcobas/nomemires",
+    "classification": "not hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877906,
+    "name": "VME64x core - msaccani",
+    "path": "ohwr/msaccani/vme64x-core-msaccani",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877878,
+    "name": "White Rabbit core collection",
+    "path": "ohwr/kblantos/wr-cores",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877849,
+    "name": "White Rabbit Switch - Gateware",
+    "path": "ohwr/kblantos/wr-switch-hdl",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877839,
+    "name": "Platform-independent core collection",
+    "path": "ohwr/kblantos/general-cores",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877838,
+    "name": "Hdlmake",
+    "path": "ohwr/bkoropoff/hdl-make",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877836,
+    "name": "Production Test Suite - base",
+    "path": "ohwr/pvantrap/pts-base",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877603,
+    "name": "DIOT Igloo2-based radiation-tolerant System Board",
+    "path": "ohwr/Qbort/diot-sb-igl",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877580,
+    "name": "Radiation Tolerant LED Beacon",
+    "path": "ohwr/jdevine/rad-tol-led-beacon",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877533,
+    "name": "AIDAInnova_TLU",
+    "path": "ohwr/cussans/aidainnova_tlu",
+    "classification": "ambiguous",
+    "hw_score": 15
+  },
+  {
+    "project_id": 68877526,
+    "name": "AIDAInnova_TLU-gw",
+    "path": "ohwr/cussans/aidainnova_tlu-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877451,
+    "name": "AIDAInnova_TLU-hw",
+    "path": "ohwr/cussans/aidainnova_tlu-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877308,
+    "name": "White Rabbit Switch - Testing",
+    "path": "ohwr/orsonmmz/wr-switch-testing",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68877097,
+    "name": "hdlmaker",
+    "path": "ohwr/garcialasheras/hdlmaker",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865749,
+    "name": "afc-ipmi-sw",
+    "path": "ohwr/xtca-projects/afc-ipmi-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865714,
+    "name": "amc-carrier-2-sl",
+    "path": "ohwr/xtca-projects/amc-carrier-2-sl",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865703,
+    "name": "amc-cpu-com6",
+    "path": "ohwr/xtca-projects/amc-cpu-com6",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865685,
+    "name": "amc-ubackplane-sfp",
+    "path": "ohwr/xtca-projects/amc-ubackplane-sfp",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865642,
+    "name": "ertm15-llrf-wr",
+    "path": "ohwr/xtca-projects/ertm15-llrf-wr",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865595,
+    "name": "mtca-4-timing-module",
+    "path": "ohwr/xtca-projects/mtca-4-timing-module",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865572,
+    "name": "utca-rtm-8-sfp",
+    "path": "ohwr/xtca-projects/utca-rtm-8-sfp",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865568,
+    "name": "wrs-fl-hw",
+    "path": "ohwr/white-rabbit/wr-switch-hw/wrs-fl-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865546,
+    "name": "wrs-ljdprep-hw",
+    "path": "ohwr/white-rabbit/wr-switch-hw/wrs-ljdprep-hw",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865541,
+    "name": "wrs-low-jitter",
+    "path": "ohwr/white-rabbit/wr-switch-hw/wrs-low-jitter",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865531,
+    "name": "ptp-noposix",
+    "path": "ohwr/white-rabbit/ppsi/ptp-noposix",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865522,
+    "name": "wr-switch-hdl",
+    "path": "ohwr/white-rabbit/wr-switch-hdl",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865488,
+    "name": "crio-wr",
+    "path": "ohwr/white-rabbit/crio-wr",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865452,
+    "name": "cute-wr-dp",
+    "path": "ohwr/white-rabbit/cute-wr-dp",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865422,
+    "name": "cute-wr",
+    "path": "ohwr/white-rabbit/cute-wr",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865378,
+    "name": "gsi-timing-starter-kit",
+    "path": "ohwr/white-rabbit/gsi-timing-starter-kit",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865303,
+    "name": "list",
+    "path": "ohwr/white-rabbit/list",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865291,
+    "name": "maroc_csa",
+    "path": "ohwr/white-rabbit/maroc_csa",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865200,
+    "name": "tr-amc",
+    "path": "ohwr/white-rabbit/tr-amc",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865172,
+    "name": "tr-pmc",
+    "path": "ohwr/white-rabbit/tr-pmc",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865109,
+    "name": "wr-calibration",
+    "path": "ohwr/white-rabbit/wr-calibration",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865091,
+    "name": "wr-d3s",
+    "path": "ohwr/white-rabbit/wr-d3s",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865054,
+    "name": "wr-drf",
+    "path": "ohwr/white-rabbit/wr-drf",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68865024,
+    "name": "wr-hsr",
+    "path": "ohwr/white-rabbit/wr-hsr",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864983,
+    "name": "wr-nic",
+    "path": "ohwr/white-rabbit/wr-nic",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864938,
+    "name": "wrn-robustness",
+    "path": "ohwr/white-rabbit/wrn-robustness",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864896,
+    "name": "wr-starting-kit",
+    "path": "ohwr/white-rabbit/wr-starting-kit",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864893,
+    "name": "wr-std",
+    "path": "ohwr/white-rabbit/wr-std",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864807,
+    "name": "wr-switch-hw-v4",
+    "path": "ohwr/white-rabbit/wr-switch-hw-v4",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864796,
+    "name": "wr-switch-sw",
+    "path": "ohwr/white-rabbit/wr-switch-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864764,
+    "name": "wr-switch-testing",
+    "path": "ohwr/white-rabbit/wr-switch-testing",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864745,
+    "name": "wrxi",
+    "path": "ohwr/white-rabbit/wrxi",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864728,
+    "name": "usb-adc2k12b4ch-dac2k10b2ch-dio8ch",
+    "path": "ohwr/usb-projects/usb-adc2k12b4ch-dac2k10b2ch-dio8ch",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864707,
+    "name": "usb-relay-box1",
+    "path": "ohwr/usb-projects/usb-relay-box1",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864694,
+    "name": "libsfp",
+    "path": "ohwr/sfp/sfp-plus-i2c/libsfp",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864672,
+    "name": "radtol-led-luminaire",
+    "path": "ohwr/rad-tol-projects/radtol-led-luminaire",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864662,
+    "name": "radtol-led-psu",
+    "path": "ohwr/rad-tol-projects/radtol-led-psu",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864650,
+    "name": "fpb",
+    "path": "ohwr/rack-19/r19-tdc-del-a/fpb",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864639,
+    "name": "pandabox-gw",
+    "path": "ohwr/rack-19/pandabox/pandabox-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864604,
+    "name": "pandabox-hw",
+    "path": "ohwr/rack-19/pandabox/pandabox-hw",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864585,
+    "name": "pandabox-sw",
+    "path": "ohwr/rack-19/pandabox/pandabox-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864578,
+    "name": "pandabox-tst",
+    "path": "ohwr/rack-19/pandabox/pandabox-tst",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864572,
+    "name": "eez-psu",
+    "path": "ohwr/rack-19/eez-psu",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864541,
+    "name": "pda-8ch-fda-8ch",
+    "path": "ohwr/rack-19/pda-8ch-fda-8ch",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864520,
+    "name": "rf-mux-8ch",
+    "path": "ohwr/rack-19/rf-mux-8ch",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864515,
+    "name": "TimIQ Hardware",
+    "path": "ohwr/project/timiq/timiq-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864498,
+    "name": "TimIQ Software",
+    "path": "ohwr/project/timiq/timiq-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864486,
+    "name": "ARRAY",
+    "path": "ohwr/project/array/array",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864457,
+    "name": "ARRAY - Hardware",
+    "path": "ohwr/project/array/array-hardware",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864415,
+    "name": "ARRAY - Python Interface",
+    "path": "ohwr/project/array/array-interface-python",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864397,
+    "name": "ARRAY - LabVIEW Interface ",
+    "path": "ohwr/project/array/array-interface-labview",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864376,
+    "name": "ARRAY - Firmware",
+    "path": "ohwr/project/array/array-firmware",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864364,
+    "name": "White Rabbit Trigger Distribution",
+    "path": "ohwr/project/wrtd",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68864322,
+    "name": "PCI FMC carrier with SOC ",
+    "path": "ohwr/project/pcie-fmc-soc-vdas",
+    "classification": "hardware",
+    "hw_score": 21
+  },
+  {
+    "project_id": 68864312,
+    "name": "White Rabbit",
+    "path": "ohwr/project/white-rabbit",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863501,
+    "name": "CernFIP",
+    "path": "ohwr/project/cern-fip",
+    "classification": "not hardware",
+    "hw_score": 9
+  },
+  {
+    "project_id": 68863431,
+    "name": "FMC PCIe Carrier PFC",
+    "path": "ohwr/project/fmc-pci-carrier",
+    "classification": "hardware",
+    "hw_score": 97
+  },
+  {
+    "project_id": 68863411,
+    "name": "VME FMC Carrier VFC",
+    "path": "ohwr/project/fmc-vme-carrier",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863333,
+    "name": "FMC Projects",
+    "path": "ohwr/project/fmc-projects",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863284,
+    "name": "FMC ADC 100M 14b 4cha",
+    "path": "ohwr/project/fmc-adc-100m14b4cha",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863218,
+    "name": "FMC DAC 10M 16b 4cha",
+    "path": "ohwr/project/fmc-dac-1",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863184,
+    "name": "HDL Core Lib",
+    "path": "ohwr/project/hdl-core-lib",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863146,
+    "name": "OHR Support",
+    "path": "ohwr/project/ohr-support",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863118,
+    "name": "FMC DIO 16ch TTL a",
+    "path": "ohwr/project/fmc-dio-16chttla",
+    "classification": "hardware",
+    "hw_score": 34
+  },
+  {
+    "project_id": 68863072,
+    "name": "Wishbone slave generator",
+    "path": "ohwr/project/wishbone-gen",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68863036,
+    "name": "VME64x core",
+    "path": "ohwr/project/vme64x-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862996,
+    "name": "FMC ADC 200k 16b 11cha",
+    "path": "ohwr/project/fmc-adc-100k16b8cha",
+    "classification": "hardware",
+    "hw_score": 84
+  },
+  {
+    "project_id": 68862981,
+    "name": "nanoFIP Test Board",
+    "path": "ohwr/project/nanofip-test-board",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862874,
+    "name": "Gennum GN4124 core",
+    "path": "ohwr/project/gn4124-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862829,
+    "name": "FMC DEL 1ns 4cha",
+    "path": "ohwr/project/fmc-delay-1ns-8cha",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862781,
+    "name": "ARMadillo",
+    "path": "ohwr/project/armadillo",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862748,
+    "name": "OHR Meta Project",
+    "path": "ohwr/project/ohr-meta",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862616,
+    "name": "Simple PCIe FMC carrier SPEC",
+    "path": "ohwr/project/spec",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862557,
+    "name": "Level conversion circuits",
+    "path": "ohwr/project/level-conversion",
+    "classification": "hardware",
+    "hw_score": 29
+  },
+  {
+    "project_id": 68862520,
+    "name": "Conv TTL NIM 3in 30out",
+    "path": "ohwr/project/conv-ttl-nim-3i-30o",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862484,
+    "name": "FIP Converter",
+    "path": "ohwr/project/fip-converter",
+    "classification": "not hardware",
+    "hw_score": 5
+  },
+  {
+    "project_id": 68862452,
+    "name": "EtherBone Core",
+    "path": "ohwr/project/etherbone-core",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862406,
+    "name": "DDR3 controller for Spartan6",
+    "path": "ohwr/project/ddr3-sp6-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862340,
+    "name": "Miscellaneous Projects - non-HW",
+    "path": "ohwr/project/misc",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862307,
+    "name": "ADC  Testing",
+    "path": "ohwr/project/adc-testing",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862269,
+    "name": "VXS DSP FMC carrier",
+    "path": "ohwr/project/vxs-dsp-fmc-carrier",
+    "classification": "hardware",
+    "hw_score": 68
+  },
+  {
+    "project_id": 68862255,
+    "name": "RHINO",
+    "path": "ohwr/project/rhino-hardware-01",
+    "classification": "hardware",
+    "hw_score": 73
+  },
+  {
+    "project_id": 68862233,
+    "name": "White Rabbit Switch - Software",
+    "path": "ohwr/project/wr-switch-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68862036,
+    "name": "FMC PCIe Carrier PFC - Software",
+    "path": "ohwr/project/pfc-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861997,
+    "name": "Optical link interface AMC",
+    "path": "ohwr/project/glib",
+    "classification": "hardware",
+    "hw_score": 33
+  },
+  {
+    "project_id": 68861959,
+    "name": "Wishbone Serializer Core",
+    "path": "ohwr/project/wb-serializer-core",
+    "classification": "not hardware",
+    "hw_score": 4
+  },
+  {
+    "project_id": 68861936,
+    "name": "Low-level RF Servo control",
+    "path": "ohwr/project/lrfsc",
+    "classification": "ambiguous",
+    "hw_score": 15
+  },
+  {
+    "project_id": 68861897,
+    "name": "FMC TDC 1ns 5cha",
+    "path": "ohwr/project/fmc-tdc",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861865,
+    "name": "FMC Carrier tester",
+    "path": "ohwr/project/fmc-conn-tester",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861818,
+    "name": "OpenPicus",
+    "path": "ohwr/project/openpicus",
+    "classification": "not hardware",
+    "hw_score": 2
+  },
+  {
+    "project_id": 68861795,
+    "name": "Hdlmake",
+    "path": "ohwr/project/hdl-make",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861757,
+    "name": "FMC DAC 250M 16b 4cha",
+    "path": "ohwr/project/fmc-dac-250m16b4cha",
+    "classification": "hardware",
+    "hw_score": 206
+  },
+  {
+    "project_id": 68861740,
+    "name": "SPI Boards Package",
+    "path": "ohwr/project/spi-board-package",
+    "classification": "hardware",
+    "hw_score": 22
+  },
+  {
+    "project_id": 68861729,
+    "name": "AIDA-2020 TLU",
+    "path": "ohwr/project/fmc-mtlu",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861561,
+    "name": "PHASE",
+    "path": "ohwr/project/phase",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861480,
+    "name": "IPBus",
+    "path": "ohwr/project/ipbus",
+    "classification": "not hardware",
+    "hw_score": 2
+  },
+  {
+    "project_id": 68861391,
+    "name": "Platform-independent core collection",
+    "path": "ohwr/project/general-cores",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861353,
+    "name": "White Rabbit core collection",
+    "path": "ohwr/project/wr-cores",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861273,
+    "name": "White Rabbit Switch - Gateware",
+    "path": "ohwr/project/wr-switch-hdl",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861149,
+    "name": "FPGA Configuration Space",
+    "path": "ohwr/project/fpga-config-space",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861089,
+    "name": "FMC DIO 5ch TTL a",
+    "path": "ohwr/project/fmc-dio-5chttla",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861053,
+    "name": "CERN Open Hardware Licence",
+    "path": "ohwr/project/cernohl",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861044,
+    "name": "TDC core",
+    "path": "ohwr/project/tdc-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68861039,
+    "name": "Conv TTL Blocking",
+    "path": "ohwr/project/conv-ttl-blo",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68860935,
+    "name": "GTS Guesses Timing Somehow",
+    "path": "ohwr/project/gts",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68860921,
+    "name": "Production Test Suite",
+    "path": "ohwr/project/pts",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68858212,
+    "name": "Simple VME FMC Carrier SVEC",
+    "path": "ohwr/project/svec",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68858182,
+    "name": "FMC ADC 125M 14b 1ch DAC 600M 14b 1ch",
+    "path": "ohwr/project/fmc-adc125m14b1ch-dac600m14b1ch",
+    "classification": "hardware",
+    "hw_score": 59
+  },
+  {
+    "project_id": 68858148,
+    "name": "Simple PCIe FMC carrier SPEC - Software",
+    "path": "ohwr/project/spec-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68858119,
+    "name": "Optical Clock and Data Recovery FMC",
+    "path": "ohwr/project/optical-cdr-fmc",
+    "classification": "hardware",
+    "hw_score": 21
+  },
+  {
+    "project_id": 68858103,
+    "name": "FMC ADC 1G 8b 2cha",
+    "path": "ohwr/project/fmc-adc-1g8b2cha",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68858051,
+    "name": "CERN LNGS Time Transfer",
+    "path": "ohwr/project/cngs-time-transfer",
+    "classification": "not hardware",
+    "hw_score": 2
+  },
+  {
+    "project_id": 68857992,
+    "name": "ZIO",
+    "path": "ohwr/project/zio",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857928,
+    "name": "FMC LPC 100 Mil 12 Pin Digital IO Expansion Board",
+    "path": "ohwr/project/lpcfmc12pexp",
+    "classification": "ambiguous",
+    "hw_score": 18
+  },
+  {
+    "project_id": 68857881,
+    "name": "HiCCE-FMC-128",
+    "path": "ohwr/project/hicce-fmc-128",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857839,
+    "name": "QDR II controller for Virtex 6",
+    "path": "ohwr/project/qdr2-v6-core",
+    "classification": "hardware",
+    "hw_score": 45
+  },
+  {
+    "project_id": 68857804,
+    "name": "Conv TTL RS485",
+    "path": "ohwr/project/conv-ttl-rs485",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857737,
+    "name": "ROBIN-NP - Hardware",
+    "path": "ohwr/project/atlas-robin-np-hw",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857705,
+    "name": "ROBIN-NP - Gateware",
+    "path": "ohwr/project/atlas-robin-np-fw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857640,
+    "name": "ROBIN-NP - Software",
+    "path": "ohwr/project/atlas-robin-np-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857618,
+    "name": "White Rabbit Network Robustness",
+    "path": "ohwr/project/wrn-robustness",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857609,
+    "name": "Simple PXIe FMC Carrier SPEXI",
+    "path": "ohwr/project/spexi",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857506,
+    "name": "FMC ADC 250M 12b 2cha",
+    "path": "ohwr/project/fmc-adc-250m12b2cha",
+    "classification": "hardware",
+    "hw_score": 87
+  },
+  {
+    "project_id": 68857475,
+    "name": "FMC 8 channel temperature monitor",
+    "path": "ohwr/project/fmc-8cha-temp",
+    "classification": "ambiguous",
+    "hw_score": 16
+  },
+  {
+    "project_id": 68857423,
+    "name": "FMC PowerPC carrier SPEC-based",
+    "path": "ohwr/project/powec",
+    "classification": "hardware",
+    "hw_score": 34
+  },
+  {
+    "project_id": 68857396,
+    "name": "Handheld measurement terminal",
+    "path": "ohwr/project/hmt-3cha",
+    "classification": "hardware",
+    "hw_score": 47
+  },
+  {
+    "project_id": 68857377,
+    "name": "White Rabbit Switch - Testing",
+    "path": "ohwr/project/wr-switch-testing",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857314,
+    "name": "White Rabbit Network Interface Card",
+    "path": "ohwr/project/wr-nic",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857292,
+    "name": "Compact Universal Timing Endpoint based on White Rabbit",
+    "path": "ohwr/project/cute-wr",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857285,
+    "name": "Software for White Rabbit PTP Core",
+    "path": "ohwr/project/wrpc-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857216,
+    "name": "PPSi",
+    "path": "ohwr/project/ppsi",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68857183,
+    "name": "Distributed RF over White Rabbit",
+    "path": "ohwr/project/wr-drf",
+    "classification": "ambiguous",
+    "hw_score": 13
+  },
+  {
+    "project_id": 68857159,
+    "name": "nanoFIPDiag",
+    "path": "ohwr/project/nanofipdiag",
+    "classification": "not hardware",
+    "hw_score": 7
+  },
+  {
+    "project_id": 68857147,
+    "name": "White Rabbit Standardization",
+    "path": "ohwr/project/wr-std",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856992,
+    "name": "Electronics Design",
+    "path": "ohwr/project/ed",
+    "classification": "hardware",
+    "hw_score": 34
+  },
+  {
+    "project_id": 68856942,
+    "name": "Beam Position Monitor",
+    "path": "ohwr/project/bpm",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856914,
+    "name": "Beam Positoning Monitor - RF Front-End",
+    "path": "ohwr/project/bpm-rffe",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856871,
+    "name": "White Rabbit Switch - Hardware",
+    "path": "ohwr/project/wr-switch-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856820,
+    "name": "Neo51",
+    "path": "ohwr/project/neo51",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856779,
+    "name": "FMC ADC 2M 18b 2ch DAC 500k 20b 1ch",
+    "path": "ohwr/project/fmc-adc2m18b2ch-dac500k20b1ch",
+    "classification": "hardware",
+    "hw_score": 31
+  },
+  {
+    "project_id": 68856728,
+    "name": "FMC ADC 10M 16b 2ch DAC 50M 16b 2ch",
+    "path": "ohwr/project/fmc-adc10m16b2ch-dac50m16b1ch",
+    "classification": "ambiguous",
+    "hw_score": 13
+  },
+  {
+    "project_id": 68856694,
+    "name": "AsyncArt",
+    "path": "ohwr/project/asyncart",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856623,
+    "name": "FMC DEL 1ns 4cha - Software",
+    "path": "ohwr/project/fine-delay-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856587,
+    "name": "TimEX3",
+    "path": "ohwr/project/timex3",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856527,
+    "name": "FMC ADC 100M 14b 4cha - Software",
+    "path": "ohwr/project/fmc-adc-100m14b4cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856471,
+    "name": "PTP noposix stack",
+    "path": "ohwr/project/ptp-noposix",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856454,
+    "name": "FMC ADC 130M 16b 4cha",
+    "path": "ohwr/project/fmc-adc-130m-16b-4cha",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856415,
+    "name": "FMC ADC 250M 16b 4cha",
+    "path": "ohwr/project/fmc-adc-250m-16b-4cha",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856403,
+    "name": "GSI Timing Starter Kit",
+    "path": "ohwr/project/gsi-timing-starter-kit",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856363,
+    "name": "FMC TDC 1ns 5cha - Software",
+    "path": "ohwr/project/fmc-tdc-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856336,
+    "name": "Beam Positoning Monitor - Software",
+    "path": "ohwr/project/bpm-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856308,
+    "name": "FMC Bus",
+    "path": "ohwr/project/fmc-bus",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856296,
+    "name": "White Rabbit Starting Kit",
+    "path": "ohwr/project/wr-starting-kit",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856282,
+    "name": "Simple VME FMC Carrier SVEC - Software",
+    "path": "ohwr/project/svec-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856250,
+    "name": "SPICONTROLLER",
+    "path": "ohwr/project/spicontroller",
+    "classification": "hardware",
+    "hw_score": 26
+  },
+  {
+    "project_id": 68856231,
+    "name": "SPIETBOX",
+    "path": "ohwr/project/spietbox",
+    "classification": "not hardware",
+    "hw_score": 5
+  },
+  {
+    "project_id": 68856200,
+    "name": "CERN BE-CO-HT contribution to KiCad",
+    "path": "ohwr/project/cern-kicad",
+    "classification": "hardware",
+    "hw_score": 506
+  },
+  {
+    "project_id": 68856162,
+    "name": "Libre Filter Design and Analysis Tool",
+    "path": "ohwr/project/libre-fdatool",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856148,
+    "name": "PMTLib",
+    "path": "ohwr/project/pmtlib",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68856142,
+    "name": "AMC FMC Carrier AFC",
+    "path": "ohwr/project/afc",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855994,
+    "name": "FMC DAC 600M 12b 1cha DDS",
+    "path": "ohwr/project/fmc-dac-600m-12b-1cha-dds",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855953,
+    "name": "FMC DIO 32ch TTL a",
+    "path": "ohwr/project/fmc-dio-32chttla",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855934,
+    "name": "FMC DAC 130M 12b 4ch 4SFP",
+    "path": "ohwr/project/fmc-dac-130m-12b-4ch-4sfp",
+    "classification": "ambiguous",
+    "hw_score": 17
+  },
+  {
+    "project_id": 68855882,
+    "name": "Stand-alone 18-slot FMC carrier",
+    "path": "ohwr/project/sac-18-fmc",
+    "classification": "hardware",
+    "hw_score": 28
+  },
+  {
+    "project_id": 68855859,
+    "name": "VME ADC 250k 16b 36cha",
+    "path": "ohwr/project/vme-adc-250k-16b-36cha",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855822,
+    "name": "FMC ADC 125M 14b 1ch DAC 600M 14b 1ch - Software",
+    "path": "ohwr/project/fmc-adc125m14b1ch-dac600m14b1ch-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855792,
+    "name": "FMC ADC 130M 16B 4CH - Software",
+    "path": "ohwr/project/fmc-adc-130m-16b-4cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855772,
+    "name": "FMC DIO 32CH TTL A - Software",
+    "path": "ohwr/project/fmc-dio-32chttla-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855754,
+    "name": "FMC ADC 250M 16B 4CH - Software",
+    "path": "ohwr/project/fmc-adc-250m-16b-4cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855721,
+    "name": "CERN ELMB",
+    "path": "ohwr/project/cern-elmb",
+    "classification": "hardware",
+    "hw_score": 23
+  },
+  {
+    "project_id": 68855700,
+    "name": "USB Relay Box 1",
+    "path": "ohwr/project/usb-relay-box1",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855666,
+    "name": "Distributed Direct Digital Synthesis over White Rabbit D3S",
+    "path": "ohwr/project/wr-d3s",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855645,
+    "name": "AMC CPU COM6",
+    "path": "ohwr/project/amc-cpu-com6",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855627,
+    "name": "FMC HV SUP",
+    "path": "ohwr/project/fmc-hv-sup",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855612,
+    "name": "VIDEO Processing Platform MIXXEO",
+    "path": "ohwr/project/video-fpga-hdmi-dvi-ethernet",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855592,
+    "name": "Programmable RF Attenuator in VME",
+    "path": "ohwr/project/vme-rf-att-4cha",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68855572,
+    "name": "CROME",
+    "path": "ohwr/project/crome",
+    "classification": "ambiguous",
+    "hw_score": 15
+  },
+  {
+    "project_id": 68855540,
+    "name": "CROME FMC Carrier",
+    "path": "ohwr/project/crome-fmc-carrier",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68855522,
+    "name": "Conv TTL Blocking - Gateware",
+    "path": "ohwr/project/conv-ttl-blo-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855492,
+    "name": "uTCA RTM 8 SFP",
+    "path": "ohwr/project/utca-rtm-8-sfp",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855463,
+    "name": "E-bone SoC interconnection and cores",
+    "path": "ohwr/project/e-bone",
+    "classification": "not hardware",
+    "hw_score": 2
+  },
+  {
+    "project_id": 68855441,
+    "name": "legacy-vme64x-core",
+    "path": "ohwr/project/legacy-vme64x-core",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855405,
+    "name": "SPEC box 1 Node",
+    "path": "ohwr/project/spec-box-1n",
+    "classification": "not hardware",
+    "hw_score": 2
+  },
+  {
+    "project_id": 68855382,
+    "name": "SPEC Box 3 Nodes Rack 19",
+    "path": "ohwr/project/spec-box-3n",
+    "classification": "not hardware",
+    "hw_score": 3
+  },
+  {
+    "project_id": 68855354,
+    "name": "AMC uBackplane SFP",
+    "path": "ohwr/project/amc-ubackplane-sfp",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855340,
+    "name": "Image processing core library",
+    "path": "ohwr/project/img-proc-core-lib",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855319,
+    "name": "Stereo disparity cores",
+    "path": "ohwr/project/stereo-disparity-cores",
+    "classification": "not hardware",
+    "hw_score": 7
+  },
+  {
+    "project_id": 68855281,
+    "name": "Optical flow cores",
+    "path": "ohwr/project/optical-flow-cores",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68855244,
+    "name": "Local descriptor cores",
+    "path": "ohwr/project/local-descriptor-cores",
+    "classification": "not hardware",
+    "hw_score": 7
+  },
+  {
+    "project_id": 68855216,
+    "name": "FMC DTX 4CHA",
+    "path": "ohwr/project/fmc-dtx-4cha",
+    "classification": "hardware",
+    "hw_score": 37
+  },
+  {
+    "project_id": 68855199,
+    "name": "FMC DTRX 4CHA",
+    "path": "ohwr/project/fmc-dtrx-4cha",
+    "classification": "hardware",
+    "hw_score": 35
+  },
+  {
+    "project_id": 68855178,
+    "name": "Getting Started with the SPEC",
+    "path": "ohwr/project/spec-getting-started",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855140,
+    "name": "xTCA Projects",
+    "path": "ohwr/project/xtca-projects",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855103,
+    "name": "Attention",
+    "path": "ohwr/project/attention",
+    "classification": "not hardware",
+    "hw_score": 8
+  },
+  {
+    "project_id": 68855075,
+    "name": "Compact Universal Timing Endpoint Based on White Rabbit with Dual Ports Cute-WR-DP",
+    "path": "ohwr/project/cute-wr-dp",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855042,
+    "name": "AMC FMC Carrier Kintex AFCK",
+    "path": "ohwr/project/afck",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68855013,
+    "name": "Production Test Suite - base",
+    "path": "ohwr/project/pts-base",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854987,
+    "name": "FMC ADC 100M 14b 4cha - Hardware",
+    "path": "ohwr/project/fmc-adc-100m14b4cha-hw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854966,
+    "name": "FMC ADC 100M 14b 4cha - Gateware",
+    "path": "ohwr/project/fmc-adc-100m14b4cha-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854920,
+    "name": "FMC ADC 100M 14b 4cha - Testing",
+    "path": "ohwr/project/fmc-adc-100m14b4cha-tst",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854888,
+    "name": "evo",
+    "path": "ohwr/project/evo",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854877,
+    "name": "fwatch",
+    "path": "ohwr/project/f-watch",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854781,
+    "name": "FMC DEL 1ns 4cha - stand-alone application",
+    "path": "ohwr/project/fmc-delay-1ns-8cha-sa",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854768,
+    "name": "Applications of Open Hardware",
+    "path": "ohwr/project/oh-applications",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854740,
+    "name": "FMC POF 10M R4ch ",
+    "path": "ohwr/project/fmc-pof-10m-r4ch",
+    "classification": "hardware",
+    "hw_score": 26
+  },
+  {
+    "project_id": 68854710,
+    "name": "FMC POF 10M R3ch T1ch",
+    "path": "ohwr/project/fmc-pof-10m-r3ch-t1ch",
+    "classification": "hardware",
+    "hw_score": 26
+  },
+  {
+    "project_id": 68854670,
+    "name": "Beam Positoning Monitor - Gateware",
+    "path": "ohwr/project/bpm-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854620,
+    "name": "USB Projects",
+    "path": "ohwr/project/usb-projects",
+    "classification": "not hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854594,
+    "name": "FMC ADC 125M 14b 12ch - DAC 1250M 16b 2ch",
+    "path": "ohwr/project/fmc-adc125m14b12ch-dac1250m16b2ch",
+    "classification": "hardware",
+    "hw_score": 20
+  },
+  {
+    "project_id": 68854576,
+    "name": "FMC TDC 1ns 5cha - Hardware",
+    "path": "ohwr/project/fmc-tdc-1ns-5cha-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854551,
+    "name": "FMC TDC 1ns 5cha - Gateware",
+    "path": "ohwr/project/fmc-tdc-1ns-5cha-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854527,
+    "name": "FMC TDC 1ns 5cha - Testing",
+    "path": "ohwr/project/fmc-tdc-1ns-5cha-tst",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854503,
+    "name": "MasterFIP",
+    "path": "ohwr/project/masterfip",
+    "classification": "hardware",
+    "hw_score": 43
+  },
+  {
+    "project_id": 68854475,
+    "name": "MasterFIP - Gateware",
+    "path": "ohwr/project/masterfip-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854444,
+    "name": "MasterFIP - Software",
+    "path": "ohwr/project/masterfip-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854411,
+    "name": "MasterFIP - Testing",
+    "path": "ohwr/project/masterfip-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854391,
+    "name": "Converter Common Gateware",
+    "path": "ohwr/project/conv-common-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854353,
+    "name": "FMC Dual channel L band front-end",
+    "path": "ohwr/project/fmc-fe-l-band-2ch",
+    "classification": "ambiguous",
+    "hw_score": 17
+  },
+  {
+    "project_id": 68854321,
+    "name": "Conv TTL Blocking - Hardware",
+    "path": "ohwr/project/conv-ttl-blo-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854300,
+    "name": "Conv TTL Blocking - Testing",
+    "path": "ohwr/project/conv-ttl-blo-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854271,
+    "name": "Conv TTL RS485 - Gateware",
+    "path": "ohwr/project/conv-ttl-rs485-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854232,
+    "name": "Conv TTL RS485 - Hardware",
+    "path": "ohwr/project/conv-ttl-rs485-hw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854220,
+    "name": "Conv TTL RS485 - Testing",
+    "path": "ohwr/project/conv-ttl-rs485-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854172,
+    "name": "FMC ADC 2k 24b 8cha",
+    "path": "ohwr/project/fmc-adc-2k24b8cha",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854152,
+    "name": "CompactRIO White Rabbit CRIO-WR",
+    "path": "ohwr/project/crio-wr",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854122,
+    "name": "3.3V adapter for SVEC",
+    "path": "ohwr/project/svec-3v3",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854097,
+    "name": "FMC ADC 100M 14b 16cha DAC 2M 14B 4 cha ",
+    "path": "ohwr/project/fmc-adc100m14b16cha-dac2m14b4cha",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854059,
+    "name": "FMC DAC 100M 14b 16cha ADC 2M 14B 4 cha",
+    "path": "ohwr/project/fmc-dac100m14b16cha-adc2m14b4cha",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68854031,
+    "name": "USB ADC 2k 12b 4ch DAC 2k 10b 2ch dio 8ch",
+    "path": "ohwr/project/usb-adc2k12b4ch-dac2k10b2ch-dio8ch",
+    "classification": "hardware",
+    "hw_score": 42
+  },
+  {
+    "project_id": 68854003,
+    "name": "Machines and tools",
+    "path": "ohwr/project/machines-tools",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853966,
+    "name": "Furnarius Rufus PCB Milling Machine",
+    "path": "ohwr/project/fr_pcb_mm",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853941,
+    "name": "EDM Boards",
+    "path": "ohwr/project/edm",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853895,
+    "name": "WandAdapter",
+    "path": "ohwr/project/wandadapter",
+    "classification": "hardware",
+    "hw_score": 22
+  },
+  {
+    "project_id": 68853857,
+    "name": "EPICS support for Wishbone peripherals",
+    "path": "ohwr/project/epics-wb",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853821,
+    "name": "FMC DIO 16ch lvds a",
+    "path": "ohwr/project/fmc-dio-16ch-lvds-a",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853775,
+    "name": "meta-spec",
+    "path": "ohwr/project/meta-spec",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853748,
+    "name": "PCI core",
+    "path": "ohwr/project/pci-core",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853728,
+    "name": "tr-pmc",
+    "path": "ohwr/project/tr-pmc",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853680,
+    "name": "FMC MasterFIP",
+    "path": "ohwr/project/fmc-masterfip",
+    "classification": "hardware",
+    "hw_score": 155
+  },
+  {
+    "project_id": 68853664,
+    "name": "VME FMC Carrier - VFC-HD",
+    "path": "ohwr/project/vfc-hd",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853614,
+    "name": "GBT-based Expandable Front-End GEFE",
+    "path": "ohwr/project/gefe",
+    "classification": "hardware",
+    "hw_score": 69
+  },
+  {
+    "project_id": 68853580,
+    "name": "Scalable  MAROC Charge Sensitive Readout",
+    "path": "ohwr/project/maroc_csa",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853552,
+    "name": "nanoFIP",
+    "path": "ohwr/project/nanofip",
+    "classification": "hardware",
+    "hw_score": 24
+  },
+  {
+    "project_id": 68853525,
+    "name": "nanoFIP - Gateware",
+    "path": "ohwr/project/nanofip-gateware",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853504,
+    "name": "FMC optical TX 72ls 8hs",
+    "path": "ohwr/project/fmc-72chopt480-8chopt1600",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853485,
+    "name": "Rad-tol projects",
+    "path": "ohwr/project/rad-tol-projects",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853465,
+    "name": "Radiation Tolerant LED PSU",
+    "path": "ohwr/project/radtol-led-psu",
+    "classification": "hardware",
+    "hw_score": 32
+  },
+  {
+    "project_id": 68853423,
+    "name": "Cosmic Pi",
+    "path": "ohwr/project/cosmic-pi",
+    "classification": "hardware",
+    "hw_score": 55
+  },
+  {
+    "project_id": 68853384,
+    "name": "White Rabbit High-availability Seamless Redundancy WR-HSR",
+    "path": "ohwr/project/wr-hsr",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853339,
+    "name": "Particle Detectors",
+    "path": "ohwr/project/p-det",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853308,
+    "name": "MRPC 25x18 24strip",
+    "path": "ohwr/project/mrpc-25x18-24strip",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853221,
+    "name": "SDB - Self-describing Bus",
+    "path": "ohwr/project/sdb",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853191,
+    "name": "adc-lib",
+    "path": "ohwr/project/adc-lib",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68853076,
+    "name": "embedded-linux",
+    "path": "ohwr/project/embedded-linux",
+    "classification": "ambiguous",
+    "hw_score": 16
+  },
+  {
+    "project_id": 68853049,
+    "name": "Mock Turtle",
+    "path": "ohwr/project/mock-turtle",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852989,
+    "name": "urv-core",
+    "path": "ohwr/project/urv-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852950,
+    "name": "FMC ADC 400k 18b 4cha iso",
+    "path": "ohwr/project/fmc-adc-400k18b4cha-iso",
+    "classification": "hardware",
+    "hw_score": 25
+  },
+  {
+    "project_id": 68852932,
+    "name": "FMC ADC 400k 18b 4cha iso - Gateware",
+    "path": "ohwr/project/fmc-adc-400k18b4cha-iso-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852891,
+    "name": "FMC ADC 400k 18b 4cha iso - Hardware",
+    "path": "ohwr/project/fmc-adc-400k18b4cha-iso-hw",
+    "classification": "hardware",
+    "hw_score": 42
+  },
+  {
+    "project_id": 68852824,
+    "name": "FMC ADC 400k 18b 4cha iso - Software",
+    "path": "ohwr/project/fmc-adc-400k18b4cha-iso-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852797,
+    "name": "FMC DIO 10I 8O",
+    "path": "ohwr/project/fmc-dio-10i-8o",
+    "classification": "hardware",
+    "hw_score": 223
+  },
+  {
+    "project_id": 68852744,
+    "name": "Humanitarian projects",
+    "path": "ohwr/project/humanitarian",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852691,
+    "name": "UV-watch",
+    "path": "ohwr/project/uv-watch",
+    "classification": "hardware",
+    "hw_score": 27
+  },
+  {
+    "project_id": 68852668,
+    "name": "UV-mask",
+    "path": "ohwr/project/uv-mask",
+    "classification": "hardware",
+    "hw_score": 53
+  },
+  {
+    "project_id": 68852629,
+    "name": "fmc dac 600m 12b 1cha dds - Testing",
+    "path": "ohwr/project/fmc-dac-600m-12b-1cha-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852572,
+    "name": "Absolute Encoder VHDL core",
+    "path": "ohwr/project/absenc",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852530,
+    "name": "VME RTM",
+    "path": "ohwr/project/vme-rtm",
+    "classification": "not hardware",
+    "hw_score": 2
+  },
+  {
+    "project_id": 68852498,
+    "name": "VMR-DIO-24ch-DCI",
+    "path": "ohwr/project/vmr-dio-24ch-dci",
+    "classification": "ambiguous",
+    "hw_score": 11
+  },
+  {
+    "project_id": 68852445,
+    "name": "MasterFIP - Hardware",
+    "path": "ohwr/project/masterfip-hw",
+    "classification": "not hardware",
+    "hw_score": 5
+  },
+  {
+    "project_id": 68852392,
+    "name": "Data centre environmental sensors",
+    "path": "ohwr/project/dces",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852377,
+    "name": "DCES-DTRHF-SER1CH-v1 ",
+    "path": "ohwr/project/dces-dtrhf-ser1ch-v1",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852326,
+    "name": "FMC SFP 4cha",
+    "path": "ohwr/project/fmc-sfp-4cha",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852301,
+    "name": "FPGA and ARM SoC FMC Carrier FASEC",
+    "path": "ohwr/project/fasec",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852256,
+    "name": "FMC DEL 1ns 2cha",
+    "path": "ohwr/project/fmc-del-1ns-2cha",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852231,
+    "name": "WRXI - White Rabbit eXtensions for Instrumentation",
+    "path": "ohwr/project/wrxi",
+    "classification": "not hardware",
+    "hw_score": 5
+  },
+  {
+    "project_id": 68852206,
+    "name": "Dual AMC Carrier",
+    "path": "ohwr/project/amc-carrier-2-sl",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852161,
+    "name": "Rackable 19 projects",
+    "path": "ohwr/project/rack-19",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852132,
+    "name": "Multi-channel Time Interval Counter and fine delay generator",
+    "path": "ohwr/project/r19-tdc-del-a",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852106,
+    "name": "openMMC",
+    "path": "ohwr/project/afc-ipmi-sw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852070,
+    "name": "soft-cpu toolchains",
+    "path": "ohwr/project/soft-cpu-toolchains",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68852013,
+    "name": "spec-stress-test",
+    "path": "ohwr/project/spec-stress-test",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851991,
+    "name": "White Rabbit Calibration",
+    "path": "ohwr/project/wr-calibration",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851956,
+    "name": "SFP",
+    "path": "ohwr/project/sfp",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851940,
+    "name": "sfp-plus-i2c",
+    "path": "ohwr/project/sfp-plus-i2c",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851907,
+    "name": "White Rabbit low jitter",
+    "path": "ohwr/project/wr-low-jitter",
+    "classification": "not hardware",
+    "hw_score": 5
+  },
+  {
+    "project_id": 68851852,
+    "name": "FMC DIO 32ch lvds a",
+    "path": "ohwr/project/fmc-dio-32chlvdsa",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851822,
+    "name": "WRAP",
+    "path": "ohwr/project/wrap",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68851805,
+    "name": "tr-amc",
+    "path": "ohwr/project/tr-amc",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851795,
+    "name": "PandABox",
+    "path": "ohwr/project/pandabox",
+    "classification": "hardware",
+    "hw_score": 59
+  },
+  {
+    "project_id": 68851714,
+    "name": "PandABox-hw",
+    "path": "ohwr/project/pandabox-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851665,
+    "name": "PandABox-sw",
+    "path": "ohwr/project/pandabox-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851615,
+    "name": "PandABox-gw",
+    "path": "ohwr/project/pandabox-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851565,
+    "name": "PandABox-tst",
+    "path": "ohwr/project/pandabox-tst",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851537,
+    "name": "eez-psu",
+    "path": "ohwr/project/eez-psu",
+    "classification": "ambiguous",
+    "hw_score": 13
+  },
+  {
+    "project_id": 68851487,
+    "name": "Filter-prototype-board",
+    "path": "ohwr/project/fpb",
+    "classification": "hardware",
+    "hw_score": 26
+  },
+  {
+    "project_id": 68851442,
+    "name": "FMC ADC subsamp 125M 14b 4cha",
+    "path": "ohwr/project/fmc-adc-subsamp125m14b4cha",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851398,
+    "name": "GWSW Development Framework",
+    "path": "ohwr/project/gw-sw-dev-framework",
+    "classification": "not hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851374,
+    "name": "WRS Low Jitter Daughterboard",
+    "path": "ohwr/project/wrs-low-jitter",
+    "classification": "hardware",
+    "hw_score": 95
+  },
+  {
+    "project_id": 68851323,
+    "name": "libsfp",
+    "path": "ohwr/project/libsfp",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851273,
+    "name": "Conv-diff-se-cable-driver",
+    "path": "ohwr/project/conv-diff-se-cable-driver",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851251,
+    "name": "Artix Trivial FMC Carrier  ATFC ",
+    "path": "ohwr/project/atfc",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851219,
+    "name": "FMC VHDCI",
+    "path": "ohwr/project/fmc-vhdci",
+    "classification": "ambiguous",
+    "hw_score": 14
+  },
+  {
+    "project_id": 68851177,
+    "name": "fmc-nanofip",
+    "path": "ohwr/project/fmc-nanofip",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851151,
+    "name": "PC104",
+    "path": "ohwr/project/pc104",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68851127,
+    "name": "EMC2-DP",
+    "path": "ohwr/project/emc2-dp",
+    "classification": "hardware",
+    "hw_score": 77
+  },
+  {
+    "project_id": 68851090,
+    "name": "YAM  Yet Another Micro-controller",
+    "path": "ohwr/project/yam",
+    "classification": "not hardware",
+    "hw_score": 1
+  },
+  {
+    "project_id": 68851064,
+    "name": "FMC Prototype Board - LPC",
+    "path": "ohwr/project/fmc-prt-lpc",
+    "classification": "ambiguous",
+    "hw_score": 16
+  },
+  {
+    "project_id": 68851027,
+    "name": "Conv RS485 OPT RTM",
+    "path": "ohwr/project/conv-rs485-opt-rtm",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850970,
+    "name": "1-to-8 Pulse and Frequency Distribution Amplifier",
+    "path": "ohwr/project/pda-8ch-fda-8ch",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850958,
+    "name": "VME SBC A25 PCIe to VME bridge",
+    "path": "ohwr/project/vme-sbc-a25-pcie-vme-bridge",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850928,
+    "name": "High Performance MTCA.4 White Rabbit Receiver",
+    "path": "ohwr/project/ertm15-llrf-wr",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850896,
+    "name": "SPEC7",
+    "path": "ohwr/project/spec7",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850804,
+    "name": "VHDL Coding Style",
+    "path": "ohwr/project/vhdl-style",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850796,
+    "name": "WRS Fan-less hardware",
+    "path": "ohwr/project/wrs-fl-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850700,
+    "name": "Mini-WR",
+    "path": "ohwr/project/mini-wr",
+    "classification": "hardware",
+    "hw_score": 27
+  },
+  {
+    "project_id": 68850653,
+    "name": "Radiation Tolerant LED Luminaire",
+    "path": "ohwr/project/radtol-led-luminaire",
+    "classification": "hardware",
+    "hw_score": 65
+  },
+  {
+    "project_id": 68850628,
+    "name": "CTR FMC 5 CH TTL RS485",
+    "path": "ohwr/project/ctr-fmc-5chttla",
+    "classification": "hardware",
+    "hw_score": 68
+  },
+  {
+    "project_id": 68850596,
+    "name": "DIOT - Distributed IO Tier",
+    "path": "ohwr/project/diot",
+    "classification": "hardware",
+    "hw_score": 81
+  },
+  {
+    "project_id": 68850567,
+    "name": "DIOT DIO 16ch opt 24V",
+    "path": "ohwr/project/diot-dio-16ch-opt-24v",
+    "classification": "hardware",
+    "hw_score": 31
+  },
+  {
+    "project_id": 68850537,
+    "name": "OPT-ADC-10k-32b-1cha HPM7177",
+    "path": "ohwr/project/opt-adc-10k-32b-1cha",
+    "classification": "hardware",
+    "hw_score": 73
+  },
+  {
+    "project_id": 68850514,
+    "name": "VME FMC Carrier - VFC-HS",
+    "path": "ohwr/project/vfc-hs",
+    "classification": "hardware",
+    "hw_score": 58
+  },
+  {
+    "project_id": 68850487,
+    "name": "DIOT WIC Gateware",
+    "path": "ohwr/project/diot-wic-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850443,
+    "name": "LHC Instability Trigger Distribution LIST",
+    "path": "ohwr/project/list",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850411,
+    "name": "RF Multiplexer 8ch 1GHz",
+    "path": "ohwr/project/rf-mux-8ch",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850373,
+    "name": "Training projects",
+    "path": "ohwr/project/training",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850343,
+    "name": "Hello PDN",
+    "path": "ohwr/project/hellopdn",
+    "classification": "hardware",
+    "hw_score": 47
+  },
+  {
+    "project_id": 68850262,
+    "name": "FMC-DTXRX-4CHA",
+    "path": "ohwr/project/fmc-dtxrx-4cha",
+    "classification": "hardware",
+    "hw_score": 35
+  },
+  {
+    "project_id": 68850254,
+    "name": "VME",
+    "path": "ohwr/project/vme",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850246,
+    "name": "White Rabbit Switch - Hardware V4",
+    "path": "ohwr/project/wr-switch-hw-v4",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850081,
+    "name": "WRS-318 with LJD prepared hardware",
+    "path": "ohwr/project/wrs-ljdprep-hw",
+    "classification": "hardware",
+    "hw_score": 23
+  },
+  {
+    "project_id": 68850056,
+    "name": "TiCkS",
+    "path": "ohwr/project/spec-ticks",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850050,
+    "name": "AIDA-2020 TLU - Gateware",
+    "path": "ohwr/project/fmc-mtlu-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68850035,
+    "name": "AIDA-2020 TLU - Hardware",
+    "path": "ohwr/project/fmc-mtlu-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849911,
+    "name": "AIDA-2020 TLU - Software",
+    "path": "ohwr/project/fmc-mtlu-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849877,
+    "name": "AIDA-2020 TLU - Testing",
+    "path": "ohwr/project/fmc-mtlu-tst",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849828,
+    "name": "Euro ADC 65M 14b 40cha PUMA",
+    "path": "ohwr/project/euro-adc-65m-14b-40cha",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68849799,
+    "name": "Eurocard",
+    "path": "ohwr/project/eurocard",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849787,
+    "name": "Euro ADC 65M 14b 40cha gw PUMA-gw",
+    "path": "ohwr/project/euro-adc-65m-14b-40cha-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849774,
+    "name": "Euro ADC 65M 14b 40cha hw PUMA-hw",
+    "path": "ohwr/project/euro-adc-65m-14b-40cha-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849634,
+    "name": "Euro ADC 65M 14b 40cha sw PUMA-sw",
+    "path": "ohwr/project/euro-adc-65m-14b-40cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849603,
+    "name": "Euro ADC 65M 14b 40cha tst PUMA-tst",
+    "path": "ohwr/project/euro-adc-65m-14b-40cha-tst",
+    "classification": "not hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849589,
+    "name": "Companies",
+    "path": "ohwr/project/companies",
+    "classification": "not hardware",
+    "hw_score": 8
+  },
+  {
+    "project_id": 68849519,
+    "name": "Licences",
+    "path": "ohwr/project/licences",
+    "classification": "ambiguous",
+    "hw_score": 17
+  },
+  {
+    "project_id": 68849474,
+    "name": "White Rabbit Fixed Point Calculations",
+    "path": "ohwr/project/wr-fixed-point-calculations",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849436,
+    "name": "White Rabbit Compliance Tests",
+    "path": "ohwr/project/wr-compliance-tests",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849334,
+    "name": "PXIe controller COM Express based",
+    "path": "ohwr/project/pxie-ctl-comexpress",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849301,
+    "name": "RaToPUS radiation-tolerant AC-DC power supply",
+    "path": "ohwr/project/psu-rad-acdc-230v-12v5v-110w",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849254,
+    "name": "VHDL macro libraries for Microsemi ProASIC3",
+    "path": "ohwr/project/microsemi-lib",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849218,
+    "name": "luvi",
+    "path": "ohwr/project/luvi",
+    "classification": "ambiguous",
+    "hw_score": 18
+  },
+  {
+    "project_id": 68849177,
+    "name": "OpenDSO - Open Digital Storage Oscilloscope",
+    "path": "ohwr/project/opendso",
+    "classification": "ambiguous",
+    "hw_score": 18
+  },
+  {
+    "project_id": 68849164,
+    "name": "DIOT Zynq Ultrascale-based System Board",
+    "path": "ohwr/project/diot-sb-zu",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68849001,
+    "name": "OHW research",
+    "path": "ohwr/project/ohw-research",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848878,
+    "name": "distributed oscilloscope",
+    "path": "ohwr/project/distributed-oscilloscope",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848818,
+    "name": "Resource Evaluation of WR switch HDL for Ultrascale Plus",
+    "path": "ohwr/project/wr-switch-hdl-usp-eval",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848772,
+    "name": "DAPHNE FEB",
+    "path": "ohwr/project/daphne-feb-dune",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848766,
+    "name": "DIOT Monitoring Module",
+    "path": "ohwr/project/diot-monimod",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848611,
+    "name": "DIOT CompactPCI Serial crate hardware",
+    "path": "ohwr/project/diot-crate-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848538,
+    "name": "CITY - CarrIer for RFoWR-based Timing sYstems",
+    "path": "ohwr/project/city",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848476,
+    "name": "FMC Software Support",
+    "path": "ohwr/project/fmc-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848438,
+    "name": "FPGA Framework",
+    "path": "ohwr/project/fpga-framework",
+    "classification": "not hardware",
+    "hw_score": 1
+  },
+  {
+    "project_id": 68848376,
+    "name": "tr-pexp",
+    "path": "ohwr/project/tr-pexp",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848350,
+    "name": "FPGA Device ID",
+    "path": "ohwr/project/fpga-dev-id",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848296,
+    "name": "RF over Ethernet - a protocol",
+    "path": "ohwr/project/roe-protocol",
+    "classification": "not hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848237,
+    "name": "HPSEC - High Precision Slaved External Clock",
+    "path": "ohwr/project/hpsec",
+    "classification": "hardware",
+    "hw_score": 82
+  },
+  {
+    "project_id": 68848217,
+    "name": "Simple VME FMC Carrier 7 - SVEC7",
+    "path": "ohwr/project/svec7",
+    "classification": "hardware",
+    "hw_score": 45
+  },
+  {
+    "project_id": 68848194,
+    "name": "SPEC150",
+    "path": "ohwr/project/spec150",
+    "classification": "ambiguous",
+    "hw_score": 14
+  },
+  {
+    "project_id": 68848167,
+    "name": "White Rabbit Industrial Timing Enhancement - WRITE",
+    "path": "ohwr/project/write",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68848155,
+    "name": "Microstepper",
+    "path": "ohwr/project/microstepper",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848132,
+    "name": "FMC-PROFINET",
+    "path": "ohwr/project/fmc-profinet",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848091,
+    "name": "CERN BE-CO-HT CI",
+    "path": "ohwr/project/cern-be-co-ht-ci",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848074,
+    "name": "DIOT Igloo2-based radiation-tolerant System Board",
+    "path": "ohwr/project/diot-sb-igl",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848048,
+    "name": "Ventilator PAL",
+    "path": "ohwr/project/ventilatorpal",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68848032,
+    "name": "PROFIP - PROFINET-IRT - WorldFIP gateway",
+    "path": "ohwr/project/profip",
+    "classification": "ambiguous",
+    "hw_score": 12
+  },
+  {
+    "project_id": 68848008,
+    "name": "PXIe FMC Carrier Board - SPEXI7U",
+    "path": "ohwr/project/spexi7u",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847985,
+    "name": "HEV - High Energy Ventilator",
+    "path": "ohwr/project/hev",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847965,
+    "name": "SAMbuCa",
+    "path": "ohwr/project/sambuca",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68847938,
+    "name": "CERN-ELMB2",
+    "path": "ohwr/project/cern-elmb2",
+    "classification": "hardware",
+    "hw_score": 26
+  },
+  {
+    "project_id": 68847932,
+    "name": "DIOT Kintex Ultrascale-based Peripheral Board FMC Carrier",
+    "path": "ohwr/project/diot-pfc-ku",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847885,
+    "name": "SoC Course with Reference Designs",
+    "path": "ohwr/project/soc-course",
+    "classification": "hardware",
+    "hw_score": 49
+  },
+  {
+    "project_id": 68847858,
+    "name": "Hydra - a radiation-tolerant SoC",
+    "path": "ohwr/project/hydra",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847846,
+    "name": "3DMASK - 3D printed mask",
+    "path": "ohwr/project/3dmask",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847718,
+    "name": "DIOT reliability studies project",
+    "path": "ohwr/project/diot-reliability",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847686,
+    "name": "Face Shield - 3Dprinting and Injection Moulding",
+    "path": "ohwr/project/faceshield",
+    "classification": "not hardware",
+    "hw_score": 5
+  },
+  {
+    "project_id": 68847646,
+    "name": "Holoblade",
+    "path": "ohwr/project/holoblade",
+    "classification": "ambiguous",
+    "hw_score": 14
+  },
+  {
+    "project_id": 68847625,
+    "name": "WRS with low jitter logic integrated",
+    "path": "ohwr/project/wrs-lj-hw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847605,
+    "name": "Compact Universal Timing Endpoint Based on White Rabbit with Artix7 - Cute-WR-A7",
+    "path": "ohwr/project/cute-wr-a7",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847569,
+    "name": "Programmable RF Attenuator",
+    "path": "ohwr/project/rf-att-4cha",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847487,
+    "name": "SPEC7 Processing System Software",
+    "path": "ohwr/project/spec7-ps-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847447,
+    "name": "powerlink",
+    "path": "ohwr/project/powerlink",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68847394,
+    "name": "FMC FSI photodetection module 8ch",
+    "path": "ohwr/project/fmc-fsi-det-8ch",
+    "classification": "not hardware",
+    "hw_score": 10
+  },
+  {
+    "project_id": 68831841,
+    "name": "Respir-OS",
+    "path": "ohwr/project/respir-os",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831815,
+    "name": "fmc-temp-pt100-15ch",
+    "path": "ohwr/project/fmc-temp-pt100-15ch",
+    "classification": "ambiguous",
+    "hw_score": 18
+  },
+  {
+    "project_id": 68831804,
+    "name": "samb-temp-thcpl-fmc",
+    "path": "ohwr/project/samb-temp-thcpl-fmc",
+    "classification": "ambiguous",
+    "hw_score": 12
+  },
+  {
+    "project_id": 68831783,
+    "name": "samc-temp-thcpl-20ch",
+    "path": "ohwr/project/samc-temp-thcpl-20ch",
+    "classification": "ambiguous",
+    "hw_score": 12
+  },
+  {
+    "project_id": 68831758,
+    "name": "FMC ADC 500M 14b 4cha",
+    "path": "ohwr/project/fmc-adc-500m14b4cha",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831744,
+    "name": "SIS1160 PCI-L IO add on",
+    "path": "ohwr/project/sis1160-pci-io",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831714,
+    "name": "AMC FMC Carrier AFCZ",
+    "path": "ohwr/project/afcz",
+    "classification": "hardware",
+    "hw_score": 67
+  },
+  {
+    "project_id": 68831670,
+    "name": "FSI Data Acquisition Path Gateware and Software",
+    "path": "ohwr/project/fsi-daq",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831659,
+    "name": "FSI DIOT Photodetection module 8ch",
+    "path": "ohwr/project/diot-fsi-det-8ch",
+    "classification": "hardware",
+    "hw_score": 141
+  },
+  {
+    "project_id": 68831636,
+    "name": "10G White Rabbit Network Interface Core",
+    "path": "ohwr/project/10G-wr-nic",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831621,
+    "name": "PXIe Communication Tester - PXCT",
+    "path": "ohwr/project/pxct",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831605,
+    "name": "AMC FMC Carrier Kintex Ultrascale AFCKU",
+    "path": "ohwr/project/afcku",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831589,
+    "name": "FMC Motion Front-End",
+    "path": "ohwr/project/fmc-mfe",
+    "classification": "ambiguous",
+    "hw_score": 17
+  },
+  {
+    "project_id": 68831563,
+    "name": "PassStat",
+    "path": "ohwr/project/passstat",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831537,
+    "name": "PXIe controller COM Express based testing support",
+    "path": "ohwr/project/pxie-ctl-comexpress-tst",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831509,
+    "name": "test",
+    "path": "ohwr/project/test",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831491,
+    "name": "FMC High-Voltage supply - fmc-hv-2ch",
+    "path": "ohwr/project/fmc-hv-2ch",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831462,
+    "name": "Extract Capacitor Voltage Rating",
+    "path": "ohwr/project/extract-cap-voltage-rating",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831445,
+    "name": "samb-step-dcdrive-4ch",
+    "path": "ohwr/project/samb-step-dcdrive-4ch",
+    "classification": "ambiguous",
+    "hw_score": 13
+  },
+  {
+    "project_id": 68831428,
+    "name": "PZ Carrier and Trigger IO - PZ-TIO",
+    "path": "ohwr/project/pz-tio",
+    "classification": "hardware",
+    "hw_score": 65
+  },
+  {
+    "project_id": 68831404,
+    "name": "SAMbuCa I2PS",
+    "path": "ohwr/project/samb-i2ps",
+    "classification": "not hardware",
+    "hw_score": 2
+  },
+  {
+    "project_id": 68831383,
+    "name": "DIOT Peripheral Board Loop-back",
+    "path": "ohwr/project/diot-pb-lbk",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831336,
+    "name": "Optical to electrical converter",
+    "path": "ohwr/project/conv-opt-ttl-1i-1o",
+    "classification": "hardware",
+    "hw_score": 51
+  },
+  {
+    "project_id": 68831302,
+    "name": "Electrical to Optical converter",
+    "path": "ohwr/project/conv-ttl-opt-1i-1o",
+    "classification": "not hardware",
+    "hw_score": 8
+  },
+  {
+    "project_id": 68831285,
+    "name": "BabyWR",
+    "path": "ohwr/project/babywr",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831243,
+    "name": "Generic I\u00b2C-Reconfigurable Active PatcH GIRAPH",
+    "path": "ohwr/project/giraph32",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831201,
+    "name": "WRTD Reference Designs",
+    "path": "ohwr/project/wrtd-ref-designs",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831178,
+    "name": "Negative Pressure Wound Treatment",
+    "path": "ohwr/project/npwt",
+    "classification": "hardware",
+    "hw_score": 29
+  },
+  {
+    "project_id": 68831113,
+    "name": "Power Supply Interface Module PSIM",
+    "path": "ohwr/project/psim",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831063,
+    "name": "DIOT Mixed Digital IO RTM",
+    "path": "ohwr/project/mdior",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68831036,
+    "name": "Pex10",
+    "path": "ohwr/project/pex10",
+    "classification": "not hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830978,
+    "name": "ACCURATE 2A Evaluation Board",
+    "path": "ohwr/project/accurate2-eval",
+    "classification": "hardware",
+    "hw_score": 63
+  },
+  {
+    "project_id": 68830973,
+    "name": "Macbeth",
+    "path": "ohwr/project/macbeth",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830827,
+    "name": "Analogue GIRAPH",
+    "path": "ohwr/project/analogue-giraph",
+    "classification": "hardware",
+    "hw_score": 23
+  },
+  {
+    "project_id": 68830816,
+    "name": "PandABox II",
+    "path": "ohwr/project/PandaBox2",
+    "classification": "hardware",
+    "hw_score": 54
+  },
+  {
+    "project_id": 68830784,
+    "name": "Idrogen",
+    "path": "ohwr/project/idrogen",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830758,
+    "name": "FMC ADC 210M 16b 4cha",
+    "path": "ohwr/project/fmc-adc-210m-16b-4cha",
+    "classification": "not hardware",
+    "hw_score": 7
+  },
+  {
+    "project_id": 68830742,
+    "name": "WREN",
+    "path": "ohwr/project/wren",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830716,
+    "name": "White Rabbit Timing System",
+    "path": "ohwr/project/wrt",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830702,
+    "name": "Quad-Channel Digital Pico ammeter",
+    "path": "ohwr/project/P4CH-LNLS",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830673,
+    "name": "Ultra low noise amplifier",
+    "path": "ohwr/project/ultra-low-noise-amplifier",
+    "classification": "ambiguous",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830641,
+    "name": "mrpc-25x18-24strip",
+    "path": "ohwr/p-det/mrpc-25x18-24strip",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830633,
+    "name": "Open Breath Lung Ventilator",
+    "path": "ohwr/openbreath/lungventilator",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830613,
+    "name": "Open Breath PEP Whistle",
+    "path": "ohwr/openbreath/pepwhistle",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830599,
+    "name": "ohr-deploy",
+    "path": "ohwr/ohr-support/ohr-deploy",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830587,
+    "name": "fmc-delay-1ns-8cha-sa",
+    "path": "ohwr/oh-applications/fmc-delay-1ns-8cha-sa",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830579,
+    "name": "adc-lib",
+    "path": "ohwr/misc/adc-lib",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830560,
+    "name": "adc-testing",
+    "path": "ohwr/misc/adc-testing",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830523,
+    "name": "ed",
+    "path": "ohwr/misc/ed",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830500,
+    "name": "embedded-linux",
+    "path": "ohwr/misc/embedded-linux",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830478,
+    "name": "epics-wb",
+    "path": "ohwr/misc/epics-wb",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830450,
+    "name": "gts",
+    "path": "ohwr/misc/gts",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830426,
+    "name": "hdl-make",
+    "path": "ohwr/misc/hdl-make",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830410,
+    "name": "libre-fdatool",
+    "path": "ohwr/misc/libre-fdatool",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830382,
+    "name": "panda",
+    "path": "ohwr/misc/panda",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830356,
+    "name": "pmtlib",
+    "path": "ohwr/misc/pmtlib",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830346,
+    "name": "pts-base",
+    "path": "ohwr/misc/pts-base",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830338,
+    "name": "pts",
+    "path": "ohwr/misc/pts",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830203,
+    "name": "sdb",
+    "path": "ohwr/misc/sdb",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830186,
+    "name": "soft-cpu-toolchains",
+    "path": "ohwr/misc/soft-cpu-toolchains",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830163,
+    "name": "vhdl-style",
+    "path": "ohwr/misc/vhdl-style",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830157,
+    "name": "zio",
+    "path": "ohwr/misc/zio",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830152,
+    "name": "fr_pcb_mm",
+    "path": "ohwr/machines-tools/fr_pcb_mm",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830140,
+    "name": "conv-ttl-rs485-gw",
+    "path": "ohwr/level-conversion/conv-ttl-rs485/conv-ttl-rs485-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830129,
+    "name": "conv-ttl-rs485-hw",
+    "path": "ohwr/level-conversion/conv-ttl-rs485/conv-ttl-rs485-hw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830124,
+    "name": "conv-ttl-rs485-tst",
+    "path": "ohwr/level-conversion/conv-ttl-rs485/conv-ttl-rs485-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830112,
+    "name": "conv-ttl-blo-gw",
+    "path": "ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830085,
+    "name": "conv-ttl-blo-hw",
+    "path": "ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830075,
+    "name": "conv-ttl-blo-tst",
+    "path": "ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830057,
+    "name": "conv-common-gw",
+    "path": "ohwr/level-conversion/conv-common-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830050,
+    "name": "conv-diff-se-cable-driver",
+    "path": "ohwr/level-conversion/conv-diff-se-cable-driver",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830036,
+    "name": "wrpc-sw",
+    "path": "ohwr/hdl-core-lib/wr-cores/wrpc-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830028,
+    "name": "evo",
+    "path": "ohwr/hdl-core-lib/asyncart/evo",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68830016,
+    "name": "absenc",
+    "path": "ohwr/hdl-core-lib/absenc",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829994,
+    "name": "ddr3-sp6-core",
+    "path": "ohwr/hdl-core-lib/ddr3-sp6-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829976,
+    "name": "etherbone-core",
+    "path": "ohwr/hdl-core-lib/etherbone-core",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829951,
+    "name": "fpga-config-space",
+    "path": "ohwr/hdl-core-lib/fpga-config-space",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829925,
+    "name": "general-cores",
+    "path": "ohwr/hdl-core-lib/general-cores",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829889,
+    "name": "gn4124-core",
+    "path": "ohwr/hdl-core-lib/gn4124-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829869,
+    "name": "mock-turtle",
+    "path": "ohwr/hdl-core-lib/mock-turtle",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829845,
+    "name": "pci-core",
+    "path": "ohwr/hdl-core-lib/pci-core",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829820,
+    "name": "pcie-vme-bridge",
+    "path": "ohwr/hdl-core-lib/pcie-vme-bridge",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829777,
+    "name": "tdc-core",
+    "path": "ohwr/hdl-core-lib/tdc-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829736,
+    "name": "urv-core",
+    "path": "ohwr/hdl-core-lib/urv-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829713,
+    "name": "wishbone-gen",
+    "path": "ohwr/hdl-core-lib/wishbone-gen",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829698,
+    "name": "vme64x-core",
+    "path": "ohwr/hdl-core-lib/vme64x-core",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829682,
+    "name": "svec-3v3",
+    "path": "ohwr/fmc-projects/svec/svec-3v3",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829667,
+    "name": "svec-sw",
+    "path": "ohwr/fmc-projects/svec/svec-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829656,
+    "name": "meta-spec",
+    "path": "ohwr/fmc-projects/spec/spec-getting-started/meta-spec",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829649,
+    "name": "spec-stress-test",
+    "path": "ohwr/fmc-projects/spec/spec-getting-started/spec-stress-test",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829638,
+    "name": "spec-sw",
+    "path": "ohwr/fmc-projects/spec/spec-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829619,
+    "name": "fmc-tdc-1ns-5cha-gw",
+    "path": "ohwr/fmc-projects/fmc-tdc/fmc-tdc-1ns-5cha-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829574,
+    "name": "fmc-tdc-1ns-5cha-hw",
+    "path": "ohwr/fmc-projects/fmc-tdc/fmc-tdc-1ns-5cha-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829516,
+    "name": "fmc-tdc-1ns-5cha-tst",
+    "path": "ohwr/fmc-projects/fmc-tdc/fmc-tdc-1ns-5cha-tst",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829490,
+    "name": "fmc-tdc-sw",
+    "path": "ohwr/fmc-projects/fmc-tdc/fmc-tdc-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829481,
+    "name": "fmc-mtlu-gw",
+    "path": "ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829474,
+    "name": "fmc-mtlu-hw",
+    "path": "ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829348,
+    "name": "fmc-mtlu-sw",
+    "path": "ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829332,
+    "name": "fmc-mtlu-tst",
+    "path": "ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-tst",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829321,
+    "name": "fmc-dio-32chttla-sw",
+    "path": "ohwr/fmc-projects/fmc-dio-32chttla/fmc-dio-32chttla-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829314,
+    "name": "fine-delay-sw",
+    "path": "ohwr/fmc-projects/fmc-delay-1ns-8cha/fine-delay-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829308,
+    "name": "fmc-dac-600m-12b-1cha-tst",
+    "path": "ohwr/fmc-projects/fmc-dac-600m-12b-1cha-dds/fmc-dac-600m-12b-1cha-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829296,
+    "name": "fmc-adc-400k18b4cha-iso-gw",
+    "path": "ohwr/fmc-projects/fmc-adc-400k18b4cha-iso/fmc-adc-400k18b4cha-iso-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829276,
+    "name": "fmc-adc-400k18b4cha-iso-hw",
+    "path": "ohwr/fmc-projects/fmc-adc-400k18b4cha-iso/fmc-adc-400k18b4cha-iso-hw",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829248,
+    "name": "fmc-adc-400k18b4cha-iso-sw",
+    "path": "ohwr/fmc-projects/fmc-adc-400k18b4cha-iso/fmc-adc-400k18b4cha-iso-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829236,
+    "name": "fmc-adc-250m-16b-4cha-sw",
+    "path": "ohwr/fmc-projects/fmc-adc-250m-16b-4cha/fmc-adc-250m-16b-4cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829231,
+    "name": "fmc-adc-130m-16b-4cha-sw",
+    "path": "ohwr/fmc-projects/fmc-adc-130m-16b-4cha/fmc-adc-130m-16b-4cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829226,
+    "name": "fmc-adc125m14b1ch-dac600m14b1ch-sw",
+    "path": "ohwr/fmc-projects/fmc-adc125m14b1ch-dac600m14b1ch/fmc-adc125m14b1ch-dac600m14b1ch-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829218,
+    "name": "fmc-adc-100m14b4cha-gw",
+    "path": "ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829195,
+    "name": "fmc-adc-100m14b4cha-hw",
+    "path": "ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-hw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829156,
+    "name": "fmc-adc-100m14b4cha-sw",
+    "path": "ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829130,
+    "name": "fmc-adc-100m14b4cha-tst",
+    "path": "ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-tst",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829102,
+    "name": "afc",
+    "path": "ohwr/fmc-projects/afc",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829076,
+    "name": "afck",
+    "path": "ohwr/fmc-projects/afck",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68829030,
+    "name": "atfc",
+    "path": "ohwr/fmc-projects/atfc",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828957,
+    "name": "fasec",
+    "path": "ohwr/fmc-projects/fasec",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828879,
+    "name": "fmc-72chopt480-8chopt1600",
+    "path": "ohwr/fmc-projects/fmc-72chopt480-8chopt1600",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828820,
+    "name": "fmc-adc100m14b16cha-dac2m14b4cha",
+    "path": "ohwr/fmc-projects/fmc-adc100m14b16cha-dac2m14b4cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828746,
+    "name": "fmc-adc125m14b12ch-dac1250m16b2ch",
+    "path": "ohwr/fmc-projects/fmc-adc125m14b12ch-dac1250m16b2ch",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828675,
+    "name": "fmc-adc-1g8b2cha",
+    "path": "ohwr/fmc-projects/fmc-adc-1g8b2cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828624,
+    "name": "fmc-adc-250m12b2cha",
+    "path": "ohwr/fmc-projects/fmc-adc-250m12b2cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828590,
+    "name": "fmc-adc-2k24b8cha",
+    "path": "ohwr/fmc-projects/fmc-adc-2k24b8cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828549,
+    "name": "fmc-adc-subsamp125m14b4cha",
+    "path": "ohwr/fmc-projects/fmc-adc-subsamp125m14b4cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828517,
+    "name": "fmc-bus",
+    "path": "ohwr/fmc-projects/fmc-bus",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828487,
+    "name": "fmc-dac100m14b16cha-adc2m14b4cha",
+    "path": "ohwr/fmc-projects/fmc-dac100m14b16cha-adc2m14b4cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828458,
+    "name": "fmc-del-1ns-2cha",
+    "path": "ohwr/fmc-projects/fmc-del-1ns-2cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828425,
+    "name": "fmc-dio-10i-8o",
+    "path": "ohwr/fmc-projects/fmc-dio-10i-8o",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828398,
+    "name": "fmc-dio-16ch-lvds-a",
+    "path": "ohwr/fmc-projects/fmc-dio-16ch-lvds-a",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828357,
+    "name": "fmc-dio-32chlvdsa",
+    "path": "ohwr/fmc-projects/fmc-dio-32chlvdsa",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828331,
+    "name": "fmc-fe-l-band-2ch",
+    "path": "ohwr/fmc-projects/fmc-fe-l-band-2ch",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828319,
+    "name": "fmc-pof-10m-r3ch-t1ch",
+    "path": "ohwr/fmc-projects/fmc-pof-10m-r3ch-t1ch",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828292,
+    "name": "fmc-pof-10m-r4ch",
+    "path": "ohwr/fmc-projects/fmc-pof-10m-r4ch",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828260,
+    "name": "fmc-sfp-4cha",
+    "path": "ohwr/fmc-projects/fmc-sfp-4cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828230,
+    "name": "fmc-worldfip",
+    "path": "ohwr/fmc-projects/fmc-worldfip",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828209,
+    "name": "gefe",
+    "path": "ohwr/fmc-projects/gefe",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828184,
+    "name": "hicce-fmc-128",
+    "path": "ohwr/fmc-projects/hicce-fmc-128",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828166,
+    "name": "lpcfmc12pexp",
+    "path": "ohwr/fmc-projects/lpcfmc12pexp",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828123,
+    "name": "spec-ticks",
+    "path": "ohwr/fmc-projects/spec-ticks",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828079,
+    "name": "spexi",
+    "path": "ohwr/fmc-projects/spexi",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828072,
+    "name": "vfc-hd",
+    "path": "ohwr/fmc-projects/vfc-hd",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828057,
+    "name": "euro-adc-65m-14b-40cha-gw",
+    "path": "ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68828044,
+    "name": "euro-adc-65m-14b-40cha-hw",
+    "path": "ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-hw",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827899,
+    "name": "euro-adc-65m-14b-40cha-sw",
+    "path": "ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827893,
+    "name": "euro-adc-65m-14b-40cha-tst",
+    "path": "ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-tst",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827880,
+    "name": "wandadapter",
+    "path": "ohwr/edm/wandadapter",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827870,
+    "name": "diot-dio-16ch-opt-24v",
+    "path": "ohwr/diot/diot-dio-16ch-opt-24v",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827854,
+    "name": "diot-wic-gw",
+    "path": "ohwr/diot/diot-wic-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827848,
+    "name": "dces-dtrhf-ser1ch-v1",
+    "path": "ohwr/dces/dces-dtrhf-ser1ch-v1",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827835,
+    "name": "nanofip-gateware",
+    "path": "ohwr/cern-fip/nanofip/nanofip-gateware",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827825,
+    "name": "masterfip-gw",
+    "path": "ohwr/cern-fip/masterfip/masterfip-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827786,
+    "name": "masterfip-sw",
+    "path": "ohwr/cern-fip/masterfip/masterfip-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827778,
+    "name": "masterfip-tst",
+    "path": "ohwr/cern-fip/masterfip/masterfip-tst",
+    "classification": "hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827763,
+    "name": "cape-pwr-12b-6cha",
+    "path": "ohwr/cape/cape-pwr-12b-6cha",
+    "classification": "empty_respository",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827750,
+    "name": "bpm-gw",
+    "path": "ohwr/bpm/bpm-gw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827729,
+    "name": "bpm-rffe",
+    "path": "ohwr/bpm/bpm-rffe",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827716,
+    "name": "bpm-sw",
+    "path": "ohwr/bpm/bpm-sw",
+    "classification": "not_hardware",
+    "hw_score": 0
+  },
+  {
+    "project_id": 68827686,
+    "name": "CERN BE-CO-HT CI",
+    "path": "ohwr/be-co-ht/cern-be-co-ht-ci",
+    "classification": "not_hardware",
+    "hw_score": 0
+  }
+]

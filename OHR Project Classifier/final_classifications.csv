@@ -1,0 +1,568 @@
+project_id,name,path,classification,hw_score
+68878307,Hdlmake,ohwr/Lacsapix/hdl-make,hardware,0
+68878115,adc-lib,ohwr/mmalczak/adc-lib,not_hardware,0
+68878085,urv-core,ohwr/cgentsos/urv-core,hardware,0
+68878056,AIDA-2020 TLU - Gateware,ohwr/yiliu/fmc-mtlu-gw,not_hardware,0
+68878021,ZIO,ohwr/dlampridis/zio,not_hardware,0
+68877941,FMC Software Support,ohwr/dlampridis/fmc-sw,not_hardware,0
+68877917,nomemires,ohwr/dcobas/nomemires,not hardware,0
+68877906,VME64x core - msaccani,ohwr/msaccani/vme64x-core-msaccani,hardware,0
+68877878,White Rabbit core collection,ohwr/kblantos/wr-cores,hardware,0
+68877849,White Rabbit Switch - Gateware,ohwr/kblantos/wr-switch-hdl,not_hardware,0
+68877839,Platform-independent core collection,ohwr/kblantos/general-cores,not_hardware,0
+68877838,Hdlmake,ohwr/bkoropoff/hdl-make,hardware,0
+68877836,Production Test Suite - base,ohwr/pvantrap/pts-base,not_hardware,0
+68877603,DIOT Igloo2-based radiation-tolerant System Board,ohwr/Qbort/diot-sb-igl,hardware,0
+68877580,Radiation Tolerant LED Beacon,ohwr/jdevine/rad-tol-led-beacon,not_hardware,0
+68877533,AIDAInnova_TLU,ohwr/cussans/aidainnova_tlu,ambiguous,15
+68877526,AIDAInnova_TLU-gw,ohwr/cussans/aidainnova_tlu-gw,not_hardware,0
+68877451,AIDAInnova_TLU-hw,ohwr/cussans/aidainnova_tlu-hw,hardware,0
+68877308,White Rabbit Switch - Testing,ohwr/orsonmmz/wr-switch-testing,hardware,0
+68877097,hdlmaker,ohwr/garcialasheras/hdlmaker,not_hardware,0
+68865749,afc-ipmi-sw,ohwr/xtca-projects/afc-ipmi-sw,not_hardware,0
+68865714,amc-carrier-2-sl,ohwr/xtca-projects/amc-carrier-2-sl,hardware,0
+68865703,amc-cpu-com6,ohwr/xtca-projects/amc-cpu-com6,hardware,0
+68865685,amc-ubackplane-sfp,ohwr/xtca-projects/amc-ubackplane-sfp,hardware,0
+68865642,ertm15-llrf-wr,ohwr/xtca-projects/ertm15-llrf-wr,hardware,0
+68865595,mtca-4-timing-module,ohwr/xtca-projects/mtca-4-timing-module,empty_respository,0
+68865572,utca-rtm-8-sfp,ohwr/xtca-projects/utca-rtm-8-sfp,hardware,0
+68865568,wrs-fl-hw,ohwr/white-rabbit/wr-switch-hw/wrs-fl-hw,hardware,0
+68865546,wrs-ljdprep-hw,ohwr/white-rabbit/wr-switch-hw/wrs-ljdprep-hw,empty_respository,0
+68865541,wrs-low-jitter,ohwr/white-rabbit/wr-switch-hw/wrs-low-jitter,empty_respository,0
+68865531,ptp-noposix,ohwr/white-rabbit/ppsi/ptp-noposix,hardware,0
+68865522,wr-switch-hdl,ohwr/white-rabbit/wr-switch-hdl,hardware,0
+68865488,crio-wr,ohwr/white-rabbit/crio-wr,hardware,0
+68865452,cute-wr-dp,ohwr/white-rabbit/cute-wr-dp,hardware,0
+68865422,cute-wr,ohwr/white-rabbit/cute-wr,hardware,0
+68865378,gsi-timing-starter-kit,ohwr/white-rabbit/gsi-timing-starter-kit,not_hardware,0
+68865303,list,ohwr/white-rabbit/list,hardware,0
+68865291,maroc_csa,ohwr/white-rabbit/maroc_csa,hardware,0
+68865200,tr-amc,ohwr/white-rabbit/tr-amc,not_hardware,0
+68865172,tr-pmc,ohwr/white-rabbit/tr-pmc,hardware,0
+68865109,wr-calibration,ohwr/white-rabbit/wr-calibration,hardware,0
+68865091,wr-d3s,ohwr/white-rabbit/wr-d3s,hardware,0
+68865054,wr-drf,ohwr/white-rabbit/wr-drf,empty_respository,0
+68865024,wr-hsr,ohwr/white-rabbit/wr-hsr,not_hardware,0
+68864983,wr-nic,ohwr/white-rabbit/wr-nic,hardware,0
+68864938,wrn-robustness,ohwr/white-rabbit/wrn-robustness,hardware,0
+68864896,wr-starting-kit,ohwr/white-rabbit/wr-starting-kit,not_hardware,0
+68864893,wr-std,ohwr/white-rabbit/wr-std,not_hardware,0
+68864807,wr-switch-hw-v4,ohwr/white-rabbit/wr-switch-hw-v4,empty_respository,0
+68864796,wr-switch-sw,ohwr/white-rabbit/wr-switch-sw,not_hardware,0
+68864764,wr-switch-testing,ohwr/white-rabbit/wr-switch-testing,hardware,0
+68864745,wrxi,ohwr/white-rabbit/wrxi,empty_respository,0
+68864728,usb-adc2k12b4ch-dac2k10b2ch-dio8ch,ohwr/usb-projects/usb-adc2k12b4ch-dac2k10b2ch-dio8ch,empty_respository,0
+68864707,usb-relay-box1,ohwr/usb-projects/usb-relay-box1,hardware,0
+68864694,libsfp,ohwr/sfp/sfp-plus-i2c/libsfp,empty_respository,0
+68864672,radtol-led-luminaire,ohwr/rad-tol-projects/radtol-led-luminaire,empty_respository,0
+68864662,radtol-led-psu,ohwr/rad-tol-projects/radtol-led-psu,empty_respository,0
+68864650,fpb,ohwr/rack-19/r19-tdc-del-a/fpb,empty_respository,0
+68864639,pandabox-gw,ohwr/rack-19/pandabox/pandabox-gw,not_hardware,0
+68864604,pandabox-hw,ohwr/rack-19/pandabox/pandabox-hw,empty_respository,0
+68864585,pandabox-sw,ohwr/rack-19/pandabox/pandabox-sw,not_hardware,0
+68864578,pandabox-tst,ohwr/rack-19/pandabox/pandabox-tst,empty_respository,0
+68864572,eez-psu,ohwr/rack-19/eez-psu,empty_respository,0
+68864541,pda-8ch-fda-8ch,ohwr/rack-19/pda-8ch-fda-8ch,hardware,0
+68864520,rf-mux-8ch,ohwr/rack-19/rf-mux-8ch,hardware,0
+68864515,TimIQ Hardware,ohwr/project/timiq/timiq-hw,hardware,0
+68864498,TimIQ Software,ohwr/project/timiq/timiq-sw,not_hardware,0
+68864486,ARRAY,ohwr/project/array/array,not_hardware,0
+68864457,ARRAY - Hardware,ohwr/project/array/array-hardware,hardware,0
+68864415,ARRAY - Python Interface,ohwr/project/array/array-interface-python,not_hardware,0
+68864397,ARRAY - LabVIEW Interface ,ohwr/project/array/array-interface-labview,not_hardware,0
+68864376,ARRAY - Firmware,ohwr/project/array/array-firmware,not_hardware,0
+68864364,White Rabbit Trigger Distribution,ohwr/project/wrtd,not_hardware,0
+68864322,PCI FMC carrier with SOC ,ohwr/project/pcie-fmc-soc-vdas,hardware,21
+68864312,White Rabbit,ohwr/project/white-rabbit,not_hardware,0
+68863501,CernFIP,ohwr/project/cern-fip,not hardware,9
+68863431,FMC PCIe Carrier PFC,ohwr/project/fmc-pci-carrier,hardware,97
+68863411,VME FMC Carrier VFC,ohwr/project/fmc-vme-carrier,hardware,0
+68863333,FMC Projects,ohwr/project/fmc-projects,not_hardware,0
+68863284,FMC ADC 100M 14b 4cha,ohwr/project/fmc-adc-100m14b4cha,hardware,0
+68863218,FMC DAC 10M 16b 4cha,ohwr/project/fmc-dac-1,not_hardware,0
+68863184,HDL Core Lib,ohwr/project/hdl-core-lib,not_hardware,0
+68863146,OHR Support,ohwr/project/ohr-support,not_hardware,0
+68863118,FMC DIO 16ch TTL a,ohwr/project/fmc-dio-16chttla,hardware,34
+68863072,Wishbone slave generator,ohwr/project/wishbone-gen,not_hardware,0
+68863036,VME64x core,ohwr/project/vme64x-core,hardware,0
+68862996,FMC ADC 200k 16b 11cha,ohwr/project/fmc-adc-100k16b8cha,hardware,84
+68862981,nanoFIP Test Board,ohwr/project/nanofip-test-board,hardware,0
+68862874,Gennum GN4124 core,ohwr/project/gn4124-core,hardware,0
+68862829,FMC DEL 1ns 4cha,ohwr/project/fmc-delay-1ns-8cha,hardware,0
+68862781,ARMadillo,ohwr/project/armadillo,hardware,0
+68862748,OHR Meta Project,ohwr/project/ohr-meta,not_hardware,0
+68862616,Simple PCIe FMC carrier SPEC,ohwr/project/spec,hardware,0
+68862557,Level conversion circuits,ohwr/project/level-conversion,hardware,29
+68862520,Conv TTL NIM 3in 30out,ohwr/project/conv-ttl-nim-3i-30o,hardware,0
+68862484,FIP Converter,ohwr/project/fip-converter,not hardware,5
+68862452,EtherBone Core,ohwr/project/etherbone-core,not_hardware,0
+68862406,DDR3 controller for Spartan6,ohwr/project/ddr3-sp6-core,hardware,0
+68862340,Miscellaneous Projects - non-HW,ohwr/project/misc,empty_respository,0
+68862307,ADC  Testing,ohwr/project/adc-testing,not_hardware,0
+68862269,VXS DSP FMC carrier,ohwr/project/vxs-dsp-fmc-carrier,hardware,68
+68862255,RHINO,ohwr/project/rhino-hardware-01,hardware,73
+68862233,White Rabbit Switch - Software,ohwr/project/wr-switch-sw,not_hardware,0
+68862036,FMC PCIe Carrier PFC - Software,ohwr/project/pfc-sw,not_hardware,0
+68861997,Optical link interface AMC,ohwr/project/glib,hardware,33
+68861959,Wishbone Serializer Core,ohwr/project/wb-serializer-core,not hardware,4
+68861936,Low-level RF Servo control,ohwr/project/lrfsc,ambiguous,15
+68861897,FMC TDC 1ns 5cha,ohwr/project/fmc-tdc,hardware,0
+68861865,FMC Carrier tester,ohwr/project/fmc-conn-tester,hardware,0
+68861818,OpenPicus,ohwr/project/openpicus,not hardware,2
+68861795,Hdlmake,ohwr/project/hdl-make,hardware,0
+68861757,FMC DAC 250M 16b 4cha,ohwr/project/fmc-dac-250m16b4cha,hardware,206
+68861740,SPI Boards Package,ohwr/project/spi-board-package,hardware,22
+68861729,AIDA-2020 TLU,ohwr/project/fmc-mtlu,not_hardware,0
+68861561,PHASE,ohwr/project/phase,not_hardware,0
+68861480,IPBus,ohwr/project/ipbus,not hardware,2
+68861391,Platform-independent core collection,ohwr/project/general-cores,not_hardware,0
+68861353,White Rabbit core collection,ohwr/project/wr-cores,hardware,0
+68861273,White Rabbit Switch - Gateware,ohwr/project/wr-switch-hdl,not_hardware,0
+68861149,FPGA Configuration Space,ohwr/project/fpga-config-space,not_hardware,0
+68861089,FMC DIO 5ch TTL a,ohwr/project/fmc-dio-5chttla,hardware,0
+68861053,CERN Open Hardware Licence,ohwr/project/cernohl,not_hardware,0
+68861044,TDC core,ohwr/project/tdc-core,hardware,0
+68861039,Conv TTL Blocking,ohwr/project/conv-ttl-blo,not_hardware,0
+68860935,GTS Guesses Timing Somehow,ohwr/project/gts,empty_respository,0
+68860921,Production Test Suite,ohwr/project/pts,hardware,0
+68858212,Simple VME FMC Carrier SVEC,ohwr/project/svec,hardware,0
+68858182,FMC ADC 125M 14b 1ch DAC 600M 14b 1ch,ohwr/project/fmc-adc125m14b1ch-dac600m14b1ch,hardware,59
+68858148,Simple PCIe FMC carrier SPEC - Software,ohwr/project/spec-sw,not_hardware,0
+68858119,Optical Clock and Data Recovery FMC,ohwr/project/optical-cdr-fmc,hardware,21
+68858103,FMC ADC 1G 8b 2cha,ohwr/project/fmc-adc-1g8b2cha,hardware,0
+68858051,CERN LNGS Time Transfer,ohwr/project/cngs-time-transfer,not hardware,2
+68857992,ZIO,ohwr/project/zio,not_hardware,0
+68857928,FMC LPC 100 Mil 12 Pin Digital IO Expansion Board,ohwr/project/lpcfmc12pexp,ambiguous,18
+68857881,HiCCE-FMC-128,ohwr/project/hicce-fmc-128,hardware,0
+68857839,QDR II controller for Virtex 6,ohwr/project/qdr2-v6-core,hardware,45
+68857804,Conv TTL RS485,ohwr/project/conv-ttl-rs485,not_hardware,0
+68857737,ROBIN-NP - Hardware,ohwr/project/atlas-robin-np-hw,empty_respository,0
+68857705,ROBIN-NP - Gateware,ohwr/project/atlas-robin-np-fw,not_hardware,0
+68857640,ROBIN-NP - Software,ohwr/project/atlas-robin-np-sw,not_hardware,0
+68857618,White Rabbit Network Robustness,ohwr/project/wrn-robustness,not_hardware,0
+68857609,Simple PXIe FMC Carrier SPEXI,ohwr/project/spexi,not_hardware,0
+68857506,FMC ADC 250M 12b 2cha,ohwr/project/fmc-adc-250m12b2cha,hardware,87
+68857475,FMC 8 channel temperature monitor,ohwr/project/fmc-8cha-temp,ambiguous,16
+68857423,FMC PowerPC carrier SPEC-based,ohwr/project/powec,hardware,34
+68857396,Handheld measurement terminal,ohwr/project/hmt-3cha,hardware,47
+68857377,White Rabbit Switch - Testing,ohwr/project/wr-switch-testing,hardware,0
+68857314,White Rabbit Network Interface Card,ohwr/project/wr-nic,hardware,0
+68857292,Compact Universal Timing Endpoint based on White Rabbit,ohwr/project/cute-wr,not_hardware,0
+68857285,Software for White Rabbit PTP Core,ohwr/project/wrpc-sw,not_hardware,0
+68857216,PPSi,ohwr/project/ppsi,hardware,0
+68857183,Distributed RF over White Rabbit,ohwr/project/wr-drf,ambiguous,13
+68857159,nanoFIPDiag,ohwr/project/nanofipdiag,not hardware,7
+68857147,White Rabbit Standardization,ohwr/project/wr-std,not_hardware,0
+68856992,Electronics Design,ohwr/project/ed,hardware,34
+68856942,Beam Position Monitor,ohwr/project/bpm,not_hardware,0
+68856914,Beam Positoning Monitor - RF Front-End,ohwr/project/bpm-rffe,not_hardware,0
+68856871,White Rabbit Switch - Hardware,ohwr/project/wr-switch-hw,hardware,0
+68856820,Neo51,ohwr/project/neo51,empty_respository,0
+68856779,FMC ADC 2M 18b 2ch DAC 500k 20b 1ch,ohwr/project/fmc-adc2m18b2ch-dac500k20b1ch,hardware,31
+68856728,FMC ADC 10M 16b 2ch DAC 50M 16b 2ch,ohwr/project/fmc-adc10m16b2ch-dac50m16b1ch,ambiguous,13
+68856694,AsyncArt,ohwr/project/asyncart,hardware,0
+68856623,FMC DEL 1ns 4cha - Software,ohwr/project/fine-delay-sw,not_hardware,0
+68856587,TimEX3,ohwr/project/timex3,hardware,0
+68856527,FMC ADC 100M 14b 4cha - Software,ohwr/project/fmc-adc-100m14b4cha-sw,not_hardware,0
+68856471,PTP noposix stack,ohwr/project/ptp-noposix,not_hardware,0
+68856454,FMC ADC 130M 16b 4cha,ohwr/project/fmc-adc-130m-16b-4cha,not_hardware,0
+68856415,FMC ADC 250M 16b 4cha,ohwr/project/fmc-adc-250m-16b-4cha,hardware,0
+68856403,GSI Timing Starter Kit,ohwr/project/gsi-timing-starter-kit,not_hardware,0
+68856363,FMC TDC 1ns 5cha - Software,ohwr/project/fmc-tdc-sw,not_hardware,0
+68856336,Beam Positoning Monitor - Software,ohwr/project/bpm-sw,not_hardware,0
+68856308,FMC Bus,ohwr/project/fmc-bus,not_hardware,0
+68856296,White Rabbit Starting Kit,ohwr/project/wr-starting-kit,not_hardware,0
+68856282,Simple VME FMC Carrier SVEC - Software,ohwr/project/svec-sw,not_hardware,0
+68856250,SPICONTROLLER,ohwr/project/spicontroller,hardware,26
+68856231,SPIETBOX,ohwr/project/spietbox,not hardware,5
+68856200,CERN BE-CO-HT contribution to KiCad,ohwr/project/cern-kicad,hardware,506
+68856162,Libre Filter Design and Analysis Tool,ohwr/project/libre-fdatool,not_hardware,0
+68856148,PMTLib,ohwr/project/pmtlib,hardware,0
+68856142,AMC FMC Carrier AFC,ohwr/project/afc,hardware,0
+68855994,FMC DAC 600M 12b 1cha DDS,ohwr/project/fmc-dac-600m-12b-1cha-dds,hardware,0
+68855953,FMC DIO 32ch TTL a,ohwr/project/fmc-dio-32chttla,hardware,0
+68855934,FMC DAC 130M 12b 4ch 4SFP,ohwr/project/fmc-dac-130m-12b-4ch-4sfp,ambiguous,17
+68855882,Stand-alone 18-slot FMC carrier,ohwr/project/sac-18-fmc,hardware,28
+68855859,VME ADC 250k 16b 36cha,ohwr/project/vme-adc-250k-16b-36cha,not_hardware,0
+68855822,FMC ADC 125M 14b 1ch DAC 600M 14b 1ch - Software,ohwr/project/fmc-adc125m14b1ch-dac600m14b1ch-sw,not_hardware,0
+68855792,FMC ADC 130M 16B 4CH - Software,ohwr/project/fmc-adc-130m-16b-4cha-sw,not_hardware,0
+68855772,FMC DIO 32CH TTL A - Software,ohwr/project/fmc-dio-32chttla-sw,not_hardware,0
+68855754,FMC ADC 250M 16B 4CH - Software,ohwr/project/fmc-adc-250m-16b-4cha-sw,not_hardware,0
+68855721,CERN ELMB,ohwr/project/cern-elmb,hardware,23
+68855700,USB Relay Box 1,ohwr/project/usb-relay-box1,hardware,0
+68855666,Distributed Direct Digital Synthesis over White Rabbit D3S,ohwr/project/wr-d3s,not_hardware,0
+68855645,AMC CPU COM6,ohwr/project/amc-cpu-com6,hardware,0
+68855627,FMC HV SUP,ohwr/project/fmc-hv-sup,not_hardware,0
+68855612,VIDEO Processing Platform MIXXEO,ohwr/project/video-fpga-hdmi-dvi-ethernet,hardware,0
+68855592,Programmable RF Attenuator in VME,ohwr/project/vme-rf-att-4cha,not hardware,10
+68855572,CROME,ohwr/project/crome,ambiguous,15
+68855540,CROME FMC Carrier,ohwr/project/crome-fmc-carrier,not hardware,10
+68855522,Conv TTL Blocking - Gateware,ohwr/project/conv-ttl-blo-gw,not_hardware,0
+68855492,uTCA RTM 8 SFP,ohwr/project/utca-rtm-8-sfp,hardware,0
+68855463,E-bone SoC interconnection and cores,ohwr/project/e-bone,not hardware,2
+68855441,legacy-vme64x-core,ohwr/project/legacy-vme64x-core,not_hardware,0
+68855405,SPEC box 1 Node,ohwr/project/spec-box-1n,not hardware,2
+68855382,SPEC Box 3 Nodes Rack 19,ohwr/project/spec-box-3n,not hardware,3
+68855354,AMC uBackplane SFP,ohwr/project/amc-ubackplane-sfp,hardware,0
+68855340,Image processing core library,ohwr/project/img-proc-core-lib,not_hardware,0
+68855319,Stereo disparity cores,ohwr/project/stereo-disparity-cores,not hardware,7
+68855281,Optical flow cores,ohwr/project/optical-flow-cores,not hardware,10
+68855244,Local descriptor cores,ohwr/project/local-descriptor-cores,not hardware,7
+68855216,FMC DTX 4CHA,ohwr/project/fmc-dtx-4cha,hardware,37
+68855199,FMC DTRX 4CHA,ohwr/project/fmc-dtrx-4cha,hardware,35
+68855178,Getting Started with the SPEC,ohwr/project/spec-getting-started,hardware,0
+68855140,xTCA Projects,ohwr/project/xtca-projects,empty_respository,0
+68855103,Attention,ohwr/project/attention,not hardware,8
+68855075,Compact Universal Timing Endpoint Based on White Rabbit with Dual Ports Cute-WR-DP,ohwr/project/cute-wr-dp,hardware,0
+68855042,AMC FMC Carrier Kintex AFCK,ohwr/project/afck,hardware,0
+68855013,Production Test Suite - base,ohwr/project/pts-base,not_hardware,0
+68854987,FMC ADC 100M 14b 4cha - Hardware,ohwr/project/fmc-adc-100m14b4cha-hw,not_hardware,0
+68854966,FMC ADC 100M 14b 4cha - Gateware,ohwr/project/fmc-adc-100m14b4cha-gw,not_hardware,0
+68854920,FMC ADC 100M 14b 4cha - Testing,ohwr/project/fmc-adc-100m14b4cha-tst,not_hardware,0
+68854888,evo,ohwr/project/evo,hardware,0
+68854877,fwatch,ohwr/project/f-watch,hardware,0
+68854781,FMC DEL 1ns 4cha - stand-alone application,ohwr/project/fmc-delay-1ns-8cha-sa,hardware,0
+68854768,Applications of Open Hardware,ohwr/project/oh-applications,empty_respository,0
+68854740,FMC POF 10M R4ch ,ohwr/project/fmc-pof-10m-r4ch,hardware,26
+68854710,FMC POF 10M R3ch T1ch,ohwr/project/fmc-pof-10m-r3ch-t1ch,hardware,26
+68854670,Beam Positoning Monitor - Gateware,ohwr/project/bpm-gw,not_hardware,0
+68854620,USB Projects,ohwr/project/usb-projects,not hardware,0
+68854594,FMC ADC 125M 14b 12ch - DAC 1250M 16b 2ch,ohwr/project/fmc-adc125m14b12ch-dac1250m16b2ch,hardware,20
+68854576,FMC TDC 1ns 5cha - Hardware,ohwr/project/fmc-tdc-1ns-5cha-hw,hardware,0
+68854551,FMC TDC 1ns 5cha - Gateware,ohwr/project/fmc-tdc-1ns-5cha-gw,not_hardware,0
+68854527,FMC TDC 1ns 5cha - Testing,ohwr/project/fmc-tdc-1ns-5cha-tst,not_hardware,0
+68854503,MasterFIP,ohwr/project/masterfip,hardware,43
+68854475,MasterFIP - Gateware,ohwr/project/masterfip-gw,not_hardware,0
+68854444,MasterFIP - Software,ohwr/project/masterfip-sw,not_hardware,0
+68854411,MasterFIP - Testing,ohwr/project/masterfip-tst,hardware,0
+68854391,Converter Common Gateware,ohwr/project/conv-common-gw,not_hardware,0
+68854353,FMC Dual channel L band front-end,ohwr/project/fmc-fe-l-band-2ch,ambiguous,17
+68854321,Conv TTL Blocking - Hardware,ohwr/project/conv-ttl-blo-hw,hardware,0
+68854300,Conv TTL Blocking - Testing,ohwr/project/conv-ttl-blo-tst,hardware,0
+68854271,Conv TTL RS485 - Gateware,ohwr/project/conv-ttl-rs485-gw,not_hardware,0
+68854232,Conv TTL RS485 - Hardware,ohwr/project/conv-ttl-rs485-hw,not_hardware,0
+68854220,Conv TTL RS485 - Testing,ohwr/project/conv-ttl-rs485-tst,hardware,0
+68854172,FMC ADC 2k 24b 8cha,ohwr/project/fmc-adc-2k24b8cha,not_hardware,0
+68854152,CompactRIO White Rabbit CRIO-WR,ohwr/project/crio-wr,not_hardware,0
+68854122,3.3V adapter for SVEC,ohwr/project/svec-3v3,not_hardware,0
+68854097,FMC ADC 100M 14b 16cha DAC 2M 14B 4 cha ,ohwr/project/fmc-adc100m14b16cha-dac2m14b4cha,not_hardware,0
+68854059,FMC DAC 100M 14b 16cha ADC 2M 14B 4 cha,ohwr/project/fmc-dac100m14b16cha-adc2m14b4cha,not_hardware,0
+68854031,USB ADC 2k 12b 4ch DAC 2k 10b 2ch dio 8ch,ohwr/project/usb-adc2k12b4ch-dac2k10b2ch-dio8ch,hardware,42
+68854003,Machines and tools,ohwr/project/machines-tools,empty_respository,0
+68853966,Furnarius Rufus PCB Milling Machine,ohwr/project/fr_pcb_mm,not_hardware,0
+68853941,EDM Boards,ohwr/project/edm,empty_respository,0
+68853895,WandAdapter,ohwr/project/wandadapter,hardware,22
+68853857,EPICS support for Wishbone peripherals,ohwr/project/epics-wb,not_hardware,0
+68853821,FMC DIO 16ch lvds a,ohwr/project/fmc-dio-16ch-lvds-a,not_hardware,0
+68853775,meta-spec,ohwr/project/meta-spec,not_hardware,0
+68853748,PCI core,ohwr/project/pci-core,not_hardware,0
+68853728,tr-pmc,ohwr/project/tr-pmc,hardware,0
+68853680,FMC MasterFIP,ohwr/project/fmc-masterfip,hardware,155
+68853664,VME FMC Carrier - VFC-HD,ohwr/project/vfc-hd,not_hardware,0
+68853614,GBT-based Expandable Front-End GEFE,ohwr/project/gefe,hardware,69
+68853580,Scalable  MAROC Charge Sensitive Readout,ohwr/project/maroc_csa,hardware,0
+68853552,nanoFIP,ohwr/project/nanofip,hardware,24
+68853525,nanoFIP - Gateware,ohwr/project/nanofip-gateware,not_hardware,0
+68853504,FMC optical TX 72ls 8hs,ohwr/project/fmc-72chopt480-8chopt1600,not_hardware,0
+68853485,Rad-tol projects,ohwr/project/rad-tol-projects,empty_respository,0
+68853465,Radiation Tolerant LED PSU,ohwr/project/radtol-led-psu,hardware,32
+68853423,Cosmic Pi,ohwr/project/cosmic-pi,hardware,55
+68853384,White Rabbit High-availability Seamless Redundancy WR-HSR,ohwr/project/wr-hsr,not_hardware,0
+68853339,Particle Detectors,ohwr/project/p-det,empty_respository,0
+68853308,MRPC 25x18 24strip,ohwr/project/mrpc-25x18-24strip,hardware,0
+68853221,SDB - Self-describing Bus,ohwr/project/sdb,not_hardware,0
+68853191,adc-lib,ohwr/project/adc-lib,not_hardware,0
+68853076,embedded-linux,ohwr/project/embedded-linux,ambiguous,16
+68853049,Mock Turtle,ohwr/project/mock-turtle,hardware,0
+68852989,urv-core,ohwr/project/urv-core,hardware,0
+68852950,FMC ADC 400k 18b 4cha iso,ohwr/project/fmc-adc-400k18b4cha-iso,hardware,25
+68852932,FMC ADC 400k 18b 4cha iso - Gateware,ohwr/project/fmc-adc-400k18b4cha-iso-gw,not_hardware,0
+68852891,FMC ADC 400k 18b 4cha iso - Hardware,ohwr/project/fmc-adc-400k18b4cha-iso-hw,hardware,42
+68852824,FMC ADC 400k 18b 4cha iso - Software,ohwr/project/fmc-adc-400k18b4cha-iso-sw,not_hardware,0
+68852797,FMC DIO 10I 8O,ohwr/project/fmc-dio-10i-8o,hardware,223
+68852744,Humanitarian projects,ohwr/project/humanitarian,empty_respository,0
+68852691,UV-watch,ohwr/project/uv-watch,hardware,27
+68852668,UV-mask,ohwr/project/uv-mask,hardware,53
+68852629,fmc dac 600m 12b 1cha dds - Testing,ohwr/project/fmc-dac-600m-12b-1cha-tst,hardware,0
+68852572,Absolute Encoder VHDL core,ohwr/project/absenc,not_hardware,0
+68852530,VME RTM,ohwr/project/vme-rtm,not hardware,2
+68852498,VMR-DIO-24ch-DCI,ohwr/project/vmr-dio-24ch-dci,ambiguous,11
+68852445,MasterFIP - Hardware,ohwr/project/masterfip-hw,not hardware,5
+68852392,Data centre environmental sensors,ohwr/project/dces,empty_respository,0
+68852377,DCES-DTRHF-SER1CH-v1 ,ohwr/project/dces-dtrhf-ser1ch-v1,not_hardware,0
+68852326,FMC SFP 4cha,ohwr/project/fmc-sfp-4cha,hardware,0
+68852301,FPGA and ARM SoC FMC Carrier FASEC,ohwr/project/fasec,not_hardware,0
+68852256,FMC DEL 1ns 2cha,ohwr/project/fmc-del-1ns-2cha,hardware,0
+68852231,WRXI - White Rabbit eXtensions for Instrumentation,ohwr/project/wrxi,not hardware,5
+68852206,Dual AMC Carrier,ohwr/project/amc-carrier-2-sl,hardware,0
+68852161,Rackable 19 projects,ohwr/project/rack-19,empty_respository,0
+68852132,Multi-channel Time Interval Counter and fine delay generator,ohwr/project/r19-tdc-del-a,hardware,0
+68852106,openMMC,ohwr/project/afc-ipmi-sw,hardware,0
+68852070,soft-cpu toolchains,ohwr/project/soft-cpu-toolchains,not_hardware,0
+68852013,spec-stress-test,ohwr/project/spec-stress-test,hardware,0
+68851991,White Rabbit Calibration,ohwr/project/wr-calibration,hardware,0
+68851956,SFP,ohwr/project/sfp,empty_respository,0
+68851940,sfp-plus-i2c,ohwr/project/sfp-plus-i2c,hardware,0
+68851907,White Rabbit low jitter,ohwr/project/wr-low-jitter,not hardware,5
+68851852,FMC DIO 32ch lvds a,ohwr/project/fmc-dio-32chlvdsa,hardware,0
+68851822,WRAP,ohwr/project/wrap,not hardware,10
+68851805,tr-amc,ohwr/project/tr-amc,hardware,0
+68851795,PandABox,ohwr/project/pandabox,hardware,59
+68851714,PandABox-hw,ohwr/project/pandabox-hw,hardware,0
+68851665,PandABox-sw,ohwr/project/pandabox-sw,not_hardware,0
+68851615,PandABox-gw,ohwr/project/pandabox-gw,not_hardware,0
+68851565,PandABox-tst,ohwr/project/pandabox-tst,not_hardware,0
+68851537,eez-psu,ohwr/project/eez-psu,ambiguous,13
+68851487,Filter-prototype-board,ohwr/project/fpb,hardware,26
+68851442,FMC ADC subsamp 125M 14b 4cha,ohwr/project/fmc-adc-subsamp125m14b4cha,not_hardware,0
+68851398,GWSW Development Framework,ohwr/project/gw-sw-dev-framework,not hardware,0
+68851374,WRS Low Jitter Daughterboard,ohwr/project/wrs-low-jitter,hardware,95
+68851323,libsfp,ohwr/project/libsfp,not_hardware,0
+68851273,Conv-diff-se-cable-driver,ohwr/project/conv-diff-se-cable-driver,hardware,0
+68851251,Artix Trivial FMC Carrier  ATFC ,ohwr/project/atfc,hardware,0
+68851219,FMC VHDCI,ohwr/project/fmc-vhdci,ambiguous,14
+68851177,fmc-nanofip,ohwr/project/fmc-nanofip,hardware,0
+68851151,PC104,ohwr/project/pc104,empty_respository,0
+68851127,EMC2-DP,ohwr/project/emc2-dp,hardware,77
+68851090,YAM  Yet Another Micro-controller,ohwr/project/yam,not hardware,1
+68851064,FMC Prototype Board - LPC,ohwr/project/fmc-prt-lpc,ambiguous,16
+68851027,Conv RS485 OPT RTM,ohwr/project/conv-rs485-opt-rtm,not_hardware,0
+68850970,1-to-8 Pulse and Frequency Distribution Amplifier,ohwr/project/pda-8ch-fda-8ch,hardware,0
+68850958,VME SBC A25 PCIe to VME bridge,ohwr/project/vme-sbc-a25-pcie-vme-bridge,not_hardware,0
+68850928,High Performance MTCA.4 White Rabbit Receiver,ohwr/project/ertm15-llrf-wr,hardware,0
+68850896,SPEC7,ohwr/project/spec7,hardware,0
+68850804,VHDL Coding Style,ohwr/project/vhdl-style,not_hardware,0
+68850796,WRS Fan-less hardware,ohwr/project/wrs-fl-hw,hardware,0
+68850700,Mini-WR,ohwr/project/mini-wr,hardware,27
+68850653,Radiation Tolerant LED Luminaire,ohwr/project/radtol-led-luminaire,hardware,65
+68850628,CTR FMC 5 CH TTL RS485,ohwr/project/ctr-fmc-5chttla,hardware,68
+68850596,DIOT - Distributed IO Tier,ohwr/project/diot,hardware,81
+68850567,DIOT DIO 16ch opt 24V,ohwr/project/diot-dio-16ch-opt-24v,hardware,31
+68850537,OPT-ADC-10k-32b-1cha HPM7177,ohwr/project/opt-adc-10k-32b-1cha,hardware,73
+68850514,VME FMC Carrier - VFC-HS,ohwr/project/vfc-hs,hardware,58
+68850487,DIOT WIC Gateware,ohwr/project/diot-wic-gw,not_hardware,0
+68850443,LHC Instability Trigger Distribution LIST,ohwr/project/list,hardware,0
+68850411,RF Multiplexer 8ch 1GHz,ohwr/project/rf-mux-8ch,hardware,0
+68850373,Training projects,ohwr/project/training,empty_respository,0
+68850343,Hello PDN,ohwr/project/hellopdn,hardware,47
+68850262,FMC-DTXRX-4CHA,ohwr/project/fmc-dtxrx-4cha,hardware,35
+68850254,VME,ohwr/project/vme,empty_respository,0
+68850246,White Rabbit Switch - Hardware V4,ohwr/project/wr-switch-hw-v4,hardware,0
+68850081,WRS-318 with LJD prepared hardware,ohwr/project/wrs-ljdprep-hw,hardware,23
+68850056,TiCkS,ohwr/project/spec-ticks,hardware,0
+68850050,AIDA-2020 TLU - Gateware,ohwr/project/fmc-mtlu-gw,not_hardware,0
+68850035,AIDA-2020 TLU - Hardware,ohwr/project/fmc-mtlu-hw,hardware,0
+68849911,AIDA-2020 TLU - Software,ohwr/project/fmc-mtlu-sw,not_hardware,0
+68849877,AIDA-2020 TLU - Testing,ohwr/project/fmc-mtlu-tst,empty_respository,0
+68849828,Euro ADC 65M 14b 40cha PUMA,ohwr/project/euro-adc-65m-14b-40cha,not hardware,10
+68849799,Eurocard,ohwr/project/eurocard,empty_respository,0
+68849787,Euro ADC 65M 14b 40cha gw PUMA-gw,ohwr/project/euro-adc-65m-14b-40cha-gw,not_hardware,0
+68849774,Euro ADC 65M 14b 40cha hw PUMA-hw,ohwr/project/euro-adc-65m-14b-40cha-hw,hardware,0
+68849634,Euro ADC 65M 14b 40cha sw PUMA-sw,ohwr/project/euro-adc-65m-14b-40cha-sw,not_hardware,0
+68849603,Euro ADC 65M 14b 40cha tst PUMA-tst,ohwr/project/euro-adc-65m-14b-40cha-tst,not hardware,0
+68849589,Companies,ohwr/project/companies,not hardware,8
+68849519,Licences,ohwr/project/licences,ambiguous,17
+68849474,White Rabbit Fixed Point Calculations,ohwr/project/wr-fixed-point-calculations,not_hardware,0
+68849436,White Rabbit Compliance Tests,ohwr/project/wr-compliance-tests,not_hardware,0
+68849334,PXIe controller COM Express based,ohwr/project/pxie-ctl-comexpress,hardware,0
+68849301,RaToPUS radiation-tolerant AC-DC power supply,ohwr/project/psu-rad-acdc-230v-12v5v-110w,hardware,0
+68849254,VHDL macro libraries for Microsemi ProASIC3,ohwr/project/microsemi-lib,not_hardware,0
+68849218,luvi,ohwr/project/luvi,ambiguous,18
+68849177,OpenDSO - Open Digital Storage Oscilloscope,ohwr/project/opendso,ambiguous,18
+68849164,DIOT Zynq Ultrascale-based System Board,ohwr/project/diot-sb-zu,not_hardware,0
+68849001,OHW research,ohwr/project/ohw-research,not_hardware,0
+68848878,distributed oscilloscope,ohwr/project/distributed-oscilloscope,not_hardware,0
+68848818,Resource Evaluation of WR switch HDL for Ultrascale Plus,ohwr/project/wr-switch-hdl-usp-eval,hardware,0
+68848772,DAPHNE FEB,ohwr/project/daphne-feb-dune,empty_respository,0
+68848766,DIOT Monitoring Module,ohwr/project/diot-monimod,hardware,0
+68848611,DIOT CompactPCI Serial crate hardware,ohwr/project/diot-crate-hw,hardware,0
+68848538,CITY - CarrIer for RFoWR-based Timing sYstems,ohwr/project/city,not_hardware,0
+68848476,FMC Software Support,ohwr/project/fmc-sw,not_hardware,0
+68848438,FPGA Framework,ohwr/project/fpga-framework,not hardware,1
+68848376,tr-pexp,ohwr/project/tr-pexp,hardware,0
+68848350,FPGA Device ID,ohwr/project/fpga-dev-id,not_hardware,0
+68848296,RF over Ethernet - a protocol,ohwr/project/roe-protocol,not hardware,0
+68848237,HPSEC - High Precision Slaved External Clock,ohwr/project/hpsec,hardware,82
+68848217,Simple VME FMC Carrier 7 - SVEC7,ohwr/project/svec7,hardware,45
+68848194,SPEC150,ohwr/project/spec150,ambiguous,14
+68848167,White Rabbit Industrial Timing Enhancement - WRITE,ohwr/project/write,not hardware,10
+68848155,Microstepper,ohwr/project/microstepper,hardware,0
+68848132,FMC-PROFINET,ohwr/project/fmc-profinet,hardware,0
+68848091,CERN BE-CO-HT CI,ohwr/project/cern-be-co-ht-ci,not_hardware,0
+68848074,DIOT Igloo2-based radiation-tolerant System Board,ohwr/project/diot-sb-igl,hardware,0
+68848048,Ventilator PAL,ohwr/project/ventilatorpal,not_hardware,0
+68848032,PROFIP - PROFINET-IRT - WorldFIP gateway,ohwr/project/profip,ambiguous,12
+68848008,PXIe FMC Carrier Board - SPEXI7U,ohwr/project/spexi7u,not_hardware,0
+68847985,HEV - High Energy Ventilator,ohwr/project/hev,not_hardware,0
+68847965,SAMbuCa,ohwr/project/sambuca,not hardware,10
+68847938,CERN-ELMB2,ohwr/project/cern-elmb2,hardware,26
+68847932,DIOT Kintex Ultrascale-based Peripheral Board FMC Carrier,ohwr/project/diot-pfc-ku,hardware,0
+68847885,SoC Course with Reference Designs,ohwr/project/soc-course,hardware,49
+68847858,Hydra - a radiation-tolerant SoC,ohwr/project/hydra,not_hardware,0
+68847846,3DMASK - 3D printed mask,ohwr/project/3dmask,not_hardware,0
+68847718,DIOT reliability studies project,ohwr/project/diot-reliability,not_hardware,0
+68847686,Face Shield - 3Dprinting and Injection Moulding,ohwr/project/faceshield,not hardware,5
+68847646,Holoblade,ohwr/project/holoblade,ambiguous,14
+68847625,WRS with low jitter logic integrated,ohwr/project/wrs-lj-hw,not_hardware,0
+68847605,Compact Universal Timing Endpoint Based on White Rabbit with Artix7 - Cute-WR-A7,ohwr/project/cute-wr-a7,not_hardware,0
+68847569,Programmable RF Attenuator,ohwr/project/rf-att-4cha,hardware,0
+68847487,SPEC7 Processing System Software,ohwr/project/spec7-ps-sw,not_hardware,0
+68847447,powerlink,ohwr/project/powerlink,hardware,0
+68847394,FMC FSI photodetection module 8ch,ohwr/project/fmc-fsi-det-8ch,not hardware,10
+68831841,Respir-OS,ohwr/project/respir-os,hardware,0
+68831815,fmc-temp-pt100-15ch,ohwr/project/fmc-temp-pt100-15ch,ambiguous,18
+68831804,samb-temp-thcpl-fmc,ohwr/project/samb-temp-thcpl-fmc,ambiguous,12
+68831783,samc-temp-thcpl-20ch,ohwr/project/samc-temp-thcpl-20ch,ambiguous,12
+68831758,FMC ADC 500M 14b 4cha,ohwr/project/fmc-adc-500m14b4cha,not_hardware,0
+68831744,SIS1160 PCI-L IO add on,ohwr/project/sis1160-pci-io,hardware,0
+68831714,AMC FMC Carrier AFCZ,ohwr/project/afcz,hardware,67
+68831670,FSI Data Acquisition Path Gateware and Software,ohwr/project/fsi-daq,not_hardware,0
+68831659,FSI DIOT Photodetection module 8ch,ohwr/project/diot-fsi-det-8ch,hardware,141
+68831636,10G White Rabbit Network Interface Core,ohwr/project/10G-wr-nic,not_hardware,0
+68831621,PXIe Communication Tester - PXCT,ohwr/project/pxct,hardware,0
+68831605,AMC FMC Carrier Kintex Ultrascale AFCKU,ohwr/project/afcku,hardware,0
+68831589,FMC Motion Front-End,ohwr/project/fmc-mfe,ambiguous,17
+68831563,PassStat,ohwr/project/passstat,not_hardware,0
+68831537,PXIe controller COM Express based testing support,ohwr/project/pxie-ctl-comexpress-tst,not_hardware,0
+68831509,test,ohwr/project/test,not_hardware,0
+68831491,FMC High-Voltage supply - fmc-hv-2ch,ohwr/project/fmc-hv-2ch,hardware,0
+68831462,Extract Capacitor Voltage Rating,ohwr/project/extract-cap-voltage-rating,not_hardware,0
+68831445,samb-step-dcdrive-4ch,ohwr/project/samb-step-dcdrive-4ch,ambiguous,13
+68831428,PZ Carrier and Trigger IO - PZ-TIO,ohwr/project/pz-tio,hardware,65
+68831404,SAMbuCa I2PS,ohwr/project/samb-i2ps,not hardware,2
+68831383,DIOT Peripheral Board Loop-back,ohwr/project/diot-pb-lbk,hardware,0
+68831336,Optical to electrical converter,ohwr/project/conv-opt-ttl-1i-1o,hardware,51
+68831302,Electrical to Optical converter,ohwr/project/conv-ttl-opt-1i-1o,not hardware,8
+68831285,BabyWR,ohwr/project/babywr,hardware,0
+68831243,Generic I²C-Reconfigurable Active PatcH GIRAPH,ohwr/project/giraph32,not_hardware,0
+68831201,WRTD Reference Designs,ohwr/project/wrtd-ref-designs,hardware,0
+68831178,Negative Pressure Wound Treatment,ohwr/project/npwt,hardware,29
+68831113,Power Supply Interface Module PSIM,ohwr/project/psim,empty_respository,0
+68831063,DIOT Mixed Digital IO RTM,ohwr/project/mdior,hardware,0
+68831036,Pex10,ohwr/project/pex10,not hardware,0
+68830978,ACCURATE 2A Evaluation Board,ohwr/project/accurate2-eval,hardware,63
+68830973,Macbeth,ohwr/project/macbeth,not_hardware,0
+68830827,Analogue GIRAPH,ohwr/project/analogue-giraph,hardware,23
+68830816,PandABox II,ohwr/project/PandaBox2,hardware,54
+68830784,Idrogen,ohwr/project/idrogen,hardware,0
+68830758,FMC ADC 210M 16b 4cha,ohwr/project/fmc-adc-210m-16b-4cha,not hardware,7
+68830742,WREN,ohwr/project/wren,hardware,0
+68830716,White Rabbit Timing System,ohwr/project/wrt,empty_respository,0
+68830702,Quad-Channel Digital Pico ammeter,ohwr/project/P4CH-LNLS,hardware,0
+68830673,Ultra low noise amplifier,ohwr/project/ultra-low-noise-amplifier,ambiguous,0
+68830641,mrpc-25x18-24strip,ohwr/p-det/mrpc-25x18-24strip,hardware,0
+68830633,Open Breath Lung Ventilator,ohwr/openbreath/lungventilator,hardware,0
+68830613,Open Breath PEP Whistle,ohwr/openbreath/pepwhistle,hardware,0
+68830599,ohr-deploy,ohwr/ohr-support/ohr-deploy,not_hardware,0
+68830587,fmc-delay-1ns-8cha-sa,ohwr/oh-applications/fmc-delay-1ns-8cha-sa,hardware,0
+68830579,adc-lib,ohwr/misc/adc-lib,not_hardware,0
+68830560,adc-testing,ohwr/misc/adc-testing,not_hardware,0
+68830523,ed,ohwr/misc/ed,empty_respository,0
+68830500,embedded-linux,ohwr/misc/embedded-linux,empty_respository,0
+68830478,epics-wb,ohwr/misc/epics-wb,not_hardware,0
+68830450,gts,ohwr/misc/gts,empty_respository,0
+68830426,hdl-make,ohwr/misc/hdl-make,hardware,0
+68830410,libre-fdatool,ohwr/misc/libre-fdatool,not_hardware,0
+68830382,panda,ohwr/misc/panda,hardware,0
+68830356,pmtlib,ohwr/misc/pmtlib,hardware,0
+68830346,pts-base,ohwr/misc/pts-base,not_hardware,0
+68830338,pts,ohwr/misc/pts,not_hardware,0
+68830203,sdb,ohwr/misc/sdb,not_hardware,0
+68830186,soft-cpu-toolchains,ohwr/misc/soft-cpu-toolchains,not_hardware,0
+68830163,vhdl-style,ohwr/misc/vhdl-style,not_hardware,0
+68830157,zio,ohwr/misc/zio,not_hardware,0
+68830152,fr_pcb_mm,ohwr/machines-tools/fr_pcb_mm,not_hardware,0
+68830140,conv-ttl-rs485-gw,ohwr/level-conversion/conv-ttl-rs485/conv-ttl-rs485-gw,not_hardware,0
+68830129,conv-ttl-rs485-hw,ohwr/level-conversion/conv-ttl-rs485/conv-ttl-rs485-hw,not_hardware,0
+68830124,conv-ttl-rs485-tst,ohwr/level-conversion/conv-ttl-rs485/conv-ttl-rs485-tst,hardware,0
+68830112,conv-ttl-blo-gw,ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-gw,not_hardware,0
+68830085,conv-ttl-blo-hw,ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-hw,hardware,0
+68830075,conv-ttl-blo-tst,ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-tst,hardware,0
+68830057,conv-common-gw,ohwr/level-conversion/conv-common-gw,not_hardware,0
+68830050,conv-diff-se-cable-driver,ohwr/level-conversion/conv-diff-se-cable-driver,hardware,0
+68830036,wrpc-sw,ohwr/hdl-core-lib/wr-cores/wrpc-sw,not_hardware,0
+68830028,evo,ohwr/hdl-core-lib/asyncart/evo,empty_respository,0
+68830016,absenc,ohwr/hdl-core-lib/absenc,not_hardware,0
+68829994,ddr3-sp6-core,ohwr/hdl-core-lib/ddr3-sp6-core,hardware,0
+68829976,etherbone-core,ohwr/hdl-core-lib/etherbone-core,not_hardware,0
+68829951,fpga-config-space,ohwr/hdl-core-lib/fpga-config-space,not_hardware,0
+68829925,general-cores,ohwr/hdl-core-lib/general-cores,not_hardware,0
+68829889,gn4124-core,ohwr/hdl-core-lib/gn4124-core,hardware,0
+68829869,mock-turtle,ohwr/hdl-core-lib/mock-turtle,hardware,0
+68829845,pci-core,ohwr/hdl-core-lib/pci-core,not_hardware,0
+68829820,pcie-vme-bridge,ohwr/hdl-core-lib/pcie-vme-bridge,not_hardware,0
+68829777,tdc-core,ohwr/hdl-core-lib/tdc-core,hardware,0
+68829736,urv-core,ohwr/hdl-core-lib/urv-core,hardware,0
+68829713,wishbone-gen,ohwr/hdl-core-lib/wishbone-gen,not_hardware,0
+68829698,vme64x-core,ohwr/hdl-core-lib/vme64x-core,hardware,0
+68829682,svec-3v3,ohwr/fmc-projects/svec/svec-3v3,not_hardware,0
+68829667,svec-sw,ohwr/fmc-projects/svec/svec-sw,not_hardware,0
+68829656,meta-spec,ohwr/fmc-projects/spec/spec-getting-started/meta-spec,empty_respository,0
+68829649,spec-stress-test,ohwr/fmc-projects/spec/spec-getting-started/spec-stress-test,empty_respository,0
+68829638,spec-sw,ohwr/fmc-projects/spec/spec-sw,not_hardware,0
+68829619,fmc-tdc-1ns-5cha-gw,ohwr/fmc-projects/fmc-tdc/fmc-tdc-1ns-5cha-gw,not_hardware,0
+68829574,fmc-tdc-1ns-5cha-hw,ohwr/fmc-projects/fmc-tdc/fmc-tdc-1ns-5cha-hw,hardware,0
+68829516,fmc-tdc-1ns-5cha-tst,ohwr/fmc-projects/fmc-tdc/fmc-tdc-1ns-5cha-tst,not_hardware,0
+68829490,fmc-tdc-sw,ohwr/fmc-projects/fmc-tdc/fmc-tdc-sw,not_hardware,0
+68829481,fmc-mtlu-gw,ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-gw,not_hardware,0
+68829474,fmc-mtlu-hw,ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-hw,hardware,0
+68829348,fmc-mtlu-sw,ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-sw,not_hardware,0
+68829332,fmc-mtlu-tst,ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-tst,empty_respository,0
+68829321,fmc-dio-32chttla-sw,ohwr/fmc-projects/fmc-dio-32chttla/fmc-dio-32chttla-sw,not_hardware,0
+68829314,fine-delay-sw,ohwr/fmc-projects/fmc-delay-1ns-8cha/fine-delay-sw,not_hardware,0
+68829308,fmc-dac-600m-12b-1cha-tst,ohwr/fmc-projects/fmc-dac-600m-12b-1cha-dds/fmc-dac-600m-12b-1cha-tst,hardware,0
+68829296,fmc-adc-400k18b4cha-iso-gw,ohwr/fmc-projects/fmc-adc-400k18b4cha-iso/fmc-adc-400k18b4cha-iso-gw,not_hardware,0
+68829276,fmc-adc-400k18b4cha-iso-hw,ohwr/fmc-projects/fmc-adc-400k18b4cha-iso/fmc-adc-400k18b4cha-iso-hw,empty_respository,0
+68829248,fmc-adc-400k18b4cha-iso-sw,ohwr/fmc-projects/fmc-adc-400k18b4cha-iso/fmc-adc-400k18b4cha-iso-sw,not_hardware,0
+68829236,fmc-adc-250m-16b-4cha-sw,ohwr/fmc-projects/fmc-adc-250m-16b-4cha/fmc-adc-250m-16b-4cha-sw,not_hardware,0
+68829231,fmc-adc-130m-16b-4cha-sw,ohwr/fmc-projects/fmc-adc-130m-16b-4cha/fmc-adc-130m-16b-4cha-sw,not_hardware,0
+68829226,fmc-adc125m14b1ch-dac600m14b1ch-sw,ohwr/fmc-projects/fmc-adc125m14b1ch-dac600m14b1ch/fmc-adc125m14b1ch-dac600m14b1ch-sw,not_hardware,0
+68829218,fmc-adc-100m14b4cha-gw,ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-gw,not_hardware,0
+68829195,fmc-adc-100m14b4cha-hw,ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-hw,not_hardware,0
+68829156,fmc-adc-100m14b4cha-sw,ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-sw,not_hardware,0
+68829130,fmc-adc-100m14b4cha-tst,ohwr/fmc-projects/fmc-adc-100m14b4cha/fmc-adc-100m14b4cha-tst,not_hardware,0
+68829102,afc,ohwr/fmc-projects/afc,empty_respository,0
+68829076,afck,ohwr/fmc-projects/afck,empty_respository,0
+68829030,atfc,ohwr/fmc-projects/atfc,empty_respository,0
+68828957,fasec,ohwr/fmc-projects/fasec,empty_respository,0
+68828879,fmc-72chopt480-8chopt1600,ohwr/fmc-projects/fmc-72chopt480-8chopt1600,empty_respository,0
+68828820,fmc-adc100m14b16cha-dac2m14b4cha,ohwr/fmc-projects/fmc-adc100m14b16cha-dac2m14b4cha,empty_respository,0
+68828746,fmc-adc125m14b12ch-dac1250m16b2ch,ohwr/fmc-projects/fmc-adc125m14b12ch-dac1250m16b2ch,empty_respository,0
+68828675,fmc-adc-1g8b2cha,ohwr/fmc-projects/fmc-adc-1g8b2cha,empty_respository,0
+68828624,fmc-adc-250m12b2cha,ohwr/fmc-projects/fmc-adc-250m12b2cha,empty_respository,0
+68828590,fmc-adc-2k24b8cha,ohwr/fmc-projects/fmc-adc-2k24b8cha,empty_respository,0
+68828549,fmc-adc-subsamp125m14b4cha,ohwr/fmc-projects/fmc-adc-subsamp125m14b4cha,empty_respository,0
+68828517,fmc-bus,ohwr/fmc-projects/fmc-bus,not_hardware,0
+68828487,fmc-dac100m14b16cha-adc2m14b4cha,ohwr/fmc-projects/fmc-dac100m14b16cha-adc2m14b4cha,empty_respository,0
+68828458,fmc-del-1ns-2cha,ohwr/fmc-projects/fmc-del-1ns-2cha,empty_respository,0
+68828425,fmc-dio-10i-8o,ohwr/fmc-projects/fmc-dio-10i-8o,empty_respository,0
+68828398,fmc-dio-16ch-lvds-a,ohwr/fmc-projects/fmc-dio-16ch-lvds-a,empty_respository,0
+68828357,fmc-dio-32chlvdsa,ohwr/fmc-projects/fmc-dio-32chlvdsa,empty_respository,0
+68828331,fmc-fe-l-band-2ch,ohwr/fmc-projects/fmc-fe-l-band-2ch,empty_respository,0
+68828319,fmc-pof-10m-r3ch-t1ch,ohwr/fmc-projects/fmc-pof-10m-r3ch-t1ch,empty_respository,0
+68828292,fmc-pof-10m-r4ch,ohwr/fmc-projects/fmc-pof-10m-r4ch,empty_respository,0
+68828260,fmc-sfp-4cha,ohwr/fmc-projects/fmc-sfp-4cha,empty_respository,0
+68828230,fmc-worldfip,ohwr/fmc-projects/fmc-worldfip,empty_respository,0
+68828209,gefe,ohwr/fmc-projects/gefe,empty_respository,0
+68828184,hicce-fmc-128,ohwr/fmc-projects/hicce-fmc-128,empty_respository,0
+68828166,lpcfmc12pexp,ohwr/fmc-projects/lpcfmc12pexp,empty_respository,0
+68828123,spec-ticks,ohwr/fmc-projects/spec-ticks,empty_respository,0
+68828079,spexi,ohwr/fmc-projects/spexi,empty_respository,0
+68828072,vfc-hd,ohwr/fmc-projects/vfc-hd,empty_respository,0
+68828057,euro-adc-65m-14b-40cha-gw,ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-gw,not_hardware,0
+68828044,euro-adc-65m-14b-40cha-hw,ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-hw,hardware,0
+68827899,euro-adc-65m-14b-40cha-sw,ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-sw,not_hardware,0
+68827893,euro-adc-65m-14b-40cha-tst,ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-tst,empty_respository,0
+68827880,wandadapter,ohwr/edm/wandadapter,empty_respository,0
+68827870,diot-dio-16ch-opt-24v,ohwr/diot/diot-dio-16ch-opt-24v,empty_respository,0
+68827854,diot-wic-gw,ohwr/diot/diot-wic-gw,not_hardware,0
+68827848,dces-dtrhf-ser1ch-v1,ohwr/dces/dces-dtrhf-ser1ch-v1,not_hardware,0
+68827835,nanofip-gateware,ohwr/cern-fip/nanofip/nanofip-gateware,not_hardware,0
+68827825,masterfip-gw,ohwr/cern-fip/masterfip/masterfip-gw,not_hardware,0
+68827786,masterfip-sw,ohwr/cern-fip/masterfip/masterfip-sw,not_hardware,0
+68827778,masterfip-tst,ohwr/cern-fip/masterfip/masterfip-tst,hardware,0
+68827763,cape-pwr-12b-6cha,ohwr/cape/cape-pwr-12b-6cha,empty_respository,0
+68827750,bpm-gw,ohwr/bpm/bpm-gw,not_hardware,0
+68827729,bpm-rffe,ohwr/bpm/bpm-rffe,not_hardware,0
+68827716,bpm-sw,ohwr/bpm/bpm-sw,not_hardware,0
+68827686,CERN BE-CO-HT CI,ohwr/be-co-ht/cern-be-co-ht-ci,not_hardware,0
