@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-"""
-OpenHardware.io Project Scraper
-
-Reads project page names from hardware.txt and scrapes structured data
-according to the defined JSON schema.
-"""
-
 import requests
 from bs4 import BeautifulSoup
 import json
