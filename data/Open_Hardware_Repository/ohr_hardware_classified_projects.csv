@@ -1,0 +1,261 @@
+id,name,name_with_namespace,classification ,hardware_score
+68878307,Hdlmake,ohwr/Lacsapix/hdl-make,hardware,0
+68878085,urv-core,ohwr/cgentsos/urv-core,hardware,0
+68877906,VME64x core - msaccani,ohwr/msaccani/vme64x-core-msaccani,hardware,0
+68877878,White Rabbit core collection,ohwr/kblantos/wr-cores,hardware,0
+68877838,Hdlmake,ohwr/bkoropoff/hdl-make,hardware,0
+68877603,DIOT Igloo2-based radiation-tolerant System Board,ohwr/Qbort/diot-sb-igl,hardware,0
+68877451,AIDAInnova_TLU-hw,ohwr/cussans/aidainnova_tlu-hw,hardware,0
+68877308,White Rabbit Switch - Testing,ohwr/orsonmmz/wr-switch-testing,hardware,0
+68865714,amc-carrier-2-sl,ohwr/xtca-projects/amc-carrier-2-sl,hardware,0
+68865703,amc-cpu-com6,ohwr/xtca-projects/amc-cpu-com6,hardware,0
+68865685,amc-ubackplane-sfp,ohwr/xtca-projects/amc-ubackplane-sfp,hardware,0
+68865642,ertm15-llrf-wr,ohwr/xtca-projects/ertm15-llrf-wr,hardware,0
+68865572,utca-rtm-8-sfp,ohwr/xtca-projects/utca-rtm-8-sfp,hardware,0
+68865568,wrs-fl-hw,ohwr/white-rabbit/wr-switch-hw/wrs-fl-hw,hardware,0
+68865531,ptp-noposix,ohwr/white-rabbit/ppsi/ptp-noposix,hardware,0
+68865522,wr-switch-hdl,ohwr/white-rabbit/wr-switch-hdl,hardware,0
+68865488,crio-wr,ohwr/white-rabbit/crio-wr,hardware,0
+68865452,cute-wr-dp,ohwr/white-rabbit/cute-wr-dp,hardware,0
+68865422,cute-wr,ohwr/white-rabbit/cute-wr,hardware,0
+68865303,list,ohwr/white-rabbit/list,hardware,0
+68865291,maroc_csa,ohwr/white-rabbit/maroc_csa,hardware,0
+68865172,tr-pmc,ohwr/white-rabbit/tr-pmc,hardware,0
+68865109,wr-calibration,ohwr/white-rabbit/wr-calibration,hardware,0
+68865091,wr-d3s,ohwr/white-rabbit/wr-d3s,hardware,0
+68864983,wr-nic,ohwr/white-rabbit/wr-nic,hardware,0
+68864938,wrn-robustness,ohwr/white-rabbit/wrn-robustness,hardware,0
+68864764,wr-switch-testing,ohwr/white-rabbit/wr-switch-testing,hardware,0
+68864707,usb-relay-box1,ohwr/usb-projects/usb-relay-box1,hardware,0
+68864541,pda-8ch-fda-8ch,ohwr/rack-19/pda-8ch-fda-8ch,hardware,0
+68864520,rf-mux-8ch,ohwr/rack-19/rf-mux-8ch,hardware,0
+68864515,TimIQ Hardware,ohwr/project/timiq/timiq-hw,hardware,0
+68864457,ARRAY - Hardware,ohwr/project/array/array-hardware,hardware,0
+68864322,PCI FMC carrier with SOC,ohwr/project/pcie-fmc-soc-vdas,hardware,21
+68863431,FMC PCIe Carrier PFC,ohwr/project/fmc-pci-carrier,hardware,97
+68863411,VME FMC Carrier VFC,ohwr/project/fmc-vme-carrier,hardware,0
+68863284,FMC ADC 100M 14b 4cha,ohwr/project/fmc-adc-100m14b4cha,hardware,0
+68863118,FMC DIO 16ch TTL a,ohwr/project/fmc-dio-16chttla,hardware,34
+68863036,VME64x core,ohwr/project/vme64x-core,hardware,0
+68862996,FMC ADC 200k 16b 11cha,ohwr/project/fmc-adc-100k16b8cha,hardware,84
+68862981,nanoFIP Test Board,ohwr/project/nanofip-test-board,hardware,0
+68862874,Gennum GN4124 core,ohwr/project/gn4124-core,hardware,0
+68862829,FMC DEL 1ns 4cha,ohwr/project/fmc-delay-1ns-8cha,hardware,0
+68862781,ARMadillo,ohwr/project/armadillo,hardware,0
+68862616,Simple PCIe FMC carrier SPEC,ohwr/project/spec,hardware,0
+68862557,Level conversion circuits,ohwr/project/level-conversion,hardware,29
+68862520,Conv TTL NIM 3in 30out,ohwr/project/conv-ttl-nim-3i-30o,hardware,0
+68862406,DDR3 controller for Spartan6,ohwr/project/ddr3-sp6-core,hardware,0
+68862269,VXS DSP FMC carrier,ohwr/project/vxs-dsp-fmc-carrier,hardware,68
+68862255,RHINO,ohwr/project/rhino-hardware-01,hardware,73
+68861997,Optical link interface AMC,ohwr/project/glib,hardware,33
+68861897,FMC TDC 1ns 5cha,ohwr/project/fmc-tdc,hardware,0
+68861865,FMC Carrier tester,ohwr/project/fmc-conn-tester,hardware,0
+68861795,Hdlmake,ohwr/project/hdl-make,hardware,0
+68861757,FMC DAC 250M 16b 4cha,ohwr/project/fmc-dac-250m16b4cha,hardware,206
+68861740,SPI Boards Package,ohwr/project/spi-board-package,hardware,22
+68861353,White Rabbit core collection,ohwr/project/wr-cores,hardware,0
+68861089,FMC DIO 5ch TTL a,ohwr/project/fmc-dio-5chttla,hardware,0
+68861044,TDC core,ohwr/project/tdc-core,hardware,0
+68860921,Production Test Suite,ohwr/project/pts,hardware,0
+68858212,Simple VME FMC Carrier SVEC,ohwr/project/svec,hardware,0
+68858182,FMC ADC 125M 14b 1ch DAC 600M 14b 1ch,ohwr/project/fmc-adc125m14b1ch-dac600m14b1ch,hardware,59
+68858119,Optical Clock and Data Recovery FMC,ohwr/project/optical-cdr-fmc,hardware,21
+68858103,FMC ADC 1G 8b 2cha,ohwr/project/fmc-adc-1g8b2cha,hardware,0
+68857881,HiCCE-FMC-128,ohwr/project/hicce-fmc-128,hardware,0
+68857839,QDR II controller for Virtex 6,ohwr/project/qdr2-v6-core,hardware,45
+68857506,FMC ADC 250M 12b 2cha,ohwr/project/fmc-adc-250m12b2cha,hardware,87
+68857423,FMC PowerPC carrier SPEC-based,ohwr/project/powec,hardware,34
+68857396,Handheld measurement terminal,ohwr/project/hmt-3cha,hardware,47
+68857377,White Rabbit Switch - Testing,ohwr/project/wr-switch-testing,hardware,0
+68857314,White Rabbit Network Interface Card,ohwr/project/wr-nic,hardware,0
+68857216,PPSi,ohwr/project/ppsi,hardware,0
+68856992,Electronics Design,ohwr/project/ed,hardware,34
+68856871,White Rabbit Switch - Hardware,ohwr/project/wr-switch-hw,hardware,0
+68856779,FMC ADC 2M 18b 2ch DAC 500k 20b 1ch,ohwr/project/fmc-adc2m18b2ch-dac500k20b1ch,hardware,31
+68856694,AsyncArt,ohwr/project/asyncart,hardware,0
+68856587,TimEX3,ohwr/project/timex3,hardware,0
+68856415,FMC ADC 250M 16b 4cha,ohwr/project/fmc-adc-250m-16b-4cha,hardware,0
+68856250,SPICONTROLLER,ohwr/project/spicontroller,hardware,26
+68856200,CERN BE-CO-HT contribution to KiCad,ohwr/project/cern-kicad,hardware,506
+68856148,PMTLib,ohwr/project/pmtlib,hardware,0
+68856142,AMC FMC Carrier AFC,ohwr/project/afc,hardware,0
+68855994,FMC DAC 600M 12b 1cha DDS,ohwr/project/fmc-dac-600m-12b-1cha-dds,hardware,0
+68855953,FMC DIO 32ch TTL a,ohwr/project/fmc-dio-32chttla,hardware,0
+68855882,Stand-alone 18-slot FMC carrier,ohwr/project/sac-18-fmc,hardware,28
+68855721,CERN ELMB,ohwr/project/cern-elmb,hardware,23
+68855700,USB Relay Box 1,ohwr/project/usb-relay-box1,hardware,0
+68855645,AMC CPU COM6,ohwr/project/amc-cpu-com6,hardware,0
+68855612,VIDEO Processing Platform MIXXEO,ohwr/project/video-fpga-hdmi-dvi-ethernet,hardware,0
+68855492,uTCA RTM 8 SFP,ohwr/project/utca-rtm-8-sfp,hardware,0
+68855354,AMC uBackplane SFP,ohwr/project/amc-ubackplane-sfp,hardware,0
+68855216,FMC DTX 4CHA,ohwr/project/fmc-dtx-4cha,hardware,37
+68855199,FMC DTRX 4CHA,ohwr/project/fmc-dtrx-4cha,hardware,35
+68855178,Getting Started with the SPEC,ohwr/project/spec-getting-started,hardware,0
+68855075,Compact Universal Timing Endpoint Based on White Rabbit with Dual Ports Cute-WR-DP,ohwr/project/cute-wr-dp,hardware,0
+68855042,AMC FMC Carrier Kintex AFCK,ohwr/project/afck,hardware,0
+68854888,evo,ohwr/project/evo,hardware,0
+68854877,fwatch,ohwr/project/f-watch,hardware,0
+68854781,FMC DEL 1ns 4cha - stand-alone application,ohwr/project/fmc-delay-1ns-8cha-sa,hardware,0
+68854740,FMC POF 10M R4ch,ohwr/project/fmc-pof-10m-r4ch,hardware,26
+68854710,FMC POF 10M R3ch T1ch,ohwr/project/fmc-pof-10m-r3ch-t1ch,hardware,26
+68854594,FMC ADC 125M 14b 12ch - DAC 1250M 16b 2ch,ohwr/project/fmc-adc125m14b12ch-dac1250m16b2ch,hardware,20
+68854576,FMC TDC 1ns 5cha - Hardware,ohwr/project/fmc-tdc-1ns-5cha-hw,hardware,0
+68854503,MasterFIP,ohwr/project/masterfip,hardware,43
+68854411,MasterFIP - Testing,ohwr/project/masterfip-tst,hardware,0
+68854321,Conv TTL Blocking - Hardware,ohwr/project/conv-ttl-blo-hw,hardware,0
+68854300,Conv TTL Blocking - Testing,ohwr/project/conv-ttl-blo-tst,hardware,0
+68854220,Conv TTL RS485 - Testing,ohwr/project/conv-ttl-rs485-tst,hardware,0
+68854031,USB ADC 2k 12b 4ch DAC 2k 10b 2ch dio 8ch,ohwr/project/usb-adc2k12b4ch-dac2k10b2ch-dio8ch,hardware,42
+68853895,WandAdapter,ohwr/project/wandadapter,hardware,22
+68853728,tr-pmc,ohwr/project/tr-pmc,hardware,0
+68853680,FMC MasterFIP,ohwr/project/fmc-masterfip,hardware,155
+68853614,GBT-based Expandable Front-End GEFE,ohwr/project/gefe,hardware,69
+68853580,Scalable  MAROC Charge Sensitive Readout,ohwr/project/maroc_csa,hardware,0
+68853552,nanoFIP,ohwr/project/nanofip,hardware,24
+68853465,Radiation Tolerant LED PSU,ohwr/project/radtol-led-psu,hardware,32
+68853423,Cosmic Pi,ohwr/project/cosmic-pi,hardware,55
+68853308,MRPC 25x18 24strip,ohwr/project/mrpc-25x18-24strip,hardware,0
+68853049,Mock Turtle,ohwr/project/mock-turtle,hardware,0
+68852989,urv-core,ohwr/project/urv-core,hardware,0
+68852950,FMC ADC 400k 18b 4cha iso,ohwr/project/fmc-adc-400k18b4cha-iso,hardware,25
+68852891,FMC ADC 400k 18b 4cha iso - Hardware,ohwr/project/fmc-adc-400k18b4cha-iso-hw,hardware,42
+68852797,FMC DIO 10I 8O,ohwr/project/fmc-dio-10i-8o,hardware,223
+68852691,UV-watch,ohwr/project/uv-watch,hardware,27
+68852668,UV-mask,ohwr/project/uv-mask,hardware,53
+68852629,fmc dac 600m 12b 1cha dds - Testing,ohwr/project/fmc-dac-600m-12b-1cha-tst,hardware,0
+68852326,FMC SFP 4cha,ohwr/project/fmc-sfp-4cha,hardware,0
+68852256,FMC DEL 1ns 2cha,ohwr/project/fmc-del-1ns-2cha,hardware,0
+68852206,Dual AMC Carrier,ohwr/project/amc-carrier-2-sl,hardware,0
+68852132,Multi-channel Time Interval Counter and fine delay generator,ohwr/project/r19-tdc-del-a,hardware,0
+68852106,openMMC,ohwr/project/afc-ipmi-sw,hardware,0
+68852013,spec-stress-test,ohwr/project/spec-stress-test,hardware,0
+68851991,White Rabbit Calibration,ohwr/project/wr-calibration,hardware,0
+68851940,sfp-plus-i2c,ohwr/project/sfp-plus-i2c,hardware,0
+68851852,FMC DIO 32ch lvds a,ohwr/project/fmc-dio-32chlvdsa,hardware,0
+68851805,tr-amc,ohwr/project/tr-amc,hardware,0
+68851795,PandABox,ohwr/project/pandabox,hardware,59
+68851714,PandABox-hw,ohwr/project/pandabox-hw,hardware,0
+68851487,Filter-prototype-board,ohwr/project/fpb,hardware,26
+68851374,WRS Low Jitter Daughterboard,ohwr/project/wrs-low-jitter,hardware,95
+68851273,Conv-diff-se-cable-driver,ohwr/project/conv-diff-se-cable-driver,hardware,0
+68851251,Artix Trivial FMC Carrier  ATFC,ohwr/project/atfc,hardware,0
+68851177,fmc-nanofip,ohwr/project/fmc-nanofip,hardware,0
+68851127,EMC2-DP,ohwr/project/emc2-dp,hardware,77
+68850970,1-to-8 Pulse and Frequency Distribution Amplifier,ohwr/project/pda-8ch-fda-8ch,hardware,0
+68850928,High Performance MTCA.4 White Rabbit Receiver,ohwr/project/ertm15-llrf-wr,hardware,0
+68850896,SPEC7,ohwr/project/spec7,hardware,0
+68850796,WRS Fan-less hardware,ohwr/project/wrs-fl-hw,hardware,0
+68850700,Mini-WR,ohwr/project/mini-wr,hardware,27
+68850653,Radiation Tolerant LED Luminaire,ohwr/project/radtol-led-luminaire,hardware,65
+68850628,CTR FMC 5 CH TTL RS485,ohwr/project/ctr-fmc-5chttla,hardware,68
+68850596,DIOT - Distributed IO Tier,ohwr/project/diot,hardware,81
+68850567,DIOT DIO 16ch opt 24V,ohwr/project/diot-dio-16ch-opt-24v,hardware,31
+68850537,OPT-ADC-10k-32b-1cha HPM7177,ohwr/project/opt-adc-10k-32b-1cha,hardware,73
+68850514,VME FMC Carrier - VFC-HS,ohwr/project/vfc-hs,hardware,58
+68850443,LHC Instability Trigger Distribution LIST,ohwr/project/list,hardware,0
+68850411,RF Multiplexer 8ch 1GHz,ohwr/project/rf-mux-8ch,hardware,0
+68850343,Hello PDN,ohwr/project/hellopdn,hardware,47
+68850262,FMC-DTXRX-4CHA,ohwr/project/fmc-dtxrx-4cha,hardware,35
+68850246,White Rabbit Switch - Hardware V4,ohwr/project/wr-switch-hw-v4,hardware,0
+68850081,WRS-318 with LJD prepared hardware,ohwr/project/wrs-ljdprep-hw,hardware,23
+68850056,TiCkS,ohwr/project/spec-ticks,hardware,0
+68850035,AIDA-2020 TLU - Hardware,ohwr/project/fmc-mtlu-hw,hardware,0
+68849774,Euro ADC 65M 14b 40cha hw PUMA-hw,ohwr/project/euro-adc-65m-14b-40cha-hw,hardware,0
+68849334,PXIe controller COM Express based,ohwr/project/pxie-ctl-comexpress,hardware,0
+68849301,RaToPUS radiation-tolerant AC-DC power supply,ohwr/project/psu-rad-acdc-230v-12v5v-110w,hardware,0
+68848818,Resource Evaluation of WR switch HDL for Ultrascale Plus,ohwr/project/wr-switch-hdl-usp-eval,hardware,0
+68848766,DIOT Monitoring Module,ohwr/project/diot-monimod,hardware,0
+68848611,DIOT CompactPCI Serial crate hardware,ohwr/project/diot-crate-hw,hardware,0
+68848376,tr-pexp,ohwr/project/tr-pexp,hardware,0
+68848237,HPSEC - High Precision Slaved External Clock,ohwr/project/hpsec,hardware,82
+68848217,Simple VME FMC Carrier 7 - SVEC7,ohwr/project/svec7,hardware,45
+68848155,Microstepper,ohwr/project/microstepper,hardware,0
+68848132,FMC-PROFINET,ohwr/project/fmc-profinet,hardware,0
+68848074,DIOT Igloo2-based radiation-tolerant System Board,ohwr/project/diot-sb-igl,hardware,0
+68847938,CERN-ELMB2,ohwr/project/cern-elmb2,hardware,26
+68847932,DIOT Kintex Ultrascale-based Peripheral Board FMC Carrier,ohwr/project/diot-pfc-ku,hardware,0
+68847885,SoC Course with Reference Designs,ohwr/project/soc-course,hardware,49
+68847569,Programmable RF Attenuator,ohwr/project/rf-att-4cha,hardware,0
+68847447,powerlink,ohwr/project/powerlink,hardware,0
+68831841,Respir-OS,ohwr/project/respir-os,hardware,0
+68831744,SIS1160 PCI-L IO add on,ohwr/project/sis1160-pci-io,hardware,0
+68831714,AMC FMC Carrier AFCZ,ohwr/project/afcz,hardware,67
+68831659,FSI DIOT Photodetection module 8ch,ohwr/project/diot-fsi-det-8ch,hardware,141
+68831621,PXIe Communication Tester - PXCT,ohwr/project/pxct,hardware,0
+68831605,AMC FMC Carrier Kintex Ultrascale AFCKU,ohwr/project/afcku,hardware,0
+68831491,FMC High-Voltage supply - fmc-hv-2ch,ohwr/project/fmc-hv-2ch,hardware,0
+68831428,PZ Carrier and Trigger IO - PZ-TIO,ohwr/project/pz-tio,hardware,65
+68831383,DIOT Peripheral Board Loop-back,ohwr/project/diot-pb-lbk,hardware,0
+68831336,Optical to electrical converter,ohwr/project/conv-opt-ttl-1i-1o,hardware,51
+68831285,BabyWR,ohwr/project/babywr,hardware,0
+68831201,WRTD Reference Designs,ohwr/project/wrtd-ref-designs,hardware,0
+68831178,Negative Pressure Wound Treatment,ohwr/project/npwt,hardware,29
+68831063,DIOT Mixed Digital IO RTM,ohwr/project/mdior,hardware,0
+68830978,ACCURATE 2A Evaluation Board,ohwr/project/accurate2-eval,hardware,63
+68830827,Analogue GIRAPH,ohwr/project/analogue-giraph,hardware,23
+68830816,PandABox II,ohwr/project/PandaBox2,hardware,54
+68830784,Idrogen,ohwr/project/idrogen,hardware,0
+68830742,WREN,ohwr/project/wren,hardware,0
+68830702,Quad-Channel Digital Pico ammeter,ohwr/project/P4CH-LNLS,hardware,0
+68830641,mrpc-25x18-24strip,ohwr/p-det/mrpc-25x18-24strip,hardware,0
+68830633,Open Breath Lung Ventilator,ohwr/openbreath/lungventilator,hardware,0
+68830613,Open Breath PEP Whistle,ohwr/openbreath/pepwhistle,hardware,0
+68830587,fmc-delay-1ns-8cha-sa,ohwr/oh-applications/fmc-delay-1ns-8cha-sa,hardware,0
+68830426,hdl-make,ohwr/misc/hdl-make,hardware,0
+68830382,panda,ohwr/misc/panda,hardware,0
+68830356,pmtlib,ohwr/misc/pmtlib,hardware,0
+68830124,conv-ttl-rs485-tst,ohwr/level-conversion/conv-ttl-rs485/conv-ttl-rs485-tst,hardware,0
+68830085,conv-ttl-blo-hw,ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-hw,hardware,0
+68830075,conv-ttl-blo-tst,ohwr/level-conversion/conv-ttl-blo/conv-ttl-blo-tst,hardware,0
+68830050,conv-diff-se-cable-driver,ohwr/level-conversion/conv-diff-se-cable-driver,hardware,0
+68829994,ddr3-sp6-core,ohwr/hdl-core-lib/ddr3-sp6-core,hardware,0
+68829889,gn4124-core,ohwr/hdl-core-lib/gn4124-core,hardware,0
+68829869,mock-turtle,ohwr/hdl-core-lib/mock-turtle,hardware,0
+68829777,tdc-core,ohwr/hdl-core-lib/tdc-core,hardware,0
+68829736,urv-core,ohwr/hdl-core-lib/urv-core,hardware,0
+68829698,vme64x-core,ohwr/hdl-core-lib/vme64x-core,hardware,0
+68829574,fmc-tdc-1ns-5cha-hw,ohwr/fmc-projects/fmc-tdc/fmc-tdc-1ns-5cha-hw,hardware,0
+68829474,fmc-mtlu-hw,ohwr/fmc-projects/fmc-mtlu/fmc-mtlu-hw,hardware,0
+68829308,fmc-dac-600m-12b-1cha-tst,ohwr/fmc-projects/fmc-dac-600m-12b-1cha-dds/fmc-dac-600m-12b-1cha-tst,hardware,0
+68828044,euro-adc-65m-14b-40cha-hw,ohwr/eurocard/euro-adc-65m-14b-40cha/euro-adc-65m-14b-40cha-hw,hardware,0
+68827778,masterfip-tst,ohwr/cern-fip/masterfip/masterfip-tst,hardware,0
+68877533,AIDAInnova_TLU,ohwr/cussans/aidainnova_tlu,hardware,
+68861936,Low-level RF Servo control,ohwr/project/lrfsc,hardware,
+68857928,FMC LPC 100 Mil 12 Pin Digital IO Expansion Board,ohwr/project/lpcfmc12pexp,hardware,
+68857475,FMC 8 channel temperature monitor,ohwr/project/fmc-8cha-temp,hardware,
+68855934,FMC DAC 130M 12b 4ch 4SFP,ohwr/project/fmc-dac-130m-12b-4ch-4sfp,hardware,
+68855572,CROME,ohwr/project/crome,hardware,
+68854353,FMC Dual channel L band front-end,ohwr/project/fmc-fe-l-band-2ch,hardware,
+68852498,VMR-DIO-24ch-DCI,ohwr/project/vmr-dio-24ch-dci,hardware,
+68851537,eez-psu,ohwr/project/eez-psu,hardware,
+68851219,FMC VHDCI,ohwr/project/fmc-vhdci,hardware,
+68865595,mtca-4-timing-module,ohwr/xtca-projects/mtca-4-timing-module,hardware,
+68865546,wrs-ljdprep-hw,ohwr/white-rabbit/wr-switch-hw/wrs-ljdprep-hw,hardware,
+68865541,wrs-low-jitter,ohwr/white-rabbit/wr-switch-hw/wrs-low-jitter,hardware,
+68864807,wr-switch-hw-v4,ohwr/white-rabbit/wr-switch-hw-v4,hardware,
+68864694,libsfp,ohwr/sfp/sfp-plus-i2c/libsfp,hardware,
+68864672,radtol-led-luminaire,ohwr/rad-tol-projects/radtol-led-luminaire,hardware,
+68864662,radtol-led-psu,ohwr/rad-tol-projects/radtol-led-psu,hardware,
+68864604,pandabox-hw,ohwr/rack-19/pandabox/pandabox-hw,hardware,
+68864572,eez-psu,ohwr/rack-19/eez-psu,hardware,
+68853485,Rad-tol projects,ohwr/project/rad-tol-projects,hardware,
+68853339,Particle Detectors,ohwr/project/p-det,hardware,
+68852392,Data centre environmental sensors,ohwr/project/dces,hardware,
+68852161,Rackable 19 projects,ohwr/project/rack-19,hardware,
+68851956,SFP,ohwr/project/sfp,hardware,
+68851151,PC104,ohwr/project/pc104,hardware,
+68830716,White Rabbit Timing System,ohwr/project/wrt,hardware,
+68827870,diot-dio-16ch-opt-24v,ohwr/diot/diot-dio-16ch-opt-24v,hardware,
+68851064,FMC Prototype Board - LPC,ohwr/project/fmc-prt-lpc,hardware,
+68849218,luvi,ohwr/project/luvi,hardware,
+68849177,OpenDSO - Open Digital Storage Oscilloscope,ohwr/project/opendso,hardware,
+68848194,SPEC150,ohwr/project/spec150,hardware,
+68848032,PROFIP - PROFINET-IRT - WorldFIP gateway,ohwr/project/profip,hardware,
+68847646,Holoblade,ohwr/project/holoblade,hardware,
+68831815,fmc-temp-pt100-15ch,ohwr/project/fmc-temp-pt100-15ch,hardware,
+68831783,samc-temp-thcpl-20ch,ohwr/project/samc-temp-thcpl-20ch,hardware,
+68831589,FMC Motion Front-End,ohwr/project/fmc-mfe,hardware,
+68831445,samb-step-dcdrive-4ch,ohwr/project/samb-step-dcdrive-4ch,hardware,
+68830673,Ultra low noise amplifier,ohwr/project/ultra-low-noise-amplifier,hardware,
+68827880,wandadapter,ohwr/edm/wandadapter,hardware,
