@@ -33,7 +33,7 @@ def scrape_project_data(url):
         project_data = {
             'url': url,
             'project_name': None,
-            'github_link': None,
+            'repository_link': None,
             'description': None,
             'bill_of_materials': [],
             'gerber_file_link': None,
@@ -46,55 +46,82 @@ def scrape_project_data(url):
         if title_elem:
             project_data['project_name'] = title_elem.get_text(strip=True)
         elif next_data and 'props' in next_data:
-            props = next_data['props']['pageProps']
-            project_data['project_name'] = props.get('projectName')
+            try:
+                props = next_data['props']['pageProps']
+                project_data['project_name'] = props.get('projectName')
+            except (KeyError, TypeError):
+                try:
+                    props = next_data['props']['pageProps']['singleProject']
+                    project_data['project_name'] = props.get('projectName')
+                except (KeyError, TypeError):
+                    pass
         
         desc_meta = soup.find('meta', {'name': 'description'})
         if desc_meta:
             project_data['description'] = desc_meta.get('content')
         elif next_data and 'props' in next_data:
-            props = next_data['props']['pageProps']
-            project_data['description'] = props.get('ogDescription')
+            try:
+                props = next_data['props']['pageProps']
+                project_data['description'] = props.get('ogDescription')
+            except (KeyError, TypeError):
+                try:
+                    props = next_data['props']['pageProps']['singleProject']
+                    project_data['description'] = props.get('ogDescription')
+                except (KeyError, TypeError):
+                    pass
         
         github_elem = soup.find('div', {'data-cy': 'original-url'})
         if github_elem:
             github_link = github_elem.find('a')
             if github_link:
                 href = github_link.get('href')
-                if href and 'github.com' in href:
-                    project_data['github_link'] = href
+                if href and any(host in href for host in ['github.com', 'gitlab.com', 'bitbucket.org']):
+                    project_data['repository_link'] = href
         
-        if not project_data['github_link'] and next_data:
+        if not project_data['repository_link'] and next_data:
             try:
                 repo_data = next_data['props']['pageProps']['repo']
                 original_url = repo_data.get('original_url')
-                if original_url and 'github.com' in original_url:
-                    project_data['github_link'] = original_url
+                if original_url and any(host in original_url for host in ['github.com', 'gitlab.com', 'bitbucket.org']):
+                    project_data['repository_link'] = original_url
+            except (KeyError, TypeError):
+                pass
+            
+            try:
+                single_project_data = next_data['props']['pageProps']['singleProject']['repo']
+                original_url = single_project_data.get('original_url')
+                if original_url and any(host in original_url for host in ['github.com', 'gitlab.com', 'bitbucket.org']):
+                    project_data['repository_link'] = original_url
             except (KeyError, TypeError):
                 pass
         
         if next_data and 'props' in next_data:
+            bom_info = None
             try:
                 bom_info = next_data['props']['pageProps']['bomInfo']
-                if bom_info and 'bom' in bom_info and 'lines' in bom_info['bom']:
-                    for line in bom_info['bom']['lines']:
-                        bom_item = {
-                            'reference': line.get('reference', ''),
-                            'quantity': line.get('quantity', ''),
-                            'description': line.get('description', ''),
-                            'manufacturer': '',
-                            'mpn': '',
-                            'retailers': line.get('retailers', {})
-                        }
-                        
-                        part_numbers = line.get('partNumbers', [])
-                        if part_numbers and len(part_numbers) > 0:
-                            bom_item['manufacturer'] = part_numbers[0].get('manufacturer', '')
-                            bom_item['mpn'] = part_numbers[0].get('part', '')
-                        
-                        project_data['bill_of_materials'].append(bom_item)
-            except (KeyError, TypeError) as e:
-                print(f"Error extracting BOM from JSON: {e}")
+            except (KeyError, TypeError):
+                try:
+                    bom_info = next_data['props']['pageProps']['singleProject']['bomInfo']
+                except (KeyError, TypeError):
+                    pass
+            
+            if bom_info and 'bom' in bom_info and 'lines' in bom_info['bom']:
+                for line in bom_info['bom']['lines']:
+                    bom_item = {
+                        'reference': line.get('reference', ''),
+                        'quantity': line.get('quantity', ''),
+                        'description': line.get('description', ''),
+                        'manufacturer': '',
+                        'mpn': '',
+                        'retailers': line.get('retailers', {})
+                    }
+                    
+                    part_numbers = line.get('partNumbers', [])
+                    if part_numbers and len(part_numbers) > 0:
+                        bom_item['manufacturer'] = part_numbers[0].get('manufacturer', '')
+                        bom_item['mpn'] = part_numbers[0].get('part', '')
+                    
+                    project_data['bill_of_materials'].append(bom_item)
         
         if not project_data['bill_of_materials']:
             bom_table = soup.find('table', class_=re.compile(r'TsvTable'))
@@ -117,12 +144,17 @@ def scrape_project_data(url):
                             project_data['bill_of_materials'].append(bom_item)
         
         if next_data and 'props' in next_data:
+            zip_url = None
             try:
                 zip_url = next_data['props']['pageProps'].get('zipUrl')
-                if zip_url:
-                    project_data['gerber_file_link'] = zip_url
             except (KeyError, TypeError):
-                pass
+                try:
+                    zip_url = next_data['props']['pageProps']['singleProject'].get('zipUrl')
+                except (KeyError, TypeError):
+                    pass
+            
+            if zip_url:
+                project_data['gerber_file_link'] = zip_url
         
         if not project_data['gerber_file_link']:
             gerber_link = soup.find('a', {'href': lambda x: x and 'gerbers.zip' in x})
@@ -139,7 +171,7 @@ def scrape_project_data(url):
         return {
             'url': url,
             'project_name': None,
-            'github_link': None,
+            'repository_link': None,
             'description': None,
             'bill_of_materials': [],
             'gerber_file_link': None,
@@ -149,7 +181,7 @@ def scrape_project_data(url):
         return {
             'url': url,
             'project_name': None,
-            'github_link': None,
+            'repository_link': None,
             'description': None,
             'bill_of_materials': [],
             'gerber_file_link': None,
@@ -182,7 +214,7 @@ def scrape_projects_from_json(json_data, delay=1.0):
         else:
             print(f"  Project: {project_data['project_name']}")
             print(f"  BOM items: {len(project_data['bill_of_materials'])}")
-            print(f"  GitHub: {project_data['github_link']}")
+            print(f"  Repository: {project_data['repository_link']}")
         
         if i < len(projects) - 1:
             time.sleep(delay)
@@ -204,18 +236,20 @@ def load_json_data(input_path):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Scrape Kitspace project data from a list of URLs',
+        description='Scrape Kitspace project data from a single URL or list of URLs',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   python scraper.py -i projects.json -o results.json
   python scraper.py -i https://example.com/projects.json -o /path/to/output.json
   python scraper.py -i projects.json -o results.json --delay 3
+  python scraper.py -u https://kitspace.org/weirdgyn/Driverino-Shield -o result.json
         """
     )
     
+    parser.add_argument('-u', '--url',
+                       help='Single Kitspace project URL to scrape (alternative to -i)')
     parser.add_argument('-i', '--input', 
-                       required=True,
                        help='Path to JSON file or URL containing project URLs')
     parser.add_argument('-o', '--output',
                        required=True, 
@@ -227,16 +261,36 @@ Examples:
     
     args = parser.parse_args()
     
-    print(f"Loading project data from: {args.input}")
-    json_data = load_json_data(args.input)
+    if not args.input and not args.url:
+        parser.error("Either -i/--input or -u/--url must be specified")
     
-    if 'projects' not in json_data:
-        print("Error: JSON file must contain a 'projects' key")
-        sys.exit(1)
-    
-    print(f"Found {len(json_data['projects'])} projects to scrape")
-    
-    results = scrape_projects_from_json(json_data, delay=args.delay)
+    if args.url:
+        print(f"Scraping single URL: {args.url}")
+        project_data = scrape_project_data(args.url)
+        
+        results = {
+            'timestamp': None,
+            'total_projects': 1,
+            'scraped_data': [project_data]
+        }
+        
+        if project_data['error']:
+            print(f"  Error: {project_data['error']}")
+        else:
+            print(f"  Project: {project_data['project_name']}")
+            print(f"  BOM items: {len(project_data['bill_of_materials'])}")
+            print(f"  Repository: {project_data['repository_link']}")
+    else:
+        print(f"Loading project data from: {args.input}")
+        json_data = load_json_data(args.input)
+        
+        if 'projects' not in json_data:
+            print("Error: JSON file must contain a 'projects' key")
+            sys.exit(1)
+        
+        print(f"Found {len(json_data['projects'])} projects to scrape")
+        
+        results = scrape_projects_from_json(json_data, delay=args.delay)
     
     print(f"Saving results to: {args.output}")
     try:
