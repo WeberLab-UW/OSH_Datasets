@@ -1,5 +1,3 @@
-# Research-Grade GitHub README Analysis Prompt
-
 Analyze this README file and extract structured information following rigorous classification criteria. Return your response as valid JSON following the exact schema below.
 
 ## Operational Definitions
