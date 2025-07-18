@@ -1,0 +1,277 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red193\green193\blue193;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c80000\c80000\c80000;}
+\margl1440\margr1440\vieww25200\viewh16880\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 ```json\
+\{\
+  "document_metadata": \{\
+    "total_word_count": 10400,\
+    "contains_technical_language": true,\
+    "primary_language": "english",\
+    "project_type": "mixed",\
+    "document_structure_quality": "well_structured"\
+  \},\
+  "license_information": \{\
+    "general_license": \{\
+      "present": true,\
+      "type": "explicit",\
+      "license_name": "Multiple licenses specified",\
+      "evidence_full": "The device is [Open-source hardware]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Open-source_hardware"}}{\fldrslt \ul \strokec3 https://en.wikipedia.org/wiki/Open-source_hardware}}), [licensed by Open Source Hardware Association]({\field{\*\fldinst{HYPERLINK "https://certification.oshwa.org/bg000078.html)./n/n-"}}{\fldrslt \ul \strokec3 https://certification.oshwa.org/bg000078.html).\\n\\n-}} Hardware is licensed under [CERN-OHL-W v2]({\field{\*\fldinst{HYPERLINK "https://ohwr.org/cern_ohl_w_v2.txt)./n-"}}{\fldrslt \ul \strokec3 https://ohwr.org/cern_ohl_w_v2.txt).\\n-}} Software is licensed under [Apache License 2]({\field{\*\fldinst{HYPERLINK "https://www.apache.org/licenses/LICENSE-2.0)/n-"}}{\fldrslt \ul \strokec3 https://www.apache.org/licenses/LICENSE-2.0)\\n-}} Documentation is licensed under [CC-BY-SA-4.0]({\field{\*\fldinst{HYPERLINK "https://creativecommons.org/licenses/by-sa/4.0/"}}{\fldrslt \ul \strokec3 https://creativecommons.org/licenses/by-sa/4.0/}}).",\
+      "evidence_location": "License section",\
+      "confidence_score": 95,\
+      "confidence_rationale": "explicit_mention"\
+    \}\
+  \},\
+  "contributing_guidelines": \{\
+    "present": false,\
+    "level": 0,\
+    "location_type": "none",\
+    "evidence_full": "",\
+    "evidence_location": "",\
+    "confidence_score": 0,\
+    "confidence_rationale": "No contribution information present"\
+  \},\
+  "bill_of_materials": \{\
+    "present": true,\
+    "completeness_level": "complete",\
+    "format_type": "table",\
+    "total_components": 20,\
+    "components": [\
+      \{\
+        "component_name": "PCB Board",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "in [kicad folder](kicad) you can find all the data and GERBER PCB design files",\
+        "source_line_full": "| | PCB Board | 1 | in [kicad folder](kicad) you can find all the data and GERBER PCB design files"\
+      \},\
+      \{\
+        "component_name": "WeMos_D1_mini_ESP32",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "[ESP8266 version]({\field{\*\fldinst{HYPERLINK "https://www.wemos.cc/en/latest/d1/d1_mini.html"}}{\fldrslt \ul \strokec3 https://www.wemos.cc/en/latest/d1/d1_mini.html}}) also can work but not recommended",\
+        "source_line_full": "U1 | [WeMos_D1_mini_ESP32]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/4000880936043.html?spm=a2g0o.productlist.0.0.f387754egZVnTc&algo_pvid=b105e43b-6669-40bc-99c4-cf22d026995d&algo_expid=b105e43b-6669-40bc-99c4-cf22d026995d-6&btsid=0bb0623616009843570355505e4ca0&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/4000880936043.html?spm=a2g0o.productlist.0.0.f387754egZVnTc&algo_pvid=b105e43b-6669-40bc-99c4-cf22d026995d&algo_expid=b105e43b-6669-40bc-99c4-cf22d026995d-6&btsid=0bb0623616009843570355505e4ca0&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_}}) | 1 | [ESP8266 version]({\field{\*\fldinst{HYPERLINK "https://www.wemos.cc/en/latest/d1/d1_mini.html"}}{\fldrslt \ul \strokec3 https://www.wemos.cc/en/latest/d1/d1_mini.html}}) also can work but not recommended"\
+      \},\
+      \{\
+        "component_name": "PMS7003 Sensor",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "don't use the 2x5pin 1.27mm receptacle which comes normally wit these sensors, explanation is bellow",\
+        "source_line_full": "U2 | [PMS7003 Sensor]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/32832444694.html?spm=a2g0s.9042311.0.0.27424c4dKxsO6Z"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/32832444694.html?spm=a2g0s.9042311.0.0.27424c4dKxsO6Z}}) | 1 | don't use the 2x5pin 1.27mm receptacle which comes normally wit these sensors, explanation is bellow"\
+      \},\
+      \{\
+        "component_name": "SSD1306 Display",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "pay attention to correct pin order if you are buying from another source, as there are similar 4pin boards with different pinout",\
+        "source_line_full": "U3 | [SSD1306 Display]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/32956051129.html?spm=a2g0o.productlist.0.0.523365fcQkP3XC&algo_pvid=b62bd3ab-fe19-479e-bc50-b2c68dd35525&algo_expid=b62bd3ab-fe19-479e-bc50-b2c68dd35525-25&btsid=67d67e08-4ad1-4c08-8cec-e378bae47fc6&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/32956051129.html?spm=a2g0o.productlist.0.0.523365fcQkP3XC&algo_pvid=b62bd3ab-fe19-479e-bc50-b2c68dd35525&algo_expid=b62bd3ab-fe19-479e-bc50-b2c68dd35525-25&btsid=67d67e08-4ad1-4c08-8cec-e378bae47fc6&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55}}) | 1 | pay attention to correct pin order if you are buying from another source, as there are similar 4pin boards with different pinout"\
+      \},\
+      \{\
+        "component_name": "BME280 breakout board",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "only 3.3V version with 6 pins which have both I2C and SPI. **Please note that due to semiconductor shortage these are difficult to find now (June 2021). I am currently using my own breakout where I solder the BME directly. BME280 as IC can be found occasionally in stock from DigiKey**",\
+        "source_line_full": "U4 | [BME280 breakout board]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/4000166540445.html?spm=a2g0o.productlist.0.0.363a562ely2LZq&algo_pvid=b0bd6068-edbb-4f9c-aa24-92324f726eda&algo_expid=b0bd6068-edbb-4f9c-aa24-92324f726eda-8&btsid=3927b67d-2f89-4594-9f47-b017e00ef8a0&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/4000166540445.html?spm=a2g0o.productlist.0.0.363a562ely2LZq&algo_pvid=b0bd6068-edbb-4f9c-aa24-92324f726eda&algo_expid=b0bd6068-edbb-4f9c-aa24-92324f726eda-8&btsid=3927b67d-2f89-4594-9f47-b017e00ef8a0&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55}}) | 1 | only 3.3V version with 6 pins which have both I2C and SPI. **Please note that due to semiconductor shortage these are difficult to find now (June 2021). I am currently using my own breakout where I solder the BME directly. BME280 as IC can be found occasionally in stock from DigiKey**"\
+      \},\
+      \{\
+        "component_name": "MH-Z19B Sensor",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "**Beware for fake sensors, as [explained here]({\field{\*\fldinst{HYPERLINK "https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29"}}{\fldrslt \ul \strokec3 https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29}}). Buy from Winsen official store in Aliexpress.**",\
+        "source_line_full": "U5 | [MH-Z19B Sensor]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/1005001865093513.html?spm=2114.12010610.8148356.5.5b7387a5ZmuUlX"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/1005001865093513.html?spm=2114.12010610.8148356.5.5b7387a5ZmuUlX}}) | 1 | **Beware for fake sensors, as [explained here]({\field{\*\fldinst{HYPERLINK "https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29"}}{\fldrslt \ul \strokec3 https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29}}). Buy from Winsen official store in Aliexpress.**"\
+      \},\
+      \{\
+        "component_name": "SGP30 breakout board",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": null,\
+        "source_line_full": "U6 | [SGP30 breakout board]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/4000004614708.html?spm=a2g0o.productlist.0.0.688164abtt6ZRA&algo_pvid=7f813f70-3c1d-42ee-b6cf-9bf501c47314&algo_expid=7f813f70-3c1d-42ee-b6cf-9bf501c47314-1&btsid=3f683b7d-631a-4373-b0a1-f574cd317549&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/4000004614708.html?spm=a2g0o.productlist.0.0.688164abtt6ZRA&algo_pvid=7f813f70-3c1d-42ee-b6cf-9bf501c47314&algo_expid=7f813f70-3c1d-42ee-b6cf-9bf501c47314-1&btsid=3f683b7d-631a-4373-b0a1-f574cd317549&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55}}) | 1"\
+      \},\
+      \{\
+        "component_name": "TLS2561 light sensor",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": null,\
+        "source_line_full": "U7 | [TLS2561 light sensor]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/33056165996.html?spm=a2g0s.9042311.0.0.15314c4draqb6x"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/33056165996.html?spm=a2g0s.9042311.0.0.15314c4draqb6x}}) | 1"\
+      \},\
+      \{\
+        "component_name": "0.1 uF SMD Capacitor",\
+        "quantity": "4",\
+        "specifications": null,\
+        "sourcing_info": null,\
+        "source_line_full": "C1-C4 | [0.1 uF SMD Capacitor]({\field{\*\fldinst{HYPERLINK "https://bg.farnell.com/wurth-elektronik/885012207016/cap-0-1-f-10v-10-x7r-0805/dp/2534051?st=smd%20capacitors"}}{\fldrslt \ul \strokec3 https://bg.farnell.com/wurth-elektronik/885012207016/cap-0-1-f-10v-10-x7r-0805/dp/2534051?st=smd%20capacitors}}) | 4"\
+      \},\
+      \{\
+        "component_name": "Neopixel 5050 LED",\
+        "quantity": "3",\
+        "specifications": null,\
+        "sourcing_info": null,\
+        "source_line_full": "D1-D3 | [Neopixel 5050 LED]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/4000750610574.html?spm=a2g0o.productlist.0.0.55a96722mpqDCp&algo_pvid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f&algo_expid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f-5&btsid=0bb0623416009856118282154ebe61&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/4000750610574.html?spm=a2g0o.productlist.0.0.55a96722mpqDCp&algo_pvid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f&algo_expid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f-5&btsid=0bb0623416009856118282154ebe61&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_}}) | 3"\
+      \},\
+      \{\
+        "component_name": "Tactile Switch B3S-1000",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": null,\
+        "source_line_full": "| SW1 | [Tactile Switch B3S-1000]({\field{\*\fldinst{HYPERLINK "https://uk.farnell.com/omron/b3s-1000/switch-spno-0-05a-24v-smd/dp/177807"}}{\fldrslt \ul \strokec3 https://uk.farnell.com/omron/b3s-1000/switch-spno-0-05a-24v-smd/dp/177807}}) | 1 |"\
+      \},\
+      \{\
+        "component_name": "Tactile Switch B3U-1000P",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": null,\
+        "source_line_full": "| SW2 | [Tactile Switch B3U-1000P]({\field{\*\fldinst{HYPERLINK "https://bg.farnell.com/omron/b3u-1000p/switch-spst-no-0-05a-12v-smd/dp/1333652?st=B3U-1000P"}}{\fldrslt \ul \strokec3 https://bg.farnell.com/omron/b3u-1000p/switch-spst-no-0-05a-12v-smd/dp/1333652?st=B3U-1000P}}) | 1"\
+      \},\
+      \{\
+        "component_name": "PCB Receptacle, 1.27 mm, 10 Contacts",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "This PCB Receptacle is for connecting PMS7003 dust sensor. Keep in mind these sensors come with such connector included but it's slightly taller and makes a gap of about half mm between sensor and PCB which is not ok.",\
+        "source_line_full": "| | [PCB Receptacle, 1.27 mm, 10 Contacts]({\field{\*\fldinst{HYPERLINK "https://bg.farnell.com/amphenol-icc-fci/20021311-00010t4lf/receptacle-vert-1-27mm-tht-10way/dp/1865313"}}{\fldrslt \ul \strokec3 https://bg.farnell.com/amphenol-icc-fci/20021311-00010t4lf/receptacle-vert-1-27mm-tht-10way/dp/1865313}}) | 1 | This PCB Receptacle is for connecting PMS7003 dust sensor. Keep in mind these sensors come with such connector included but it's slightly taller and makes a gap of about half mm between sensor and PCB which is not ok."\
+      \},\
+      \{\
+        "component_name": "SMD PCB Receptacle 8 pins",\
+        "quantity": "3",\
+        "specifications": null,\
+        "sourcing_info": "two are needed for the MCU board, 3rd you can skip. It's for extra pins on the PCB but with ESP32 MCU not needed so much as extra headers can be soldered directly on it's board",\
+        "source_line_full": "| | [SMD PCB Receptacle 8 pins]({\field{\*\fldinst{HYPERLINK "https://uk.farnell.com/samtec/ssm-108-l-sv/receptacle-2-54mm-vert-8way/dp/1668259?st=ssm-108-l-sv%20pcb%20receptacle"}}{\fldrslt \ul \strokec3 https://uk.farnell.com/samtec/ssm-108-l-sv/receptacle-2-54mm-vert-8way/dp/1668259?st=ssm-108-l-sv%20pcb%20receptacle}}) | 3 | two are needed for the MCU board, 3rd you can skip. It's for extra pins on the PCB but with ESP32 MCU not needed so much as extra headers can be soldered directly on it's board"\
+      \},\
+      \{\
+        "component_name": "PCB Receptacle 4 pin",\
+        "quantity": "4",\
+        "specifications": null,\
+        "sourcing_info": "four is needed if all sensors are installed",\
+        "source_line_full": "| | [PCB Receptacle 4 pin]({\field{\*\fldinst{HYPERLINK "https://uk.farnell.com/samtec/bcs-104-l-s-te/receptacle-2-54mm-vert-4way/dp/1667470?ost=bcs-104-l-s-te"}}{\fldrslt \ul \strokec3 https://uk.farnell.com/samtec/bcs-104-l-s-te/receptacle-2-54mm-vert-4way/dp/1667470?ost=bcs-104-l-s-te}}) | 4 | four is needed if all sensors are installed"\
+      \},\
+      \{\
+        "component_name": "OLED 63x48 shield",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "not required, only if you want an extra display on top of the MCU board",\
+        "source_line_full": "| | [OLED 63x48 shield]({\field{\*\fldinst{HYPERLINK "https://www.aliexpress.com/item/32981156326.html?spm=a2g0s.9042311.0.0.27424c4dO21RuC"}}{\fldrslt \ul \strokec3 https://www.aliexpress.com/item/32981156326.html?spm=a2g0s.9042311.0.0.27424c4dO21RuC}}) | 1 | not required, only if you want an extra display on top of the MCU board"\
+      \},\
+      \{\
+        "component_name": "Holder case",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "it's not required to have it but it makes the device completed",\
+        "source_line_full": "| | [Holder case](case_model) | 1 | it's not required to have it but it makes the device completed"\
+      \},\
+      \{\
+        "component_name": "Display holder",\
+        "quantity": "1",\
+        "specifications": null,\
+        "sourcing_info": "This small 3D printed part is holding tight the display from flapping",\
+        "source_line_full": "| | [Display holder](case_model) | 1 | This small 3D printed part is holding tight the display from flapping"\
+      \},\
+      \{\
+        "component_name": "Various 2.54 headers",\
+        "quantity": null,\
+        "specifications": null,\
+        "sourcing_info": "You will need these for the CO2 sensor if you don't have available. Normally they come together with the breakout boards.",\
+        "source_line_full": "| | [Various 2.54 headers]({\field{\*\fldinst{HYPERLINK "https://www.ebay.co.uk/itm/10pcs-40-pin-2-54mm-Breakaway-Male-Header-for-PCB-Breadboard-1x40-Single-Row-UK/262755464818?epid=20008873513&hash=item3d2d723672:g:st8AAOSwMsZdNw5x"}}{\fldrslt \ul \strokec3 https://www.ebay.co.uk/itm/10pcs-40-pin-2-54mm-Breakaway-Male-Header-for-PCB-Breadboard-1x40-Single-Row-UK/262755464818?epid=20008873513&hash=item3d2d723672:g:st8AAOSwMsZdNw5x}}) | | You will need these for the CO2 sensor if you don't have available. Normally they come together with the breakout boards."\
+      \},\
+      \{\
+        "component_name": "2mm nylon bolts/nuts",\
+        "quantity": null,\
+        "specifications": null,\
+        "sourcing_info": "If you want to make the display more stable you can install nylon bolts like explained [in the video]({\field{\*\fldinst{HYPERLINK "https://youtu.be/b2oDBgN3h1w?t=758"}}{\fldrslt \ul \strokec3 https://youtu.be/b2oDBgN3h1w?t=758}}). Better use [display holder](case_model).",\
+        "source_line_full": "| | [2mm nylon bolts/nuts]({\field{\*\fldinst{HYPERLINK "https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2047675.m570.l1313&_nkw=2mm+nylon+bolts&_sacat=0"}}{\fldrslt \ul \strokec3 https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2047675.m570.l1313&_nkw=2mm+nylon+bolts&_sacat=0}}) | | If you want to make the display more stable you can install nylon bolts like explained [in the video]({\field{\*\fldinst{HYPERLINK "https://youtu.be/b2oDBgN3h1w?t=758"}}{\fldrslt \ul \strokec3 https://youtu.be/b2oDBgN3h1w?t=758}}). Better use [display holder](case_model)."\
+      \}\
+    ],\
+    "evidence_full": "Bellow is the list of all parts needed to assemble the device with links to sources where you can get them. Of course other sources can be used, just pay attention that the items are identical with the listed bellow. For example the SSD1306 display can be found with similar physical look and dimensions, but pins are not the same.\\n\\nSchematic Ref | ITEM | pcs | Comment\\n--------------| ---- | :-: | -------\\n| | PCB Board | 1 | in [kicad folder](kicad) you can find all the data and GERBER PCB design files\\nU1 | [WeMos_D1_mini_ESP32](https://www.aliexpress.com/item/4000880936043.html?spm=a2g0o.productlist.0.0.f387754egZVnTc&algo_pvid=b105e43b-6669-40bc-99c4-cf22d026995d&algo_expid=b105e43b-6669-40bc-99c4-cf22d026995d-6&btsid=0bb0623616009843570355505e4ca0&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 1 | [ESP8266 version](https://www.wemos.cc/en/latest/d1/d1_mini.html) also can work but not recommended \\nU2 | [PMS7003 Sensor](https://www.aliexpress.com/item/32832444694.html?spm=a2g0s.9042311.0.0.27424c4dKxsO6Z) | 1 | don't use the 2x5pin 1.27mm receptacle which comes normally wit these sensors, explanation is bellow\\nU3 | [SSD1306 Display](https://www.aliexpress.com/item/32956051129.html?spm=a2g0o.productlist.0.0.523365fcQkP3XC&algo_pvid=b62bd3ab-fe19-479e-bc50-b2c68dd35525&algo_expid=b62bd3ab-fe19-479e-bc50-b2c68dd35525-25&btsid=67d67e08-4ad1-4c08-8cec-e378bae47fc6&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1 | pay attention to correct pin order if you are buying from another source, as there are similar 4pin boards with different pinout\\nU4 | [BME280 breakout board](https://www.aliexpress.com/item/4000166540445.html?spm=a2g0o.productlist.0.0.363a562ely2LZq&algo_pvid=b0bd6068-edbb-4f9c-aa24-92324f726eda&algo_expid=b0bd6068-edbb-4f9c-aa24-92324f726eda-8&btsid=3927b67d-2f89-4594-9f47-b017e00ef8a0&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1 | only 3.3V version with 6 pins which have both I2C and SPI. **Please note that due to semiconductor shortage these are difficult to find now (June 2021). I am currently using my own breakout where I solder the BME directly. BME280 as IC can be found occasionally in stock from DigiKey**\\nU5 | [MH-Z19B Sensor](https://www.aliexpress.com/item/1005001865093513.html?spm=2114.12010610.8148356.5.5b7387a5ZmuUlX) | 1 | **Beware for fake sensors, as [explained here](https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29). Buy from Winsen official store in Aliexpress.**  \\nU6 | [SGP30 breakout board](https://www.aliexpress.com/item/4000004614708.html?spm=a2g0o.productlist.0.0.688164abtt6ZRA&algo_pvid=7f813f70-3c1d-42ee-b6cf-9bf501c47314&algo_expid=7f813f70-3c1d-42ee-b6cf-9bf501c47314-1&btsid=3f683b7d-631a-4373-b0a1-f574cd317549&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1\\nU7 | [TLS2561 light sensor](https://www.aliexpress.com/item/33056165996.html?spm=a2g0s.9042311.0.0.15314c4draqb6x) | 1\\nC1-C4 | [0.1 uF SMD Capacitor](https://bg.farnell.com/wurth-elektronik/885012207016/cap-0-1-f-10v-10-x7r-0805/dp/2534051?st=smd%20capacitors) | 4\\nD1-D3 | [Neopixel 5050 LED](https://www.aliexpress.com/item/4000750610574.html?spm=a2g0o.productlist.0.0.55a96722mpqDCp&algo_pvid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f&algo_expid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f-5&btsid=0bb0623416009856118282154ebe61&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 3\\n| SW1 | [Tactile Switch B3S-1000](https://uk.farnell.com/omron/b3s-1000/switch-spno-0-05a-24v-smd/dp/177807) | 1 |\\n| SW2 | [Tactile Switch B3U-1000P](https://bg.farnell.com/omron/b3u-1000p/switch-spst-no-0-05a-12v-smd/dp/1333652?st=B3U-1000P) | 1\\n| | [PCB Receptacle, 1.27 mm, 10 Contacts](https://bg.farnell.com/amphenol-icc-fci/20021311-00010t4lf/receptacle-vert-1-27mm-tht-10way/dp/1865313) | 1 | This PCB Receptacle is for connecting PMS7003 dust sensor. Keep in mind these sensors come with such connector included but it's slightly taller and makes a gap of about half mm between sensor and PCB which is not ok.\\n| | [SMD PCB Receptacle 8 pins](https://uk.farnell.com/samtec/ssm-108-l-sv/receptacle-2-54mm-vert-8way/dp/1668259?st=ssm-108-l-sv%20pcb%20receptacle) | 3 | two are needed for the MCU board, 3rd you can skip. It's for extra pins on the PCB but with ESP32 MCU not needed so much as extra headers can be soldered directly on it's board\\n| | [PCB Receptacle 4 pin](https://uk.farnell.com/samtec/bcs-104-l-s-te/receptacle-2-54mm-vert-4way/dp/1667470?ost=bcs-104-l-s-te) | 4 | four is needed if all sensors are installed\\n| | [OLED 63x48 shield](https://www.aliexpress.com/item/32981156326.html?spm=a2g0s.9042311.0.0.27424c4dO21RuC) | 1 | not required, only if you want an extra display on top of the MCU board\\n| | [Holder case](case_model) | 1 | it's not required to have it but it makes the device completed\\n| | [Display holder](case_model) | 1 | This small 3D printed part is holding tight the display from flapping \\n| | [Various 2.54 headers](https://www.ebay.co.uk/itm/10pcs-40-pin-2-54mm-Breakaway-Male-Header-for-PCB-Breadboard-1x40-Single-Row-UK/262755464818?epid=20008873513&hash=item3d2d723672:g:st8AAOSwMsZdNw5x) | | You will need these for the CO2 sensor if you don't have available. Normally they come together with the breakout boards.\\n| | [2mm nylon bolts/nuts](https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2047675.m570.l1313&_nkw=2mm+nylon+bolts&_sacat=0) | | If you want to make the display more stable you can install nylon bolts like explained [in the video](https://youtu.be/b2oDBgN3h1w?t=758). Better use [display holder](case_model).",\
+    "evidence_location": "Bill of Materials section",\
+    "confidence_score": 95,\
+    "confidence_rationale": "explicit_mention",\
+    "multiple_boms_detected": false,\
+    "conflicting_info": false\
+  \},\
+  "assembly_instructions": \{\
+    "present": true,\
+    "detail_level": "detailed",\
+    "instruction_format": "numbered_steps",\
+    "step_count": 5,\
+    "evidence_full": "The device is just a simple PCB board and almost everyone with some soldering skills can assemble it in a few steps:\\n1. [Download the PCB files](kicad/) and print the PCB somewhere like {\field{\*\fldinst{HYPERLINK "https://jlcpcb.com//n2"}}{\fldrslt \ul \strokec3 https://jlcpcb.com/\\n2}}. Buy some components (listed in the bill of materials section) from Aliexpress or any other source.\\n3. Solder everything on the board. With the exception of the ambient light sensor, all the rest is pretty easy with general soldering skills. Soldering light sensor can be done with regular soldering iron, but because of the small size of the IC, it's easier if you have heat gun or SMD reflow oven/plate. [Here is video how to complete device from assembled PCB.]({\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=b2oDBgN3h1w)%5Cn4"}}{\fldrslt \ul \strokec3 https://www.youtube.com/watch?v=b2oDBgN3h1w)\\n4}}. Flash the microcontroller with the esphome firmware [following the manual](firmware/). You can write your own firmware if you have the skills. :smile: \\n5. Print the holder case on 3D printer if you wish. I have some sensors without it and they are perfectly fine, so it's up to you.",\
+    "evidence_location": "Who can build it? section",\
+    "confidence_score": 90,\
+    "confidence_rationale": "explicit_mention"\
+  \},\
+  "design_files": \{\
+    "hardware_design_files": \{\
+      "present": true,\
+      "file_categories": ["CAD", "PCB", "3D"],\
+      "specific_formats": ["kicad_pcb", "gerber", "step"],\
+      "file_locations": ["kicad/iaq_device/plot/", "my_libs/3dmodels/"],\
+      "evidence_full": "It's designed on [KiCad]({\field{\*\fldinst{HYPERLINK "https://kicad.org/"}}{\fldrslt \ul \strokec3 https://kicad.org/}}) and in the [kicad folder](kicad/) you can find full KiCad project, PCB gerber files, etc.",\
+      "evidence_location": "Components Details section",\
+      "confidence_score": 90,\
+      "confidence_rationale": "explicit_mention"\
+    \},\
+    "mechanical_design_files": \{\
+      "present": true,\
+      "file_categories": ["3D"],\
+      "specific_formats": ["step"],\
+      "file_locations": ["my_libs/3dmodels/"],\
+      "evidence_full": "The case can stay at about 45 degrees angle. It is designed on Fusion 360 and the [details are here](case_model).",\
+      "evidence_location": "Holder case section",\
+      "confidence_score": 90,\
+      "confidence_rationale": "explicit_mention"\
+    \}\
+  \},\
+  "specific_licenses": \{\
+    "hardware_license": \{\
+      "present": true,\
+      "license_name": "CERN-OHL-W v2",\
+      "license_type": "copyleft",\
+      "evidence_full": "- Hardware is licensed under [CERN-OHL-W v2]({\field{\*\fldinst{HYPERLINK "https://ohwr.org/cern_ohl_w_v2.txt"}}{\fldrslt \ul \strokec3 https://ohwr.org/cern_ohl_w_v2.txt}}).",\
+      "evidence_location": "License section",\
+      "confidence_score": 95,\
+      "confidence_rationale": "explicit_mention"\
+    \},\
+    "software_license": \{\
+      "present": true,\
+      "license_name": "Apache License 2",\
+      "license_type": "permissive",\
+      "evidence_full": "- Software is licensed under [Apache License 2]({\field{\*\fldinst{HYPERLINK "https://www.apache.org/licenses/LICENSE-2.0"}}{\fldrslt \ul \strokec3 https://www.apache.org/licenses/LICENSE-2.0}})",\
+      "evidence_location": "License section",\
+      "confidence_score": 95,\
+      "confidence_rationale": "explicit_mention"\
+    \},\
+    "documentation_license": \{\
+      "present": true,\
+      "license_name": "CC-BY-SA-4.0",\
+      "license_type": "copyleft",\
+      "evidence_full": "- Documentation is licensed under [CC-BY-SA-4.0]({\field{\*\fldinst{HYPERLINK "https://creativecommons.org/licenses/by-sa/4.0/"}}{\fldrslt \ul \strokec3 https://creativecommons.org/licenses/by-sa/4.0/}}).",\
+      "evidence_location": "License section",\
+      "confidence_score": 95,\
+      "confidence_rationale": "explicit_mention"\
+    \}\
+  \},\
+  "validation_checks": \{\
+    "readme_sections_identified": [\
+      "IAQ (Indoor Air Quality) Board",\
+      "What exactly is this thing?",\
+      "Who can build it?",\
+      "What about ordering a device?",\
+      "Components Details",\
+      "Bill of Materials (BOM)",\
+      "Firmware",\
+      "Schematic",\
+      "Soldering tips",\
+      "User manual",\
+      "FAQ",\
+      "More Tech Details",\
+      "Known issues",\
+      "License"\
+    ],\
+    "contradictory_information_detected": false,\
+    "incomplete_information_flagged": false,\
+    "classification_boundary_cases": [],\
+    "evidence_verification_notes": "The README is well-structured and provides explicit information on licenses, BOM, and assembly instructions. No contradictory or incomplete information detected."\
+  \}\
+\}\
+```}
