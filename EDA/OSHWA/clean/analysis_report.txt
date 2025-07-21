@@ -1,0 +1,110 @@
+
+OSHWA Certification Data Analysis Report
+Generated on 2025-07-21 13:41:20
+
+1. Basic Statistics
+------------------
+Total Projects: 1910
+Countries Represented: 57
+Unique Responsible Parties: 521
+
+Top 5 Countries:
+United States of America    1021
+Bulgaria                     140
+Croatia                      115
+Germany                       63
+India                         54
+
+Top 5 Primary Types:
+Electronics    1416
+IOT             101
+Science          66
+Education        64
+Tool             45
+
+2. Temporal Analysis
+-------------------
+First Certification: 2016-10-04
+Latest Certification: 2025-06-20
+Total Projects with Dates: 1897
+Projects Missing Dates: 13
+
+Certifications by Year:
+2016     49
+2017     34
+2018     88
+2019     89
+2020    432
+2021    280
+2022    131
+2023    523
+2024    201
+2025     70
+
+3. License Usage
+---------------
+Top Hardware Licenses:
+CERN              761
+Other             551
+CERN-OHL-S-2.0    152
+TAPR              140
+CC-BY-SA-4.0       90
+
+Top Software Licenses:
+MIT                 920
+No software         303
+GPL                 270
+GPL-3.0-or-later    121
+Other               115
+
+Top Documentation Licenses:
+CC BY-SA        1229
+Other            198
+CC-BY-SA-4.0     192
+CC BY             83
+CC-BY-4.0         57
+
+4. Keyword Analysis
+------------------
+Projects with Keywords: 1910
+Average Keywords per Project: 3.62
+
+Top 10 Keywords:
+SparkFun         557
+Qwiic            220
+CircuitPython    172
+Arduino          124
+                 118
+ESP32             48
+arduino           40
+sensor            40
+ARDUINO           39
+LED               36
+
+5. Additional Project Types
+-------------------------
+Top Additional Types:
+Electronics          848
+Education            369
+IOT                  314
+Tool                 200
+Science              197
+Robotics             162
+3D Printing          143
+Home Connection      127
+Environmental        112
+Other                 98
+Manufacturing         92
+Arts                  63
+Wearables             62
+Sound                 43
+Enclosure             43
+Agriculture           38
+Space                 16
+Home Construction      2
+
+6. Version Analysis
+------------------
+Projects with Previous Versions: 1910
+Total Previous Versions: 60
+Average Previous Versions per Project: 0.03
