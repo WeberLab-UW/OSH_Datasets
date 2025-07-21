@@ -1,0 +1,327 @@
+{
+  "basic_stats": {
+    "total_projects": 3053,
+    "unique_countries": 64,
+    "countries": {
+      "United States of America": 1836,
+      "Germany": 154,
+      "Bulgaria": 149,
+      "Croatia": 118,
+      "United Kingdom": 76,
+      "India": 72,
+      "Canada": 65,
+      "Spain": 50,
+      "Mexico": 33,
+      "Romania": 30,
+      "Netherlands": 30,
+      "Switzerland": 29,
+      "Sweden": 29,
+      "France": 26,
+      "Japan": 22,
+      "Italy": 21,
+      "Belgium": 21,
+      "Poland": 19,
+      "Guatemala": 19,
+      "Brazil": 19,
+      "Australia": 18,
+      "China": 18,
+      "Sri Lanka": 16,
+      "Thailand": 14,
+      "Indonesia": 11,
+      "Czech Republic": 10,
+      "Mauritius": 9,
+      "Greece": 9,
+      "Austria": 9,
+      "Malaysia": 8,
+      "Chile": 8,
+      "Norway": 8,
+      "Singapore": 7,
+      "Hungary": 6,
+      "Ireland": 6,
+      "New Zealand": 5,
+      "Portugal": 5,
+      "Ukraine": 5,
+      "Taiwan": 5,
+      "Azerbaijan": 4,
+      "Argentina": 4,
+      "Turkey": 4,
+      "Lithuania": 4,
+      "Russia": 4,
+      "Ecuador": 4,
+      "Panama": 3,
+      "Finland": 3,
+      "Estonia": 3,
+      "Slovakia": 3,
+      "Saudi Arabia": 3,
+      "Egypt": 2,
+      "Bangladesh": 2,
+      "Israel": 2,
+      "Belarus": 2,
+      "Moldova": 2,
+      "Iran": 1,
+      "South Korea": 1,
+      "Denmark": 1,
+      "Slovenia": 1,
+      "El Salvador": 1,
+      "Costa Rica": 1,
+      "Latvia": 1,
+      "Syria": 1,
+      "Venezuela": 1
+    },
+    "unique_parties": 745,
+    "primary_types": {
+      "Electronics": 2263,
+      "IOT": 120,
+      "3D Printing": 120,
+      "Education": 100,
+      "Science": 99,
+      "Tool": 62,
+      "Other": 60,
+      "Sound": 50,
+      "Wearables": 39,
+      "Robotics": 35,
+      "Environmental": 30,
+      "Arts": 23,
+      "Enclosure": 13,
+      "Manufacturing": 13,
+      "Agriculture": 11,
+      "Home Connection": 9,
+      "Space": 6
+    }
+  },
+  "temporal_stats": {
+    "first_certification": "2016-10-01",
+    "latest_certification": "2025-06-20",
+    "total_with_dates": 3029,
+    "missing_dates": 24,
+    "certifications_by_year": {
+      "2016": 85,
+      "2017": 47,
+      "2018": 102,
+      "2019": 132,
+      "2020": 949,
+      "2021": 390,
+      "2022": 222,
+      "2023": 669,
+      "2024": 319,
+      "2025": 114
+    }
+  },
+  "license_stats": {
+    "hardware_licenses": {
+      "Other": 1381,
+      "CERN": 869,
+      "CERN-OHL-S-2.0": 210,
+      "TAPR": 145,
+      "CC-BY-SA-4.0": 129,
+      "CERN-OHL-P-2.0": 90,
+      "CERN-OHL-W-2.0": 54,
+      "CERN-OHL-1.2": 50,
+      "GPL-3.0-or-later": 45,
+      "CC-BY-4.0": 29,
+      "Solderpad": 19,
+      "GPL-3.0-only": 16,
+      "CC0-1.0": 8,
+      "GPL": 7
+    },
+    "software_licenses": {
+      "MIT": 1623,
+      "No software": 506,
+      "GPL": 356,
+      "Other": 170,
+      "GPL-3.0-or-later": 146,
+      "CC-BY-SA-4.0": 63,
+      "Apache": 58,
+      "GPL-3.0-only": 39,
+      "LGPL": 38,
+      "CERN-OHL-S-2.0": 21,
+      "CC-BY-4.0": 11,
+      "CERN-OHL-P-2.0": 9,
+      "CERN-OHL-W-2.0": 7,
+      "Mozilla": 3,
+      "CC0-1.0": 2
+    },
+    "documentation_licenses": {
+      "CC BY-SA": 2072,
+      "Other": 279,
+      "CC-BY-SA-4.0": 254,
+      "CC BY": 144,
+      "CC-BY-4.0": 86,
+      "GPL-3.0-or-later": 53,
+      "CERN-OHL-S-2.0": 46,
+      "CC 0": 26,
+      "CERN-OHL-P-2.0": 25,
+      "GPL-3.0-only": 21,
+      "CC0-1.0": 19,
+      "GPL": 15,
+      "CERN-OHL-W-2.0": 12
+    }
+  },
+  "keyword_stats": {
+    "top_keywords": [
+      [
+        "CircuitPython",
+        781
+      ],
+      [
+        "SparkFun",
+        558
+      ],
+      [
+        "Qwiic",
+        221
+      ],
+      [
+        "Arduino",
+        152
+      ],
+      [
+        "",
+        144
+      ],
+      [
+        "ESP32",
+        59
+      ],
+      [
+        "Sensor",
+        52
+      ],
+      [
+        "arduino",
+        50
+      ],
+      [
+        "sensor",
+        47
+      ],
+      [
+        "USB",
+        43
+      ],
+      [
+        "ARDUINO",
+        39
+      ],
+      [
+        "Raspberry Pi",
+        37
+      ],
+      [
+        "LED",
+        37
+      ],
+      [
+        "3D Printing",
+        36
+      ],
+      [
+        "Field Ready",
+        32
+      ],
+      [
+        "IoT",
+        31
+      ],
+      [
+        "MicroMod",
+        31
+      ],
+      [
+        "GPS",
+        29
+      ],
+      [
+        "keyboard",
+        28
+      ],
+      [
+        "groundstudio",
+        28
+      ]
+    ],
+    "projects_with_keywords": 3053,
+    "avg_keywords_per_project": 3.3553881428103507
+  },
+  "additional_type_stats": {
+    "top_additional_types": [
+      [
+        "Electronics",
+        1590
+      ],
+      [
+        "Education",
+        476
+      ],
+      [
+        "IOT",
+        381
+      ],
+      [
+        "Tool",
+        309
+      ],
+      [
+        "3D Printing",
+        274
+      ],
+      [
+        "Science",
+        269
+      ],
+      [
+        "Robotics",
+        219
+      ],
+      [
+        "Environmental",
+        151
+      ],
+      [
+        "Manufacturing",
+        150
+      ],
+      [
+        "Home Connection",
+        150
+      ],
+      [
+        "Other",
+        147
+      ],
+      [
+        "Arts",
+        109
+      ],
+      [
+        "Wearables",
+        84
+      ],
+      [
+        "Sound",
+        71
+      ],
+      [
+        "Enclosure",
+        54
+      ],
+      [
+        "Agriculture",
+        54
+      ],
+      [
+        "Space",
+        23
+      ],
+      [
+        "Home Construction",
+        3
+      ]
+    ]
+  },
+  "version_stats": {
+    "projects_with_previous_versions": 3053,
+    "total_previous_versions": 89,
+    "avg_previous_versions": 0.029151654110710776
+  }
+}
