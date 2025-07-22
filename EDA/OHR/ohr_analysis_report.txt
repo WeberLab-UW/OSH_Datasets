@@ -1,0 +1,53 @@
+
+Open Hardware Project Data Analysis Report
+Generated on 2025-07-21 18:05:01
+
+1. Basic Statistics
+-------------------
+Total Projects: 260
+Total Number of Projects with a Web Url: 260
+Total Number of Projects with a README Url: 102
+
+2. Attention Metrics 
+--------------------
+FORKS: 
+Average Number of Forks: 0.06
+
+Top 5 Projects by Forks (Top):
+                        name  forks_count
+                     Hdlmake            4
+White Rabbit core collection            4
+                      BabyWR            3
+                 VME64x core            1
+          Gennum GN4124 core            1
+
+
+Top 5 Projects by Forks (Bottom):
+                        name  forks_count
+                     Hdlmake            0
+                    urv-core            0
+      VME64x core - msaccani            0
+White Rabbit core collection            0
+                     Hdlmake            0
+
+
+STARS: 
+Average Number of Stars: 0.05
+
+Top 5 Projects by Stars (Top):
+                               name  star_count
+       White Rabbit core collection           5
+                               PPSi           2
+          FMC DAC 600M 12b 1cha DDS           1
+                          CERN ELMB           1
+fmc dac 600m 12b 1cha dds - Testing           1
+
+
+Top 5 Projects by Stars (Bottom):
+                        name  star_count
+                     Hdlmake           0
+                    urv-core           0
+      VME64x core - msaccani           0
+White Rabbit core collection           0
+                     Hdlmake           0
+
