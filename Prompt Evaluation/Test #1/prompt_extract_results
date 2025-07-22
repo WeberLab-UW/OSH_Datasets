@@ -1,0 +1,548 @@
+
+🔍 Processing project: iaq_board
+   ✅ Found README file: /Users/saraht45/Downloads/Open_Hardware/Git_Repositories_Sample/iaq_board/readme/iaq_board_readme.rtf
+   ✅ Found repo_tree file: /Users/saraht45/Downloads/Open_Hardware/Git_Repositories_Sample/iaq_board/repo_tree/iaq_board_tree.rtf
+
+LLM Response:
+
+```json
+{
+  "document_metadata": {
+    "total_word_count": 10800,
+    "contains_technical_language": true,
+    "primary_language": "english",
+    "project_type": "mixed",
+    "document_structure_quality": "well_structured"
+  },
+  "license_information": {
+    "general_license": {
+      "present": true,
+      "type": "explicit",
+      "license_name": "Multiple licenses specified",
+      "evidence_full": "The device is [Open-source hardware](https://en.wikipedia.org/wiki/Open-source_hardware), [licensed by Open Source Hardware Association](https://certification.oshwa.org/bg000078.html).\n\n- Hardware is licensed under [CERN-OHL-W v2](https://ohwr.org/cern_ohl_w_v2.txt).\n- Software is licensed under [Apache License 2](https://www.apache.org/licenses/LICENSE-2.0)\n- Documentation is licensed under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/).",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    }
+  },
+  "contributing_guidelines": {
+    "present": false,
+    "level": 0,
+    "location_type": "none",
+    "evidence_full": "",
+    "evidence_location": "",
+    "confidence_score": 0,
+    "confidence_rationale": "No contribution information found"
+  },
+  "bill_of_materials": {
+    "present": true,
+    "completeness_level": "complete",
+    "format_type": "table",
+    "total_components": 20,
+    "components": [
+      {
+        "component_name": "PCB Board",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "in [kicad folder](kicad) you can find all the data and GERBER PCB design files",
+        "source_line_full": "| | PCB Board | 1 | in [kicad folder](kicad) you can find all the data and GERBER PCB design files"
+      },
+      {
+        "component_name": "WeMos_D1_mini_ESP32",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "[ESP8266 version](https://www.wemos.cc/en/latest/d1/d1_mini.html) also can work but not recommended",
+        "source_line_full": "U1 | [WeMos_D1_mini_ESP32](https://www.aliexpress.com/item/4000880936043.html?spm=a2g0o.productlist.0.0.f387754egZVnTc&algo_pvid=b105e43b-6669-40bc-99c4-cf22d026995d&algo_expid=b105e43b-6669-40bc-99c4-cf22d026995d-6&btsid=0bb0623616009843570355505e4ca0&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 1 | [ESP8266 version](https://www.wemos.cc/en/latest/d1/d1_mini.html) also can work but not recommended"
+      },
+      {
+        "component_name": "PMS7003 Sensor",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "don't use the 2x5pin 1.27mm receptacle which comes normally wit these sensors, explanation is bellow",
+        "source_line_full": "U2 | [PMS7003 Sensor](https://www.aliexpress.com/item/32832444694.html?spm=a2g0s.9042311.0.0.27424c4dKxsO6Z) | 1 | don't use the 2x5pin 1.27mm receptacle which comes normally wit these sensors, explanation is bellow"
+      },
+      {
+        "component_name": "SSD1306 Display",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "pay attention to correct pin order if you are buying from another source, as there are similar 4pin boards with different pinout",
+        "source_line_full": "U3 | [SSD1306 Display](https://www.aliexpress.com/item/32956051129.html?spm=a2g0o.productlist.0.0.523365fcQkP3XC&algo_pvid=b62bd3ab-fe19-479e-bc50-b2c68dd35525&algo_expid=b62bd3ab-fe19-479e-bc50-b2c68dd35525-25&btsid=67d67e08-4ad1-4c08-8cec-e378bae47fc6&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1 | pay attention to correct pin order if you are buying from another source, as there are similar 4pin boards with different pinout"
+      },
+      {
+        "component_name": "BME280 breakout board",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "only 3.3V version with 6 pins which have both I2C and SPI. **Please note that due to semiconductor shortage these are difficult to find now (June 2021). I am currently using my own breakout where I solder the BME directly. BME280 as IC can be found occasionally in stock from DigiKey**",
+        "source_line_full": "U4 | [BME280 breakout board](https://www.aliexpress.com/item/4000166540445.html?spm=a2g0o.productlist.0.0.363a562ely2LZq&algo_pvid=b0bd6068-edbb-4f9c-aa24-92324f726eda&algo_expid=b0bd6068-edbb-4f9c-aa24-92324f726eda-8&btsid=3927b67d-2f89-4594-9f47-b017e00ef8a0&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1 | only 3.3V version with 6 pins which have both I2C and SPI. **Please note that due to semiconductor shortage these are difficult to find now (June 2021). I am currently using my own breakout where I solder the BME directly. BME280 as IC can be found occasionally in stock from DigiKey**"
+      },
+      {
+        "component_name": "MH-Z19B Sensor",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "**Beware for fake sensors, as [explained here](https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29). Buy from Winsen official store in Aliexpress.**",
+        "source_line_full": "U5 | [MH-Z19B Sensor](https://www.aliexpress.com/item/1005001865093513.html?spm=2114.12010610.8148356.5.5b7387a5ZmuUlX) | 1 | **Beware for fake sensors, as [explained here](https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29). Buy from Winsen official store in Aliexpress.**"
+      },
+      {
+        "component_name": "SGP30 breakout board",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "U6 | [SGP30 breakout board](https://www.aliexpress.com/item/4000004614708.html?spm=a2g0o.productlist.0.0.688164abtt6ZRA&algo_pvid=7f813f70-3c1d-42ee-b6cf-9bf501c47314&algo_expid=7f813f70-3c1d-42ee-b6cf-9bf501c47314-1&btsid=3f683b7d-631a-4373-b0a1-f574cd317549&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1"
+      },
+      {
+        "component_name": "TLS2561 light sensor",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "U7 | [TLS2561 light sensor](https://www.aliexpress.com/item/33056165996.html?spm=a2g0s.9042311.0.0.15314c4draqb6x) | 1"
+      },
+      {
+        "component_name": "0.1 uF SMD Capacitor",
+        "quantity": "4",
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "C1-C4 | [0.1 uF SMD Capacitor](https://bg.farnell.com/wurth-elektronik/885012207016/cap-0-1-f-10v-10-x7r-0805/dp/2534051?st=smd%20capacitors) | 4"
+      },
+      {
+        "component_name": "Neopixel 5050 LED",
+        "quantity": "3",
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "D1-D3 | [Neopixel 5050 LED](https://www.aliexpress.com/item/4000750610574.html?spm=a2g0o.productlist.0.0.55a96722mpqDCp&algo_pvid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f&algo_expid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f-5&btsid=0bb0623416009856118282154ebe61&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 3"
+      },
+      {
+        "component_name": "Tactile Switch B3S-1000",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "| SW1 | [Tactile Switch B3S-1000](https://uk.farnell.com/omron/b3s-1000/switch-spno-0-05a-24v-smd/dp/177807) | 1 |"
+      },
+      {
+        "component_name": "Tactile Switch B3U-1000P",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "| SW2 | [Tactile Switch B3U-1000P](https://bg.farnell.com/omron/b3u-1000p/switch-spst-no-0-05a-12v-smd/dp/1333652?st=B3U-1000P) | 1"
+      },
+      {
+        "component_name": "PCB Receptacle, 1.27 mm, 10 Contacts",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "This PCB Receptacle is for connecting PMS7003 dust sensor. Keep in mind these sensors come with such connector included but it's slightly taller and makes a gap of about half mm between sensor and PCB which is not ok.",
+        "source_line_full": "| | [PCB Receptacle, 1.27 mm, 10 Contacts](https://bg.farnell.com/amphenol-icc-fci/20021311-00010t4lf/receptacle-vert-1-27mm-tht-10way/dp/1865313) | 1 | This PCB Receptacle is for connecting PMS7003 dust sensor. Keep in mind these sensors come with such connector included but it's slightly taller and makes a gap of about half mm between sensor and PCB which is not ok."
+      },
+      {
+        "component_name": "SMD PCB Receptacle 8 pins",
+        "quantity": "3",
+        "specifications": null,
+        "sourcing_info": "two are needed for the MCU board, 3rd you can skip. It's for extra pins on the PCB but with ESP32 MCU not needed so much as extra headers can be soldered directly on it's board",
+        "source_line_full": "| | [SMD PCB Receptacle 8 pins](https://uk.farnell.com/samtec/ssm-108-l-sv/receptacle-2-54mm-vert-8way/dp/1668259?st=ssm-108-l-sv%20pcb%20receptacle) | 3 | two are needed for the MCU board, 3rd you can skip. It's for extra pins on the PCB but with ESP32 MCU not needed so much as extra headers can be soldered directly on it's board"
+      },
+      {
+        "component_name": "PCB Receptacle 4 pin",
+        "quantity": "4",
+        "specifications": null,
+        "sourcing_info": "four is needed if all sensors are installed",
+        "source_line_full": "| | [PCB Receptacle 4 pin](https://uk.farnell.com/samtec/bcs-104-l-s-te/receptacle-2-54mm-vert-4way/dp/1667470?ost=bcs-104-l-s-te) | 4 | four is needed if all sensors are installed"
+      },
+      {
+        "component_name": "OLED 63x48 shield",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "not required, only if you want an extra display on top of the MCU board",
+        "source_line_full": "| | [OLED 63x48 shield](https://www.aliexpress.com/item/32981156326.html?spm=a2g0s.9042311.0.0.27424c4dO21RuC) | 1 | not required, only if you want an extra display on top of the MCU board"
+      },
+      {
+        "component_name": "Holder case",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "it's not required to have it but it makes the device completed",
+        "source_line_full": "| | [Holder case](case_model) | 1 | it's not required to have it but it makes the device completed"
+      },
+      {
+        "component_name": "Display holder",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": "This small 3D printed part is holding tight the display from flapping",
+        "source_line_full": "| | [Display holder](case_model) | 1 | This small 3D printed part is holding tight the display from flapping"
+      },
+      {
+        "component_name": "Various 2.54 headers",
+        "quantity": null,
+        "specifications": null,
+        "sourcing_info": "You will need these for the CO2 sensor if you don't have available. Normally they come together with the breakout boards.",
+        "source_line_full": "| | [Various 2.54 headers](https://www.ebay.co.uk/itm/10pcs-40-pin-2-54mm-Breakaway-Male-Header-for-PCB-Breadboard-1x40-Single-Row-UK/262755464818?epid=20008873513&hash=item3d2d723672:g:st8AAOSwMsZdNw5x) | | You will need these for the CO2 sensor if you don't have available. Normally they come together with the breakout boards."
+      },
+      {
+        "component_name": "2mm nylon bolts/nuts",
+        "quantity": null,
+        "specifications": null,
+        "sourcing_info": "If you want to make the display more stable you can install nylon bolts like explained [in the video](https://youtu.be/b2oDBgN3h1w?t=758). Better use [display holder](case_model).",
+        "source_line_full": "| | [2mm nylon bolts/nuts](https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2047675.m570.l1313&_nkw=2mm+nylon+bolts&_sacat=0) | | If you want to make the display more stable you can install nylon bolts like explained [in the video](https://youtu.be/b2oDBgN3h1w?t=758). Better use [display holder](case_model)."
+      }
+    ],
+    "evidence_full": "Bellow is the list of all parts needed to assemble the device with links to sources where you can get them. Of course other sources can be used, just pay attention that the items are identical with the listed bellow. For example the SSD1306 display can be found with similar physical look and dimensions, but pins are not the same.\n\nSchematic Ref | ITEM | pcs | Comment\n--------------| ---- | :-: | -------\n| | PCB Board | 1 | in [kicad folder](kicad) you can find all the data and GERBER PCB design files\nU1 | [WeMos_D1_mini_ESP32](https://www.aliexpress.com/item/4000880936043.html?spm=a2g0o.productlist.0.0.f387754egZVnTc&algo_pvid=b105e43b-6669-40bc-99c4-cf22d026995d&algo_expid=b105e43b-6669-40bc-99c4-cf22d026995d-6&btsid=0bb0623616009843570355505e4ca0&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 1 | [ESP8266 version](https://www.wemos.cc/en/latest/d1/d1_mini.html) also can work but not recommended \nU2 | [PMS7003 Sensor](https://www.aliexpress.com/item/32832444694.html?spm=a2g0s.9042311.0.0.27424c4dKxsO6Z) | 1 | don't use the 2x5pin 1.27mm receptacle which comes normally wit these sensors, explanation is bellow\nU3 | [SSD1306 Display](https://www.aliexpress.com/item/32956051129.html?spm=a2g0o.productlist.0.0.523365fcQkP3XC&algo_pvid=b62bd3ab-fe19-479e-bc50-b2c68dd35525&algo_expid=b62bd3ab-fe19-479e-bc50-b2c68dd35525-25&btsid=67d67e08-4ad1-4c08-8cec-e378bae47fc6&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1 | pay attention to correct pin order if you are buying from another source, as there are similar 4pin boards with different pinout\nU4 | [BME280 breakout board](https://www.aliexpress.com/item/4000166540445.html?spm=a2g0o.productlist.0.0.363a562ely2LZq&algo_pvid=b0bd6068-edbb-4f9c-aa24-92324f726eda&algo_expid=b0bd6068-edbb-4f9c-aa24-92324f726eda-8&btsid=3927b67d-2f89-4594-9f47-b017e00ef8a0&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1 | only 3.3V version with 6 pins which have both I2C and SPI. **Please note that due to semiconductor shortage these are difficult to find now (June 2021). I am currently using my own breakout where I solder the BME directly. BME280 as IC can be found occasionally in stock from DigiKey**\nU5 | [MH-Z19B Sensor](https://www.aliexpress.com/item/1005001865093513.html?spm=2114.12010610.8148356.5.5b7387a5ZmuUlX) | 1 | **Beware for fake sensors, as [explained here](https://revspace.nl/MH-Z19B#Fake_MH-Z19B_.28black_PCB.29). Buy from Winsen official store in Aliexpress.**  \nU6 | [SGP30 breakout board](https://www.aliexpress.com/item/4000004614708.html?spm=a2g0o.productlist.0.0.688164abtt6ZRA&algo_pvid=7f813f70-3c1d-42ee-b6cf-9bf501c47314&algo_expid=7f813f70-3c1d-42ee-b6cf-9bf501c47314-1&btsid=3f683b7d-631a-4373-b0a1-f574cd317549&ws_ab_test=searchweb0_0,searchweb201602_9,searchweb201603_55) | 1\nU7 | [TLS2561 light sensor](https://www.aliexpress.com/item/33056165996.html?spm=a2g0s.9042311.0.0.15314c4draqb6x) | 1\nC1-C4 | [0.1 uF SMD Capacitor](https://bg.farnell.com/wurth-elektronik/885012207016/cap-0-1-f-10v-10-x7r-0805/dp/2534051?st=smd%20capacitors) | 4\nD1-D3 | [Neopixel 5050 LED](https://www.aliexpress.com/item/4000750610574.html?spm=a2g0o.productlist.0.0.55a96722mpqDCp&algo_pvid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f&algo_expid=4be2d94a-875a-4e56-af12-1f6a3dcdf49f-5&btsid=0bb0623416009856118282154ebe61&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 3\n| SW1 | [Tactile Switch B3S-1000](https://uk.farnell.com/omron/b3s-1000/switch-spno-0-05a-24v-smd/dp/177807) | 1 |\n| SW2 | [Tactile Switch B3U-1000P](https://bg.farnell.com/omron/b3u-1000p/switch-spst-no-0-05a-12v-smd/dp/1333652?st=B3U-1000P) | 1\n| | [PCB Receptacle, 1.27 mm, 10 Contacts](https://bg.farnell.com/amphenol-icc-fci/20021311-00010t4lf/receptacle-vert-1-27mm-tht-10way/dp/1865313) | 1 | This PCB Receptacle is for connecting PMS7003 dust sensor. Keep in mind these sensors come with such connector included but it's slightly taller and makes a gap of about half mm between sensor and PCB which is not ok.\n| | [SMD PCB Receptacle 8 pins](https://uk.farnell.com/samtec/ssm-108-l-sv/receptacle-2-54mm-vert-8way/dp/1668259?st=ssm-108-l-sv%20pcb%20receptacle) | 3 | two are needed for the MCU board, 3rd you can skip. It's for extra pins on the PCB but with ESP32 MCU not needed so much as extra headers can be soldered directly on it's board\n| | [PCB Receptacle 4 pin](https://uk.farnell.com/samtec/bcs-104-l-s-te/receptacle-2-54mm-vert-4way/dp/1667470?ost=bcs-104-l-s-te) | 4 | four is needed if all sensors are installed\n| | [OLED 63x48 shield](https://www.aliexpress.com/item/32981156326.html?spm=a2g0s.9042311.0.0.27424c4dO21RuC) | 1 | not required, only if you want an extra display on top of the MCU board\n| | [Holder case](case_model) | 1 | it's not required to have it but it makes the device completed\n| | [Display holder](case_model) | 1 | This small 3D printed part is holding tight the display from flapping \n| | [Various 2.54 headers](https://www.ebay.co.uk/itm/10pcs-40-pin-2-54mm-Breakaway-Male-Header-for-PCB-Breadboard-1x40-Single-Row-UK/262755464818?epid=20008873513&hash=item3d2d723672:g:st8AAOSwMsZdNw5x) | | You will need these for the CO2 sensor if you don't have available. Normally they come together with the breakout boards.\n| | [2mm nylon bolts/nuts](https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2047675.m570.l1313&_nkw=2mm+nylon+bolts&_sacat=0) | | If you want to make the display more stable you can install nylon bolts like explained [in the video](https://youtu.be/b2oDBgN3h1w?t=758). Better use [display holder](case_model).",
+    "evidence_location": "Bill of Materials section",
+    "confidence_score": 95,
+    "confidence_rationale": "explicit_mention",
+    "multiple_boms_detected": false,
+    "conflicting_info": false
+  },
+  "assembly_instructions": {
+    "present": true,
+    "detail_level": "detailed",
+    "instruction_format": "numbered_steps",
+    "step_count": 5,
+    "evidence_full": "The device is just a simple PCB board and almost everyone with some soldering skills can assemble it in a few steps:\n1. [Download the PCB files](kicad/) and print the PCB somewhere like https://jlcpcb.com/\n2. Buy some components (listed in the bill of materials section) from Aliexpress or any other source.\n3. Solder everything on the board. With the exception of the ambient light sensor, all the rest is pretty easy with general soldering skills. Soldering light sensor can be done with regular soldering iron, but because of the small size of the IC, it's easier if you have heat gun or SMD reflow oven/plate. [Here is video how to complete device from assembled PCB.](https://www.youtube.com/watch?v=b2oDBgN3h1w)\n4. Flash the microcontroller with the esphome firmware [following the manual](firmware/). You can write your own firmware if you have the skills. :smile: \n5. Print the holder case on 3D printer if you wish. I have some sensors without it and they are perfectly fine, so it's up to you.",
+    "evidence_location": "Who can build it? section",
+    "confidence_score": 90,
+    "confidence_rationale": "explicit_mention"
+  },
+  "design_files": {
+    "hardware_design_files": {
+      "present": true,
+      "file_categories": ["PCB"],
+      "specific_formats": ["gbr", "drl", "kicad_pcb", "sch"],
+      "file_locations": ["kicad/iaq_device/plot/", "kicad/iaq_device/"],
+      "evidence_full": "It's designed on [KiCad](https://kicad.org/) and in the [kicad folder](kicad/) you can find full KiCad project, PCB gerber files, etc.",
+      "evidence_location": "1. PCB section",
+      "confidence_score": 90,
+      "confidence_rationale": "explicit_mention"
+    },
+    "mechanical_design_files": {
+      "present": true,
+      "file_categories": ["3D"],
+      "specific_formats": ["step", "stp"],
+      "file_locations": ["kicad/my_libs/3dmodels/"],
+      "evidence_full": "Taking into account this, I designed a simple holder case for \"sliding\" the PCB in it and holding the particle sensor. The case can stay at about 45 degrees angle. It is designed on Fusion 360 and the [details are here](case_model).",
+      "evidence_location": "2. Holder case section",
+      "confidence_score": 90,
+      "confidence_rationale": "explicit_mention"
+    }
+  },
+  "specific_licenses": {
+    "hardware_license": {
+      "present": true,
+      "license_name": "CERN-OHL-W v2",
+      "license_type": "copyleft",
+      "evidence_full": "- Hardware is licensed under [CERN-OHL-W v2](https://ohwr.org/cern_ohl_w_v2.txt).",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    },
+    "software_license": {
+      "present": true,
+      "license_name": "Apache License 2",
+      "license_type": "permissive",
+      "evidence_full": "- Software is licensed under [Apache License 2](https://www.apache.org/licenses/LICENSE-2.0)",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    },
+    "documentation_license": {
+      "present": true,
+      "license_name": "CC-BY-SA-4.0",
+      "license_type": "copyleft",
+      "evidence_full": "- Documentation is licensed under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/).",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    }
+  },
+  "validation_checks": {
+    "readme_sections_identified": [
+      "IAQ (Indoor Air Quality) Board",
+      "What exactly is this thing?",
+      "Who can build it?",
+      "What about ordering a device?",
+      "Components Details",
+      "Bill of Materials (BOM)",
+      "Firmware",
+      "Schematic",
+      "Soldering tips",
+      "User manual",
+      "FAQ",
+      "More Tech Details",
+      "Known issues",
+      "License"
+    ],
+    "contradictory_information_detected": false,
+    "incomplete_information_flagged": false,
+    "classification_boundary_cases": [],
+    "evidence_verification_notes": "All evidence is directly quoted from the README content provided."
+  }
+}
+```
+
+==================================================
+
+✅ Finished processing project: iaq_board
+
+🔍 Processing project: openscout
+   ❗ Error reading README /Users/saraht45/Downloads/Open_Hardware/Git_Repositories_Sample/openscout/readme/.DS_Store: 'utf-8' codec can't decode byte 0x80 in position 3131: invalid start byte
+   ✅ Found README file: /Users/saraht45/Downloads/Open_Hardware/Git_Repositories_Sample/openscout/readme/openscout_readme.rtf
+   ✅ Found repo_tree file: /Users/saraht45/Downloads/Open_Hardware/Git_Repositories_Sample/openscout/repo_tree/openscout_tree.rtf
+
+LLM Response:
+
+```json
+{
+  "document_metadata": {
+    "total_word_count": 646,
+    "contains_technical_language": true,
+    "primary_language": "english",
+    "project_type": "mixed",
+    "document_structure_quality": "well_structured"
+  },
+  "license_information": {
+    "general_license": {
+      "present": true,
+      "type": "explicit",
+      "license_name": "Multiple licenses specified",
+      "evidence_full": "This project is licensed under the [GNU General Public License v3.0](LICENSE) and [CERN-OHL-W](LICENCE) and [CC BY-SA](CC-BY-SA_LICENCE)",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    }
+  },
+  "contributing_guidelines": {
+    "present": true,
+    "level": 3,
+    "location_type": "inline_detailed",
+    "evidence_full": "While we try to keep this project open source you are free to make your own choice of materials and adapt the robot to your needs. However, we kindly request you to stick to the suggested 200mm & 300mm 20x20 aluminum extrusions, to allow other users disassemble their current configuration and try out yours! If you use OpenScout for your project, please open a PR with your configuration and tutorials. The general process of contributing on GitHub is widely documented however the outline process is below: 1. Identify where you want to host the project locally. This could be a OpenScout projects folder for example. 1. Clone or fork the repository using GitHub desktop or the CLI into this location (CLI is recommended as this helps you become more familiar with Git in general). You can do this with the following command: git clone https://github.com/cbedio/OpenScout 1. Update the project and then make a pull request!",
+    "evidence_location": "How to contribute section",
+    "confidence_score": 90,
+    "confidence_rationale": "explicit_mention"
+  },
+  "bill_of_materials": {
+    "present": true,
+    "completeness_level": "partial",
+    "format_type": "paragraph",
+    "total_components": 3,
+    "components": [
+      {
+        "component_name": "200mm & 300mm 20x20 aluminium extrusions",
+        "quantity": null,
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "The robot consists of 200mm & 300mm 20x20 aluminium extrusions connected with 90 degree angle joints so the width, length and its height can be highly adjustable."
+      },
+      {
+        "component_name": "90:1 12V CQrobot motor with encoder",
+        "quantity": "4",
+        "specifications": null,
+        "sourcing_info": "https://www.amazon.co.uk/CQRobot-90-Gearmotor-oz-Diameter/dp/B0887RR8SH",
+        "source_line_full": "We suggest also the [90:1 12V CQrobot](https://www.amazon.co.uk/CQRobot-90-Gearmotor-oz-Diameter/dp/B0887RR8SH) motor with encoder, as 4 of them provide enough traction to carry big payloads."
+      },
+      {
+        "component_name": "Arduino Mega",
+        "quantity": "1",
+        "specifications": null,
+        "sourcing_info": null,
+        "source_line_full": "Finally, an Arduino Mega is necessary as it provides enough interrupt pins for the RF receiver and the motor encoders."
+      }
+    ],
+    "evidence_full": "Materials used: The robot consists of 200mm & 300mm 20x20 aluminium extrusions connected with 90 degree angle joints so the width, length and its height can be highly adjustable. We suggest also the [90:1 12V CQrobot](https://www.amazon.co.uk/CQRobot-90-Gearmotor-oz-Diameter/dp/B0887RR8SH) motor with encoder, as 4 of them provide enough traction to carry big payloads. Finally, an Arduino Mega is necessary as it provides enough interrupt pins for the RF receiver and the motor encoders.",
+    "evidence_location": "Getting started section",
+    "confidence_score": 70,
+    "confidence_rationale": "clear_evidence_but_requires_minimal_interpretation",
+    "multiple_boms_detected": false,
+    "conflicting_info": false
+  },
+  "assembly_instructions": {
+    "present": true,
+    "detail_level": "referenced",
+    "instruction_format": "external_link",
+    "step_count": 0,
+    "evidence_full": "A fully documented assembly tutorial for the OpenScout with a 'Lazy Susan' revolute hinge is available below. Additionally, a comprehensive and fully annotated [Assembly Manual](Documentation/CAD_Files/Instruction_Manual/InstructionManual.pdf) with step by step 3D projections of the hardware build has been made available to print out. All associated CAD files and schematics are available in the [Documentation](Documentation) directory.",
+    "evidence_location": "Assembly Tutorial section",
+    "confidence_score": 85,
+    "confidence_rationale": "clear_evidence_but_requires_minimal_interpretation"
+  },
+  "design_files": {
+    "hardware_design_files": {
+      "present": true,
+      "file_categories": ["CAD"],
+      "specific_formats": ["dxf", "step"],
+      "file_locations": ["Documentation/CAD_Files/DXF/", "Documentation/CAD_Files/STEP/"],
+      "evidence_full": "CAD_Files/ DXF/ Acrylic Spacer.dxf Back_back_340_200.dxf Back_middle_340_200_DXF.dxf Floor_A3.dxf Front_Front_340_200.dxf Front_middle_340_200_DXF.dxf STEP/ Final Model.step Model no Wheels.step Wheel v4.step",
+      "evidence_location": "Directory structure",
+      "confidence_score": 90,
+      "confidence_rationale": "explicit_mention"
+    },
+    "mechanical_design_files": {
+      "present": true,
+      "file_categories": ["CAD"],
+      "specific_formats": ["dxf", "step"],
+      "file_locations": ["Documentation/CAD_Files/DXF/", "Documentation/CAD_Files/STEP/"],
+      "evidence_full": "CAD_Files/ DXF/ Acrylic Spacer.dxf Back_back_340_200.dxf Back_middle_340_200_DXF.dxf Floor_A3.dxf Front_Front_340_200.dxf Front_middle_340_200_DXF.dxf STEP/ Final Model.step Model no Wheels.step Wheel v4.step",
+      "evidence_location": "Directory structure",
+      "confidence_score": 90,
+      "confidence_rationale": "explicit_mention"
+    }
+  },
+  "specific_licenses": {
+    "hardware_license": {
+      "present": true,
+      "license_name": "CERN-OHL-W",
+      "license_type": "copyleft",
+      "evidence_full": "This project is licensed under the [GNU General Public License v3.0](LICENSE) and [CERN-OHL-W](LICENCE) and [CC BY-SA](CC-BY-SA_LICENCE)",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    },
+    "software_license": {
+      "present": true,
+      "license_name": "GNU General Public License v3.0",
+      "license_type": "copyleft",
+      "evidence_full": "This project is licensed under the [GNU General Public License v3.0](LICENSE) and [CERN-OHL-W](LICENCE) and [CC BY-SA](CC-BY-SA_LICENCE)",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    },
+    "documentation_license": {
+      "present": true,
+      "license_name": "CC BY-SA",
+      "license_type": "copyleft",
+      "evidence_full": "This project is licensed under the [GNU General Public License v3.0](LICENSE) and [CERN-OHL-W](LICENCE) and [CC BY-SA](CC-BY-SA_LICENCE)",
+      "evidence_location": "License section",
+      "confidence_score": 95,
+      "confidence_rationale": "explicit_mention"
+    }
+  },
+  "validation_checks": {
+    "readme_sections_identified": ["An Open Source Hardware Mobile Robot", "Demonstration", "HackaDay", "Getting started", "Assembly Tutorial", "How to contribute", "License"],
+    "contradictory_information_detected": false,
+    "incomplete_information_flagged": false,
+    "classification_boundary_cases": [],
+    "evidence_verification_notes": "All evidence was directly quotable from the provided text, with explicit mentions of licenses and contributing guidelines."
+  }
+}
+```
+
+==================================================
+
+✅ Finished processing project: openscout
+
+🔍 Processing project: totp
+   ✅ Found README file: /Users/saraht45/Downloads/Open_Hardware/Git_Repositories_Sample/totp/readme/totp_readme.rtf
+   ✅ Found repo_tree file: /Users/saraht45/Downloads/Open_Hardware/Git_Repositories_Sample/totp/repo_tree/totp_tree.rtf
+
+LLM Response:
+
+```json
+{
+  "document_metadata": {
+    "total_word_count": 366,
+    "contains_technical_language": true,
+    "primary_language": "english",
+    "project_type": "mixed",
+    "document_structure_quality": "basic_structure"
+  },
+  "license_information": {
+    "general_license": {
+      "present": false,
+      "type": null,
+      "license_name": null,
+      "evidence_full": "",
+      "evidence_location": "",
+      "confidence_score": 0,
+      "confidence_rationale": "No credible evidence"
+    }
+  },
+  "contributing_guidelines": {
+    "present": false,
+    "level": 0,
+    "location_type": "none",
+    "evidence_full": "",
+    "evidence_location": "",
+    "confidence_score": 0,
+    "confidence_rationale": "No contribution information"
+  },
+  "bill_of_materials": {
+    "present": false,
+    "completeness_level": "none",
+    "format_type": "none",
+    "total_components": 0,
+    "components": [],
+    "evidence_full": "",
+    "evidence_location": "",
+    "confidence_score": 0,
+    "confidence_rationale": "No component information",
+    "multiple_boms_detected": false,
+    "conflicting_info": false
+  },
+  "assembly_instructions": {
+    "present": false,
+    "detail_level": "none",
+    "instruction_format": "none",
+    "step_count": 0,
+    "evidence_full": "",
+    "evidence_location": "",
+    "confidence_score": 0,
+    "confidence_rationale": "No assembly information"
+  },
+  "design_files": {
+    "hardware_design_files": {
+      "present": true,
+      "file_categories": ["PCB"],
+      "specific_formats": ["kicad_sch", "kicad_pcb", "kicad_prl", "kicad_pro"],
+      "file_locations": ["hardware/kicad/"],
+      "evidence_full": "cpu.kicad_sch, lcd.kicad_sch, lpc1756_totp.kicad_pcb, lpc1756_totp.kicad_prl, lpc1756_totp.kicad_pro, lpc1756_totp.kicad_sch, power.kicad_sch, usb.kicad_sch",
+      "evidence_location": "Directory structure",
+      "confidence_score": 95,
+      "confidence_rationale": "Explicit file references"
+    },
+    "mechanical_design_files": {
+      "present": false,
+      "file_categories": [],
+      "specific_formats": [],
+      "file_locations": [],
+      "evidence_full": "",
+      "evidence_location": "",
+      "confidence_score": 0,
+      "confidence_rationale": "No mechanical design files"
+    }
+  },
+  "specific_licenses": {
+    "hardware_license": {
+      "present": false,
+      "license_name": null,
+      "license_type": null,
+      "evidence_full": "",
+      "evidence_location": "",
+      "confidence_score": 0,
+      "confidence_rationale": "No credible evidence"
+    },
+    "software_license": {
+      "present": false,
+      "license_name": null,
+      "license_type": null,
+      "evidence_full": "",
+      "evidence_location": "",
+      "confidence_score": 0,
+      "confidence_rationale": "No credible evidence"
+    },
+    "documentation_license": {
+      "present": false,
+      "license_name": null,
+      "license_type": null,
+      "evidence_full": "",
+      "evidence_location": "",
+      "confidence_score": 0,
+      "confidence_rationale": "No credible evidence"
+    }
+  },
+  "validation_checks": {
+    "readme_sections_identified": ["Features", "Images", "TODO", "Compiling", "Extra"],
+    "contradictory_information_detected": false,
+    "incomplete_information_flagged": true,
+    "classification_boundary_cases": [],
+    "evidence_verification_notes": "The README lacks explicit sections for licensing, contributing, BOM, and assembly instructions."
+  }
+}
+```
+
+==================================================
+
+✅ Finished processing project: totp
