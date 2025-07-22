@@ -1,0 +1,109 @@
+
+Hackaday Project Data Analysis Report
+Generated on 2025-07-21 17:21:47
+
+1. Basic Statistics
+-------------------
+Total Projects: 5697
+Total Number of Creators: 3302
+
+2. Attention Metrics 
+--------------------
+FOLLOWERS: 
+Average Followers: 420.03
+
+Top 5 Projects by Followers (Top):
+                                            title  followersCount
+"Connect" to an atomic clock in space! GPS, DCF77           15192
+                                           mqopen           13913
+                FossaSat-1, Open Source Satellite           13647
+   Low Cost Wireless Home Automation and Security           13405
+             LTE CAT-M1/NB-IoT Shield for Arduino           11482
+
+
+Top 5 Projects by Followers (Bottom):
+                                      title  followersCount
+Temperature Control with ESPhome or Tasmota               0
+                        The Silly Simulator               0
+                       STM32F446_ProtoBoard               0
+   Wireless Looping YouTube Foot Controller               0
+                   Zynq7010_eink_controller               0
+
+
+LIKES: 
+Average Likes: 26.53
+
+Top 5 Projects by Likes (Top):
+                                  title  likesCount
+                 3D Printable Robot Arm        1677
+  ZeroPhone - a Raspberry Pi smartphone        1409
+              Raspberry Pi Smart Mirror        1363
+   Arduino Glasses a HMD for Multimeter        1306
+ODrive - High performance motor control        1101
+
+
+Top 5 Projects by Likes (Bottom):
+                                      title  likesCount
+Temperature Control with ESPhome or Tasmota           0
+               HardBreak - IoT Hacking Wiki           0
+                        The Silly Simulator           0
+                          Running Light Box           0
+                       STM32F446_ProtoBoard           0
+
+
+VIEWS: 
+Average Views: 5570.16
+
+Top 5 Projects by Views (Top):
+                                title  viewsCount
+ MIPI DSI Display Shield/HDMI Adapter      450099
+ZeroPhone - a Raspberry Pi smartphone      427772
+ Arduino Glasses a HMD for Multimeter      376799
+    WiFi Webradio on ESP8266 or ESP32      371538
+               3D Printable Robot Arm      331992
+
+
+Top 5 Projects by Views (Bottom):
+                                              title  viewsCount
+                                          Cat Valve           0
+                                       VLF receiver           0
+Understanding BLE Advertising &amp; how to build it           0
+                                  Tennis for two HD           0
+                                      pico-mac-nano           0
+
+
+3. Tag Analysis
+---------------
+Projects with Tags: 5697
+Average Tags per Project: 6.93
+Number of Unique Tags: 9350
+
+Top 10 Tags:
+hardware             5074
+ongoing project      2976
+completed project    1654
+software              638
+arduino               526
+raspberry pi          418
+esp32                 374
+iot                   341
+esp8266               334
+pcb                   278
+
+4. Component Analysis
+----------------------
+Projects with Components Listed: 5697
+Average Components per Project: 4.02
+Number of Unique Components: 18759
+
+Top 10 Components:
+10k resistor    63
+led             59
+push button     48
+arduino uno     44
+pcb             43
+arduino nano    36
+raspberry pi    33
+1k resistor     32
+buzzer          31
+wires           30
