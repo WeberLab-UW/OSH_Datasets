@@ -1,0 +1,325 @@
+
+OSHWA Certification Data Analysis Report
+Generated on 2025-07-21 19:11:53
+
+1. Basic Statistics
+------------------
+Total Projects: 3053
+Countries Represented: 64
+Unique Responsible Parties: 745
+
+Top 5 Countries:
+United States of America    1836
+Germany                      154
+Bulgaria                     149
+Croatia                      118
+United Kingdom                76
+
+Top 5 Primary Types:
+Electronics    2263
+IOT             120
+3D Printing     120
+Education       100
+Science          99
+
+2. Temporal Analysis
+-------------------
+First Certification: 2016-10-01
+Latest Certification: 2025-06-20
+Total Projects with Dates: 3029
+Projects Missing Dates: 24
+
+Certifications by Year:
+2016     85
+2017     47
+2018    102
+2019    132
+2020    949
+2021    390
+2022    222
+2023    669
+2024    319
+2025    114
+
+3. License Usage
+---------------
+Top Hardware Licenses:
+Other             1381
+CERN               869
+CERN-OHL-S-2.0     210
+TAPR               145
+CC-BY-SA-4.0       129
+
+Top Software Licenses:
+MIT                 1623
+No software          506
+GPL                  356
+Other                170
+GPL-3.0-or-later     146
+
+Top Documentation Licenses:
+CC BY-SA        2072
+Other            279
+CC-BY-SA-4.0     254
+CC BY            144
+CC-BY-4.0         86
+
+4. Keyword Analysis
+------------------
+Projects with Keywords: 3053
+Average Keywords per Project: 3.36
+
+Top 10 Keywords:
+CircuitPython    781
+SparkFun         558
+Qwiic            221
+Arduino          152
+                 144
+ESP32             59
+Sensor            52
+arduino           50
+sensor            47
+USB               43
+
+5. Additional Project Types
+-------------------------
+Top Additional Types:
+Electronics          1590
+Education             476
+IOT                   381
+Tool                  309
+3D Printing           274
+Science               269
+Robotics              219
+Environmental         151
+Manufacturing         150
+Home Connection       150
+Other                 147
+Arts                  109
+Wearables              84
+Sound                  71
+Enclosure              54
+Agriculture            54
+Space                  23
+Home Construction       3
+
+6. Version Analysis
+------------------
+Projects with Previous Versions: 3053
+Total Previous Versions: 89
+Average Previous Versions per Project: 0.03
+
+7. Platform Project Repositories Analysis
+------------------------------------------
+Number of Repository Platforms: 209
+
+Repository Platforms Used:
+github.com                                   1877
+learn.adafruit.com                            602
+learn.watterott.com                            66
+airtable.com                                   56
+gitlab.com                                     30
+www.adafruit.com                               20
+osf.io                                         16
+devel.lulzbot.com                              13
+drive.google.com                               12
+download.lulzbot.com                           12
+hackaday.io                                    10
+dslik.github.io                                 8
+learn.sparkfun.com                              7
+bela.io                                         7
+doi.org                                         7
+data.mendeley.com                               6
+adafruit.com                                    5
+bitbucket.org                                   5
+https:                                          5
+codeberg.org                                    5
+www.olimex.com                                  5
+docs.beagleboard.org                            4
+docs.google.com                                 4
+www.hackster.io                                 4
+learntosolderkits.com                           3
+ottaa-project.github.io                         3
+www.whiteboxes.ch                               3
+www.instructables.com                           3
+tinkererway.com                                 3
+upverter.com                                    3
+www.mdpi.com                                    3
+www.solder.party                                3
+docs.franzininho.com.br                         3
+anu1905.medium.com                              3
+zenodo.org                                      3
+docs.opulo.io                                   3
+pedalboard.github.io                            3
+learn.bela.io                                   3
+kfw.solder.party                                2
+opendesignengine.net                            2
+rp2040-stamp.solder.party                       2
+docs.jaredwolff.com                             2
+learn.pi-supply.com                             2
+www.thingiverse.com                             2
+www.tindie.com                                  2
+prototypingcorner.io                            2
+www.airgradient.com                             2
+www.sleepyponylabs.com                          2
+victormazon.com                                 2
+wntr.dev                                        2
+oshwlab.com                                     2
+usb-c-breakout.solder.party                     2
+www.pcbway.com                                  2
+www.greatlakesdev.io                            2
+wikifactory.com                                 2
+handibot.com                                    2
+devdocs.openefi.tech                            2
+www.philips-p2000t.nl                           1
+wiki.justsem.org                                1
+pmod-to-qwiic.solder.party                      1
+docs.beagle.cc                                  1
+open-acidification.github.io                    1
+pico2-ice.tinyvision.ai                         1
+jerzeek.github.io                               1
+dav1dyang.notion.site                           1
+3dprint.nih.gov                                 1
+interstitial.coop                               1
+support.openevse.com                            1
+git.liberatedsystems.co.uk                      1
+www.panucatt.com                                1
+openspool.io                                    1
+pico-synth-sandbox.readthedocs.io               1
+big.umassmed.edu                                1
+ossm.tech                                       1
+pewpew.readthedocs.io                           1
+docs.foundationdevices.com                      1
+otis.leedsraspjam.co.uk                         1
+www.appropedia.org                              1
+www.sciencedirect.com                           1
+tetrabiodistributed.github.io                   1
+publiclab.org                                   1
+papers.ssrn.com                                 1
+hackrf.readthedocs.io                           1
+git.sentinel65x.com                             1
+quanta.obsilab.com                              1
+savageelectronics.com                           1
+www.space-nl.com                                1
+www.printables.com                              1
+teebeutel.jadyn.dev                             1
+teebeutel.entropia.de                           1
+codethinklabs.gitlab.io                         1
+thunderfly.cz                                   1
+www.peoplesvent.org                             1
+tinytapeout.com                                 1
+gocivici.github.io                              1
+alpelectronics.se                               1
+www.warp-charger.com                            1
+watchy.sqfmi.com                                1
+hwlab.io                                        1
+ladyada.net                                     1
+xprojetos.net                                   1
+0x0h.com                                        1
+zig-star.com                                    1
+www.ladyada.net                                 1
+speak.wntr.dev                                  1
+reflex.dance                                    1
+sonatino.com                                    1
+www.reamima.com                                 1
+wordpress.rose-hulman.edu                       1
+rosmo-robot.github.io                           1
+cloud.3mdeb.com                                 1
+git.cta.if.ufrgs.br                             1
+wiki.satnogs.org                                1
+tinkeringtech.com                               1
+6px.eu                                          1
+afmd.github.io                                  1
+arxiv.org                                       1
+serwom.com                                      1
+serpente.solder.party                           1
+hax0rbana.org                                   1
+circuitsetup.us                                 1
+taylormadeak.bitbucket.io                       1
+solo2.dev                                       1
+docs.solokeys.dev                               1
+docs.openlabautomata.xyz                        1
+lambdachip.com                                  1
+air.nettigo.pl                                  1
+calliope-edu.github.io                          1
+cantact.io                                      1
+gemini.wntr.dev                                 1
+slae.sh                                         1
+esccrasci.in                                    1
+hughski.com                                     1
+embarcacoes.ic.unicamp.br                       1
+cow-pi.readthedocs.io                           1
+docs.crabik.ru                                  1
+cubetouch.noteolvid.es                          1
+sites.google.com                                1
+www.yuque.com                                   1
+luna.readthedocs.io                             1
+upcommons.upc.edu                               1
+digoutbox.readthedocs.io                        1
+www.diskiopi.com                                1
+engravinator.com                                1
+docs.designspark.io                             1
+canine.readthedocs.io                           1
+calliope-mini.github.io                         1
+www.esp32touchdown.com                          1
+gitlab.cairn-devices.eu                         1
+ieee-dataport.org                               1
+www.humansforrobots.com                         1
+blueprintfoundry.net                            1
+knack.supply                                    1
+www.zerotoasiccourse.com                        1
+www.gre-nable.fr                                1
+circuitmaker.com                                1
+www.apertus.org                                 1
+www.iitg.ac.in                                  1
+bbq20kbd.solder.party                           1
+git.beagleboard.org                             1
+openbeagle.org                                  1
+docs.luxonis.com                                1
+breathinggames.net                              1
+docs.borneoiot.com                              1
+www.catlab.tech                                 1
+edx-twin3.org                                   1
+esp-flasher.makerspace.lt                       1
+www.freetronics.com.au                          1
+neptune.wntr.dev                                1
+hyperglitch.com                                 1
+meowmeowahr.github.io                           1
+nlighten-systems.com                            1
+ust.cz                                          1
+s-ol.nu                                         1
+libre.solar                                     1
+www.techrxiv.org                                1
+doc.un0rick.cc                                  1
+www.digital-sqrt.com                            1
+global-health-engineering.github.io             1
+shop.mearm.com                                  1
+notabug.org                                     1
+micronova.wntr.dev                              1
+ble.themooltipass.com                           1
+digital-naturalism-laboratories.github.io       1
+mpython.readthedocs.io                          1
+muxpi.readthedocs.io                            1
+nicolaielectronics.nl                           1
+jubilee3d.com                                   1
+docs.v1e.com                                    1
+re-enthused.com                                 1
+blog.ivor.org                                   1
+openfabpdx.com                                  1
+wiki.vdbx.io                                    1
+freesewing.org                                  1
+franzininho.gitbook.io                          1
+blazer82.github.io                              1
+gasblender.org                                  1
+groboards.com                                   1
+healthypi.protocentral.com                      1
+helium.wntr.dev                                 1
+www.hilotextiles.com                            1
+hologram.io                                     1
+www.hackerspace.sv                              1
+hydrogen.wntr.dev                               1
+inkplate.readthedocs.io                         1
+super-8.com                                     1
+poemtechnology.com                              1
+git2.peterjin.org                               1
+xyzroe.cc                                       1
