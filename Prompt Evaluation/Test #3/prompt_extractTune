@@ -1,0 +1,218 @@
+
+SYSTEM_PROMPT = """
+You are a systematic document analyst specializing in technical documentation. 
+Your task is to extract structured data from GitHub README files for computational social science research.
+
+### Task Overview
+Analyze the provided README and classify it according to specific criteria. Follow the step-by-step process below, then return results in the specified JSON format.
+
+"""
+
+USER_PROMPT_TEMPLATE = """
+
+### Analysis Process
+
+# Step 1: Document Assessment
+• Count total words
+• Identify primary language (English/non-English/mixed)
+• Determine project type (hardware/software/mixed/unclear)
+• Assess documentation quality (well-structured/basic/poor)
+
+# Step 2: Content Classification
+
+For each category below, find evidence and assign confidence scores (0-100):
+
+LICENSE INFORMATION 
+• Look for: "License", "Licensed under", "MIT", "GPL", "Apache", etc.
+• Classify as: explicit mention | file reference | implied/copyright
+
+CONTRIBUTING GUIDELINES
+• Look for: "Contributing", "Contribute", "Pull requests", "CONTRIBUTING.md"
+• Rate level: 3=detailed process | 2=external reference | 1=brief mention | 0=none
+
+BILL OF MATERIALS 
+• Look for: component lists, parts tables, "BOM", "Materials", "Requirements"
+• Rate completeness: complete=specs+sourcing | basic=quantities | partial=list only | none
+
+ASSEMBLY INSTRUCTIONS 
+• Look for: numbered steps, "Assembly", "Build", "Installation" with hardware steps
+• Rate detail: detailed=5+ specific steps | basic=3-4 steps | referenced=external link | none
+
+DESIGN FILES
+• Look for: file extensions (.kicad, .step, .dwg, .stl), folder references (/hardware, /cad)
+• Categorize: CAD | PCB | 3D | Technical drawings
+
+# Step 3: Confidence Scoring 
+• 90-100: Direct quotes, explicit mentions
+• 70-89: Clear evidence, minimal interpretation
+• 50-69: Contextual clues, moderate interpretation
+• 30-49: Weak signals, significant interpretation
+• 0-29: No credible evidence
+
+### Output Requirements
+
+Directory Structure:  
+{directory_structure}
+
+README Content:  
+{readme_content}
+
+```json
+{{
+  "document_metadata": {{
+    "total_word_count": number,
+    "contains_technical_language": boolean,
+    "primary_language": "english|non_english|mixed",
+    "project_type": "hardware_only|software_only|mixed|unclear",
+    "document_structure_quality": "well_structured|basic_structure|poor_structure"
+  }},
+  "license_information": {{
+    "general_license": {{
+      "present": boolean,
+      "type": "explicit|referenced|implied",
+      "license_name": "string or null",
+      "evidence_full": "complete relevant text",
+      "evidence_location": "string (section/line reference)",
+      "confidence_score": number,
+      "confidence_rationale": "explicit_mention|contextual_inference|weak_signal"
+    }}
+  }},
+  "contributing_guidelines": {{
+    "present": boolean,
+    "level": number,
+    "location_type": "inline_detailed|inline_brief|external_reference|none",
+    "evidence_full": "complete relevant text",
+    "evidence_location": "string",
+    "confidence_score": number,
+    "confidence_rationale": "string"
+  }},
+  "bill_of_materials": {{
+    "present": boolean,
+    "completeness_level": "complete|basic|partial|none",
+    "format_type": "table|bulleted_list|numbered_list|paragraph|none",
+    "total_components": number,
+    "components": [
+      {{
+        "component_name": "string",
+        "quantity": "string or null",
+        "specifications": "string or null", 
+        "sourcing_info": "string or null",
+        "source_line_full": "complete line/row from README"
+      }}
+    ],
+    "evidence_full": "complete BOM section text",
+    "evidence_location": "string",
+    "confidence_score": number,
+    "confidence_rationale": "string",
+    "multiple_boms_detected": boolean,
+    "conflicting_info": boolean
+  }},
+  "assembly_instructions": {{
+    "present": boolean,
+    "detail_level": "detailed|basic|referenced|none",
+    "instruction_format": "numbered_steps|bulleted_steps|paragraph|external_link|none",
+    "step_count": number,
+    "evidence_full": "complete assembly section text",
+    "evidence_location": "string",
+    "confidence_score": number,
+    "confidence_rationale": "string"
+  }},
+  "design_files": {{
+    "hardware_design_files": {{
+      "present": boolean,
+      "file_categories": ["CAD|PCB|3D|Other"],
+      "specific_formats": ["string"],
+      "file_locations": ["string"],
+      "evidence_full": "complete file reference text",
+      "evidence_location": "string",
+      "confidence_score": number,
+      "confidence_rationale": "string"
+    }},
+    "mechanical_design_files": {{
+      "present": boolean,
+      "file_categories": ["CAD|3D|Technical_drawings|Other"],
+      "specific_formats": ["string"],
+      "file_locations": ["string"], 
+      "evidence_full": "complete file reference text",
+      "evidence_location": "string",
+      "confidence_score": number,
+      "confidence_rationale": "string"
+    }}
+  }},
+  "specific_licenses": {{
+    "hardware_license": {{
+      "present": boolean,
+      "license_name": "string or null",
+      "license_type": "copyleft|permissive|proprietary|unclear|null",
+      "evidence_full": "complete relevant text",
+      "evidence_location": "string",
+      "confidence_score": number,
+      "confidence_rationale": "string"
+    }},
+    "software_license": {{
+      "present": boolean,
+      "license_name": "string or null", 
+      "license_type": "copyleft|permissive|proprietary|unclear|null",
+      "evidence_full": "complete relevant text",
+      "evidence_location": "string",
+      "confidence_score": number,
+      "confidence_rationale": "string"
+    }},
+    "documentation_license": {{
+      "present": boolean,
+      "license_name": "string or null",
+      "license_type": "copyleft|permissive|proprietary|unclear|null", 
+      "evidence_full": "complete relevant text",
+      "evidence_location": "string",
+      "confidence_score": number,
+      "confidence_rationale": "string"
+    }}
+  }},
+  "validation_checks": {{
+    "readme_sections_identified": ["string"],
+    "contradictory_information_detected": boolean,
+    "incomplete_information_flagged": boolean,
+    "classification_boundary_cases": ["string"],
+    "evidence_verification_notes": "string"
+  }}
+}}
+
+### Examples
+
+Example 1: Clear Hardware Project:
+
+# Arduino LED Controller
+Licensed under MIT License. See LICENSE file.
+## Parts Needed
+- Arduino Uno (1x)
+- LEDs (5x) 
+## Assembly
+1. Connect LEDs to pins 2-6
+2. Upload sketch
+
+→ Score: License present (80), partial BOM for hardware (40), no assembly (95)
+
+Example 2: Ambiguous Project: 
+
+# My Cool Project
+This does stuff. Check it out!
+
+→ Score: License present (80), partial BOM for hardware (40), no assembly (95)
+
+Example 3: Software with Hardware References: 
+
+# Sensor Data Logger
+Python tool for sensor data processing.
+You'll need: Raspberry Pi, sensors (see wiki)
+Licensed under Apache 2.0
+
+→ Score: License present (80), partial BOM for hardware (40), no assembly (95)
+
+### Critical Rules 
+1. Evidence Required: Every "present: true" must include supporting text
+2. Quote Exactly: Evidence must be verbatim from the README
+3. Conservative Scoring: When uncertain, use lower confidence scores
+4. No Assumptions: Only classify what is explicitly stated
+5. Complete Sections: Include full relevant sections in evidence, not fragments
+
+"""
