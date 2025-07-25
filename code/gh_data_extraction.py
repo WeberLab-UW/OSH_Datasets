@@ -145,9 +145,9 @@ class OptimizedGitHubAPIClient:
                     time.sleep(2 ** attempt)
         return None
 
-    def get_repository_endpoints(self, owner: str, repo: str, tree_sha: str) -> List[str]:
+    def get_repository_endpoints(self, owner: str, repo: str, tree_sha: Optional[str] = None) -> List[str]:
         base_url = f"https://api.github.com/repos/{owner}/{repo}"
-        return [
+        endpoints = [
             base_url,
             f"{base_url}/contributors",
             f"{base_url}/issues?state=all&per_page=100",
@@ -157,10 +157,15 @@ class OptimizedGitHubAPIClient:
             f"{base_url}/tags",
             f"{base_url}/community/profile",
             f"{base_url}/readme",
-            f"{base_url}/git/trees/{tree_sha}?recursive=1",
             f"{base_url}/languages",
             f"{base_url}/topics"
         ]
+        
+        # Only add tree endpoint if we have a SHA
+        if tree_sha:
+            endpoints.append(f"{base_url}/git/trees/{tree_sha}?recursive=1")
+            
+        return endpoints
 
     # Setup "parallel processing"
     def fetch_repository_data(self, owner: str, repo: str) -> Dict[str, Any]:
@@ -168,11 +173,12 @@ class OptimizedGitHubAPIClient:
         repo_data = self._fetch_endpoint_with_retry(base_url)
         if not repo_data:
             return {}
-        default_branch = repo_data.get("default_branch", "main")
 
-        endpoints = self.get_repository_endpoints(owner, repo, default_branch)
+        # First, get initial endpoints without tree
+        endpoints = self.get_repository_endpoints(owner, repo)
         results = {base_url: repo_data}
 
+        # Fetch initial data
         with ThreadPoolExecutor(max_workers=min(len(endpoints), 5)) as executor:
             future_to_endpoint = {
                 executor.submit(self._fetch_endpoint_with_retry, endpoint): endpoint
@@ -185,6 +191,23 @@ class OptimizedGitHubAPIClient:
                 except Exception as e:
                     print(f"Error fetching {endpoint}: {e}")
                     results[endpoint] = None
+
+        # Now resolve SHA and fetch tree if possible
+        default_branch = repo_data.get("default_branch", "main")
+        tree_sha = None
+        
+        # Try to get SHA from branches data
+        branches = results.get(f"{base_url}/branches", [])
+        if branches and isinstance(branches, list):
+            branch_info = next((b for b in branches if b.get("name") == default_branch), None)
+            if branch_info:
+                tree_sha = branch_info.get("commit", {}).get("sha")
+
+        # If we got a SHA, fetch the tree
+        if tree_sha:
+            tree_endpoint = f"{base_url}/git/trees/{tree_sha}?recursive=1"
+            tree_data = self._fetch_endpoint_with_retry(tree_endpoint)
+            results[tree_endpoint] = tree_data
 
         return self._structure_repository_data(results, owner, repo)
 
@@ -227,10 +250,16 @@ class OptimizedGitHubAPIClient:
 
         # Fetch the repository tree if we have a SHA
         repo_tree = {}
-        if default_branch:
-            tree_endpoint = f"{base_url}/git/trees/{default_branch}?recursive=1"
+        if tree_sha:
+            tree_endpoint = f"{base_url}/git/trees/{tree_sha}?recursive=1"
             repo_tree = raw_data.get(tree_endpoint, {}) or {}
             print(f"DEBUG - Using endpoint: {tree_endpoint}")
+            print(f"DEBUG - Found in raw_data: {tree_endpoint in raw_data}")
+        elif default_branch:
+            # Fallback to branch name if SHA resolution failed
+            tree_endpoint = f"{base_url}/git/trees/{default_branch}?recursive=1"
+            repo_tree = raw_data.get(tree_endpoint, {}) or {}
+            print(f"DEBUG - Fallback endpoint: {tree_endpoint}")
             print(f"DEBUG - Found in raw_data: {tree_endpoint in raw_data}")
         
         if repo_tree:
@@ -488,7 +517,7 @@ def save_all_repo_data(results, output_dir="data"):
             # -------------------------
             if temp_tree_data:
                 raw_tree = temp_tree_data.get("raw_tree")
-                llm_tree = temp_tree_data.get("llm_tree")
+                # llm_tree = temp_tree_data.get("llm_tree")  # Currently unused
                 
                 try:
                     # Save raw tree
