@@ -1,0 +1,34 @@
+field,hackaday,oshwa,ohr,kitspace,hardwareio,ohx + openalex,osf,plos,joh + openalex
+notes,Project registry,Certification registry,GitLab repos (hw-only subset),PCB projects,Project registry,HardwareX papers (OHX=project data; OpenAlex=bibliometrics),Research projects,Article repo links,Journal papers (JOH=project data; OpenAlex=bibliometrics)
+record_count,5696,3903,2457 (1265 hw-only),197,515,572 OHX / 638 OpenAlex (same papers),208,59 (git) / 40 (das),29 JOH / 34 OpenAlex (same papers)
+name/title,title,projectName,name,project_name,project_name,paper_title / display_name,title,,Title / display_name
+description,description,projectDescription,description,description,,,description,,Abstract Note
+project_url,url,projectWebsite,web_url,url,project_url,,url,,Url
+repo_url,github_links,,http_url_to_repo,repository_link,github,specifications_table.Source file repository,,(Repository_URL),(Repository Links)
+documentation_url,,documentationUrl,,,homepage,,,,
+author,userName,responsibleParty,,,,authorships,(contributors),,Author / authorships
+country,,country,,,,,,,,
+category/type,,primaryType + additionalType,,,,specifications_table.Hardware type,category + subjects,,Item Type
+tags/keywords,tags,projectKeywords,topics,,,,tags,,
+hw_license,,hardwareLicense,,,,specifications_table.Open source license,,,HW_License
+sw_license,,softwareLicense,,,,,,,,SW_License
+doc_license,,documentationLicense,,,,,,Rights,Documentation_License
+created_date,created (epoch),certificationDate,created_at,,created,publication_date,created,,Date
+updated_date,updated (epoch),,,,updated,,modified,,
+doi,,,,,,doi (OpenAlex),,(DOI),(DOI)
+engagement_views,viewsCount,,,,views,,metrics.total_downloads,,
+engagement_likes,likesCount,,,,statistics.likes,,metrics.activity_logs,,
+engagement_stars,,,star_count,,,,,,
+engagement_downloads,,,,,,,,,,
+forks_count,,,forks_count,,,,,,
+followers,followersCount,,,,statistics.collects,,metrics.contributor_count,,
+components,components,,,,,,,,
+bom,,,,bill_of_materials,bill_of_materials,bill_of_materials,,,
+design_files,,,,gerber_file_link,design_files,,file_structure,,
+total_cost,,,,,total_cost,specifications_table.Cost of hardware,,,
+open_access,,,,,,open_access (OpenAlex),,,open_access (OpenAlex)
+citation_count,,,,,,cited_by_count (OpenAlex),,,cited_by_count (OpenAlex)
+data_availability,,,,,,,,(Data_Availability_Statement),
+contributors,,,,,,authorships (OpenAlex),contributors,,Author
+classification,,,,,,,,,,
+hw_score,(via ohr_classifier),,(via ohr_classifier),,,,,,
