@@ -82,10 +82,21 @@ CREATE TABLE IF NOT EXISTS publications (
     UNIQUE(project_id, doi)
 );
 
+CREATE TABLE IF NOT EXISTS cross_references (
+    id            INTEGER PRIMARY KEY,
+    project_id_a  INTEGER NOT NULL REFERENCES projects(id),
+    project_id_b  INTEGER NOT NULL REFERENCES projects(id),
+    match_type    TEXT    NOT NULL,
+    confidence    REAL,
+    UNIQUE(project_id_a, project_id_b)
+);
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_projects_source ON projects(source);
 CREATE INDEX IF NOT EXISTS idx_projects_name   ON projects(name);
 CREATE INDEX IF NOT EXISTS idx_projects_repo   ON projects(repo_url);
+CREATE INDEX IF NOT EXISTS idx_xref_a          ON cross_references(project_id_a);
+CREATE INDEX IF NOT EXISTS idx_xref_b          ON cross_references(project_id_b);
 CREATE INDEX IF NOT EXISTS idx_tags_project    ON tags(project_id);
 CREATE INDEX IF NOT EXISTS idx_tags_tag        ON tags(tag);
 CREATE INDEX IF NOT EXISTS idx_licenses_proj   ON licenses(project_id);

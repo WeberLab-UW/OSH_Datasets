@@ -49,6 +49,16 @@ def load_all(db_path: Path = DB_PATH) -> dict[str, int]:
         total += count
 
     logger.info("All loaders complete: %d total projects", total)
+
+    # Post-processing enrichment
+    from osh_datasets.dedup import find_cross_references
+    from osh_datasets.enrich_ohx_dois import backfill_dois
+    from osh_datasets.license_normalizer import add_normalized_column
+
+    add_normalized_column(db_path)
+    backfill_dois(db_path)
+    find_cross_references(db_path)
+
     return results
 
 

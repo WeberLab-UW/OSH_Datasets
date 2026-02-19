@@ -6,67 +6,67 @@
 
 | Source | Records | Primary Data | Key Strengths | Key Gaps |
 |--------|---------|-------------|---------------|----------|
-| Hackaday | 5,696 | Project registry | Tags, components, GitHub links (100%), engagement | No license info |
-| OSHWA | 3,903 | Certification registry | 3 license types, country, certification date | No direct repo URLs (but 1,938 documentationUrls point to GitHub/GitLab) |
-| OHR (GitLab) | 2,457 (1,265 hw) | Code repositories | Full repo metadata, stars, forks | No license field (need to parse repo), no author |
-| Kitspace | 197 | PCB projects | Detailed BOM with retailers, gerber files, repo links (93%) | No license, no dates, no engagement |
-| Hardware.io | 515 | Project registry | License, design files, BOM, GitHub (45%) | No tags/keywords, no description |
+| Hackaday | 5,697 | Project registry | Tags, components, GitHub links (100%), engagement | No license info |
+| OSHWA | 3,052 | Certification registry | 3 license types, country, certification date | repo URLs extracted from documentationUrl (68%) |
+| OHR (GitLab) | 247 | Code repositories (hw-classified) | Full repo metadata, stars, forks, hw_score | No license field (need to parse repo), no author |
+| Kitspace | 186 | PCB projects | Detailed BOM with retailers, repo links (99%) | No license, no dates, no engagement |
+| Hardware.io | 515 | Project registry | License, design files, GitHub (45%) | No tags/keywords, no description |
 | OSF | 208 | Research projects | Contributors, files, downloads, subjects | License often empty, no external repo URLs |
 
 **Publication sources** (academic papers about hardware -- OpenAlex provides bibliometric enrichment):
 
 | Source | Records | Linked via | OpenAlex Coverage | Key Strengths | Key Gaps |
 |--------|---------|-----------|-------------------|---------------|----------|
-| OHX (HardwareX) | 572 | Paper title (DOI not in extract) | 638 HardwareX papers | Specs, BOM with costs, source repo URLs (63%) | No paper DOI in JSON extract, no dates |
-| JOH | 29 | DOI | 27 of 29 matched (93%) | HW/SW/doc licenses, repo links (90%) | Very small |
-| PLOS | 59 git / 40 DAS | DOI | 11 of 40 matched (28%) | Repo URLs, data availability statements | Very small, no project metadata |
+| OHX (HardwareX) | 567 | Paper title + XML DOI backfill | 529 matched by title + 7 by XML | Specs, BOM with costs, source repo URLs (63%) | 31 pubs still lack DOIs |
+| JOH | 29 | DOI | 19 with citation counts | HW/SW/doc licenses, repo links (79%) | Very small |
+| PLOS | 19 | DOI | 9 in OpenAlex (CSV has bad fields) | Repo URLs, data availability statements | Very small, OpenAlex CSV corrupted |
 
-**OpenAlex** (704 records) is NOT a standalone source -- it provides bibliometric metadata (DOI, citation counts, keywords, open access status, author affiliations) for the same papers in OHX (638), JOH (34), and PLOS (11). In the database, OpenAlex fields enrich the `publications` table rather than creating separate project records.
+**OpenAlex** provides bibliometric metadata (DOI, citation counts, open access status) for the same papers in OHX, JOH, and PLOS. In the database, OpenAlex fields enrich the `publications` table rather than creating separate project records.
 
-## Data Gaps to Address
+## Completed
 
-### High Priority -- Needed for Unified Database
+- [x] **OHX + OpenAlex: Join by paper title** -- 529/567 matched. Normalized title matching in `loaders/ohx.py`.
+- [x] **JOH + OpenAlex: Join by DOI** -- 19/29 with citation counts. Implemented in `loaders/joh.py`.
+- [x] **OSHWA: Extract repository URLs** -- 2,063/3,052 have repo_url (68%). Regex extraction in `loaders/oshwa.py`.
+- [x] **OHR: Map classifier results** -- Joined with `final_classifications.csv`, filtered to hardware-only (247 projects). In `loaders/ohr.py`.
+- [x] **Hackaday: Normalize timestamps** -- Unix epoch converted to ISO 8601 in `loaders/hackaday.py`.
+- [x] **License normalization** -- 202 raw strings mapped to 42 SPDX-style categories via regex rules. `license_normalizer.py` adds `license_normalized` column.
+- [x] **OHX: Extract paper DOIs from XML** -- Parsed `ohx-allPubs.xml` (572 articles). 7 additional DOIs backfilled via fuzzy title matching. `enrich_ohx_dois.py`.
+- [x] **Cross-source deduplication** -- 304 cross-references found: 134 OHX-OSF (via OSF links), 170 repo URL matches (117 Hackaday-OSHWA, 15 Hackaday-Kitspace, etc.). Stored in `cross_references` table. `dedup.py`.
+- [x] **All per-source data cleaning** -- 9 loaders handle all parsing, normalization, and insertion.
 
-- [ ] **OHX + OpenAlex: Join by paper title** -- OHX JSON extract lacks the paper's own DOI. Match OHX records to OpenAlex HardwareX records by normalized title to link bibliometric data (citations, keywords, OA status) with hardware data (BOM, specs, repo URLs).
-- [ ] **JOH + OpenAlex: Join by DOI** -- 93% already match. Enrich JOH records with OpenAlex citation counts, keywords, open access status.
-- [ ] **OSHWA: Extract repository URLs** -- `documentationUrl` contains GitHub/GitLab URLs for 1,938 of 3,053 cleaned records. Parse these to populate `repo_url`.
-- [ ] **OHR: Map classifier results** -- Join `ohr_classifier/final_classifications.csv` with OHR data to tag hardware vs. non-hardware and include `hw_score`.
-- [ ] **Hackaday: Normalize timestamps** -- `created` and `updated` are Unix epoch integers; convert to ISO 8601.
-- [ ] **All sources: Normalize license names** -- License strings vary wildly (e.g., "CERN", "CERN-OHL-S-2.0", "Creative Commons Attribution-ShareAlike license"). Build a license normalization lookup.
+## Remaining Data Gaps
 
-### Medium Priority -- Improves Completeness
+### Medium Priority -- Requires API Calls / New Scraping
 
-- [ ] **OHX: Extract paper DOIs from full XML** -- The `ohx-allPubs.xml` (53MB) likely contains the paper DOI; the JSON extract only has OSF/reference DOIs. Extracting paper DOIs would enable direct DOI-based joining with OpenAlex.
 - [ ] **OHR: Extract license info** -- License data exists in repo files (LICENSE, README) but isn't in the CSV. Could scrape from GitLab API or README content.
 - [ ] **Kitspace: Scrape creation dates** -- Not captured in current scrape; may be available from repository metadata via GitHub API.
 - [ ] **Kitspace: Extract license from repos** -- Repository links point to GitHub; could fetch license via GitHub API.
 - [ ] **OSF: Re-scrape with license focus** -- Many license fields are empty `{}`; may need different API endpoint or fallback.
 - [ ] **Hardware.io: Scrape descriptions and tags** -- Not captured in current scrape.
 - [ ] **OHR: Extract author/maintainer** -- Available via GitLab API `creator_id` -> user lookup.
-- [ ] **PLOS: Expand OpenAlex matching** -- Only 11 of 40 PLOS papers matched; investigate remaining 29 (may need title-based matching or broader DOI normalization).
+- [ ] **PLOS: Re-fetch OpenAlex data** -- Current CSV has corrupted fields (e.g., `cited_by_count = "pdf"`). Need fresh export from OpenAlex API for the 19 PLOS DOIs.
 
 ### Low Priority -- Nice to Have
 
 - [ ] **Hackaday: Parse `components` field** -- Currently stored as string arrays; normalize into structured BOM format.
-- [ ] **Cross-source deduplication** -- Projects may appear in multiple sources (e.g., a project on Hackaday AND Kitspace AND OSHWA). Identify overlaps via repo URLs, project names, or DOIs.
-- [ ] **OHX: Parse full XML for richer metadata** -- Current JSON extract is a subset; full XML has abstracts, figures, full text.
+- [ ] **OHX: Parse full XML for richer metadata** -- Current JSON extract is a subset; full XML has abstracts, figures, full text. 31 OHX pubs still lack DOIs (short project names prevent fuzzy matching).
 
-## Data Processing Steps (for Database Loading)
+## Database Summary
 
-### Per-Source Cleaning Needed
+Built and verified at `data/osh_datasets.db`:
 
-1. **Hackaday**: Convert epoch timestamps, parse `tags` and `components` from string to lists, extract GitHub owner/repo from `github_links`
-2. **OSHWA**: Parse `additionalType`, `projectKeywords`, `citations`, `previousVersions` from string to lists, normalize license names, extract repo URLs from `documentationUrl`
-3. **OHR**: Join with classifier output, filter to hardware projects, normalize `topics` from string to list
-4. **Kitspace**: Flatten `scraped_data` wrapper, handle `error` field (skip errored records), normalize BOM structure
-5. **Hardware.io**: Parse `statistics` dict, normalize `design_files` array, handle null `bill_of_materials` and `total_cost`
-6. **OHX + OpenAlex (HardwareX)**: Join by normalized paper title. From OHX: extract `specifications_table` fields, normalize BOM, parse `repository_references` and `Source file repository`. From OpenAlex: extract DOI, citation count, keywords, open access, author affiliations.
-7. **JOH + OpenAlex**: Join by DOI. From JOH: parse `Repository Links` and `Other Links` free-text into structured URLs, normalize licenses. From OpenAlex: citation count, keywords, open access.
-8. **PLOS + OpenAlex**: Join by DOI where possible. Merge `plos_gitLinks.csv` and `plos_das.csv` on DOI, extract platform info.
-9. **OSF**: Extract from nested `license`, `metrics`, `contributors`, `subjects` dicts; handle empty license objects
+| Table | Records |
+|-------|---------|
+| projects | 10,520 |
+| tags | 50,066 |
+| metrics | 21,031 |
+| bom_components | 12,783 |
+| licenses | 10,025 (normalized to 42 categories) |
+| publications | 615 |
+| contributors | 456 |
+| cross_references | 304 |
 
-### Database Schema Notes
+**Field coverage:** 87% descriptions, 84% repo URLs, 88% authors, 88% dates, 29% country, 37% category.
 
-- Publication sources (OHX, JOH, PLOS) produce records in BOTH `projects` (hardware details, BOM, repo links) AND `publications` (DOI, citations, journal, open access)
-- OpenAlex fields go into the `publications` table, not `projects`
-- A project from OHX that also has an OSF link creates entries in `projects` + `publications` + potentially a cross-reference to the OSF project record
+**Cross-source overlaps:** 304 links across sources (134 OHX-OSF, 117 Hackaday-OSHWA, 15 Hackaday-Kitspace, 13 OSHWA-Kitspace, 10 Hackaday-Hardware.io, others).
