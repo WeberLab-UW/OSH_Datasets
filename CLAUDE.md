@@ -2,69 +2,87 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Build and Run Commands
 
-**OSH_Datasets** is a research repository for collecting, cleaning, classifying, and analyzing Open Source Hardware (OSH) project metadata from multiple online platforms. Scripts scrape APIs and websites, store raw JSON/CSV, then clean and classify the results.
+```bash
+# Install (editable, with dev deps)
+uv pip install -e ".[dev]"
+
+# Run all tests
+uv run pytest tests/ -v
+
+# Run a single test file or class
+uv run pytest tests/test_scrapers.py::TestOshwaScraper -v
+
+# Type checking (strict mode)
+uv run mypy src/
+
+# Lint and format
+uv run ruff check src/ tests/
+uv run ruff format src/ tests/
+
+# Scrape all sources (requires .env with API keys)
+uv run python -m osh_datasets.scrape_all
+
+# Scrape specific sources
+uv run python -m osh_datasets.scrape_all oshwa ohr hackaday
+
+# Load cleaned data into SQLite
+uv run python -m osh_datasets.load_all
+```
 
 ## Architecture
 
-Scripts are standalone and invoked directly from `code/`:
+The pipeline has three stages: **scrape** (raw JSON) -> **clean** (standardized CSV) -> **load** (SQLite).
 
-```bash
-python code/gh_opt.py
-python code/hardwareIO.py
-python code/ohx.py
-python code/openalex_metadata.py
-python code/osf/osf_comprehensive_metadata_collector.py
-python ohr_classifier/ohr_final_classifier.py
+### Package layout (`src/osh_datasets/`)
+
+- `config.py` -- paths (`DATA_DIR`, `RAW_DIR`, `CLEANED_DIR`, `DB_PATH`), logging via `get_logger()`, env vars via `require_env()`
+- `http.py` -- `build_session()` (retry + backoff) and `rate_limited_get()`. All scrapers share these.
+- `token_manager.py` -- `TokenManager` for rotating API tokens (GitHub, GitLab, Hackaday). Loads from YAML files or env vars.
+- `db.py` -- SQLite schema (8 tables), `open_connection()` with WAL/FK pragmas, `upsert_project()`, insert helpers for child tables
+- `scrapers/` -- 11 scraper modules, each subclassing `BaseScraper` (ABC in `base.py`). Registered in `__init__.py:ALL_SCRAPERS`.
+- `loaders/` -- 9 loader modules, each subclassing `BaseLoader` (ABC in `base.py`). Registered in `load_all.py:ALL_LOADERS`.
+- `scrape_all.py` -- orchestrator that runs all or filtered scrapers
+- `load_all.py` -- orchestrator that inits DB, runs all loaders, then post-processing (dedup, DOI enrichment, license normalization)
+- `dedup.py` -- cross-source deduplication via repo URL matching -> `cross_references` table
+- `license_normalizer.py` -- maps free-text license names to SPDX identifiers
+- `enrich_ohx_dois.py` -- backfills DOI metadata from OpenAlex for HardwareX publications
+
+### Database
+
+SQLite at `data/osh_datasets.db`. 8 tables: `projects` (core), `licenses`, `tags`, `contributors`, `metrics`, `bom_components`, `publications`, `cross_references`. All child tables FK to `projects(id)`. Projects uniquely keyed on `(source, source_id)` with UPSERT semantics.
+
+### Data directory
+
+```
+data/
+  raw/<source>/       # Scraper output (JSON)
+  cleaned/<source>/   # Standardized CSV for loaders
+  osh_datasets.db     # Unified SQLite database
 ```
 
-No `pyproject.toml` or test suite exists yet. Planned rewrite into an `osh_datasets` package (Phase 3).
+### Adding a new source
 
-### Data Collection (`code/`)
+1. Create `scrapers/<source>.py` subclassing `BaseScraper` with `source_name` and `scrape() -> Path`
+2. Register in `scrapers/__init__.py:ALL_SCRAPERS`
+3. Create `loaders/<source>.py` subclassing `BaseLoader` with `source_name` and `load(db_path) -> int`
+4. Register in `load_all.py:ALL_LOADERS`
+5. Add mocked tests in `tests/test_scrapers.py` and `tests/test_loaders.py`
 
-Each data source has its own scraper, organized by subdirectory:
+### Key patterns
 
-| Source | Scripts | Method |
-|---|---|---|
-| GitHub | `gh_data_extraction.py`, `gh_repometrics.py`, `gh_opt.py` | `ghapi` with multi-token rotation (`GitHubTokenManager`) |
-| OHR (Open Hardware Repo) | `OHR/*.py` | GitLab API v4 |
-| OSHWA | `oshwa/oshwa_raw.py`, `oshwa/oshwa_clean.py` | OSHWA API |
-| Hackaday | `Hackaday/Hackaday_KeyRotation_API.py` | Hackaday API with key rotation |
-| Kitspace | `kitspace/kitspace_projectURL.py`, `kitspace/kitspace_second.py` | Web scraping |
-| Hardware.io | `hardwareIO.py` | BeautifulSoup scraping |
-| PLOS | `plos/plos_gitLinks.py`, `plos/plos_das.py` | Article scraping for GitHub links |
-| OHX | `ohx.py` | XML parsing (`data/ohx-allPubs.xml`) |
-| OpenAlex | `openalex_metadata.py` | OpenAlex REST API |
-| OSF | `osf/osf_comprehensive_metadata_collector.py`, `osf/osf_metadata_fetcher.py` | OSF API v2 (nodes/registrations/preprints) |
+- All HTTP goes through `build_session()` + `rate_limited_get()` from `http.py`
+- Tests mock HTTP via `unittest.mock.patch` on `rate_limited_get` and `build_session`
+- BS4 type narrowing: always `isinstance(el, Tag)` before accessing `.get_text()` or `.get()` (mypy strict)
+- API keys in `.env`, loaded via `config.require_env()`
+- `orjson` for JSON, `polars` for dataframes (never stdlib `json` or `pandas`)
 
-API tokens are expected via environment variables (`GITHUB_TOKEN`, GitLab `PRIVATE-TOKEN`) or token files.
+### Other directories
 
-### OHR Project Classifier (`ohr_classifier/`)
-
-Two-pass heuristic system for labeling GitLab repos as hardware vs. non-hardware:
-- **Pass 1:** Feature extraction from repo trees -- file extensions (`.kicad`, `.step`, `.stl`, etc.) and folder names (`hardware`, `pcb`, `cad`)
-- **Pass 2:** Rule-based classification with confidence scoring
-- Outputs: `final_classifications.csv` / `.json`
-
-### Prompt-Based README Evaluation
-
-`prompt_extract.md` defines a JSON schema for LLM-based extraction of documentation metadata from READMEs (license, BOM completeness, assembly instructions, design file formats) with 0-100 confidence scores. `prompt_extractTune.md` tunes extraction quality. Six strategies tested in `prompt_evaluation/test_1-test_6/`.
-
-### Data Layout
-
-- `data/raw/` -- unprocessed scraper output (hackaday, ohr, oshwa, scientific_literature)
-- `data/cleaned/` -- normalized datasets
-- `data/ohr/` -- OHR GitLab exports (CSV/JSON) and processing notebook
-- `data/osf/` -- OSF metadata dataset, links, and documentation
-- `data/journal_of_open_hardware/` -- Journal of Open Hardware papers
-- `EDA/` -- exploratory data analysis by source (Hackaday, OHR, OSHWA)
-
-### Key Patterns
-
-- Many scripts use `# %%` cell markers for Jupyter-style execution in VS Code
-- Common dependencies: `requests`, `pandas`, `beautifulsoup4`, `ghapi`, `pyyaml`, `lxml`, `py_ascii_tree`
-- OSF collector docs: see `data/osf/README.md`
+- `EDA/` -- exploratory data analysis outputs (reports, visualizations)
+- `ohr_classifier/` -- hardware vs. non-hardware classifier; `final_classifications.csv` used by `loaders/ohr.py`
+- `Prompt Evaluation/` -- LLM-based README metadata extraction experiments
 
 ---
 

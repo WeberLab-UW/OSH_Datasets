@@ -2,6 +2,7 @@
 name = "osh-datasets"
 version = "0.1.0"
 description = "Collect, clean, classify, and unify Open Source Hardware project metadata"
+license = "MIT"
 requires-python = ">=3.11"
 dependencies = [
     "requests>=2.31",
