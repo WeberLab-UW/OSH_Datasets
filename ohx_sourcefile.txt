@@ -1,0 +1,362 @@
+https://doi.org/10.17605/OSF.IO/MZCTP
+Source files repository (OSF) write the DOI URL here. http://dx.doi.org/10.17605/OSF.IO/WGK7Q
+https://doi.org/10.17605/OSF.IO/ANM7H
+https://doi.org/10.5281/zenodo.14616383
+https://doi.org/10.17632/b3jms757m9.2
+Archived Version: https://doi.org/10.5281/zenodo.15204075 [1] Git Repository: https://git.rwth-aachen.de/isea/battery-heater-board
+The hardware specifications, software, and datasets generated and analyzed during this study are openly available at Zenodo: https://doi.org/10.5281/zenodo.14545604 .
+http://dx.doi.org/10.17632/wzvw4zbhzh.2
+https://doi.org/10.5281/zenodo.14221857
+https://doi.org/10.17632/vfsj3zhsgf.2
+https://doi.org/10.17605/OSF.IO/R8PDX
+https://doi.org/10.17632/pd67rx3k5y.1
+http://doi.org/10.17605/OSF.IO/N3F4X
+https://zenodo.org/records/14875968
+Not applicable
+OSF, http://doi.org/10.17605/OSF.IO/6RAB8
+https://doi.org/10.17605/OSF.IO/D3N2J
+Mendeley Data, https://doi.org/10.17632/r4mh958pgm Code: Github, https://github.com/AShnier/RDE
+https://doi.org/10.5281/zenodo.14525339
+https://doi.org/10.17632/frwfmmpy72.1
+https://doi.org/10.5281/zenodo.13933528 https://doi.org/10.5281/zenodo.13932800
+DOI: http://dx.doi.org/10.5281/zenodo.14425536 , link: https://zenodo.org/records/14425536
+https://osf.io/a9jg2
+https://doi.org/10.5281/zenodo.14160133
+https://doi.org/10.5281/zenodo.13777788
+https://osf.io/r9pb6/
+https://doi.org/10.17632/r95wgtmffn
+https://doi.org/10.17632/5wh9bdmnm5.1
+https://doi.org/10.5281/zenodo.13151450
+https://osf.io/cxbpf/?view_only=378951f7e25949189b9773dd6cacd628
+Mendeley Data: https://doi.org/10.17632/f8jzn29f4c.2
+https://zenodo.org/records/13825787 and GitHub repository [1] .
+http://doi.org/10.17632/rbyv2xx5dr.1
+Mendeley Data ( https://data.mendeley.com/datasets/czgpmp8cr7/2 )
+https://doi.org/10.5281/zenodo.13345353
+https://doi.org/10.17632/3m3t4f9ft3
+https://osf.io/6gd27/
+https://doi.org/10.17632/93tj5gwh3j. 2
+https://data.mendeley.com/datasets/8dnbrx3s6h/1
+https://doi.org/10.17632/gtnv5dwjk5.1
+https://doi.org/10.5281/zenodo.13304397
+DOI 10.17605/OSF.IO/8N65F, https://osf.io/8n65f/
+https://data.mendeley.com/datasets/k38sfd28py/2
+https://doi.org/10.17605/OSF.IO/UN5YA
+https://osf.io/wqne2/ ; DOI https://doi.org/10.17605/OSF.IO/WQNE2
+https://doi.org/10.17605/OSF.IO/FVE43
+https://doi.org/10.17605/OSF.IO/RNT7Q
+https://doi.org/10.17632/bjkbjtf3vk
+https://data.mendeley.com/datasets/r4tf5fjzvv/1
+Open Science Framework https://doi.org/10.17605/OSF.IO/RJCHP
+https://zenodo.org/doi/10.5281/zenodo.8083881
+All supporting software and design files are available at https://doi.org/10.5281/zenodo.8331548
+https://doi.org/10.5281/zenodo.11092585
+https://zenodo.org/records/10211082
+https://doi.org/10.5281/zenodo.8328181
+http://doi.org/10.17605/OSF.IO/SZUYW
+https://dx.doi.org/10.17632/jvmd5p3rtx.2
+https://doi.org/10.5281/zenodo.7542701
+https://doi.org/10.17605/OSF.IO/UAJXB
+https://doi.org/10.17605/OSF.IO/4GTZ8
+https://OSF.IO/YTCDV
+https://doi.org/10.17605/OSF.IO/KYR59
+https://doi.org/10.17632/xn4pj3rt7b.1
+http://doi.org/10.17632/tdh45sybsn.1
+http://doi.org/10.17605/OSF.IO/SR62K
+https://doi.org/10.17605/OSF.IO/QDP7V
+Zenodo: https://doi.org/10.5281/zenodo.10205145 A live version of the repository can be found on GitHub: https://github.com/dterstege/PAW/
+Mendeley data: https://doi.org/10.17632/ddzsbh34bg.1
+Zenodo [1] /GitHub [2]
+https://doi.org/10.17632/7mshy2kcf3.3
+https://doi.org/10.5281/zenodo.8066013
+http://doi.org/10.5281/zenodo.8033755 https://3d.nih.gov/entries/3DPX-020446
+https://doi.org/10.17605/OSF.IO/WXHYM
+DOI 10.17605/OSF.IO/X3FZN
+https://zenodo.org/record/8241754
+https://doi.org/10.17605/OSF.IO/BDS26
+https://doi.org/10.17632/ftzs4yrztd.1
+https://doi.org/10.17605/OSF.IO/EVUPY
+Open Science Framework (OSF): https://doi.org/10.17605/osf.io/4d3hp
+https://osf.io/u2h4g/ DOI 10.17605/OSF.IO/U2H4G
+http://dx.doi.org/10.17632/z6hkzx433s.1
+10.5281/zenodo.6903052
+https://doi.org/10.17605/OSF.IO/EKZ2H
+DOI 10.17605/OSF.IO/KX3A2 https://osf.io/kx3a2/?view_only=ac67498e7abc4f24be764f5d13ee715d
+Github: https://github.com/andrewbierer/Open_Irr Mendeley Data: https://doi.org/10.17632/sbzxm5rydj.1
+https://doi.org/10.17632/rpzv35pccr.1
+Source files repository ( OSF ) write the DOI URL here. http://doi.org/10.17605/OSF.IO/ZG3RP
+https://doi.org/10.17605/OSF.IO/FCQNR
+https://doi.org/10.5281/zenodo.7863983
+DOI: https://doi.org/10.17605/OSF.IO/7AGPU
+https://doi.org/10.5281/zenodo.7897546 https://github.com/robotont/robotont-hardware-x-2023-replication-package https://github.com/robotont
+https://doi.org/10.5281/zenodo.7673922
+https://doi.org/10.17632/5rdt5wmbv5.1
+https://doi.org/10.17605/OSF.IO/K83X7
+https://osf.io/r8enm/ (DOI https://doi.org/10.17605/OSF.IO/R8ENM)
+https://osf.io/xa4ws/
+https://doi.org/10.17632/76msnn2tz8.1
+https://zenodo.org/record/7541996#.Y8Wd1uLMIqs
+https://doi.org/10.17632/64ykjhczr6.3
+Zenodo (design files), Github (source code)
+https:/doi.org/10.17605/OSF.IO/5ND9Y
+https://doi.org/10.5281/zenodo.6841618
+https://doi.org/10.5281/zenodo.7185235
+https://doi.org/10.17632/tgggwcmhyz.2
+Source files repository ( OSF ) write the DOI URL here. http://doi.org/10.17605/OSF.IO/5DG6X
+http://doi.org/10.17605/OSF.IO/K9GRA
+https://doi.org/10.5281/zenodo.7116287
+https://doi.org/10.5281/zenodo.6457647
+https://doi.org/10.5281/zenodo.6674534
+Uploaded at the time of submission on the online Elsevier submission interface (.zip) Zenodo data: https://doi.org/10.5281/zenodo.6795588
+https://osf.io/q6yk4/ or https://doi.org/10.17605/OSF.IO/PR8EW
+https://doi.org/10.17605/OSF.IO/JE8KN
+Live version on GitHub: https://github.com/Ponz91/HistoEnder repository on Zenodo: https://zenodo.org/badge/latestdoi/537764424 https://doi.org/10.5281/zenodo.7088610
+OSF identifier: https://doi.org/10.17605/osf.io/j2fqy
+https://doi.org/10.17605/OSF.IO/U3295
+https://doi.org/10.17605/OSF.IO/UCM8D
+Structural parts of filament extruder - https://doi.org/10.17632/2fp47vg2w9.4 Filament extruder system - https://www.doi.org/10.17632/2fp47vg2w9.4 Cooler system - https://www.doi.org/10.17632/2fp47vg2w9.4 Puller and filament measuring system - https://www.doi.org/10.17632/2fp47vg2w9.4 Spooler system - https://www.doi.org/10.17632/2fp47vg2w9.4 Integrated circuit cost - https://www.doi.org/10.17632/2fp47vg2w9.4 Electric components cost- https://www.doi.org/10.17632/2fp47vg2w9.4
+https://doi.org/10.17605/OSF.IO/TK8Z9
+https://data.mendeley.com/datasets/vnvn9m58p2/draft?a=3a509441-0e7b-4699-bdfc-c2d103e77f92
+https:/doi.org/10.17632/7jzgfwhznn.3
+https://doi.org/10.17605/OSF.IO/HDYCE
+None to report. Programming codes have been cited.
+https://doi.org/10.17632/tkm4w7wp3v.1 ; https://github.com/dzhaojie/Fluidics-system-for-FISH
+https://dx.doi.org/10.17605/osf.io/jgrm8
+https://osf.io/wgx4p/
+http://doi.org/10.17605/OSF.IO/J8ZW7
+https://data.mendeley.com/datasets/pr2d4yn4dd/2
+Mendeley Data: https://doi.org/10.17632/w6v48k72z8.1.
+https://doi.org/10.5281/zenodo.6012684
+https://doi.org/10.17632/zdvb5hzv2x.1
+https://zenodo.org/record/6459853#.YljnKejMI2w
+https://osf.io/quz7d/files/osfstorage
+https://doi.org/10.17632/xh4h6kn382.2
+González, Ximena (2021), “Wheelchair prototype design files AXGC”, Mendeley Data, V2, doi: 10.17632/ys9s9pgvbg.2, URL: https://data.mendeley.com/datasets/ys9s9pgvbg/2
+https://doi.org/10.5281/zenodo.5564369
+https://doi.org/10.5281/zenodo.5643580
+https://doi.org/10.5281/zenodo.4996271
+Software files: https://www.doi.org/10.17632/m5sm9c6wcx.1 Hardware files: https://www.doi.org/10.17632/825zc3xwz4.1
+https://doi.org/10.17605/OSF.IO/NTVXG
+https://doi.org/10.17632/75w37bsh8d.1
+Zenodo repository ht ps://zenodo.org/record/6206711 A live version of the project can be found at https://github.com/LMSE/REVOLVER-protein-purifier
+10.17605/OSF.IO/F5U6E
+doi:10.17632/499gx3pfxk.1
+Link to data in Mendeley Reserved DOI: 10.17632/bx2zyxjzzb.1
+https://doi.org/10.17632/w26x9yrbtm.2
+https://doi.org/10.5281/zenodo.5821831
+https://doi.org/10.17605/OSF.IO/H6XKQ
+https://doi.org/10.17605/OSF.IO/PFXS7
+https://doi.org/10.17605/OSF.IO/XE49Y
+doi.org/10.17605/OSF.IO/D6XAB
+https://doi.org/10.17605/OSF.IO/SNHFD
+openDSF (Mendeley data): https://doi.org/10.17632/73rt8s7pwd.2
+https://doi.org/10.17632/xcm62gpxvk.1
+https://doi.org/10.17632/cg38djj8y5.2
+https://doi.org/10.17605/osf.io/ktxuh
+https://doi.org/10.17605/osf.io/bre5f or registered: https://doi.org/10.17605/osf.io/uce2h
+https://doi.org/10.17605/OSF.IO/WVUQ9
+https://doi.org/10.17605/OSF.IO/8WKJT
+VentMon: https://doi.org/10.5281/zenodo.4079170
+https://doi.org/10.17632/9b4d8g9jc4.1
+https://nbn-resolving.org/urn:nbn:de:gbv:700-202010023619
+https://doi.org/10.17632/kvx6syk42x.1
+https://doi.org/10.17605/OSF.IO/P5DSW
+http://doi.org/10.5281/zenodo.4034301 https://github.com/amromanov/open_la
+https://doi.org/10.17605/osf.io/9xuz2
+https://doi.org/10.17632/z4hvxjgtbz.2
+Mendeley Data: ”Source Files for tci-gatewaymodule Link: https://dx.doi.org/10.17632/fvccdd6r4f.1
+• OSF: https://doi.org/10.17605/OSF.IO/8BGHA
+All supporting software and descriptions are available at https://doi.org/10.17605/OSF.IO/RBFSE .
+https://doi.org/10.17605/OSF.IO/N7ZEK
+https://osf.io/s7jzu/
+https://osf.io/96zv2/?view_only=5a670b5f49634e0cb3b69654044ec012
+doi: 10.5281/zenodo.10412769
+https://doi.org/10.5281/zenodo.15667094
+DOI https://doi.org/10.17605/OSF.IO/H8GQK
+https://doi.org/10.17632/xc5488grcv.3
+https://doi.org/10.5281/zenodo.14826547
+https://doi.org/10.5281/zenodo.14680538
+https://doi.org/10.17632/685hm7n8nb.1
+https://doi.org/10.17605/OSF.IO/ND27H
+https://doi.org/10.17605/OSF.IO/TPGE9
+https://doi.org/10.17632/x8dbztc9fs.1
+This device is made of two components shared via the following OSF Repository. https://doi.org/10.17605/OSF.IO/QB7PH
+https://doi.org/10.17605/OSF.IO/PCMHW
+Design files uploaded on OSF, https://doi.org/10.17605/OSF.IO/FB94X
+https://doi.org/10.5281/zenodo.14835096
+http://doi.org/10.5281/zenodo.14648206
+10.17605/osf.io/p5vjt
+https://doi.org/10.17632/yn9ydywcby.1
+10.5281/zenodo.14536403 (hardware) 10.5281/zenodo.14536077 (software)
+https://doi.org/10.17605/osf.io/t9fzs
+https://doi.org/10.5281/zenodo.14026247
+https://osf.io/jg7uv/files/osfstorage
+https://doi.org/10.17632/p3npz8wkny.2
+https://doi.org/10.5281/zenodo.13227905
+https://data.mendeley.com/datasets/syjv86dkkk/2
+https://doi.org/10.17605/OSF.IO/ZHBJF
+https://doi.org/10.17632/wnxv7wbfsx.5
+https://doi.org/10.17605/OSF.IO/N9R5B
+If you’ve uploaded your source files to an approved repository ( OSF , Mendeley Data or Zenodo ) write the DOI URL here. https://doi.org/10.5281/zenodo.7575248
+https://doi.org/10.17632/vgdth6ytk5.1
+https://doi.org/10.17605/OSF.IO/93WY4
+https://zenodo.org/doi/10.5281/zenodo.10052826
+https://doi.org/10.17632/k7yfn6wdv7.2
+https://doi.org/10.17632/p4v2kfp3js.1
+https://doi.org/10.17632/x2gpn7sjyt.1
+https://doi.org/10.17605/OSF.IO/T8EGC
+http://dx.doi.org/10.17632/jwzbvfj396.1
+https://doi.org/10.17632/h2zrpfx3pf.1
+https://doi.org/10.5281/zenodo.13312832
+https://doi.org/10.17632/k5y3ffzn3b.1
+Source code for the hardware is available for public download at: https://github.com/HamSCI/PSWS-Magnetometer . Source code for the software and documentation is available for public download at: https://github.com/HamSCI/rm3100-runMag . The design files and bill of materials are available at http://dx.doi.org/10.5281/zenodo.10289503 .
+https://doi.org/10.17632/zffkv4ccfd.1
+https://doi.org/10.17632/yf8z2263gy.2
+https://doi.org/10.17605/OSF.IO/VUW4J
+Mechanical Test Lung - Mendeley Data01 Mechanical Test Lung - Mendeley Data02
+https://doi.org/10.17632/jm4ndf8r9j.1
+https://doi.org/10.17632/cgmmttr4bz.2
+Vezeridis, Alexander; Herwald, Sanna (2024), “Programmable Pulsatile Centrifugal Pump for Vascular Flow Simulation”, Mendeley Data, V1, https://doi.org/10.17632/6dscgdg2b5.1 https://doi.org/10.17632/6dscgdg2b5.1
+https://doi.org/10.17605/OSF.IO/GZD62
+https://doi.org/10.17632/ng2k62crcg.2
+Mendeley Data: http://dx. https://doi.org/10.17632/xm3njtmpmd.1
+https://doi.org/10.17605/OSF.IO/VN79E
+Zenodo data link: https://doi.org/10.5281/zenodo.10828203
+https://doi.org/10.5281/zenodo.10521930
+https://doi.org/10.5281/zenodo.10825833
+https://doi.org/10.17632/s2mm5btmy5.1
+https://doi.org/10.17632/kxt5sks9zs.1
+https://doi.org/10.5281/zenodo.7802260
+http://doi.org/10.17605/OSF.IO/4BDKU
+https://10.5281/zenodo.10784048
+https://doi.org/10.17632/3yx5y8b7tm.1
+https://dx. https://doi.org/10.17632/w496dkygx8.1
+https://doi.org/10.17605/OSF.IO/VGYN7
+https://doi.org/10.5281/zenodo.10014129
+https://doi.org/10.17632/mgdnsbsxkt.1
+https://data.mendeley.com/datasets/s8bpwp2ryb/1 (DOI: 10.17632/s8bpwp2ryb.1)
+DOI: 10.5281/zenodo.10048123 https://zenodo.org/doi/10.5281/zenodo.10048123
+https://doi.org/10.17632/j2z3ns9hn4.2
+https://doi.org/10.17632/8953pcgdys.2
+Figures are attached to the manuscript.
+https://doi.org/10.17632/kk6hktdydg.3 Used in conjunction with components of a data recording device [1]
+https://zenodo.org/record/8206220
+https://doi.org/10.17632/frk98hnwxk.3
+Mendeley Data: http://doi.org/10.17632/4gfb6g46kb.2
+https://doi.org/10.17605/OSF.IO/9ARYM
+https://doi.org/10.17632/f35c6xzzcm.1
+https://doi.org/10.5281/zenodo.8435816
+https://doi.org/10.17605/OSF.IO/TRWZE
+https://doi.org/10.17632/cyb36wsh6c.2
+OSF project repository: https://doi.org/10.17605/OSF.IO/5D4PH
+https://data.mendeley.com/datasets/t4n3t4p6db/4
+http://doi.org/10.17632/2p7mbbhn47.1
+Within the article
+Mendeley Data
+https://data.mendeley.com/drafts/zgdjg5b3cs https://doi.org/10.17632/zgdjg5b3cs.1
+https://doi.org/10.5281/zenodo.8173130
+https://doi.org/10.17632/yvspjzcn2h.1
+https://doi.org/10.5281/zenodo.7823461
+https://doi.org/10.17632/zrjbtfhwh9.2
+https://doi.org/10.17605/OSF.IO/VMPFS
+https://doi.org/10.17632/46x948gzkt.1
+https://doi.org/10.17605/OSF.IO/X3EKH
+https://doi.org/10.17605/osf.io/j24f6
+https://doi.org/10.17632/cvr77cr6ry.1
+https://doi.org/10.17632/xtwrf8859b.3
+https://doi.org/10.5281/zenodo.7971517
+http://doi.org/10.5281/zenodo.6633719
+On Open Science Framework (OSF) with DOI: 10.17605/OSF.IO/JH6QY [ 6 ]
+https://doi.org/10.17632/p7jjtrt82w.4
+http://doi.org/10.17632/sv5y27mzjb.2
+https://doi.org/10.5281/zenodo.7688987
+Zenodo [1]
+Mendeley, https://doi.org/10.17632/m77h37dfjf.1
+https://doi.org/10.17605/OSF.IO/HB6UV
+https://osf.io/ps57u/
+http://doi.org/10.17605/OSF.IO/DGTW4
+https://doi.org/10.5281/zenodo.7448231; Editable CAD design files are available as an Onshape public repository here .
+https://doi.org/10.17605/OSF.IO/63S57
+Available with the article
+https://doi.org/10.17632/2nhfs99zcy.1
+https://doi.org/10.5281/zenodo.7882884
+https://figshare.com/s/dd6a9df122444dfbc496
+https://zenodo.org/record/7640543 https://doi.org/10.5281/zenodo.7640543 https://github.com/KaetzelLab/Open-MAC
+https://doi.org/10.17605/osf.io/t3yvd
+https://doi.org/10.5281/zenodo.7152400
+Mendeley Data, http://doi.org/10.17632/y84tbnfsj4
+https://doi.org/10.17632/mxr5zkg5fx.2
+http://doi.org/10.17632/mwchxw4hnp.2
+https://doi.org/10.5281/zenodo.7474569
+DOI repsitory can be found with all files here: http://doi.org/10.17605/OSF.IO/VAX5F
+Design files and data are available at 10.5281/zenodo.7380380 . A ready-to-view model is available at https://autode.sk/3vdsOu0 . Data analysis code is available at github.com/GanzingerLab . Up-to-date information about the setup is available at the K2 TIRF Github page. ( ganzingerlab.github.io/K2TIRF/K2TIRF/index.html ).
+https://doi.org/10.17605/OSF.IO/4KET9
+https://zenodo.org/record/7561142
+https://data.mendeley.com/datasets/mt24hdxsr2/1
+• Hardware: https://doi.org/10.5281/zenodo.7500242 • Software: https://doi.org/10.5281/zenodo.7500242 https://github.com/Uniminutoarduino/RaspyControlLab
+https://doi.org/10.17632/kj7nk4khzd.1
+Available with the article; https://doi.org/10.5281/zenodo.7385903.
+https://doi.org/10.5281/zenodo.7221871
+Digital Object Identifier DOI https://doi.org/10.5281/zenodo.7090151 URL : https://zenodo.org/record/7090151
+https://data.mendeley.com/datasets/xb4tykn5gd/1
+Not applicable.
+OSF: https://doi.org/10.17605/OSF.IO/M85VBGitHub : https://github.com/guru-narayana/GridAnalyser
+https://doi.org/10.17632/b7yy72wcxx.2 https://3dprint.nih.gov/discover/3dpx-017622
+https://osf.io/fnhm7/
+https://doi.org/10.17605/OSF.IO/8D429
+https://doi.org/10.17605/OSF.IO/EG9FU
+http://dx.doi.org/10.17632/jpxw5dph27.1
+https://doi.org/10.17632/wfw7nyctcy.1
+http://doi.org/10.17632/hdb93dwt2x.2
+All supporting software is available at https://DOI.org/10.17605/OSF.IO/S4PG7
+https://doi.org/10.17632/3pccd4yp8m.4
+https://doi.org/10.17632/5fth8h9sdh.1
+https://doi.org/10.17605/OSF.IO/DYCMS
+http://doi.org/10.17632/9ndz5b9ccv.3
+https://osf.io/nhj4z
+https://doi.org/10.17632/5gfmy98kcj.2
+https://doi.org/10.17632/sy2vrhj227.1 Mendeley Data: https://data.mendeley.com/datasets/sy2vrhj227/1
+https://doi.org/10.17605/OSF.IO/A874U
+https://doi.org/10.17605/OSF.IO/BVJH2
+https://doi.org/10.17605/OSF.IO/29A8T
+https://data.mendeley.com/datasets/mj6mx8d5c5/11
+https://doi.org/10.17605/OSF.IO/FB5VH
+https://doi.org/10.17605/osf.io/24zuh
+https://doi.org/10.5281/zenodo.5768034 https://github.com/klotzsch-lab/Maasi
+http://dx.doi.org/10.17632/t4rxhrgrt8.1#folder-25fad5ff-a7c5-4704-9999-126b822fdfe1
+https://doi.org/10.17605/OSF.IO/TCZJR
+Ficarro, S., Marto, J., Tavares, I., & Alexander, W. (2022, April 7). Open Source MALDI Spotter / Fraction Collector. https://doi.org/10.17605/OSF.IO/VKHRN
+https://doi.org/10.17605/OSF.IO/54KWN
+https://doi.org/10.17632/wrx22bn64h.2
+https://doi.org/10.5281/zenodo.5484803
+https://doi.org/10.17632/z6nmc3kcy8.3
+http://doi.org/10.17605/OSF.IO/329TP
+https://doi.org/10.17632/nbbhy2yxmz.1
+https://zenodo.org/record/5719382#.YZwJ17rjJhE https://ohwr.org/project/passstat
+https://doi.org/10.17632/cvdc3gsjsg.1
+http://dx.doi.org/10.17632/rckgk7gz5m.1
+https://doi.org/10.5281/zenodo.5825882
+https://doi.org/10.17605/OSF.IO/8N47G
+Mendeley Data https://doi.org/10.17632/bdg2c7tsxm.1
+URL to an approved source file repository: https://doi.org/10.17605/OSF.IO/Z5RVN.
+https://osf.io/g8w2q/
+DOI 10.17605/OSF.IO/ZYWVF
+https://osf.io/ug4z2/ and registration: https://doi.org/10.17605/OSF.IO/UV9MZ
+https://doi.org/10.17632/tz4y6s9g5w.1
+https://doi.org/10.17605/OSF.IO/Q2BPN
+https://doi.org/10.17605/OSF.IO/J362K
+https://doi.org/10.17632/c8sxdwds5x.1
+https://doi.org/10.17605/OSF.IO/KQ3EW
+https://doi.org/10.17605/OSF.IO/5AF4V
+https://doi.org/10.17605/OSF.IO/TWB3J
+https://doi.org/10.17632/skm88ynyhv.4
+https://doi.org/10.17605/OSF.IO/JS9B2
+http://osf.io/wfp7x/
+https://osf.io/rstcb
+https://osf.io/ctkmh
+https://doi.org/10.17605/OSF.IO/YX687
+https://doi.org/10.17605/OSF.IO/7FQ6U
+https://osf.io/yz6x7
+https://osf.io/3mtxk/
+https://doi.org/10.17632/gkg6wjp844.1
+https://osf.io/sfpb2/ DOI https://doi.org//10.17605/OSF.IO/SFPB2

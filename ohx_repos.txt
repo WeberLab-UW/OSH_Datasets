@@ -1,0 +1,2107 @@
+Repository Information for 526 OHX Projects
+============================================================
+
+Project 1: Open-source three-dimensional IoT anemometer for indoor air quality monitoring
+Repository: https://doi.org/10.17605/OSF.IO/MZCTP
+------------------------------------------------------------
+
+Project 2: Design and implementation of an adjustable Micro PDLC Driver for smart buildings
+Repository: Source files repository (OSF) write the DOI URL here. http://dx.doi.org/10.17605/OSF.IO/WGK7Q
+------------------------------------------------------------
+
+Project 3: CyanoStat: An open-source platform for CO
+Repository: https://doi.org/10.17605/OSF.IO/ANM7H
+------------------------------------------------------------
+
+Project 4: Naturalight: A controlled illuminated environment to study light exposure impact on behavior and cognition in freely moving rats
+Repository: https://doi.org/10.5281/zenodo.14616383
+------------------------------------------------------------
+
+Project 5: Rugged, low-cost, and lightweight rosette water sampler for ocean profiling and mooring deployment
+Repository: https://doi.org/10.17632/b3jms757m9.2
+------------------------------------------------------------
+
+Project 6: Design and development of a cost-effective buoy using 3D printing for coastal monitoring
+Repository: https://data.mendeley.com/datasets/84fygz2txp
+------------------------------------------------------------
+
+Project 7: Battery Heater Board for precise temperatures during tests
+Repository: Archived Version: https://doi.org/10.5281/zenodo.15204075 [1] Git Repository: https://git.rwth-aachen.de/isea/battery-heater-board
+------------------------------------------------------------
+
+Project 8: Design and evaluation of a voltage-controlled current source for galvanic vestibular stimulation research
+Repository: The hardware specifications, software, and datasets generated and analyzed during this study are openly available at Zenodo: https://doi.org/10.5281/zenodo.14545604 .
+------------------------------------------------------------
+
+Project 9: Optimizing thermal diffusivity measurements for fluids with accessible 3D printing and Arduino-based temperature control
+Repository: http://dx.doi.org/10.17632/wzvw4zbhzh.2
+------------------------------------------------------------
+
+Project 10: 3D-printed pulsator to enhance mass transfer in electrochemical reactors
+Repository: https://doi.org/10.5281/zenodo.14221857
+------------------------------------------------------------
+
+Project 11: Design and implementation of a module for teaching and research on SCRs for power electronics
+Repository: https://doi.org/10.17632/vfsj3zhsgf.2
+------------------------------------------------------------
+
+Project 12: Microscope Upcycling: Transforming legacy microscopes into automated cloud-integrated imaging systems
+Repository: https://doi.org/10.17605/OSF.IO/R8PDX
+------------------------------------------------------------
+
+Project 13: Design and fabrication of a 3D-printed drone-integrated winching system
+Repository: https://doi.org/10.17632/pd67rx3k5y.1
+------------------------------------------------------------
+
+Project 15: Autonomous water sampling and quality monitoring in remote locations: A novel approach using a remote-controlled boat
+Repository: http://doi.org/10.17605/OSF.IO/N3F4X
+------------------------------------------------------------
+
+Project 16: A portable low-cost polymerase chain reaction device
+Repository: https://zenodo.org/records/14875968
+------------------------------------------------------------
+
+Project 17: Portable pressure chamber for manual camera-assisted monitoring of leaf water potential
+Repository: Not applicable
+------------------------------------------------------------
+
+Project 18: ScientISST CORE: A novel hardware development platform for biomedical engineering
+Repository: OSF, http://doi.org/10.17605/OSF.IO/6RAB8
+------------------------------------------------------------
+
+Project 19: All Iron Battery 3.0
+Repository: https://doi.org/10.17605/OSF.IO/D3N2J
+------------------------------------------------------------
+
+Project 20: Low cost rotating disc electrode built using accessible hand tools and 3D printing
+Repository: Mendeley Data, https://doi.org/10.17632/r4mh958pgm Code: Github, https://github.com/AShnier/RDE
+------------------------------------------------------------
+
+Project 21: An affordable and adaptable Faraday isolator design for research
+Repository: https://doi.org/10.5281/zenodo.14525339
+------------------------------------------------------------
+
+Project 22: A low-cost autonomous and scalable hydroponics system for space farming
+Repository: https://doi.org/10.17632/frwfmmpy72.1
+------------------------------------------------------------
+
+Project 23: Spi-VSTL: Image data collection platform using off-the shelf hardware for vertically supported crops in state-of-the-art glasshouses
+Repository: https://doi.org/10.5281/zenodo.13933528 https://doi.org/10.5281/zenodo.13932800
+------------------------------------------------------------
+
+Project 24: The PolyVent educational platform: An open mechanical ventilation platform for research and education
+Repository: DOI: http://dx.doi.org/10.5281/zenodo.14425536 , link: https://zenodo.org/records/14425536
+------------------------------------------------------------
+
+Project 25: OpenNavSense platform: A low-cost, open-source inertial navigation system for the evaluation of estimation algorithms
+Repository: https://osf.io/a9jg2
+------------------------------------------------------------
+
+Project 26: PolyWAG: Autonomous filtered water sampling for eDNA
+Repository: https://doi.org/10.5281/zenodo.14160133
+------------------------------------------------------------
+
+Project 27: 3D printed dummy heads for crosstalk cancellation studies in bone conduction
+Repository: https://doi.org/10.5281/zenodo.13777788
+------------------------------------------------------------
+
+Project 28: SyncGenie: A programmable event synchronization device for neuroscience research
+Repository: https://osf.io/r9pb6/
+------------------------------------------------------------
+
+Project 29: The WOCA negative pressure wound therapy device designed for low resource settings
+Repository: https://doi.org/10.17632/r95wgtmffn
+------------------------------------------------------------
+
+Project 30: Open-source insect camera trap with vibrational detection and luring for monitoring
+Repository: https://doi.org/10.5281/zenodo.13831951
+------------------------------------------------------------
+
+Project 31: An open source isolated data acquisition with trigger pulse generation for ion mobility spectrometry
+Repository: https://doi.org/10.17632/5wh9bdmnm5.1
+------------------------------------------------------------
+
+Project 32: ASMI: An automated, low-cost indenter for soft matter
+Repository: https://doi.org/10.5281/zenodo.13151450
+------------------------------------------------------------
+
+Project 33: Low-cost urban heat environment sensing device with Android platform for digital twin
+Repository: https://doi.org/10.5281/zenodo.11086250
+------------------------------------------------------------
+
+Project 34: An automated low-cost monitoring station for suspended sediments and water level
+Repository: https://osf.io/cxbpf/?view_only=378951f7e25949189b9773dd6cacd628
+------------------------------------------------------------
+
+Project 35: An open-source, battery-powered, low-cost, and dual-channel pneumatic pulse generator for microfluidic cell-stretch assays
+Repository: Mendeley Data: https://doi.org/10.17632/f8jzn29f4c.2
+------------------------------------------------------------
+
+Project 36: General Purpose Alarm Device: A programmable annunciator
+Repository: https://zenodo.org/records/13825787 and GitHub repository [1] .
+------------------------------------------------------------
+
+Project 37: Design of a low-cost force insoles to estimate ground reaction forces during human gait
+Repository: http://doi.org/10.17632/rbyv2xx5dr.1
+------------------------------------------------------------
+
+Project 38: Multiple channels, low-cost, and dual data storage data logger for building a soil temperature network
+Repository: Mendeley Data ( https://data.mendeley.com/datasets/czgpmp8cr7/2 )
+------------------------------------------------------------
+
+Project 39: BioSense: An automated sensing node for organismal and environmental biology
+Repository: https://doi.org/10.5281/zenodo.13345353
+------------------------------------------------------------
+
+Project 40: MULA, an affordable framework for multifunctional liquid automation in natural- and life sciences with a focus on hardware design, setup, modularity and validation
+Repository: https://doi.org/10.17632/3m3t4f9ft3
+------------------------------------------------------------
+
+Project 41: Open Photonics: An integrated approach for building a 3D-printed motorized rotation stage system
+Repository: https://osf.io/6gd27/
+------------------------------------------------------------
+
+Project 42: Turbolysis: A low-cost, small footprint alternative to commercial bead beaters for cell lysis
+Repository: https://doi.org/10.17632/93tj5gwh3j. 2
+------------------------------------------------------------
+
+Project 43: Robust and low-cost open-source device for detecting infectious microorganisms by loop-mediated isothermal amplification
+Repository: https://data.mendeley.com/datasets/8dnbrx3s6h/1
+------------------------------------------------------------
+
+Project 44: A modular, isolated high-voltage switch for application in ion mobility spectrometry
+Repository: https://doi.org/10.17632/gtnv5dwjk5.1
+------------------------------------------------------------
+
+Project 45: Synchronising an IMX219 image sensor and AS7265x spectral sensor to make a novel low-cost spectral camera
+Repository: https://doi.org/10.5281/zenodo.13304397
+------------------------------------------------------------
+
+Project 46: OpenHW3 – An open-source, low-cost temperature-controlled orbital shaker
+Repository: DOI 10.17605/OSF.IO/8N65F, https://osf.io/8n65f/
+------------------------------------------------------------
+
+Project 47: A customizable digital holographic microscope
+Repository: https://data.mendeley.com/datasets/k38sfd28py/2
+------------------------------------------------------------
+
+Project 48: Low-cost, mobile EEG hardware for SSVEP applications
+Repository: https://doi.org/10.17605/OSF.IO/UN5YA
+------------------------------------------------------------
+
+Project 49: Open-source cold and hot scientific sheet press for investigating polymer-based material properties
+Repository: https://osf.io/wqne2/ ; DOI https://doi.org/10.17605/OSF.IO/WQNE2
+------------------------------------------------------------
+
+Project 50: Design and construction of a low-cost compressive loading and perfusion flow bioreactor
+Repository: https://doi.org/10.17605/OSF.IO/FVE43
+------------------------------------------------------------
+
+Project 51: The Perry project: A versatile low-cost syringe pump for dispensing in automated synthesis systems
+Repository: https://doi.org/10.17605/OSF.IO/RNT7Q
+------------------------------------------------------------
+
+Project 53: A filling rig for liquid and gas working fluids for two-phase thermal management systems
+Repository: https://doi.org/10.17632/bjkbjtf3vk
+------------------------------------------------------------
+
+Project 54: An open-source membrane stretcher for simultaneous mechanical and structural characterizations of soft materials and biological tissues
+Repository: https://data.mendeley.com/datasets/r4tf5fjzvv/1
+------------------------------------------------------------
+
+Project 55: Open-source spring-driven syringe pump with 3D-printed components for microfluidic applications
+Repository: https://doi.org/10.17632/28dxsg7x2t.1
+------------------------------------------------------------
+
+Project 56: A low-cost and open-hardware portable 3-electrode sleep monitoring device
+Repository: Open Science Framework https://doi.org/10.17605/OSF.IO/RJCHP
+------------------------------------------------------------
+
+Project 57: High-performance wide-band open-source system for acoustic stimulation
+Repository: http://doi.org/10.17632/xxzcffw3n4.1
+------------------------------------------------------------
+
+Project 58: The Open SprayBot: A high-throughput paper spray mass spectrometry platform for disease screening
+Repository: https://zenodo.org/doi/10.5281/zenodo.8083881
+------------------------------------------------------------
+
+Project 59: Open-source and low-cost miniature microscope for on-site fluorescence detection
+Repository: All supporting software and design files are available at https://doi.org/10.5281/zenodo.8331548
+------------------------------------------------------------
+
+Project 60: FriiTriga, a triggered controller with an optical beam shutter using a hard disk drive voice-coil actuator
+Repository: https://doi.org/10.5281/zenodo.11092585
+------------------------------------------------------------
+
+Project 61: A low-cost, portable device for the study of the malaria parasite’s growth inhibition via microwave exposure
+Repository: https://zenodo.org/records/10211082
+------------------------------------------------------------
+
+Project 62: Real-time ultrasonic water level IoT sensor for in-situ soil permeability testing
+Repository: https://doi.org/10.5281/zenodo.8328181
+------------------------------------------------------------
+
+Project 63: CogWatch: An open-source platform to monitor physiological indicators for cognitive workload and stress
+Repository: http://doi.org/10.17605/OSF.IO/SZUYW
+------------------------------------------------------------
+
+Project 64: Hybrid FFF/CNC: An open source hardware & software system
+Repository: https://dx.doi.org/10.17632/jvmd5p3rtx.2
+------------------------------------------------------------
+
+Project 65: Design and testing of fabric-based portable soft exoskeleton glove for hand grasping assistance in daily activity
+Repository: https://doi.org/10.5281/zenodo.7542701
+------------------------------------------------------------
+
+Project 66: Orthogonal-view microscope for the biomechanics investigations of aquatic organisms
+Repository: https://doi.org/10.17605/OSF.IO/UAJXB
+------------------------------------------------------------
+
+Project 67: Sonarlogger: Enabling long-term underwater sonar observations
+Repository: https://doi.org/10.17605/OSF.IO/4GTZ8
+------------------------------------------------------------
+
+Project 68: NeuroSense: A non-invasive and configurable somatosensory stimulator with OPENVIBE communication
+Repository: https://doi.org/10.17632/h784hj9s83.1
+------------------------------------------------------------
+
+Project 69: Modular multi-channel high voltage arbitrary waveform generator and imaging setup for dielectric elastomer actuator characterisation
+Repository: https://OSF.IO/YTCDV
+------------------------------------------------------------
+
+Project 70: Low cost MEMS accelerometer and microphone based condition monitoring sensor, with LoRa and Bluetooth Low Energy radio
+Repository: https://doi.org/10.17605/OSF.IO/KYR59
+------------------------------------------------------------
+
+Project 71: A Wearable Open-Source electrical impedance tomography device
+Repository: https://doi.org/10.17632/xn4pj3rt7b.1
+------------------------------------------------------------
+
+Project 72: Modification of a desktop FFF printer via NIR laser addition for upconversion 3D printing
+Repository: http://doi.org/10.17632/tdh45sybsn.1
+------------------------------------------------------------
+
+Project 73: Pi-seq—A customizable multichannel syringe pump for microfluidics
+Repository: http://doi.org/10.17605/OSF.IO/SR62K
+------------------------------------------------------------
+
+Project 74: BioCloneBot: A versatile, low-cost, and open-source automated liquid handler
+Repository: https://doi.org/10.17605/OSF.IO/QDP7V
+------------------------------------------------------------
+
+Project 77: PAW, a cost-effective and open-source alternative to commercial rodent running wheels
+Repository: Zenodo: https://doi.org/10.5281/zenodo.10205145 A live version of the repository can be found on GitHub: https://github.com/dterstege/PAW/
+------------------------------------------------------------
+
+Project 78: An open-source zero-gradient cell hardware to improve and accelerate durability testing of PEM fuel cells
+Repository: Mendeley data: https://doi.org/10.17632/ddzsbh34bg.1
+------------------------------------------------------------
+
+Project 79: Development of an Arduino-based, open-control interface for hardware in the loop applications
+Repository: Zenodo [1] /GitHub [2]
+------------------------------------------------------------
+
+Project 80: Respiratory pressure and split flow data collection device with rapid occlusion attachment
+Repository: https://doi.org/10.17632/7mshy2kcf3.3
+------------------------------------------------------------
+
+Project 82: Low-cost test rig for characterization of photocatalytic planar materials using photonically sized UV-A LED light sources
+Repository: https://doi.org/10.5281/zenodo.8066013
+------------------------------------------------------------
+
+Project 83: Untangling the Gordian Knot of
+Repository: http://doi.org/10.5281/zenodo.8033755 https://3d.nih.gov/entries/3DPX-020446
+------------------------------------------------------------
+
+Project 84: Development of an Inertial Measurement Unit (IMU) with datalogger and geopositioning for mapping the Earth’s magnetic field
+Repository: https://doi.org/10.17605/OSF.IO/WXHYM
+------------------------------------------------------------
+
+Project 85: Pushing boundaries in 3D printing: Economic pressure filament extruder for producing polymeric and polymer-ceramic filaments for 3D printers
+Repository: DOI 10.17605/OSF.IO/X3FZN
+------------------------------------------------------------
+
+Project 86: BioIn-Tacto: A compliant multi-modal tactile sensing module for robotic tasks
+Repository: https://zenodo.org/record/8241754
+------------------------------------------------------------
+
+Project 87: Multimodal fluorescence microscope with fast adaptive polarimetry
+Repository: https://doi.org/10.17605/OSF.IO/BDS26
+------------------------------------------------------------
+
+Project 88: A custom-built planar biaxial system for soft tissue material testing
+Repository: https://doi.org/10.17632/ftzs4yrztd.1
+------------------------------------------------------------
+
+Project 89: Modification of kitchen blenders into controllable laboratory mixers for mechanochemical synthesis of atomically thin materials
+Repository: https://doi.org/10.17605/OSF.IO/EVUPY
+------------------------------------------------------------
+
+Project 91: SPOT: Scanning plant IoT facility for high-throughput plant phenotyping
+Repository: Open Science Framework (OSF): https://doi.org/10.17605/osf.io/4d3hp
+------------------------------------------------------------
+
+Project 92: Open source framework for a Broadly Expandable and Reconfigurable data acquisition and automation device (BREAD)
+Repository: https://osf.io/u2h4g/ DOI 10.17605/OSF.IO/U2H4G
+------------------------------------------------------------
+
+Project 93: Reliable, versatile and remotely controlled instrumentation of an hectometric loop antenna using appropriate technologies
+Repository: http://dx.doi.org/10.17632/z6hkzx433s.1
+------------------------------------------------------------
+
+Project 94: Enerduino-pro: Smart meter led probe using Arduino
+Repository: 10.5281/zenodo.6903052
+------------------------------------------------------------
+
+Project 95: Power tether for long duration multi-copter flight
+Repository: https://doi.org/10.17605/OSF.IO/EKZ2H
+------------------------------------------------------------
+
+Project 96: An open-source smart fraction collector for isocratic preparative liquid chromatography
+Repository: DOI 10.17605/OSF.IO/KX3A2 https://osf.io/kx3a2/?view_only=ac67498e7abc4f24be764f5d13ee715d
+------------------------------------------------------------
+
+Project 97: Development of an open-source soil water potential management system for horticultural applications, “
+Repository: Github: https://github.com/andrewbierer/Open_Irr Mendeley Data: https://doi.org/10.17632/sbzxm5rydj.1
+------------------------------------------------------------
+
+Project 98: Compact and modular autonomous surface vehicle for water research: The Naval Operating Research Drone Assessing Climate Change (NORDACC)
+Repository: https://doi.org/10.17632/rpzv35pccr.1
+------------------------------------------------------------
+
+Project 99: Design and validation of a multilevel voltage source inverter based on modular H-bridge cells
+Repository: Source files repository ( OSF ) write the DOI URL here. http://doi.org/10.17605/OSF.IO/ZG3RP
+------------------------------------------------------------
+
+Project 100: Versatile open-source fluorescence documentation system
+Repository: https://doi.org/10.17605/OSF.IO/FCQNR
+------------------------------------------------------------
+
+Project 101: A high-purity gas–solid photoreactor for reliable and reproducible photocatalytic CO
+Repository: https://doi.org/10.5281/zenodo.7848585
+------------------------------------------------------------
+
+Project 102: OptoPi: An open source flexible platform for the analysis of small animal behaviour
+Repository: https://doi.org/10.17605/OSF.IO/PU8F5 https://github.com/PrietoGodinoLab/OptoPi
+------------------------------------------------------------
+
+Project 103: We-VoltamoStat: A wearable potentiostat for voltammetry analysis with a smartphone interface
+Repository: https://doi.org/10.17632/266vrryspz.3
+------------------------------------------------------------
+
+Project 104: Setup of a 3D printed wind tunnel: Application for calibrating bi-directional velocity probes used in fire engineering applications
+Repository: https://doi.org/10.5281/zenodo.7863983
+------------------------------------------------------------
+
+Project 105: Bilateral mode exoskeleton for hand rehabilitation with wireless control using 3D printing technology based on IMU sensor
+Repository: DOI: https://doi.org/10.17605/OSF.IO/7AGPU
+------------------------------------------------------------
+
+Project 106: ROBOTONT – Open-source and ROS-supported omnidirectional mobile robot for education and research
+Repository: https://doi.org/10.5281/zenodo.7897546 https://github.com/robotont/robotont-hardware-x-2023-replication-package https://github.com/robotont
+------------------------------------------------------------
+
+Project 107: The Open acidification Tank Controller: An open-source device for the control of pH and temperature in ocean acidification experiments
+Repository: Software: https://doi.org/10.5281/zenodo.5508206 Housing : https://doi.org/10.5281/zenodo.5348212 PCB : https://doi.org/10.5281/zenodo.5348218
+------------------------------------------------------------
+
+Project 108: Synchronization of scanning probe and pixelated sensor for image-guided diffraction microscopy
+Repository: https://doi.org/10.5281/zenodo.7673922
+------------------------------------------------------------
+
+Project 109: Development of affordable 3D food printer with an exchangeable syringe-pump mechanism
+Repository: https://doi.org/10.17632/5rdt5wmbv5.1
+------------------------------------------------------------
+
+Project 110: 
+Repository: https://doi.org/10.17605/OSF.IO/K83X7
+------------------------------------------------------------
+
+Project 111: Pressure-controlled microfluidics for automated single-molecule sample preparation
+Repository: https://osf.io/r8enm/ (DOI https://doi.org/10.17605/OSF.IO/R8ENM)
+------------------------------------------------------------
+
+Project 112: AC/off-grid photovoltaic powered open-source ball mill
+Repository: https://osf.io/xa4ws/
+------------------------------------------------------------
+
+Project 113: TMA-Mate: An open-source modular toolkit for constructing tissue microarrays of arbitrary layouts
+Repository: https://doi.org/10.17632/76msnn2tz8.1
+------------------------------------------------------------
+
+Project 114: A flexible power electronic converter system with rapid control prototyping for research and teaching
+Repository: Available in the article and at the on-line repository [4] .
+------------------------------------------------------------
+
+Project 115: EmerSense: A low-cost multiparameter logger to monitor occurrence and duration of emersion events within intertidal zones
+Repository: https://doi.org/10.5281/zenodo.5158903
+------------------------------------------------------------
+
+Project 117: An open-source biaxial tensile tester with automated pre-tensioning for mechanical studies of canvas paintings
+Repository: https://zenodo.org/record/7541996#.Y8Wd1uLMIqs
+------------------------------------------------------------
+
+Project 118: 3D printed opto-microfluidic autonomous analyzer for photometric applications
+Repository: https://doi.org/10.17632/64ykjhczr6.3
+------------------------------------------------------------
+
+Project 119: MicroFPGA: An affordable FPGA platform for microscope control
+Repository: Zenodo (design files), Github (source code)
+------------------------------------------------------------
+
+Project 120: Low-cost system for analysis pedestrian flow from an aerial view using Near-Infrared, Microwave, and Temperature sensors
+Repository: https:/doi.org/10.17605/OSF.IO/5ND9Y
+------------------------------------------------------------
+
+Project 121: Fabrication and validation of an LED array microscope for multimodal, quantitative imaging
+Repository: https://doi.org/10.5281/zenodo.6841618
+------------------------------------------------------------
+
+Project 122: Ötz-T: 3D-printed open-source turbidity sensor with Arduino shield for suspended sediment monitoring
+Repository: https://doi.org/10.5281/zenodo.7185235
+------------------------------------------------------------
+
+Project 123: The Open-source Camera Trap for Organism Presence and Underwater Surveillance (OCTOPUS)
+Repository: Software, Housing and PCB: Zenodo ( https://zenodo.org/record/7039012 )
+------------------------------------------------------------
+
+Project 124: Programmable Autonomous Water Samplers (PAWS): An inexpensive, adaptable and robust submersible system for time-integrated water sampling in freshwater and marine ecosystems
+Repository: https://doi.org/10.17632/htkn8ky6zz.1
+------------------------------------------------------------
+
+Project 125: An open-source head-fixation and implant-protection system for mice
+Repository: https://doi.org/10.17632/tgggwcmhyz.2
+------------------------------------------------------------
+
+Project 126: Design and Validation of a Modular Control Platform for a Voltage Source Inverter
+Repository: Source files repository ( OSF ) write the DOI URL here. http://doi.org/10.17605/OSF.IO/5DG6X
+------------------------------------------------------------
+
+Project 127: Open source IoT-based collection bin applied to local plastic recycling
+Repository: http://doi.org/10.17605/OSF.IO/K9GRA
+------------------------------------------------------------
+
+Project 128: A low-cost and open-source measurement system to determine the Young’s and shear moduli and Poisson's ratio of soft materials using a Raspberry Pi camera module and 3D printed parts
+Repository: https://doi.org/10.5281/zenodo.7116287
+------------------------------------------------------------
+
+Project 129: PLUSPULS: A transcranial magnetic stimulator with extended pulse protocols
+Repository: https://doi.org/10.5281/zenodo.6457647
+------------------------------------------------------------
+
+Project 130: Low-cost automated GPS, electrical conductivity and temperature sensing device (EC + T Track) and Android platform for water quality monitoring campaigns
+Repository: https://doi.org/10.5281/zenodo.6674534
+------------------------------------------------------------
+
+Project 131: Open-source perfusion system for medium-scale fabrication of demineralized bone matrix chip grafts
+Repository: Uploaded at the time of submission on the online Elsevier submission interface (.zip) Zenodo data: https://doi.org/10.5281/zenodo.6795588
+------------------------------------------------------------
+
+Project 132: Enhancing TreeMMoSys with a high-precision strain gauge to measure the wind-induced response of trees down to the ground
+Repository: https://osf.io/p8h6k/
+------------------------------------------------------------
+
+Project 134: Design and validation of a low-cost open-source impedance based quartz crystal microbalance for electrochemical research
+Repository: https://osf.io/q6yk4/ or https://doi.org/10.17605/OSF.IO/PR8EW
+------------------------------------------------------------
+
+Project 135: Low-cost fabrication of flexible tactile sensor arrays
+Repository: https://doi.org/10.17605/OSF.IO/JE8KN
+------------------------------------------------------------
+
+Project 136: HistoEnder: A 3D printer-based histological slide autostainer that retains 3D printer functions
+Repository: Live version on GitHub: https://github.com/Ponz91/HistoEnder repository on Zenodo: https://zenodo.org/badge/latestdoi/537764424 https://doi.org/10.5281/zenodo.7088610
+------------------------------------------------------------
+
+Project 137: Prototyping a low-cost open-source autonomous unmanned surface vehicle for real-time water quality monitoring and visualization
+Repository: https://doi.org/10.17632/fft8c76829.1
+------------------------------------------------------------
+
+Project 138: The miEye: Bench-top super-resolution microscope with cost-effective equipment
+Repository: OSF identifier: https://doi.org/10.17605/osf.io/j2fqy
+------------------------------------------------------------
+
+Project 139: FoamPi: An open-source raspberry Pi based apparatus for monitoring polyurethane foam reactions
+Repository: https://doi.org/10.17605/OSF.IO/U3295
+------------------------------------------------------------
+
+Project 140: A CNN-based image detector for plant leaf diseases classification
+Repository: https://doi.org/10.17605/OSF.IO/UCM8D
+------------------------------------------------------------
+
+Project 141: Design and fabrication of a low-cost and programmable dip coating machine
+Repository: https://doi.org/10.17605/OSF.IO/3AB6Z
+------------------------------------------------------------
+
+Project 142: Instrumented open-source filament extruder for research and education
+Repository: Structural parts of filament extruder - https://doi.org/10.17632/2fp47vg2w9.4 Filament extruder system - https://www.doi.org/10.17632/2fp47vg2w9.4 Cooler system - https://www.doi.org/10.17632/2fp47vg2w9.4 Puller and filament measuring system - https://www.doi.org/10.17632/2fp47vg2w9.4 Spooler system - https://www.doi.org/10.17632/2fp47vg2w9.4 Integrated circuit cost - https://www.doi.org/10.17632/2fp47vg2w9.4 Electric components cost- https://www.doi.org/10.17632/2fp47vg2w9.4
+------------------------------------------------------------
+
+Project 143: Large scale immersion bath for isothermal testing of lithium-ion cells
+Repository: https://doi.org/10.17632/mjzksgsykm.2
+------------------------------------------------------------
+
+Project 144: MADV-DAQ: Multi-channel Arduino-based differential voltage data acquisition system for remote strain measurement applications
+Repository: https://doi.org/10.17605/OSF.IO/TK8Z9
+------------------------------------------------------------
+
+Project 145: CAREDAQ: Data acquisition device for mechanical ventilation waveform monitoring
+Repository: https://data.mendeley.com/datasets/vnvn9m58p2/draft?a=3a509441-0e7b-4699-bdfc-c2d103e77f92
+------------------------------------------------------------
+
+Project 146: Design and implementation of a versatile magnetic field mapper for 3D volumes
+Repository: https:/doi.org/10.17632/7jzgfwhznn.3
+------------------------------------------------------------
+
+Project 147: A low cost, low power sap flux device for distributed and intensive monitoring of tree transpiration
+Repository: OSF: https://doi.org/10.17605/OSF.IO/KBZ5Y GitHub: https://github.com/justinbeslity/Js5-Novel_Sap_Flux_Device
+------------------------------------------------------------
+
+Project 148: A low-cost system for monitoring pH, dissolved oxygen and algal density in continuous culture of microalgae
+Repository: https://doi.org/10.17605/OSF.IO/HDYCE
+------------------------------------------------------------
+
+Project 149: Development of a semi-automated volatile organic compounds (VOCs) sampling system for field asymmetric ion mobility spectrometry (FAIMS) analysis
+Repository: None to report. Programming codes have been cited.
+------------------------------------------------------------
+
+Project 150: An open source 16-channel fluidics system for automating sequential fluorescent
+Repository: https://doi.org/10.17632/tkm4w7wp3v.1 ; https://github.com/dzhaojie/Fluidics-system-for-FISH
+------------------------------------------------------------
+
+Project 151: BLOSM: Boron-based large-scale observation of soil moisture: First laboratory results of a cost-efficient neutron detector
+Repository: https://dx.doi.org/10.17605/osf.io/jgrm8
+------------------------------------------------------------
+
+Project 152: Open-source controller for low-cost and high-speed atomic force microscopy imaging of skin corneocyte nanotextures
+Repository: https://osf.io/wgx4p/
+------------------------------------------------------------
+
+Project 153: A low-cost open-source handheld LiDAR-based automated understory timber stand surveying device
+Repository: http://doi.org/10.17605/OSF.IO/J8ZW7
+------------------------------------------------------------
+
+Project 154: CO
+Repository: https://doi.org/10.5281/zenodo.6302824
+------------------------------------------------------------
+
+Project 155: DSAIL power management board: Powering the Raspberry Pi autonomously off the grid
+Repository: https://data.mendeley.com/datasets/pr2d4yn4dd/2
+------------------------------------------------------------
+
+Project 156: PytuTester: RaspberryPi open-source ventilator tester
+Repository: Mendeley Data: https://doi.org/10.17632/w6v48k72z8.1.
+------------------------------------------------------------
+
+Project 157: Mini-DAQ: A lightweight, low-cost, high resolution, data acquisition system for wave energy converter testing
+Repository: https://doi.org/10.5281/zenodo.6012684
+------------------------------------------------------------
+
+Project 158: Low-cost, open-source contact angle analyzer using a mobile phone, commercial tripods and 3D printed parts
+Repository: http://dx. https://doi.org/10.17632/mtj3zzv3z8.1
+------------------------------------------------------------
+
+Project 159: High altitude balloon testing of Arduino and environmental sensors for CubeSat prototype
+Repository: https://doi.org/10.17605/OSF.IO/7XR38
+------------------------------------------------------------
+
+Project 163: An ultra-low-cost and adjustable in-house electrospinning machine to produce PVA nanofiber
+Repository: https://doi.org/10.17632/vzmd24hzhm.1
+------------------------------------------------------------
+
+Project 164: Lightweight drone-deployed autonomous ocean profiler for repeated measurements in hazardous areas – Example from glacier fronts in NE Greenland
+Repository: https://doi.org/10.17632/zdvb5hzv2x.1
+------------------------------------------------------------
+
+Project 165: Low-cost, microcontroller-based phase shift measurement system for a wireless power transfer prototype
+Repository: https://zenodo.org/record/6459853#.YljnKejMI2w
+------------------------------------------------------------
+
+Project 166: Mostly 3D printed chemical synthesis robot
+Repository: https://osf.io/quz7d/files/osfstorage
+------------------------------------------------------------
+
+Project 167: A transportable temperature and heatwave control device (TENTACLE) for laboratory and field simulations of different climate change scenarios in aquatic micro- and mesocosms
+Repository: https://doi.org/10.17632/xh4h6kn382.2
+------------------------------------------------------------
+
+Project 169: Wheelchair prototype controlled by position, speed and orientation using head movement
+Repository: González, Ximena (2021), “Wheelchair prototype design files AXGC”, Mendeley Data, V2, doi: 10.17632/ys9s9pgvbg.2, URL: https://data.mendeley.com/datasets/ys9s9pgvbg/2
+------------------------------------------------------------
+
+Project 170: Laborem Box: A scalable and open source platform to design remote lab experiments in electronics
+Repository: https://doi.org/10.5281/zenodo.5564369
+------------------------------------------------------------
+
+Project 171: Thermal endoscope based on cost-effective LWIR camera cores
+Repository: https://doi.org/10.5281/zenodo.5643580
+------------------------------------------------------------
+
+Project 172: Continuous fiber extruder for desktop 3D printers toward long fiber embedded hydrogel 3D printing
+Repository: https://doi.org/10.5281/zenodo.4996271
+------------------------------------------------------------
+
+Project 173: Development of mini-lysimeter system for use in irrigation automation of container-grown crops
+Repository: Software files: https://www.doi.org/10.17632/m5sm9c6wcx.1 Hardware files: https://www.doi.org/10.17632/825zc3xwz4.1
+------------------------------------------------------------
+
+Project 174: Low cost climate station for smart agriculture applications with photovoltaic energy and wireless communication
+Repository: https://doi.org/10.17605/OSF.IO/NTVXG
+------------------------------------------------------------
+
+Project 175: A low-cost push–pull syringe pump for continuous flow applications
+Repository: https://doi.org/10.17632/75w37bsh8d.1
+------------------------------------------------------------
+
+Project 176: REVOLVER: A low-cost automated protein purifier based on parallel preparative gravity column workflows
+Repository: Zenodo repository ht ps://zenodo.org/record/6206711 A live version of the project can be found at https://github.com/LMSE/REVOLVER-protein-purifier
+------------------------------------------------------------
+
+Project 177: OpenHumidistat: Humidity-controlled experiments for everyone
+Repository: 10.17605/OSF.IO/F5U6E
+------------------------------------------------------------
+
+Project 178: Open Source Automated Flow Analysis Instrument for Detecting Arsenic in Water
+Repository: doi:10.17632/499gx3pfxk.1
+------------------------------------------------------------
+
+Project 179: A lower limb rehabilitation platform with mirror therapy, electrical stimulation and virtual reality for people with limited dorsiflexion movement
+Repository: Link to data in Mendeley Reserved DOI: 10.17632/bx2zyxjzzb.1
+------------------------------------------------------------
+
+Project 181: MicroEye : A low-cost online tool wear monitoring system with modular 3D-printed components for micro-milling application
+Repository: https://doi.org/10.17632/w26x9yrbtm.2
+------------------------------------------------------------
+
+Project 183: An open-source and easily replicable hardware for Electrical Impedance Tomography
+Repository: https://doi.org/10.5281/zenodo.5821831
+------------------------------------------------------------
+
+Project 184: A low-cost, portable, two-dimensional bioimpedance distribution estimation system based on the AD5933 impedance converter
+Repository: https://doi.org/10.17632/27m65n9mk7.1
+------------------------------------------------------------
+
+Project 185: Low cost, non-invasive, and continuous vital signs monitoring device for pregnant women in low resource settings (Lvital device)
+Repository: https://doi.org/10.17605/OSF.IO/H6XKQ
+------------------------------------------------------------
+
+Project 186: A low-cost system for real-time measuring of the sunlight incident angle using IoT
+Repository: https://doi.org/10.17605/OSF.IO/PFXS7
+------------------------------------------------------------
+
+Project 187: Open source timed pressure control hardware and software for delivery of air mediated distensions in animal models
+Repository: https://doi.org/10.17605/OSF.IO/RS5P4
+------------------------------------------------------------
+
+Project 188: Design and implementation of 3-D printed radiation shields for environmental sensors
+Repository: https://doi.org/10.17605/OSF.IO/XE49Y
+------------------------------------------------------------
+
+Project 189: High-performance polymer 3D printing – Open-source liquid cooled scalable printer design
+Repository: https://doi.org/10.17632/7sjjmr9bz2.1
+------------------------------------------------------------
+
+Project 190: A low-cost vibration isolation chamber – Making high precision experiments accessible
+Repository: doi.org/10.17605/OSF.IO/D6XAB
+------------------------------------------------------------
+
+Project 191: Distributed LoRa based CO
+Repository: https://doi.org/10.17605/OSF.IO/SNHFD
+------------------------------------------------------------
+
+Project 192: A low-cost 3D-printable differential scanning fluorometer for protein and RNA melting experiments
+Repository: openDSF (Mendeley data): https://doi.org/10.17632/73rt8s7pwd.2
+------------------------------------------------------------
+
+Project 193: Open ventilator evaluation framework: A synthesized database of regulatory requirements and technical standards for emergency use ventilators from Australia, Canada, UK, and US
+Repository: https://doi.org/10.17632/xcm62gpxvk.1
+------------------------------------------------------------
+
+Project 194: Sensors-on-paper: Fabrication of graphite thermal sensor arrays on cellulose paper for large area temperature mapping
+Repository: https://doi.org/10.17632/cg38djj8y5.2
+------------------------------------------------------------
+
+Project 195: Automated melt electrowritting platform with real-time process monitoring
+Repository: https://doi.org/10.5281/zenodo.4699811 https://github.com/Lasonic/automated_mew_platform
+------------------------------------------------------------
+
+Project 196: A low-cost, accessible, and high-performing Arduino-based seawater pH control system for biological applications
+Repository: https://doi.org/10.17605/OSF.IO/3CDVZ
+------------------------------------------------------------
+
+Project 197: Open-source lab hardware: Driver and temperature controller for high compliance voltage, fiber-coupled butterfly lasers
+Repository: https://doi.org/10.17605/OSF.IO/R65MQ
+------------------------------------------------------------
+
+Project 198: Subsurface automated samplers for eDNA (SASe) for biological monitoring and research
+Repository: Mendeley: https://doi.org/10.17632/y3dgh36zt9.2
+------------------------------------------------------------
+
+Project 199: A low-cost automized anaerobic chamber for long-term growth experiments and sample handling
+Repository: 10.17605/OSF.IO/Y2G8H
+------------------------------------------------------------
+
+Project 200: Physiologic-range three/two-way valve for respiratory circuits
+Repository: https://doi.org/10.17605/osf.io/ktxuh
+------------------------------------------------------------
+
+Project 202: 3D-Printable and open-source modular smartphone visible spectrophotometer
+Repository: https://osf.io/7ewb3
+------------------------------------------------------------
+
+Project 203: Physiologic-range flow and pressure sensor for respiratory systems
+Repository: https://doi.org/10.17605/osf.io/bre5f or registered: https://doi.org/10.17605/osf.io/uce2h
+------------------------------------------------------------
+
+Project 204: A sensitive and compact optical detector based on digital lock-in amplification
+Repository: https://doi.org/10.5281/zenodo.5106522
+------------------------------------------------------------
+
+Project 205: The Crop Clamp – A non-destructive electromechanical pinch test to evaluate stalk lodging resistance
+Repository: Laboratory, AgMeq (2021), “Crop Clamp Design Files”, Mendeley Data, V1, https://doi.org/10.17632/p4r3khtht7.1
+------------------------------------------------------------
+
+Project 206: ECAM: A low-cost vaping device for generating and collecting electronic cigarette condensate for
+Repository: https://doi.org/10.17605/OSF.IO/3NGU4
+------------------------------------------------------------
+
+Project 207: Singlet oxygen luminescence detector based on low-cost InGaAs avalanche photodiode
+Repository: Everything is included in the body of the manuscript
+------------------------------------------------------------
+
+Project 208: TD-DAQ: A low-cost data acquisition system monitoring the unsaturated pore pressure regime in tailings dams
+Repository: https://doi.org/10.17605/OSF.IO/H9VBE
+------------------------------------------------------------
+
+Project 209: An open-source powered and ergonomic personal protective respirator for frontline COVID-19 response
+Repository: https://doi.org/10.17632/w6dcp428yv.1
+------------------------------------------------------------
+
+Project 210: PlateFlo – A software-controllable plate-scale perfusion system for culture of adherent cells
+Repository: OSF - https://doi.org/10.17605/OSF.IO/PYJCH
+------------------------------------------------------------
+
+Project 211: Comparison of design approaches for low-cost sampling mechanisms in open-source chemical instrumentation
+Repository: https://doi.org/10.17632/vfn2g8xg36.1
+------------------------------------------------------------
+
+Project 212: Automated low-cost device to produce sub-micrometric polymer fibers based on blow spun method
+Repository: https://doi.org/10.17632/spccrzhtyh.1
+------------------------------------------------------------
+
+Project 213: Portable low-cost IoT hyperspectral acquisition device for indoor/outdoor applications
+Repository: https://doi.org/10.17605/OSF.IO/WVUQ9
+------------------------------------------------------------
+
+Project 214: Miau, a microbalance autosampler
+Repository: https://osf.io/y2hu8/ or https://doi.org/10.17605/OSF.IO/Y2HU8
+------------------------------------------------------------
+
+Project 215: Hypnos board: A low-cost all-in-one solution for environment sensor power management, data storage, and task scheduling
+Repository: GitHub: https://github.com/OPEnSLab-OSU/OPEnS-Hypnos Zenodo: https://zenodo.org/record/4752671
+------------------------------------------------------------
+
+Project 216: The development of a low-cost photogrammetry-based 3D hand scanner
+Repository: https://doi.org/10.17632/7rcpk2trr7.1
+------------------------------------------------------------
+
+Project 217: The e-RFIDuino: An Arduino-based RFID environmental station to monitor mobile tags
+Repository: Reserved DOI: https://doi.org/10.17632/tkfj9j7z2m.1
+------------------------------------------------------------
+
+Project 218: Cable deployment system for unmanned ground vehicle (UGV) mobile microgrids
+Repository: https://doi.org/10.17605/OSF.IO/8WKJT
+------------------------------------------------------------
+
+Project 219: A low-cost, wearable, do-it-yourself functional near-infrared spectroscopy (DIY
+Repository: http://doi.org/10.17605/OSF.IO/AG46P
+------------------------------------------------------------
+
+Project 220: Highly-customizable 3D-printed peristaltic pump kit
+Repository: https://doi.org/10.17605/OSF.IO/EX29V
+------------------------------------------------------------
+
+Project 221: VentMon: An open source inline ventilator tester and monitor
+Repository: VentMon: https://doi.org/10.5281/zenodo.4079170
+------------------------------------------------------------
+
+Project 222: COVENT-Tester: A low-cost, open source ventilator tester
+Repository: https://doi.org/10.5281/zenodo.4620223
+------------------------------------------------------------
+
+Project 223: 3D printed receptacle with diffuser membrane for manipulating pressurized air and water
+Repository: https://doi.org/10.17632/9b4d8g9jc4.1
+------------------------------------------------------------
+
+Project 224: Low-cost, programmable infusion pump with bolus mode for in-vivo imaging
+Repository: https://doi.org/10.17632/rw6gz7ymwv.1
+------------------------------------------------------------
+
+Project 225: SitkaNet: A low-cost, distributed sensor network for landslide monitoring and study
+Repository: https://osf.io/497gt/ https://doi.org/10.17605/OSF.IO/497GT
+------------------------------------------------------------
+
+Project 227: An open-source non-contact thermometer using low-cost electronic components
+Repository: https://osf.io/w4kqs/files/
+------------------------------------------------------------
+
+Project 228: A modular optical honeycomb breadboard realized with 3D-printable building bricks and industrial aluminum extrusions
+Repository: https://nbn-resolving.org/urn:nbn:de:gbv:700-202010023619
+------------------------------------------------------------
+
+Project 229: Masi: A mechanical ventilator based on a manual resuscitator with telemedicine capabilities for patients with ARDS during the COVID-19 crisis
+Repository: https://doi.org/10.17632/kvx6syk42x.1
+------------------------------------------------------------
+
+Project 230: Design and implementation of a low cost bio-printer modification, allowing for switching between plastic and gel extrusion
+Repository: https://data.mendeley.com/datasets/3kfmsz4n28/1
+------------------------------------------------------------
+
+Project 231: TreeMMoSys: A low cost sensor network to measure wind-induced tree response
+Repository: https://doi.org/10.17605/OSF.IO/J63V5
+------------------------------------------------------------
+
+Project 232: Low-cost stimulation resistant electromyography
+Repository: https://doi.org/10.17605/OSF.IO/P5DSW
+------------------------------------------------------------
+
+Project 234: Syringe pump extruder and curing system for 3D printing of photopolymers
+Repository: https://doi.org/10.17632/cv9cfj39b7.1
+------------------------------------------------------------
+
+Project 235: A dual nozzle 3D printing system for super soft composite hydrogels
+Repository: https://doi.org/10.5281/zenodo.3834063
+------------------------------------------------------------
+
+Project 237: A Griggs apparatus upgrade for stress-controlled testing of geological material at high temperature and pressure
+Repository: https://doi.org/10.17605/OSF.IO/ABHRY
+------------------------------------------------------------
+
+Project 238: A high performance open-source syringe extruder optimized for extrusion and retraction during FRESH 3D bioprinting
+Repository: https://doi.org/10.5281/zenodo.4119127
+------------------------------------------------------------
+
+Project 240: PACKMAN – A portable instrument to investigate space weather
+Repository: https://data.mendeley.com/datasets/g86wh6k6dh/1
+------------------------------------------------------------
+
+Project 241: Infrared thermometer on the wall (iThermowall): An open source and 3-D print infrared thermometer for fever screening
+Repository: http://doi.org/10.5281/zenodo.4127545
+------------------------------------------------------------
+
+Project 242: An easy to implement logic analyzer for long-term precise measurements
+Repository: http://doi.org/10.5281/zenodo.4034301 https://github.com/amromanov/open_la
+------------------------------------------------------------
+
+Project 243: An automated chemical vapor deposition setup for 2D materials
+Repository: https://doi.org/10.17605/OSF.IO/WU4JM
+------------------------------------------------------------
+
+Project 244: A low-cost uniaxial cell stretcher for six parallel wells
+Repository: https://doi.org/10.17632/mgkbmytx63.1
+------------------------------------------------------------
+
+Project 245: Digital video recorder for Raspberry PI cameras with multi-camera synchronous acquisition
+Repository: https://doi.org/10.17605/OSF.IO/RUD4A
+------------------------------------------------------------
+
+Project 246: Standardized tensile testing of soft tissue using a 3D printed clamping system
+Repository: https://doi.org/10.17632/wbyswm62vv.3
+------------------------------------------------------------
+
+Project 247: Design of an affordable IoT open-source robot arm for online teaching of robotics courses during the pandemic contingency
+Repository: https://doi.org/10.17605/OSF.IO/EN9W6
+------------------------------------------------------------
+
+Project 249: iFO (infrared Fish Observation) – An open source low-cost infrared underwater video system
+Repository: https://doi.org/10.17605/osf.io/9xuz2
+------------------------------------------------------------
+
+Project 250: Pressure Optimized PowEred Respirator (PROPER): A miniaturized wearable cleanroom and biosafety system for aerially transmitted viral infections such as COVID-19
+Repository: PROPER: Mendeley
+------------------------------------------------------------
+
+Project 252: ATMO-vent: An adapted breathing atmosphere for COVID-19 patients
+Repository: https://data.mendeley.com/datasets/2c4cwmvcs8/1
+------------------------------------------------------------
+
+Project 253: Low-cost double pendulum for high-quality data collection with open-source video tracking and analysis
+Repository: https://doi.org/10.17632/z4hvxjgtbz.2
+------------------------------------------------------------
+
+Project 254: Open-source automated centrifugal pump test rig
+Repository: https://doi.org/10.17605/OSF.IO/9T2Z6
+------------------------------------------------------------
+
+Project 256: Open source arc analyzer: Multi-sensor monitoring of wire arc additive manufacturing
+Repository: https://osf.io/y85j2/
+------------------------------------------------------------
+
+Project 258: micrObs – A customizable time-lapse camera for ecological studies
+Repository: https://doi.org//10.5281/zenodo.3756718
+------------------------------------------------------------
+
+Project 259: openPFGE: An open source and low cost pulsed-field gel electrophoresis equipment
+Repository: Current development version at https://doi.org/10.5281/zenodo.3900147 . Older and newer versions at https://gitlab.com/diegusleik/openpfge
+------------------------------------------------------------
+
+Project 260: Open source high-temperature RepRap for 3-D printing heat-sterilizable PPE and other applications
+Repository: Registration: https://osf.io/46njf
+------------------------------------------------------------
+
+Project 261: Uniform wet-Spinning Mechanically Automated (USMA) fiber device
+Repository: https://doi.org/10.17605/OSF.IO/RKY2S
+------------------------------------------------------------
+
+Project 262: Electronic system for step width estimation using programmable system-on-chip technology and time of flight cameras
+Repository: https://doi.org/10.17632/dgyhpm7h2k.3
+------------------------------------------------------------
+
+Project 264: Bringing IoT to the Lab: SiLA2 and Open-Source-Powered Gateway Module for Integrating Legacy Devices into the Digital Laboratory
+Repository: Mendeley Data: ”Source Files for tci-gatewaymodule Link: https://dx.doi.org/10.17632/fvccdd6r4f.1
+------------------------------------------------------------
+
+Project 265: Facially expressive humanoid robotic face
+Repository: https://doi.org/10.5281/zenodo.3539723
+------------------------------------------------------------
+
+Project 266: TDT Sandwich: An open source dry heat system for characterizing the thermal resistance of microorganisms
+Repository: https://doi.org/10.17605/OSF.IO/5Q3Y7
+------------------------------------------------------------
+
+Project 267: FishCam: A low-cost open source autonomous camera for aquatic research
+Repository: • OSF: https://doi.org/10.17605/OSF.IO/8BGHA
+------------------------------------------------------------
+
+Project 268: DIY hybrid SSVEP-P300 LED stimuli for BCI platform using EMOTIV EEG headset
+Repository: https://osf.io/8bc5s/
+------------------------------------------------------------
+
+Project 269: Portable low-cost open-source wireless spectrophotometer for fast and reliable measurements
+Repository: All supporting software and descriptions are available at https://doi.org/10.17605/OSF.IO/RBFSE .
+------------------------------------------------------------
+
+Project 270: LunAero: Automated “smart” hardware for recording video of nocturnal migration
+Repository: https://doi.org/10.17605/OSF.IO/N7ZEK
+------------------------------------------------------------
+
+Project 271: PlasPI marine cameras: Open-source, affordable camera systems for time series marine studies
+Repository: OSF https://osf.io/9t7h3/
+------------------------------------------------------------
+
+Project 272: OpenTCC: An open source low-cost temperature-control chamber
+Repository: https://osf.io/w38t6/ - / https://doi.org/10.17605/OSF.IO/C9JFA .
+------------------------------------------------------------
+
+Project 273: Design and fabrication of a nerve-stretching device for
+Repository: https://data.mendeley.com/datasets/2g6xgyvm4d/3
+------------------------------------------------------------
+
+Project 274: µPump: An open-source pressure pump for precision fluid handling in microfluidics
+Repository: All source files and design files are uploaded at the time of submission
+------------------------------------------------------------
+
+Project 275: 3D printed biaxial stretcher compatible with live fluorescence microscopy
+Repository: https://doi.org/10.5281/zenodo.3483849
+------------------------------------------------------------
+
+Project 276: A plug-and-play Hyperspectral Imaging Sensor using low-cost equipment
+Repository: https://osf.io/s7jzu/
+------------------------------------------------------------
+
+Project 277: Spin∞: an updated miniaturized spinning bioreactor design for the generation of human cerebral organoids from pluripotent stem cells
+Repository: https://doi.org/10.17605/OSF.IO/FV9T4
+------------------------------------------------------------
+
+Project 284: 
+Repository: https://osf.io/96zv2/?view_only=5a670b5f49634e0cb3b69654044ec012
+------------------------------------------------------------
+
+Project 285: Open Lab Starter Kit Small Laser V2–an open source Fab lab produced laser cutter
+Repository: doi: 10.5281/zenodo.10412769
+------------------------------------------------------------
+
+Project 286: MDT: A simple tool to facilitate dropcasting on
+Repository: https://doi.org/10.5281/zenodo.15667094
+------------------------------------------------------------
+
+Project 287: Exoskeleton for Upper Limb Rehabilitation (EULR) with 3D printing technology based on force sensor
+Repository: DOI https://doi.org/10.17605/OSF.IO/H8GQK
+------------------------------------------------------------
+
+Project 288: Leveraging flexible pipette-based tool changes to transform liquid handling systems into dual-function sample preparation and imaging platforms
+Repository: https://doi.org/10.17632/xc5488grcv.3
+------------------------------------------------------------
+
+Project 289: Low-cost 3D-printed mask system for versatile selective sample deposition on
+Repository: https://doi.org/10.5281/zenodo.14826547
+------------------------------------------------------------
+
+Project 290: Printed, dual-loop magnetic field sniffer probe for bench measurements on radio frequency MRI coils
+Repository: https://doi.org/10.5281/zenodo.14680538
+------------------------------------------------------------
+
+Project 291: Low-cost prototype for bearing failure detection using Tiny ML through vibration analysis
+Repository: https://doi.org/10.17632/685hm7n8nb.1
+------------------------------------------------------------
+
+Project 292: Open-source compact time-domain hydrogen (1H) NMR System for Field Deployment
+Repository: https://doi.org/10.17605/OSF.IO/ND27H
+------------------------------------------------------------
+
+Project 293: Distribution station inspection robot with modular manipulator
+Repository: https://doi.org/10.17605/OSF.IO/TPGE9
+------------------------------------------------------------
+
+Project 294: A portable soil surface roughness instrument for automatic two-dimensional profile roughness measurement in the field
+Repository: https://doi.org/10.17632/x8dbztc9fs.1
+------------------------------------------------------------
+
+Project 295: A 360-degree imagery-multisensor system for visualizing environmental parameters in architecture and urban spaces
+Repository: This device is made of two components shared via the following OSF Repository. https://doi.org/10.17605/OSF.IO/QB7PH
+------------------------------------------------------------
+
+Project 296: Open-access smart blood pump platform for controlling extracorporeal membrane oxygenation
+Repository: Zenodo: https://doi.org/10.5281/zenodo.12555206
+------------------------------------------------------------
+
+Project 297: Flexible hardware for teaching and research in renewable energy and off-grid microgrids
+Repository: https://doi.org/10.17605/OSF.IO/PCMHW
+------------------------------------------------------------
+
+Project 298: A compact electromagnetic syringe stirrer and temperature controller for the reliable dispensing of living cells and microparticles
+Repository: Design files uploaded on OSF, https://doi.org/10.17605/OSF.IO/FB94X
+------------------------------------------------------------
+
+Project 299: IoT smartwatch based on open technologies for the collection of thermal comfort data
+Repository: https://doi.org/10.5281/zenodo.14835096
+------------------------------------------------------------
+
+Project 300: Low-cost composite autosampler for wastewater sampling
+Repository: https://doi.org/10.5281/zenodo.8333206
+------------------------------------------------------------
+
+Project 301: A portable electrical impedance tomography based pressure mapping sensor and force localisation validation system
+Repository: http://doi.org/10.5281/zenodo.14648206
+------------------------------------------------------------
+
+Project 302: MEMS measurement microphone compatible to P48 amplifiers
+Repository: 10.17605/osf.io/p5vjt
+------------------------------------------------------------
+
+Project 303: A low-cost open-source 3D-printed mouse cradle suspension system for awake or anaesthetised
+Repository: https://doi.org/10.17632/yn9ydywcby.1
+------------------------------------------------------------
+
+Project 304: Open-source implementation of polarisation-resolved single-shot differential phase contrast microscopy (
+Repository: 10.5281/zenodo.14536403 (hardware) 10.5281/zenodo.14536077 (software)
+------------------------------------------------------------
+
+Project 305: An open source ultrasonic flowmeter for monitoring the input/output flow rates of wastewater treatment plants
+Repository: https://doi.org/10.17605/osf.io/t9fzs
+------------------------------------------------------------
+
+Project 306: Customizable large-scale HPLC fraction collection using low-cost 3D printing
+Repository: https://doi.org/10.5281/zenodo.14026247
+------------------------------------------------------------
+
+Project 307: Design and manufacture of a low-cost 3D-printed laboratory device to measure the hyperelastic properties of polymeric films with small form factor suitable for medical devices
+Repository: https://osf.io/jg7uv/files/osfstorage
+------------------------------------------------------------
+
+Project 308: Low cost, portable, 3D printable tissue precision slicer
+Repository: https://doi.org/10.17632/p3npz8wkny.2
+------------------------------------------------------------
+
+Project 309: Automated entrance monitoring to investigate honey bee foraging trips using open-source wireless platform and fiducial tags
+Repository: https://doi.org/10.5281/zenodo.13227905
+------------------------------------------------------------
+
+Project 310: Low-cost automated cell counting module fabricated using CNC milling and soft lithography
+Repository: https://data.mendeley.com/datasets/syjv86dkkk/2
+------------------------------------------------------------
+
+Project 311: SuMOS, a submerged microscope for observing substrates: Studying benthic activity in aquatic environments
+Repository: https://doi.org/10.17605/OSF.IO/ZHBJF
+------------------------------------------------------------
+
+Project 312: Ardulake temperature profiler: An open-source, low-cost, automated monitoring system to unravel the mixing behavior of lakes
+Repository: https://doi.org/10.17632/wnxv7wbfsx.5
+------------------------------------------------------------
+
+Project 313: Aquality32: A low-cost, open-source air quality monitoring device leveraging the ESP32 and google platform
+Repository: https://doi.org/10.17605/OSF.IO/N9R5B
+------------------------------------------------------------
+
+Project 314: LabEmbryoCam: An opensource phenotyping system for developing aquatic animals
+Repository: If you’ve uploaded your source files to an approved repository ( OSF , Mendeley Data or Zenodo ) write the DOI URL here. https://doi.org/10.5281/zenodo.7575248
+------------------------------------------------------------
+
+Project 315: A customizable and low-cost 3D-printed transwell device coupled with 3D cell culture for permeability assay
+Repository: https://doi.org/10.17632/vgdth6ytk5.1
+------------------------------------------------------------
+
+Project 316: A 3D-Printable smartphone accessory for plant leaf chlorophyll measurement
+Repository: https://doi.org/10.17605/OSF.IO/93WY4
+------------------------------------------------------------
+
+Project 317: A multispectral camera in the VIS–NIR equipped with thermal imaging and environmental sensors for non invasive analysis in precision agriculture
+Repository: https://zenodo.org/doi/10.5281/zenodo.10052826
+------------------------------------------------------------
+
+Project 318: 
+Repository: https://doi.org/10.17632/k7yfn6wdv7.2
+------------------------------------------------------------
+
+Project 319: Portable, low-cost, desktop microscope
+Repository: https://doi.org/10.17632/p4v2kfp3js.1
+------------------------------------------------------------
+
+Project 320: A low-cost homogenizing device for in-field and remote DNA and RNA extraction
+Repository: https://doi.org/10.17632/x2gpn7sjyt.1
+------------------------------------------------------------
+
+Project 321: BEATRIX: An open source humanoid head platform for robotics teaching and research
+Repository: https://doi.org/10.17605/OSF.IO/T8EGC
+------------------------------------------------------------
+
+Project 322: Design and construction of a servomechanism using a memory alloy linear actuator
+Repository: http://dx.doi.org/10.17632/jwzbvfj396.1
+------------------------------------------------------------
+
+Project 323: ScarfingTool: An Advanced tool to repair Carbon Fiber Reinforced plastic
+Repository: https://doi.org/10.17632/h2zrpfx3pf.1
+------------------------------------------------------------
+
+Project 324: OpenFlume: An accessible and reproducible benchtop flume for research and education
+Repository: https://doi.org/10.5281/zenodo.13312832
+------------------------------------------------------------
+
+Project 326: Design & automation of a small-scale towing tank for flow visualization
+Repository: https://doi.org/10.17632/k5y3ffzn3b.1
+------------------------------------------------------------
+
+Project 327: Citizen science: Development of a low-cost magnetometer system for a coordinated space weather monitoring
+Repository: Source code for the hardware is available for public download at: https://github.com/HamSCI/PSWS-Magnetometer . Source code for the software and documentation is available for public download at: https://github.com/HamSCI/rm3100-runMag . The design files and bill of materials are available at http://dx.doi.org/10.5281/zenodo.10289503 .
+------------------------------------------------------------
+
+Project 328: A modular and flexible open source cell incubator system for mobile and stationary use
+Repository: https://doi.org/10.17632/zffkv4ccfd.1
+------------------------------------------------------------
+
+Project 329: AUTORECYCLER: Prototype based on artificial vision to automate the material classification process (Plastic, Glass, Cardboard and Metal)
+Repository: https://doi.org/10.17632/yf8z2263gy.2
+------------------------------------------------------------
+
+Project 330: Plasma-based optical fiber tapering rig
+Repository: https://doi.org/10.17605/OSF.IO/VUW4J
+------------------------------------------------------------
+
+Project 331: CARETestLung: A mechanical test lung with Configurable airway Resistance, lung Elastance, and breathing efforts
+Repository: Mechanical Test Lung - Mendeley Data01 Mechanical Test Lung - Mendeley Data02
+------------------------------------------------------------
+
+Project 332: Development of a robotic-assisted handling and manipulation system for the high-scale bioproduction of 3D-bioprinted organ-on-a-chip devices
+Repository: https://doi.org/10.17632/jm4ndf8r9j.1
+------------------------------------------------------------
+
+Project 333: Design and characterization of a low-cost particle image velocimetry system
+Repository: https://doi.org/10.17632/cgmmttr4bz.2
+------------------------------------------------------------
+
+Project 334: Design and implementation of a cost-effective, open-source, and programmable pulsatile flow system
+Repository: Vezeridis, Alexander; Herwald, Sanna (2024), “Programmable Pulsatile Centrifugal Pump for Vascular Flow Simulation”, Mendeley Data, V1, https://doi.org/10.17632/6dscgdg2b5.1 https://doi.org/10.17632/6dscgdg2b5.1
+------------------------------------------------------------
+
+Project 335: Open-source Internet of Things (IoT)-based air pollution monitoring system with protective case for tropical environments
+Repository: https://doi.org/10.17605/OSF.IO/GZD62
+------------------------------------------------------------
+
+Project 336: Design, manufacture, and control of a low-cost positive airway pressure device
+Repository: https://doi.org/10.17632/ng2k62crcg.2
+------------------------------------------------------------
+
+Project 337: A three-zone hypoxia chamber capable of regulating unique oxygen and carbon dioxide partial pressures simultaneously
+Repository: Mendeley Data: http://dx. https://doi.org/10.17632/xm3njtmpmd.1
+------------------------------------------------------------
+
+Project 338: Low-cost clamp for the measurement of vegetation spectral signatures
+Repository: https://doi.org/10.17605/OSF.IO/VN79E
+------------------------------------------------------------
+
+Project 339: A do-it-yourself benchtop device for highly scalable flow synthesis of protein-based nanoparticles
+Repository: https://doi.org/10.17632/bptpfpgf5h.2
+------------------------------------------------------------
+
+Project 340: Cost-effective, open-source light shutters with Arduino control
+Repository: Zenodo data link: https://doi.org/10.5281/zenodo.10828203
+------------------------------------------------------------
+
+Project 341: Spin coating on a budget: A 3D-Printed all-mechanical alternative for cost-effective thin-film deposition
+Repository: https://doi.org/10.5281/zenodo.10521930
+------------------------------------------------------------
+
+Project 342: Open collaborative smart plugs for energy management
+Repository: https://doi.org/10.5281/zenodo.10825833
+------------------------------------------------------------
+
+Project 343: Economically viable electromechanical tensile testing equipment for stretchable sensor assessment
+Repository: https://doi.org/10.17632/s2mm5btmy5.1
+------------------------------------------------------------
+
+Project 344: mSLAb – An open-source masked stereolithography (mSLA) bioprinter
+Repository: https://doi.org/10.17632/kxt5sks9zs.1
+------------------------------------------------------------
+
+Project 345: Flexible and configurable embedded electrical energy measurement system to acquire and process high-frequency features
+Repository: https://doi.org/10.5281/zenodo.7802260
+------------------------------------------------------------
+
+Project 346: Low-cost desktop learning factory to support the teaching of artificial intelligence
+Repository: http://doi.org/10.17605/OSF.IO/4BDKU
+------------------------------------------------------------
+
+Project 347: Detecting changes in seafloor elevation in sandy coastal environments using low-cost opensource tooling
+Repository: https://10.5281/zenodo.10784048
+------------------------------------------------------------
+
+Project 348: CYCLOPS: A cyclists’ orientation data acquisition system using RGB camera and inertial measurement units (IMU)
+Repository: https://doi.org/10.17632/3yx5y8b7tm.1
+------------------------------------------------------------
+
+Project 349: EnduroBone: A 3D printed bioreactor for extended bone tissue culture
+Repository: https://dx. https://doi.org/10.17632/w496dkygx8.1
+------------------------------------------------------------
+
+Project 350: Optical fiber-based open source low cost portable spectrometer system
+Repository: https://doi.org/10.17605/OSF.IO/VGYN7
+------------------------------------------------------------
+
+Project 351: A compact setup for behavioral studies measuring limb acceleration
+Repository: https://doi.org/10.5281/zenodo.10014129
+------------------------------------------------------------
+
+Project 352: ASCD: Automatic sensing and control device for crop irrigation scheduling
+Repository: https://doi.org/10.17632/mgdnsbsxkt.1
+------------------------------------------------------------
+
+Project 353: Development of a microfluidic-assisted open-source 3D bioprinting system (MOS3S) for the engineering of hierarchical tissues
+Repository: https://data.mendeley.com/datasets/s8bpwp2ryb/1 (DOI: 10.17632/s8bpwp2ryb.1)
+------------------------------------------------------------
+
+Project 354: Sequential Treatment Application Robot (STAR) for high-replication marine experimentation
+Repository: DOI: 10.5281/zenodo.10048123 https://zenodo.org/doi/10.5281/zenodo.10048123
+------------------------------------------------------------
+
+Project 355: Uncrewed aerial vehicle with onboard winch system for rapid, cost-effective, and safe oceanographic profiling in hazardous and inaccessible areas
+Repository: https://doi.org/10.17632/j2z3ns9hn4.2
+------------------------------------------------------------
+
+Project 356: Dual feed progressive cavity pump extrusion system for functionally graded direct ink write 3D printing
+Repository: https://doi.org/10.17632/8953pcgdys.2
+------------------------------------------------------------
+
+Project 357: Developing a remote gamma-ray spectra collection system (RGSCS) by coupling a high purity Germanium (HPGe) detector with a cosmicguard background reduction device
+Repository: Figures are attached to the manuscript.
+------------------------------------------------------------
+
+Project 358: Obstructive respiratory disease simulation device
+Repository: https://doi.org/10.17632/kk6hktdydg.3 Used in conjunction with components of a data recording device [1]
+------------------------------------------------------------
+
+Project 359: P-TDHM: Open-source portable telecentric digital holographic microscope
+Repository: https://zenodo.org/record/8206220
+------------------------------------------------------------
+
+Project 360: HYKYHT: A versatile, affordable, and open-source 3D-printed liquid aspiration system
+Repository: https://doi.org/10.17632/frk98hnwxk.3
+------------------------------------------------------------
+
+Project 361: A low-cost, wireless, 4-channel EEG measurement system used in virtual reality environments
+Repository: Mendeley Data: http://doi.org/10.17632/4gfb6g46kb.2
+------------------------------------------------------------
+
+Project 362: The Enderstruder: An accessible open-source syringe extruder compatible with Ender series 3D printers
+Repository: https://doi.org/10.17605/OSF.IO/9ARYM
+------------------------------------------------------------
+
+Project 364: Open STM: A low-cost scanning tunneling microscope with a fast approach method
+Repository: https://doi.org/10.17632/f35c6xzzcm.1
+------------------------------------------------------------
+
+Project 365: Low cost 3D printable flow reactors for electrochemistry
+Repository: https://doi.org/10.5281/zenodo.8435816
+------------------------------------------------------------
+
+Project 366: Lab-scale tubular LED UV reactor for continuous photocatalysis
+Repository: https://doi.org/10.17605/OSF.IO/TRWZE
+------------------------------------------------------------
+
+Project 367: Affordable lab-scale electrospinning setup with interchangeable collectors for targeted fiber formation
+Repository: https://doi.org/10.17632/cyb36wsh6c.2
+------------------------------------------------------------
+
+Project 368: Open-source controller for dynamic cardiovascular models
+Repository: OSF project repository: https://doi.org/10.17605/OSF.IO/5D4PH
+------------------------------------------------------------
+
+Project 369: 
+Repository: https://data.mendeley.com/datasets/t4n3t4p6db/4
+------------------------------------------------------------
+
+Project 370: Design and validation of an open-sourced automation system for vertical farming
+Repository: http://doi.org/10.17632/2p7mbbhn47.1
+------------------------------------------------------------
+
+Project 371: Hybrid energy-temperature method (HETM): A low-cost apparatus and reliable method for estimating the thermal capacity of solid–liquid phase change material for heat storage system
+Repository: Within the article
+------------------------------------------------------------
+
+Project 372: Monitoring multiple parameters in complex water scenarios using a low-cost open-source data acquisition platform
+Repository: Mendeley Data
+------------------------------------------------------------
+
+Project 373: A low-cost, portable 32-channel EIT system with four rings based on AFE4300 for body composition analysis
+Repository: https://data.mendeley.com/drafts/zgdjg5b3cs https://doi.org/10.17632/zgdjg5b3cs.1
+------------------------------------------------------------
+
+Project 374: OpenASAP: An affordable 3D printed atmospheric solids analysis probe (ASAP) mass spectrometry system for direct analysis of solid and liquid samples
+Repository: https://doi.org/10.5281/zenodo.8173130
+------------------------------------------------------------
+
+Project 375: Low-cost inertial microfluidic device for microparticle separation: A laser-Ablated PMMA lab-on-a-chip approach without a cleanroom
+Repository: https://doi.org/10.17632/yvspjzcn2h.1
+------------------------------------------------------------
+
+Project 376: The ReFiBot makers guide: Fostering academic open science and circularity with a robotic educational kit
+Repository: https://doi.org/10.5281/zenodo.7823461
+------------------------------------------------------------
+
+Project 377: AirQo sensor kit: A particulate matter air quality sensing kit custom designed for low-resource settings
+Repository: https://doi.org/10.17632/zrjbtfhwh9.2
+------------------------------------------------------------
+
+Project 378: Fabricating orientated nanofibrous meshes with a bespoke ultra-cost-effective electrospinning machine
+Repository: https://doi.org/10.17605/OSF.IO/ECFPU
+------------------------------------------------------------
+
+Project 379: Low-cost air, noise, and light pollution measuring station with wireless communication and tinyML
+Repository: https://doi.org/10.17605/OSF.IO/VMPFS
+------------------------------------------------------------
+
+Project 380: Multipurpose deep learning-powered UAV for forest fire prevention and emergency response
+Repository: https://doi.org/10.17632/46x948gzkt.1
+------------------------------------------------------------
+
+Project 381: Low-speed instrumented drill press for bone screw insertion
+Repository: https://doi.org/10.17605/OSF.IO/X3EKH
+------------------------------------------------------------
+
+Project 382: Low-cost, low-power, clockwork syringe pump
+Repository: https://doi.org/10.17605/osf.io/j24f6
+------------------------------------------------------------
+
+Project 383: Adaptable three-pin skull clamp for large animal research
+Repository: https://doi.org/10.17632/cvr77cr6ry.1
+------------------------------------------------------------
+
+Project 384: PlasPi TDM: Augmentation of a low-cost camera platform for advanced underwater physical-ecological observations
+Repository: https://doi.org/10.5281/zenodo.7539553
+------------------------------------------------------------
+
+Project 385: Easy to build, modular and large scale pipe conveying fluid experimental setup
+Repository: https://doi.org/10.17632/xtwrf8859b.3
+------------------------------------------------------------
+
+Project 386: Autotitrator based on an Arduino Open Source Pump
+Repository: https://doi.org/10.5281/zenodo.7971517
+------------------------------------------------------------
+
+Project 387: The experimental multi-arm pendulum on a cart: A benchmark system for chaos, learning, and control
+Repository: http://doi.org/10.5281/zenodo.6633719
+------------------------------------------------------------
+
+Project 388: GNOME: A Gaseous Nitrogen Oxide Measuring front-End for aqueous environmental materials
+Repository: Available with the article
+------------------------------------------------------------
+
+Project 389: Low-cost and open-source neonatal incubator operated by an Arduino microcontroller
+Repository: https://doi.org/10.17632/k59v85zjr5.1
+------------------------------------------------------------
+
+Project 390: A versatile hot melt centrifugal spinning apparatus for thermoplastic microfibres production
+Repository: On Open Science Framework (OSF) with DOI: 10.17605/OSF.IO/JH6QY [ 6 ]
+------------------------------------------------------------
+
+Project 391: Microfluidic paper-based device coupled with 3D printed imaging box for colorimetric detection in resource-limited settings
+Repository: https://doi.org/10.17632/p7jjtrt82w.4
+------------------------------------------------------------
+
+Project 392: SALAD: Syringe-based Arduino-operated Low-cost Antibody Dispenser
+Repository: http://doi.org/10.17632/sv5y27mzjb.2
+------------------------------------------------------------
+
+Project 393: Scanning Probe Microscopy controller with advanced sampling support
+Repository: https://doi.org/10.5281/zenodo.7688987
+------------------------------------------------------------
+
+Project 394: Automation of an atomic force microscope via Arduino
+Repository: Zenodo [1]
+------------------------------------------------------------
+
+Project 395: Arduino based intra-cerebral microinjector device for neuroscience research
+Repository: Mendeley, https://doi.org/10.17632/m77h37dfjf.1
+------------------------------------------------------------
+
+Project 396: APELLA: Open-Source, miniaturized All-in-One powered Lab-on-a-Disc platform
+Repository: https://doi.org/10.17605/OSF.IO/HB6UV
+------------------------------------------------------------
+
+Project 397: Open source scientific bottle roller
+Repository: https://osf.io/ps57u/
+------------------------------------------------------------
+
+Project 398: Distributed manufacturing of an open-source tourniquet testing system
+Repository: http://doi.org/10.17605/OSF.IO/DGTW4
+------------------------------------------------------------
+
+Project 399: Kinetic adhesion test to determine particle surface energy
+Repository: https://doi.org/10.5281/zenodo.7448231; Editable CAD design files are available as an Onshape public repository here .
+------------------------------------------------------------
+
+Project 400: A low-cost robotic hand prosthesis with apparent haptic sense controlled by electroencephalographic signals
+Repository: https://doi.org/10.17605/OSF.IO/63S57
+------------------------------------------------------------
+
+Project 401: Development of a bioreactor for in-vitro compression cycling of tissue engineered meniscal implants
+Repository: Available with the article
+------------------------------------------------------------
+
+Project 402: Phone cam array – An open-source, modular photogrammetry system made of Android phones
+Repository: https://doi.org/10.17632/2nhfs99zcy.1
+------------------------------------------------------------
+
+Project 403: Tension controlled hollow-fiber winding machine for blood oxygenator prototypes
+Repository: https://doi.org/10.5281/zenodo.7882884
+------------------------------------------------------------
+
+Project 404: Low-cost acoustic force trap in a microfluidic channel
+Repository: https://figshare.com/s/dd6a9df122444dfbc496
+------------------------------------------------------------
+
+Project 405: Open-MAC: A low-cost open-source motorized commutator for electro- and opto-physiological recordings in freely moving rodents
+Repository: https://zenodo.org/record/7640543 https://doi.org/10.5281/zenodo.7640543 https://github.com/KaetzelLab/Open-MAC
+------------------------------------------------------------
+
+Project 406: Dark-field light scattering microscope with focus stabilization
+Repository: https://doi.org/10.17605/osf.io/t3yvd
+------------------------------------------------------------
+
+Project 407: GatorByte – An Internet of Things-Based Low-Cost, Compact, and Real-Time Water Resource Monitoring Buoy
+Repository: https://doi.org/10.17632/csf6hhvy3b.1 (Web application and dashboard), https://doi.org/10.17632/y2gc2fwj5b.1 (Firmware files), https://doi.org/10.17632/gjbkxb74dw.1 (Enclosure and PCB CAD files)
+------------------------------------------------------------
+
+Project 408: A simple and low-cost setup for part per billion level frequency stabilization and characterization of red He-Ne laser
+Repository: https://doi.org/10.5281/zenodo.7152400
+------------------------------------------------------------
+
+Project 409: Robust Arduino controlled spin coater using a novel and simple gravity chuck design
+Repository: Mendeley Data, http://doi.org/10.17632/y84tbnfsj4
+------------------------------------------------------------
+
+Project 410: A handheld plug-and-play microfluidic liquid handling automation platform for immunoassays
+Repository: https://doi.org/10.17632/mxr5zkg5fx.2
+------------------------------------------------------------
+
+Project 411: Low-cost automated call box system to conduct playback experiments for wildlife research and management
+Repository: http://doi.org/10.17632/mwchxw4hnp.2
+------------------------------------------------------------
+
+Project 416: Low-cost electron detector for scanning electron microscope
+Repository: https://doi.org/10.5281/zenodo.7474569
+------------------------------------------------------------
+
+Project 417: ForageFeeder: A low-cost open source feeder for randomly distributing food
+Repository: DOI repsitory can be found with all files here: http://doi.org/10.17605/OSF.IO/VAX5F
+------------------------------------------------------------
+
+Project 418: The K2: Open-source simultaneous triple-color TIRF microscope for live-cell and single-molecule imaging
+Repository: Design files and data are available at 10.5281/zenodo.7380380 . A ready-to-view model is available at https://autode.sk/3vdsOu0 . Data analysis code is available at github.com/GanzingerLab . Up-to-date information about the setup is available at the K2 TIRF Github page. ( ganzingerlab.github.io/K2TIRF/K2TIRF/index.html ).
+------------------------------------------------------------
+
+Project 419: Robust and compact digital Lensless Holographic microscope for Label-Free blood smear imaging
+Repository: https://doi.org/10.17605/OSF.IO/4KET9
+------------------------------------------------------------
+
+Project 420: WeatherChimes: An Open IoT Weather Station and Data Sonification System
+Repository: https://doi.org/10.5281/zenodo.7328528
+------------------------------------------------------------
+
+Project 421: Hangprinter for large scale additive manufacturing using fused particle fabrication with recycled plastic and continuous feeding
+Repository: https://doi.org/10.17605/OSF.IO/NDWS6
+------------------------------------------------------------
+
+Project 422: An open-source microscopy framework for simultaneous control of image acquisition, reconstruction, and analysis
+Repository: https://zenodo.org/record/7561142
+------------------------------------------------------------
+
+Project 423: Time-domain transmission sensor system for on-site dielectric permittivity measurements in soil: A compact, low-cost and stand-alone solution
+Repository: https://data.mendeley.com/datasets/mt24hdxsr2/1
+------------------------------------------------------------
+
+Project 424: Low-cost drum granulator for mechanized seedball production
+Repository: https://doi.org/10.17632/t8bvm2cspk.1
+------------------------------------------------------------
+
+Project 425: RaspyControl Lab: A fully open-source and real-time remote laboratory for education in automatic control systems using Raspberry Pi and Python
+Repository: • Hardware: https://doi.org/10.5281/zenodo.7500242 • Software: https://doi.org/10.5281/zenodo.7500242 https://github.com/Uniminutoarduino/RaspyControlLab
+------------------------------------------------------------
+
+Project 426: Open-source lower controller for twelve degrees of freedom hydraulic quadruped robot with distributed control scheme
+Repository: https://doi.org/10.17632/zym6bwk37h.2
+------------------------------------------------------------
+
+Project 427: COVOX: Providing oxygen during the COVID-19 health emergency
+Repository: https://doi.org/10.17632/kj7nk4khzd.1
+------------------------------------------------------------
+
+Project 428: BIMMS: A versatile and portable system for biological tissue and electrode-tissue interface electrical characterization
+Repository: https://doi.org/10.5281/zenodo.7148811
+------------------------------------------------------------
+
+Project 429: Modular light sources for microscopy and beyond (ModLight)
+Repository: Available with the article; https://doi.org/10.5281/zenodo.7385903.
+------------------------------------------------------------
+
+Project 430: Low-cost modular chromatography column rack and vial holders
+Repository: A PDF format Design File is included as a Supplementary material for this article (this same file is also available on the Open Science Framework website https://osf.io/wc428/ )
+------------------------------------------------------------
+
+Project 431: Low-cost Arduino controlled dual-polarity high voltage power supply
+Repository: https://doi.org/10.5281/zenodo.7221871
+------------------------------------------------------------
+
+Project 432: PiRamid: A compact Raspberry Pi imaging box to automate small-scale time-lapse digital analysis, suitable for laboratory and field use
+Repository: Digital Object Identifier DOI https://doi.org/10.5281/zenodo.7090151 URL : https://zenodo.org/record/7090151
+------------------------------------------------------------
+
+Project 433: Design of an open source ultra low cost insulin pump
+Repository: https://data.mendeley.com/datasets/xb4tykn5gd/1
+------------------------------------------------------------
+
+Project 434: The PortaLyzer, a DIY tool that allows environmental DNA extraction in the field
+Repository: Not applicable.
+------------------------------------------------------------
+
+Project 435: A portable device for single point strain analysis in sheet metal forming processes
+Repository: OSF: https://doi.org/10.17605/OSF.IO/M85VBGitHub : https://github.com/guru-narayana/GridAnalyser
+------------------------------------------------------------
+
+Project 436: A 3-D printed vitrification device integrated with French straws
+Repository: https://doi.org/10.17632/b7yy72wcxx.2 https://3dprint.nih.gov/discover/3dpx-017622
+------------------------------------------------------------
+
+Project 437: Low-cost programable stroboscopic illumination with sub-microsecond pulses for high-throughput microfluidic applications
+Repository: https://osf.io/fnhm7/
+------------------------------------------------------------
+
+Project 438: VitRad: A low-cost continuous wave Doppler radar system with 3D-printed horn antennas for human vital sign detection
+Repository: https://doi.org/10.17605/OSF.IO/8D429
+------------------------------------------------------------
+
+Project 440: Distributed I/O as a service: A data acquisition solution to Industry 4.0
+Repository: https://doi.org/10.17605/OSF.IO/EG9FU
+------------------------------------------------------------
+
+Project 441: A portable and affordable aligner for the assembly of microfluidic devices
+Repository: http://dx.doi.org/10.17632/jpxw5dph27.1
+------------------------------------------------------------
+
+Project 442: Respiratory bi-directional pressure and flow data collection device with thoracic and abdominal circumferential monitoring
+Repository: https://doi.org/10.17632/wfw7nyctcy.1
+------------------------------------------------------------
+
+Project 443: Cost-effective and power-efficient portable turbine-based emergency ventilator
+Repository: https://doi.org/10.17632/b94xgzxsdm.2
+------------------------------------------------------------
+
+Project 444: An open design for a low-cost open-loop subsonic wind tunnel for aerodynamic measurement and characterization
+Repository: http://doi.org/10.17632/hdb93dwt2x.2
+------------------------------------------------------------
+
+Project 445: Programmable material testing device for mechanoluminescence measurements
+Repository: All supporting software is available at https://DOI.org/10.17605/OSF.IO/S4PG7
+------------------------------------------------------------
+
+Project 446: SnapFib: An easy build Arduino based tabletop prototype for thin film deposition by Successive Ionic Layer Adsorption and Reaction method
+Repository: https://doi.org/10.17632/3pccd4yp8m.4
+------------------------------------------------------------
+
+Project 447: LAMSkyCam: A low-cost and miniature ground-based sky camera
+Repository: https://doi.org/10.17632/5fth8h9sdh.1
+------------------------------------------------------------
+
+Project 448: DripOMeter: An open-source opto-electronic system for intravenous (IV) infusion monitoring
+Repository: https://doi.org/10.17605/OSF.IO/DYCMS
+------------------------------------------------------------
+
+Project 449: Motrol: A hardware-software device for batch benchmarking and profiling of in-lab mobile device clusters
+Repository: http://doi.org/10.17632/9ndz5b9ccv.3
+------------------------------------------------------------
+
+Project 450: RespiCo: A novel, flexible, and stand-alone electronic respiratory coaching device
+Repository: OSF
+------------------------------------------------------------
+
+Project 451: Open-source Internet of Things remote aquatic environmental sensing
+Repository: https://osf.io/nhj4z
+------------------------------------------------------------
+
+Project 452: Biaxial testing system for characterization of mechanical and rupture properties of small samples
+Repository: https://doi.org/10.17632/8sbwf397jk.1
+------------------------------------------------------------
+
+Project 453: A mobile observatory powered by sun and wind for near real time measurements of atmospheric, glacial, terrestrial, limnic and coastal oceanic conditions in remote off-grid areas
+Repository: https://doi.org/10.17632/5gfmy98kcj.2
+------------------------------------------------------------
+
+Project 454: Development of a low-cost IoT system based on LoRaWAN for monitoring variables related to electrical energy consumption in low voltage networks
+Repository: https://doi.org/10.17632/bkhrks6x3m.2
+------------------------------------------------------------
+
+Project 455: A low-cost and open-source mini benchtop centrifuge for molecular biology labs
+Repository: https://doi.org/10.17632/sy2vrhj227.1 Mendeley Data: https://data.mendeley.com/datasets/sy2vrhj227/1
+------------------------------------------------------------
+
+Project 456: UAV rapidly-deployable stage sensor with electro-permanent magnet docking mechanism for flood monitoring in undersampled watersheds
+Repository: https://doi.org/10.17605/OSF.IO/A874U
+------------------------------------------------------------
+
+Project 457: Design of a low-cost mobile multispectral albedometer with geopositioning and absolute orientation
+Repository: https://doi.org/10.17605/OSF.IO/BVJH2
+------------------------------------------------------------
+
+Project 458: Tailored birdcage resonator for magnetic resonance imaging at 7 T using 3D printing
+Repository: https://doi.org/10.17605/OSF.IO/29A8T
+------------------------------------------------------------
+
+Project 459: RT Box card for studying the control communication impacts on microgrid performance and stability
+Repository: https://data.mendeley.com/datasets/mj6mx8d5c5/11
+------------------------------------------------------------
+
+Project 460: OpenFish: Biomimetic design of a soft robotic fish for high speed locomotion
+Repository: https://doi.org/10.17605/OSF.IO/FB5VH
+------------------------------------------------------------
+
+Project 461: Low cost circulatory pressure acquisition and fluid infusion rate measurement system for clinical research
+Repository: https://doi.org/10.17605/osf.io/24zuh
+------------------------------------------------------------
+
+Project 462: Maasi: A 3D printed spin coater with touchscreen
+Repository: https://doi.org/10.5281/zenodo.5768034 https://github.com/klotzsch-lab/Maasi
+------------------------------------------------------------
+
+Project 463: Fabrication of a highly protective 3D-printed mask and evaluation of its viral filtration efficiency using a human head mannequin
+Repository: http://dx.doi.org/10.17632/t4rxhrgrt8.1#folder-25fad5ff-a7c5-4704-9999-126b822fdfe1
+------------------------------------------------------------
+
+Project 464: ColoriSens: An open-source and low-cost portable color sensor board for microfluidic integration with wireless communication and fluorescence detection
+Repository: https://doi.org/10.17605/OSF.IO/TCZJR
+------------------------------------------------------------
+
+Project 465: Open-source force analyzer with broad sensing range based on an optical pickup unit
+Repository: https://doi.org/10.17632/cnkd95kp65.1
+------------------------------------------------------------
+
+Project 466: Open source fraction collector/MALDI spotter for proteomics
+Repository: Ficarro, S., Marto, J., Tavares, I., & Alexander, W. (2022, April 7). Open Source MALDI Spotter / Fraction Collector. https://doi.org/10.17605/OSF.IO/VKHRN
+------------------------------------------------------------
+
+Project 468: Weed Warden: A low-cost weed detection device implemented with spectral triad sensor for agricultural applications
+Repository: https://doi.org/10.5281/zenodo.4724135
+------------------------------------------------------------
+
+Project 469: Low-cost system for sunlight incidence angle measurement using optical fiber
+Repository: https://doi.org/10.17605/OSF.IO/54KWN
+------------------------------------------------------------
+
+Project 470: PARS, low-cost portable rehabilitation system for upper arm
+Repository: https://doi.org/10.17632/wrx22bn64h.2
+------------------------------------------------------------
+
+Project 471: Low cost 3D printing of metals using filled polymer pellets
+Repository: https://doi.org/10.5281/zenodo.5484803
+------------------------------------------------------------
+
+Project 472: In-situ electronics and communications for intelligent energy storage
+Repository: https://doi.org/10.17632/z6nmc3kcy8.3
+------------------------------------------------------------
+
+Project 473: Novel modified vertical diffusion cell for testing of
+Repository: http://doi.org/10.17605/OSF.IO/329TP
+------------------------------------------------------------
+
+Project 474: Grape Version 1: First prototype of the low-cost personal space weather station receiver
+Repository: https://doi.org/10.17632/nbbhy2yxmz.1
+------------------------------------------------------------
+
+Project 475: PassStat, a simple but fast, precise and versatile open source potentiostat
+Repository: https://zenodo.org/record/5719382#.YZwJ17rjJhE https://ohwr.org/project/passstat
+------------------------------------------------------------
+
+Project 476: ADO: An open digital end-to-end tank based aquaculture platform
+Repository: https://doi.org/10.17632/cvdc3gsjsg.1
+------------------------------------------------------------
+
+Project 477: Electromechanical tensile test equipment for stretchable conductive materials
+Repository: http://dx.doi.org/10.17632/rckgk7gz5m.1
+------------------------------------------------------------
+
+Project 478: MEDUSA: An open-source and webcam based multispectral imaging system
+Repository: https://osf.io/zhp4m/
+------------------------------------------------------------
+
+Project 480: Low-cost electronic circuitry for photoacoustic gas sensing
+Repository: https://doi.org/10.5281/zenodo.6024087
+------------------------------------------------------------
+
+Project 482: AntVideoRecord: Autonomous system to capture the locomotor activity of leafcutter ants
+Repository: https://doi.org/10.5281/zenodo.5825882
+------------------------------------------------------------
+
+Project 483: Open source anaerobic and temperature-controlled
+Repository: https://doi.org/10.17632/9cyp4s22mc.2
+------------------------------------------------------------
+
+Project 484: Hardware-in-the-loop simulator for emulation and active control of chatter
+Repository: https://doi.org/10.17605/OSF.IO/8N47G
+------------------------------------------------------------
+
+Project 485: Portable device for dual detection of fluorescence and absorbance for biosensing or chemical sensing applications
+Repository: Mendeley Data https://doi.org/10.17632/bdg2c7tsxm.1
+------------------------------------------------------------
+
+Project 487: A low-cost open-source automated shot peen forming system
+Repository: URL to an approved source file repository: https://doi.org/10.17605/OSF.IO/Z5RVN.
+------------------------------------------------------------
+
+Project 488: Raspberry Pi based photovoltaic I-V curve tracer
+Repository: https://osf.io/g8w2q/
+------------------------------------------------------------
+
+Project 491: A system for determining Li-ion cell cooling coefficients
+Repository: DOI 10.17605/OSF.IO/ZYWVF
+------------------------------------------------------------
+
+Project 492: Overcoming supply disruptions during pandemics by utilizing found hardware for open source gentle ventilation
+Repository: https://osf.io/ug4z2/ and registration: https://doi.org/10.17605/OSF.IO/UV9MZ
+------------------------------------------------------------
+
+Project 493: Low-cost, open-source cell culture chamber for regulating physiologic oxygen levels
+Repository: https://doi.org/10.17605/OSF.IO/JVHDQ
+------------------------------------------------------------
+
+Project 494: Prototyping a low-cost residential air quality device using ultraviolet germicidal irradiation (UVGI) light
+Repository: https://doi.org/10.17632/bshhwy3czd.2
+------------------------------------------------------------
+
+Project 495: Designing an Integrated Low-cost Electrospinning Device for Nanofibrous Scaffold Fabrication
+Repository: https://doi.org/10.17605/OSF.IO/5YGWE
+------------------------------------------------------------
+
+Project 496: Scan4CFU: Low-cost, open-source bacterial colony tracking over large areas and extended incubation times
+Repository: Zenodo Data Repository Pandey, Santosh (2021), “ScanCFU: Low-cost, open-source bacterial colony tracking over large areas and extended incubation times ”, Zenodo, V1, / https://doi.org/10.5281/zenodo.5636769
+------------------------------------------------------------
+
+Project 497: High precision zero-friction magnetic dendrometer
+Repository: GitHub: https://github.com/OPEnSLab-OSU/Dendrometer ; Zenodo: https://doi.org/10.5281/zenodo.4482948
+------------------------------------------------------------
+
+Project 498: A microfluidic chip carrier including temperature control and perfusion system for long-term cell imaging
+Repository: https://doi.org/10.17605/OSF.IO/CJT8A
+------------------------------------------------------------
+
+Project 499: Telechemistry 2.0: Remote monitoring of fluorescent chemical reactions
+Repository: https://doi.org/10.17605/OSF.IO/7PHR5
+------------------------------------------------------------
+
+Project 500: On the development of flexible mobile multi-sensor units based on open-source hardware platforms and a reference framework
+Repository: https://doi.org/10.17632/tz4y6s9g5w.1
+------------------------------------------------------------
+
+Project 501: An open-source dual-beam spectrophotometer for citizen-science-based water quality monitoring
+Repository: https://doi.org/10.17605/OSF.IO/Q2BPN
+------------------------------------------------------------
+
+Project 502: MicroMI: A portable microbiological mobile incubator that uses inexpensive lithium power banks for field microbiology
+Repository: Available with the article
+------------------------------------------------------------
+
+Project 503: Comprehensive temperature controller with internet connectivity for plant growth experiments
+Repository: https://doi.org/10.17605/OSF.IO/J7ZKV
+------------------------------------------------------------
+
+Project 504: Modular system for UV–vis-NIR radiation measurement with wireless communication
+Repository: https://doi.org/10.17605/OSF.IO/J362K
+------------------------------------------------------------
+
+Project 505: Open-source lab hardware: Low noise adjustable two-stage gain transimpedance amplifier with DC offset for low-light detection
+Repository: https://doi.org/10.17605/OSF.IO/QUS5Y
+------------------------------------------------------------
+
+Project 506: IETeasy: An open source and low-cost instrument for impulse excitation technique, applied to materials classification by acoustical and mechanical properties assessment.
+Repository: https://doi.org/10.17632/c8sxdwds5x.1
+------------------------------------------------------------
+
+Project 507: Open-source lab hardware: A versatile microfluidic control and sensor platform
+Repository: https://doi.org/10.17605/OSF.IO/VWHG4
+------------------------------------------------------------
+
+Project 508: Open-source hybrid 3D-bioprinter for simultaneous printing of thermoplastics and hydrogels
+Repository: https://doi.org/10.17632/ywb5zdjk5x.1
+------------------------------------------------------------
+
+Project 509: Ender3 3D printer kit transformed into open, programmable syringe pump set
+Repository: A live version of the repository can be find on github: https://github.com/Vsaggiomo/Ender3-syringe-pumps Zenodo: https://zenodo.org/record/5139558
+------------------------------------------------------------
+
+Project 510: Open source and open hardware mobile robot for developing applications in education and research
+Repository: https://doi.org/10.17605/OSF.IO/KQ3EW
+------------------------------------------------------------
+
+Project 511: BoSL FAL pump: A small, low-cost, easily constructed, 3D-printed peristaltic pump for sampling of waters
+Repository: https://doi.org/10.17632/prb2wzr77y.1
+------------------------------------------------------------
+
+Project 512: RotoMate: An open-source, 3D printed autosampler for use with benchtop nuclear magnetic resonance spectrometers
+Repository: https://doi.org/10.5281/zenodo.4627675
+------------------------------------------------------------
+
+Project 513: PARA: A one-meter reach, two-kg payload, three-DoF open source robotic arm with customizable end effector
+Repository: https://doi.org/10.17605/OSF.IO/5AF4V
+------------------------------------------------------------
+
+Project 514: An open-source, automated, gas sampling peripheral for laboratory incubation experiments using cavity ring-down spectroscopy
+Repository: https://doi.org/10.17632/km23j2bxwf.2
+------------------------------------------------------------
+
+Project 515: A cost-efficient low-weight autonomous profiler for measurements in polar coastal waters and other regions with strong density gradients
+Repository: https://doi.org/10.17632/yc89ksvj8k.1
+------------------------------------------------------------
+
+Project 516: Low-cost, scalable, and automated fluid sampling for fluidics applications
+Repository: https://doi.org/10.5281/zenodo.4677604
+------------------------------------------------------------
+
+Project 517: A low-cost, mobile real-time kinematic geolocation service for engineering and research applications
+Repository: https://doi.org/10.17605/OSF.IO/QH3V7
+------------------------------------------------------------
+
+Project 518: Automated tangential-flow diafiltration device
+Repository: https://doi.org/10.17605/OSF.IO/TWB3J
+------------------------------------------------------------
+
+Project 519: Open-hardware wireless controller and 3D-printed pumps for efficient liquid manipulation
+Repository: https://doi.org/10.17605/OSF.IO/ZP2S6
+------------------------------------------------------------
+
+Project 520: A portable air quality monitoring unit and a modular, flexible tool for on-field evaluation and calibration of low-cost gas sensors
+Repository: Mendeley Data, https://doi.org/10.17632/jfhdt44kbs.1
+------------------------------------------------------------
+
+Project 521: Autonomous submersible multiport water sampler
+Repository: https://doi.org/10.17605/OSF.IO/E7NJM
+------------------------------------------------------------
+
+Project 522: eGreenhouse: Robotically positioned, low-cost, open-source CO
+Repository: GitHub: https://github.com/OPEnSLab-OSU/eGreenHouse/tree/1D Zenodo: https://doi.org/10.5281/zenodo.4113959
+------------------------------------------------------------
+
+Project 523: The incubot: A 3D printer-based microscope for long-term live cell imaging within a tissue culture incubator
+Repository: https://doi.org/10.17605/OSF.IO/ES3HR
+------------------------------------------------------------
+
+Project 524: Low-cost, open-source 3D printed antibody dispenser for development and small-scale production of lateral flow assay strips
+Repository: https://doi.org/10.17632/x2tn935zrz.1
+------------------------------------------------------------
+
+Project 525: Prokaryote playhouse: A low-cost, laser-cut acrylic incubator for optogenetic bacterial culture
+Repository: http://doi.org/10.17605/OSF.IO/AEUYH
+------------------------------------------------------------
+
+Project 526: LUCIA: An open source device for disinfection of N95 masks using UV-C radiation
+Repository: https://doi.org/10.17632/cpzfdw95ty.2
+------------------------------------------------------------
+
+Project 527: Modified full-face snorkel mask as COVID-19 personal protective equipment: Quantitative results
+Repository: DOI: https://doi.org/10.17605/OSF.IO/YXBTR
+------------------------------------------------------------
+
+Project 528: Design and validation of an inertial measurement unit (IMU)-based sensor for capturing camera movement in the operating room
+Repository: https://doi.org/10.17605/OSF.IO/9XGH6
+------------------------------------------------------------
+
+Project 529: An inexpensive robotic gantry to screen and control soil moisture for plant experiments
+Repository: DOI URL to an approved source file repository: Mendeley Data, https://doi.org/10.17632/zp9p6sr2fk.1
+------------------------------------------------------------
+
+Project 530: Open source all-iron battery 2.0
+Repository: https://doi.org/10.17605/OSF.IO/YV2E6
+------------------------------------------------------------
+
+Project 531: Motor-driven autonomous system for controlling beamline iris diaphragm apertures
+Repository: https://doi.org/10.17605/OSF.IO/FND9V
+------------------------------------------------------------
+
+Project 532: MYSTAT: A compact potentiostat/galvanostat for general electrochemistry measurements
+Repository: http://doi.org/10.5281/zenodo.4252476
+------------------------------------------------------------
+
+Project 533: Wearable light data logger for studying physiological and psychological effects of light data
+Repository: https://doi.org/10.17632/c3m4tdyvfm.1
+------------------------------------------------------------
+
+Project 534: smAvo and smaTo: A fruity odyssey of smart sensor platforms in Southern Africa
+Repository: https://doi.org/10.17605/OSF.IO/3H74M
+------------------------------------------------------------
+
+Project 535: Versatile bipolar temperature controller for custom
+Repository: Open Science Framework (OSF)
+------------------------------------------------------------
+
+Project 537: An elbow exoskeleton for haptic feedback made with a direct drive hobby motor
+Repository: https://doi.org/10.17632/skm88ynyhv.4
+------------------------------------------------------------
+
+Project 538: OpenWorkstation: A modular open-source technology for automated
+Repository: https://doi.org/10.5281/zenodo.3986643
+------------------------------------------------------------
+
+Project 539: Fly-by-Pi: Open source closed-loop control for geotechnical centrifuge testing applications
+Repository: https://doi.org/10.17605/OSF.IO/75H3A
+------------------------------------------------------------
+
+Project 540: A low-cost didactic module for testing advanced control algorithms
+Repository: https://doi.org/10.17605/OSF.IO/JS9B2
+------------------------------------------------------------
+
+Project 541: Automated multiport flow-through water pumping and sampling system
+Repository: https://doi.org/10.17605/OSF.IO/CZJ5K
+------------------------------------------------------------
+
+Project 542: Bottom-illuminated orbital shaker for microalgae cultivation
+Repository: http://osf.io/wfp7x/
+------------------------------------------------------------
+
+Project 543: HumidOSH: A self-contained environmental chamber with controls for relative humidity and fan speed
+Repository: https://dx.doi.org/10.17605/OSF.IO/WCKHM
+------------------------------------------------------------
+
+Project 544: Portable open-source autosampler for shallow waters
+Repository: https://osf.io/2c6t5/ or https://doi.org/10.17605/OSF.IO/2C6T5
+------------------------------------------------------------
+
+Project 545: Parametric nasopharyngeal swab for sampling COVID-19 and other respiratory viruses: Open source design, SLA 3-D printing and UV curing system
+Repository: https://osf.io/z5jgu/ registration: https://osf.io/yax7q
+------------------------------------------------------------
+
+Project 546: High precision laboratory dryer for thin layer and bulk drying with adjustable temperature, relative humidity and velocity of the drying air
+Repository: https://doi.org/10.17632/g9w6ct4cgk.3
+------------------------------------------------------------
+
+Project 547: Low-cost open hardware system for behavioural experiments simultaneously with electrophysiological recordings
+Repository: https://osf.io/rstcb
+------------------------------------------------------------
+
+Project 548: Partially RepRapable automated open source bag valve mask-based ventilator
+Repository: https://osf.io/fjdwz/
+------------------------------------------------------------
+
+Project 549: Conversion of self-contained breathing apparatus mask to open source powered air-purifying particulate respirator for fire fighter COVID-19 response
+Repository: Repository: https://osf.io/ydfmc/ Registration: https://osf.io/bdcjp
+------------------------------------------------------------
+
+Project 550: ESB: A low-cost EEG Synchronization Box
+Repository: https://osf.io/ctkmh
+------------------------------------------------------------
+
+Project 551: LED Zappelin’: An open source LED controller for arbitrary spectrum visual stimulation and optogenetics during 2-photon imaging
+Repository: https://github.com/BadenLab/LED-Zappelin
+------------------------------------------------------------
+
+Project 552: Open-source autosampler for elemental and isotopic analyses of solids
+Repository: https://osf.io/utzse/ or https://dx.doi.org/10.17605/OSF.IO/UTZSE
+------------------------------------------------------------
+
+Project 553: OhmPi: An open source data logger for dedicated applications of electrical resistivity imaging at the small and laboratory scale
+Repository: https://www.doi.org/10.17605/OSF.IO/DZWB4 or https://gitlab.irstea.fr/reversaal/OhmPi.git
+------------------------------------------------------------
+
+Project 554: Development and validation of a low-cost polymer selective laser sintering machine
+Repository: https://doi.org/10.17605/OSF.IO/YKSPG
+------------------------------------------------------------
+
+Project 555: A low-cost and customizable alternative for commercial implantable cannula for intracerebral administration in mice
+Repository: All source files are available with the article and on Mendeley Data at https://doi.org/10.17632/zx7kd5pw64.1 .
+------------------------------------------------------------
+
+Project 556: Customizable Recorder of Animal Kinesis (CRoAK): A multi-axis instrumented enclosure for measuring animal movements
+Repository: https://doi.org/10.17632/6wyfr3ct5x.1
+------------------------------------------------------------
+
+Project 557: The FAST Pump, a low-cost, easy to fabricate, SLA-3D-printed peristaltic pump for multi-channel systems in any lab
+Repository: https://doi.org/10.17605/OSF.IO/3R7H4
+------------------------------------------------------------
+
+Project 558: Low-cost and precise inline pressure sensor housing and DAQ for use in laboratory experiments
+Repository: GitHub: https://github.com/OPEnSLab-OSU/Inline-Pressure-Sensor Zenodo: https://zenodo.org/record/2459494 OSF: https://osf.io/2mx4a/
+------------------------------------------------------------
+
+Project 559: IoT connected device for vibration analysis and measurement
+Repository: https://doi.org/10.17605/OSF.IO/YX687
+------------------------------------------------------------
+
+Project 560: microUSV: A low-cost platform for indoor marine swarm robotics research
+Repository: https://doi.org/10.17605/OSF.IO/7FQ6U
+------------------------------------------------------------
+
+Project 561: Open-source five degree of freedom motion platform for investigating fish-robot interaction
+Repository: https://osf.io/yz6x7
+------------------------------------------------------------
+
+Project 562: A novel electromagnetic apparatus for
+Repository: http://dx.doi.org/10.17632/ymr2yhrvyn.2
+------------------------------------------------------------
+
+Project 563: Microinjection support system for small biological subjects
+Repository: https://osf.io/3mtxk/
+------------------------------------------------------------
+
+Project 564: An affordable and miniature ice coring drill for rapid acquisition of small iceberg samples
+Repository: https://doi.org/10.17632/gkg6wjp844.1
+------------------------------------------------------------
+
+Project 565: An open-source anthropomorphic robot hand system: HRI hand
+Repository: https://osf.io/sfpb2/ DOI https://doi.org//10.17605/OSF.IO/SFPB2
+------------------------------------------------------------
+
+Project 566: Design and implementation of a low cost, modular, adaptable and open-source XYZ positioning system for neurophysiology
+Repository: https://osf.io/sju9d/
+------------------------------------------------------------
+
+Project 567: Movement assay for the undergraduate neuroscience laboratory
+Repository: https://doi.org/10.17605/OSF.IO/XM96N
+------------------------------------------------------------
+
+Project 568: Low-cost, open-source, variable speed and incline treadmill for studying impacts of neonatal locomotion
+Repository: https://osf.io/d26ku/files/
+------------------------------------------------------------
+
+Project 569: CoralCam: A flexible, low-cost ecological monitoring platform
+Repository: https://osf.io/dum2h
+------------------------------------------------------------
+
+Project 571: An inexpensive modified weight-bearing device assembled in-house for high throughput unbiased behavioral pain assessment in mice
+Repository: https://osf.io/w7mvj/ (Public Repository) https://osf.io/ytf8c/ (Archived Registration)
+------------------------------------------------------------
+
