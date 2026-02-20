@@ -151,6 +151,155 @@ class TestOhxLoader:
         assert row[0] > 0
 
 
+class TestHardwareioBomLoader:
+    """Tests for Hardware.io BOM normalization and loading."""
+
+    def test_normalizes_variant_columns(
+        self, db_path: Path, tmp_path: Path
+    ) -> None:
+        """BOM columns from different EDA tools are coalesced."""
+        from osh_datasets.db import transaction, upsert_project
+        from osh_datasets.loaders.hardwareio import load_hardwareio_bom
+
+        # Insert a project to match against
+        with transaction(db_path) as conn:
+            upsert_project(
+                conn,
+                source="hardwareio",
+                source_id="test-proj",
+                name="Test Board",
+            )
+
+        # Write a BOM CSV with KiCad-style columns
+        csv = tmp_path / "bom.csv"
+        csv.write_text(
+            "project_name,Designator,Value,Qty,Package,Manufacturer,MPN\n"
+            "Test Board,R1,10k,2,0805,Yageo,RC0805\n"
+            "Test Board,C1,100nF,1,0402,Murata,GRM155\n"
+        )
+
+        count = load_hardwareio_bom(db_path, csv)
+        assert count == 2
+
+        conn = open_connection(db_path)
+        rows = conn.execute(
+            "SELECT reference, component_name, quantity, "
+            "manufacturer, part_number "
+            "FROM bom_components ORDER BY reference"
+        ).fetchall()
+        conn.close()
+
+        assert len(rows) == 2
+        assert rows[0][0] == "C1"
+        assert rows[0][1] == "100nF"
+        assert rows[0][2] == 1
+        assert rows[0][3] == "Murata"
+        assert rows[0][4] == "GRM155"
+        assert rows[1][0] == "R1"
+        assert rows[1][1] == "10k"
+        assert rows[1][2] == 2
+
+    def test_coalesces_eagle_columns(
+        self, db_path: Path, tmp_path: Path
+    ) -> None:
+        """Eagle-style column names are coalesced correctly."""
+        from osh_datasets.db import transaction, upsert_project
+        from osh_datasets.loaders.hardwareio import load_hardwareio_bom
+
+        with transaction(db_path) as conn:
+            upsert_project(
+                conn,
+                source="hardwareio",
+                source_id="eagle-proj",
+                name="Eagle Board",
+            )
+
+        csv = tmp_path / "bom.csv"
+        csv.write_text(
+            "project_name,Part,Description,Quantity,MF,"
+            "Manufacturer Part\n"
+            "Eagle Board,U1,MCU,1,STMicro,STM32F103\n"
+        )
+
+        count = load_hardwareio_bom(db_path, csv)
+        assert count == 1
+
+        conn = open_connection(db_path)
+        row = conn.execute(
+            "SELECT reference, component_name, quantity, "
+            "manufacturer, part_number FROM bom_components"
+        ).fetchone()
+        conn.close()
+
+        assert row is not None
+        # Part goes to component_name (Name variants)
+        # Description also maps to component_name but Part is
+        # lower priority; Description wins via coalesce order
+        assert row[1] == "MCU"  # Description > Part
+        assert row[2] == 1
+        assert row[3] == "STMicro"
+        assert row[4] == "STM32F103"
+
+    def test_skips_unmatched_projects(
+        self, db_path: Path, tmp_path: Path
+    ) -> None:
+        """Rows for unknown projects are skipped."""
+        from osh_datasets.loaders.hardwareio import load_hardwareio_bom
+
+        csv = tmp_path / "bom.csv"
+        csv.write_text(
+            "project_name,Value,Qty\n"
+            "NonexistentProject,10k,1\n"
+        )
+
+        count = load_hardwareio_bom(db_path, csv)
+        assert count == 0
+
+    def test_handles_missing_csv(
+        self, db_path: Path, tmp_path: Path
+    ) -> None:
+        """Returns 0 when BOM CSV does not exist."""
+        from osh_datasets.loaders.hardwareio import load_hardwareio_bom
+
+        missing = tmp_path / "no_such_file.csv"
+        count = load_hardwareio_bom(db_path, missing)
+        assert count == 0
+
+    def test_parses_quantity_with_formatting(
+        self, db_path: Path, tmp_path: Path
+    ) -> None:
+        """Quantities with commas and decimals are parsed."""
+        from osh_datasets.db import transaction, upsert_project
+        from osh_datasets.loaders.hardwareio import load_hardwareio_bom
+
+        with transaction(db_path) as conn:
+            upsert_project(
+                conn,
+                source="hardwareio",
+                source_id="qty-proj",
+                name="Qty Test",
+            )
+
+        csv = tmp_path / "bom.csv"
+        csv.write_text(
+            "project_name,Reference,Value,Qty,Cost\n"
+            "Qty Test,R1,10k,\"1,000\",$2.50\n"
+        )
+
+        count = load_hardwareio_bom(db_path, csv)
+        assert count == 1
+
+        conn = open_connection(db_path)
+        row = conn.execute(
+            "SELECT quantity, unit_cost FROM bom_components"
+        ).fetchone()
+        conn.close()
+
+        assert row is not None
+        assert row[0] == 1000
+        assert abs(row[1] - 2.50) < 0.01
+
+
 class TestAllLoadersSmoke:
     """Smoke test: run all loaders together."""
 
