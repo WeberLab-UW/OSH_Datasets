@@ -55,11 +55,13 @@ def load_all(db_path: Path = DB_PATH) -> dict[str, int]:
     # Post-processing enrichment
     from osh_datasets.dedup import find_cross_references
     from osh_datasets.enrich_ohx_dois import backfill_dois
+    from osh_datasets.enrichment.github import enrich_from_github
     from osh_datasets.license_normalizer import add_normalized_column
 
     add_normalized_column(db_path)
     backfill_dois(db_path)
     find_cross_references(db_path)
+    enrich_from_github(db_path)
 
     return results
 

@@ -52,6 +52,25 @@ def _normalize_osf(url: str) -> str | None:
     return None
 
 
+def _normalize_mendeley(url: str) -> str | None:
+    """Extract a Mendeley Data dataset ID from a URL or DOI.
+
+    Args:
+        url: Raw URL that may point to Mendeley Data.
+
+    Returns:
+        Canonical ``mendeley/<id>`` string, or None.
+    """
+    url = url.lower().strip().rstrip("/")
+    m = re.search(r"data\.mendeley\.com/datasets/([a-z0-9]+)", url)
+    if m:
+        return f"mendeley/{m.group(1)}"
+    m = re.search(r"10\.17632/([a-z0-9]+)", url)
+    if m:
+        return f"mendeley/{m.group(1)}"
+    return None
+
+
 def find_cross_references(db_path: Path = DB_PATH) -> int:
     """Detect and store cross-source project overlaps.
 
@@ -128,6 +147,32 @@ def find_cross_references(db_path: Path = DB_PATH) -> int:
                 osf_pid = osf_by_key[key]
                 a, b = min(ohx_pid, osf_pid), max(ohx_pid, osf_pid)
                 pairs.append((a, b, "osf_link", 0.9))
+
+    # --- Strategy 3: OHX -> Mendeley Data links ---
+    ohx_mendeley_rows = conn.execute(
+        "SELECT id, repo_url FROM projects "
+        "WHERE source = 'ohx' AND ("
+        "  repo_url LIKE '%mendeley%' OR repo_url LIKE '%10.17632%'"
+        ")"
+    ).fetchall()
+    mendeley_rows = conn.execute(
+        "SELECT id, url FROM projects WHERE source = 'mendeley'"
+    ).fetchall()
+
+    mendeley_by_key: dict[str, int] = {}
+    for pid, url in mendeley_rows:
+        if url:
+            key = _normalize_mendeley(url)
+            if key:
+                mendeley_by_key[key] = pid
+
+    for ohx_pid, repo_url in ohx_mendeley_rows:
+        for url in str(repo_url).split(","):
+            key = _normalize_mendeley(url.strip())
+            if key and key in mendeley_by_key:
+                m_pid = mendeley_by_key[key]
+                a, b = min(ohx_pid, m_pid), max(ohx_pid, m_pid)
+                pairs.append((a, b, "mendeley_link", 0.9))
 
     # Deduplicate and insert
     unique: dict[tuple[int, int], tuple[str, float]] = {}

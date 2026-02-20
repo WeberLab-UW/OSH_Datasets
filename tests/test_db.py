@@ -7,6 +7,7 @@ import pytest
 from osh_datasets.db import (
     init_db,
     insert_bom_component,
+    insert_bom_file_path,
     insert_contributor,
     insert_license,
     insert_metric,
@@ -15,6 +16,7 @@ from osh_datasets.db import (
     open_connection,
     transaction,
     upsert_project,
+    upsert_repo_metrics,
 )
 
 
@@ -45,6 +47,8 @@ class TestInitDb:
             "metrics",
             "bom_components",
             "publications",
+            "repo_metrics",
+            "bom_file_paths",
         }
         assert expected.issubset(tables)
 
@@ -222,3 +226,40 @@ class TestRelatedTables:
         assert row is not None
         assert row[0] == "Alice"
         assert row[1] == "admin"
+
+    def test_upsert_repo_metrics(self, db_path: Path) -> None:
+        """Repo metrics are inserted and updated on conflict."""
+        with transaction(db_path) as conn:
+            pid = upsert_project(conn, source="t", source_id="1", name="P")
+            upsert_repo_metrics(conn, pid, stars=100, forks=20, has_bom=True)
+            upsert_repo_metrics(conn, pid, stars=150, forks=25, has_bom=False)
+        conn = open_connection(db_path)
+        row = conn.execute(
+            "SELECT stars, forks, has_bom FROM repo_metrics "
+            "WHERE project_id = ?",
+            (pid,),
+        ).fetchone()
+        conn.close()
+        assert row is not None
+        assert row[0] == 150
+        assert row[1] == 25
+        assert row[2] == 0  # updated from True to False
+
+    def test_insert_bom_file_path(self, db_path: Path) -> None:
+        """BOM file paths are inserted and duplicates are ignored."""
+        with transaction(db_path) as conn:
+            pid = upsert_project(conn, source="t", source_id="1", name="P")
+            insert_bom_file_path(conn, pid, "hardware/bom.csv")
+            insert_bom_file_path(conn, pid, "hardware/bom.csv")  # dup
+            insert_bom_file_path(conn, pid, "pcb/BOM_v2.xlsx")
+        conn = open_connection(db_path)
+        rows = conn.execute(
+            "SELECT file_path FROM bom_file_paths "
+            "WHERE project_id = ? ORDER BY file_path",
+            (pid,),
+        ).fetchall()
+        conn.close()
+        assert [r[0] for r in rows] == [
+            "hardware/bom.csv",
+            "pcb/BOM_v2.xlsx",
+        ]

@@ -34,6 +34,8 @@ erDiagram
     projects ||--o{ publications : references
     projects ||--o{ cross_references : "linked via a"
     projects ||--o{ cross_references : "linked via b"
+    projects ||--o| repo_metrics : has
+    projects ||--o{ bom_file_paths : has
 
     projects {
         int id PK
@@ -106,6 +108,27 @@ erDiagram
         text match_type
         real confidence
     }
+
+    repo_metrics {
+        int id PK
+        int project_id FK
+        int stars
+        int forks
+        int watchers
+        int contributors_count
+        int community_health
+        text primary_language
+        int has_bom
+        int has_readme
+        int archived
+        text pushed_at
+    }
+
+    bom_file_paths {
+        int id PK
+        int project_id FK
+        text file_path
+    }
 ```
 
 ## Installation
@@ -159,9 +182,23 @@ python -m osh_datasets.load_all
 python -m osh_datasets.load_all oshwa hackaday kitspace
 ```
 
+### Enrich with GitHub metadata
+
+The GitHub enrichment pipeline fetches repository metrics, community health, and detects BOM (Bill of Materials) files for projects with GitHub repo URLs. Requires `GITHUB_TOKEN` in `.env`.
+
+```bash
+# Scrape GitHub metadata (auto-generates repos.txt from DB)
+python -m osh_datasets.scrape_all github
+
+# Enrich: update existing projects with scraped GitHub data
+python -m osh_datasets.enrichment.github
+```
+
+This populates the `repo_metrics` table (stars, forks, issues, PRs, community health, language, BOM detection, etc.) and `bom_file_paths` table for each matched project.
+
 ### Pipeline
 
-The full pipeline is: **scrape** (raw JSON) -> **clean** (standardized CSV) -> **load** (SQLite).
+The full pipeline is: **scrape** (raw JSON) -> **clean** (standardized CSV) -> **load** (SQLite) -> **enrich** (GitHub metadata).
 
 ```
 data/
@@ -183,13 +220,16 @@ src/osh_datasets/
     dedup.py              # Cross-source deduplication
     license_normalizer.py # SPDX license standardization
     enrich_ohx_dois.py    # DOI enrichment for HardwareX articles
-    scrapers/             # One module per data source (11 scrapers)
+    scrapers/             # One module per data source (12 scrapers)
         base.py           # BaseScraper ABC
-    loaders/              # One module per data source (9 loaders)
+    loaders/              # One module per data source (10 loaders)
         base.py           # BaseLoader ABC
+    enrichment/           # Post-scrape enrichment modules
+        github.py         # GitHub metadata -> repo_metrics, BOM detection
 tests/
     test_loaders.py       # Loader unit tests
     test_scrapers.py      # Scraper unit tests (mocked HTTP)
+    test_enrichment.py    # Enrichment pipeline tests
 ```
 
 ## Development

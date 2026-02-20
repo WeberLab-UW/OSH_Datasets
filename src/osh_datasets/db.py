@@ -91,6 +91,39 @@ CREATE TABLE IF NOT EXISTS cross_references (
     UNIQUE(project_id_a, project_id_b)
 );
 
+CREATE TABLE IF NOT EXISTS repo_metrics (
+    id                  INTEGER PRIMARY KEY,
+    project_id          INTEGER NOT NULL REFERENCES projects(id),
+    stars               INTEGER,
+    forks               INTEGER,
+    watchers            INTEGER,
+    open_issues         INTEGER,
+    total_issues        INTEGER,
+    open_prs            INTEGER,
+    closed_prs          INTEGER,
+    total_prs           INTEGER,
+    releases_count      INTEGER,
+    branches_count      INTEGER,
+    tags_count          INTEGER,
+    contributors_count  INTEGER,
+    community_health    INTEGER,
+    primary_language    TEXT,
+    has_bom             INTEGER,
+    has_readme          INTEGER,
+    repo_size_kb        INTEGER,
+    total_files         INTEGER,
+    archived            INTEGER,
+    pushed_at           TEXT,
+    UNIQUE(project_id)
+);
+
+CREATE TABLE IF NOT EXISTS bom_file_paths (
+    id            INTEGER PRIMARY KEY,
+    project_id    INTEGER NOT NULL REFERENCES projects(id),
+    file_path     TEXT    NOT NULL,
+    UNIQUE(project_id, file_path)
+);
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_projects_source ON projects(source);
 CREATE INDEX IF NOT EXISTS idx_projects_name   ON projects(name);
@@ -105,6 +138,8 @@ CREATE INDEX IF NOT EXISTS idx_bom_proj        ON bom_components(project_id);
 CREATE INDEX IF NOT EXISTS idx_pubs_proj       ON publications(project_id);
 CREATE INDEX IF NOT EXISTS idx_pubs_doi        ON publications(doi);
 CREATE INDEX IF NOT EXISTS idx_contribs_proj   ON contributors(project_id);
+CREATE INDEX IF NOT EXISTS idx_repo_metrics    ON repo_metrics(project_id);
+CREATE INDEX IF NOT EXISTS idx_bom_paths_proj  ON bom_file_paths(project_id);
 """
 
 
@@ -381,6 +416,121 @@ def insert_publication(
         VALUES (?, ?, ?, ?, ?, ?, ?)
         """,
         (project_id, doi, title, publication_year, journal, cited_by_count, oa_int),
+    )
+
+
+def upsert_repo_metrics(
+    conn: sqlite3.Connection,
+    project_id: int,
+    *,
+    stars: int | None = None,
+    forks: int | None = None,
+    watchers: int | None = None,
+    open_issues: int | None = None,
+    total_issues: int | None = None,
+    open_prs: int | None = None,
+    closed_prs: int | None = None,
+    total_prs: int | None = None,
+    releases_count: int | None = None,
+    branches_count: int | None = None,
+    tags_count: int | None = None,
+    contributors_count: int | None = None,
+    community_health: int | None = None,
+    primary_language: str | None = None,
+    has_bom: bool | None = None,
+    has_readme: bool | None = None,
+    repo_size_kb: int | None = None,
+    total_files: int | None = None,
+    archived: bool | None = None,
+    pushed_at: str | None = None,
+) -> None:
+    """Insert or replace repo metrics for a project.
+
+    Args:
+        conn: Active database connection.
+        project_id: The ``projects.id``.
+        stars: GitHub star count.
+        forks: Fork count.
+        watchers: Watcher count.
+        open_issues: Open issue count.
+        total_issues: Total issue count (excludes PRs).
+        open_prs: Open pull request count.
+        closed_prs: Closed pull request count.
+        total_prs: Total pull request count.
+        releases_count: Number of releases.
+        branches_count: Number of branches.
+        tags_count: Number of tags.
+        contributors_count: Number of contributors.
+        community_health: GitHub community health percentage (0-100).
+        primary_language: Primary programming language.
+        has_bom: Whether BOM files were detected.
+        has_readme: Whether a README exists.
+        repo_size_kb: Repository size in KB.
+        total_files: Total file count in the repo tree.
+        archived: Whether the repo is archived.
+        pushed_at: Last push timestamp (ISO 8601).
+    """
+    conn.execute(
+        """\
+        INSERT INTO repo_metrics
+            (project_id, stars, forks, watchers, open_issues, total_issues,
+             open_prs, closed_prs, total_prs, releases_count, branches_count,
+             tags_count, contributors_count, community_health,
+             primary_language, has_bom, has_readme, repo_size_kb,
+             total_files, archived, pushed_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(project_id) DO UPDATE SET
+            stars = excluded.stars,
+            forks = excluded.forks,
+            watchers = excluded.watchers,
+            open_issues = excluded.open_issues,
+            total_issues = excluded.total_issues,
+            open_prs = excluded.open_prs,
+            closed_prs = excluded.closed_prs,
+            total_prs = excluded.total_prs,
+            releases_count = excluded.releases_count,
+            branches_count = excluded.branches_count,
+            tags_count = excluded.tags_count,
+            contributors_count = excluded.contributors_count,
+            community_health = excluded.community_health,
+            primary_language = excluded.primary_language,
+            has_bom = excluded.has_bom,
+            has_readme = excluded.has_readme,
+            repo_size_kb = excluded.repo_size_kb,
+            total_files = excluded.total_files,
+            archived = excluded.archived,
+            pushed_at = excluded.pushed_at
+        """,
+        (
+            project_id, stars, forks, watchers, open_issues, total_issues,
+            open_prs, closed_prs, total_prs, releases_count, branches_count,
+            tags_count, contributors_count, community_health,
+            primary_language,
+            int(has_bom) if has_bom is not None else None,
+            int(has_readme) if has_readme is not None else None,
+            repo_size_kb, total_files,
+            int(archived) if archived is not None else None,
+            pushed_at,
+        ),
+    )
+
+
+def insert_bom_file_path(
+    conn: sqlite3.Connection,
+    project_id: int,
+    file_path: str,
+) -> None:
+    """Record a BOM file path found in a project's repository.
+
+    Args:
+        conn: Active database connection.
+        project_id: The ``projects.id``.
+        file_path: Relative path to the BOM file in the repo.
+    """
+    conn.execute(
+        "INSERT OR IGNORE INTO bom_file_paths "
+        "(project_id, file_path) VALUES (?, ?)",
+        (project_id, file_path),
     )
 
 

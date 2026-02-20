@@ -29,6 +29,12 @@ uv run python -m osh_datasets.scrape_all oshwa ohr hackaday
 
 # Load cleaned data into SQLite
 uv run python -m osh_datasets.load_all
+
+# GitHub enrichment pipeline (requires GITHUB_TOKEN in .env)
+# 1. Scrape: auto-generates repos.txt from DB, fetches metadata + BOM detection
+uv run python -m osh_datasets.scrape_all github
+# 2. Enrich: loads scraped JSON back into DB (also runs as part of load_all)
+uv run python -m osh_datasets.enrichment.github
 ```
 
 ## Architecture
@@ -40,18 +46,19 @@ The pipeline has three stages: **scrape** (raw JSON) -> **clean** (standardized 
 - `config.py` -- paths (`DATA_DIR`, `RAW_DIR`, `CLEANED_DIR`, `DB_PATH`), logging via `get_logger()`, env vars via `require_env()`
 - `http.py` -- `build_session()` (retry + backoff) and `rate_limited_get()`. All scrapers share these.
 - `token_manager.py` -- `TokenManager` for rotating API tokens (GitHub, GitLab, Hackaday). Loads from YAML files or env vars.
-- `db.py` -- SQLite schema (8 tables), `open_connection()` with WAL/FK pragmas, `upsert_project()`, insert helpers for child tables
-- `scrapers/` -- 11 scraper modules, each subclassing `BaseScraper` (ABC in `base.py`). Registered in `__init__.py:ALL_SCRAPERS`.
-- `loaders/` -- 9 loader modules, each subclassing `BaseLoader` (ABC in `base.py`). Registered in `load_all.py:ALL_LOADERS`.
+- `db.py` -- SQLite schema (10 tables), `open_connection()` with WAL/FK pragmas, `upsert_project()`, insert helpers for child tables
+- `scrapers/` -- 12 scraper modules, each subclassing `BaseScraper` (ABC in `base.py`). Registered in `__init__.py:ALL_SCRAPERS`.
+- `loaders/` -- 10 loader modules, each subclassing `BaseLoader` (ABC in `base.py`). Registered in `load_all.py:ALL_LOADERS`.
+- `enrichment/` -- post-scrape enrichment modules that update existing DB records. `github.py` reads scraped JSON and updates projects with repo metrics, BOM file paths, contributors, topics, and licenses.
 - `scrape_all.py` -- orchestrator that runs all or filtered scrapers
-- `load_all.py` -- orchestrator that inits DB, runs all loaders, then post-processing (dedup, DOI enrichment, license normalization)
+- `load_all.py` -- orchestrator that inits DB, runs all loaders, then post-processing (dedup, DOI enrichment, license normalization, GitHub enrichment)
 - `dedup.py` -- cross-source deduplication via repo URL matching -> `cross_references` table
 - `license_normalizer.py` -- maps free-text license names to SPDX identifiers
 - `enrich_ohx_dois.py` -- backfills DOI metadata from OpenAlex for HardwareX publications
 
 ### Database
 
-SQLite at `data/osh_datasets.db`. 8 tables: `projects` (core), `licenses`, `tags`, `contributors`, `metrics`, `bom_components`, `publications`, `cross_references`. All child tables FK to `projects(id)`. Projects uniquely keyed on `(source, source_id)` with UPSERT semantics.
+SQLite at `data/osh_datasets.db`. 10 tables: `projects` (core), `licenses`, `tags`, `contributors`, `metrics`, `bom_components`, `publications`, `cross_references`, `repo_metrics`, `bom_file_paths`. All child tables FK to `projects(id)`. Projects uniquely keyed on `(source, source_id)` with UPSERT semantics. `repo_metrics` stores GitHub API data (stars, forks, community health, BOM detection, etc.) keyed UNIQUE on `project_id`. `bom_file_paths` records detected BOM file paths per project.
 
 ### Data directory
 
@@ -61,6 +68,14 @@ data/
   cleaned/<source>/   # Standardized CSV for loaders
   osh_datasets.db     # Unified SQLite database
 ```
+
+### GitHub enrichment pipeline
+
+The GitHub scraper fetches 12 API endpoints per repo (metadata, issues, PRs, releases, contributors, community health, languages, topics, readme, and file tree). BOM detection scans the file tree for files matching hardware BOM naming patterns (bom.csv, bill_of_materials.*, parts_list.*, components.csv, *-bom.xml).
+
+The enrichment module (`enrichment/github.py`) matches scraped repos to existing projects via `repo_url LIKE '%github.com/owner/repo%'` and updates: `repo_metrics` table, `bom_file_paths` table, `licenses`, `tags` (topics), and `contributors`.
+
+The scraper auto-generates `repos.txt` from the database if the file doesn't exist.
 
 ### Adding a new source
 

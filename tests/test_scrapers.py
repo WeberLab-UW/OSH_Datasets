@@ -299,7 +299,7 @@ class TestKitspaceScraper:
 
 
 class TestGitHubHelpers:
-    """Test GitHub URL parsing."""
+    """Test GitHub URL parsing and BOM detection."""
 
     def test_extract_owner_repo(self) -> None:
         """Should parse owner/repo from various URL formats."""
@@ -318,6 +318,40 @@ class TestGitHubHelpers:
             "repo",
         )
         assert _extract_owner_repo("not-a-url") is None
+
+    def test_is_bom_file(self) -> None:
+        """Should detect BOM files from various naming patterns."""
+        from osh_datasets.scrapers.github import _is_bom_file
+
+        # Should match
+        assert _is_bom_file("bom.csv")
+        assert _is_bom_file("BOM.xlsx")
+        assert _is_bom_file("hardware/bom.csv")
+        assert _is_bom_file("pcb/BOM_v2.csv")
+        assert _is_bom_file("bill_of_materials.csv")
+        assert _is_bom_file("parts_list.csv")
+        assert _is_bom_file("components.csv")
+        assert _is_bom_file("board-bom.xml")
+
+        # Should not match
+        assert not _is_bom_file("README.md")
+        assert not _is_bom_file("main.py")
+        assert not _is_bom_file("bom.py")  # wrong extension
+        assert not _is_bom_file("image.png")
+
+    def test_detect_bom_files(self) -> None:
+        """Should scan tree entries and return BOM file paths."""
+        from osh_datasets.scrapers.github import _detect_bom_files
+
+        entries = [
+            {"path": "README.md", "type": "blob"},
+            {"path": "hardware/bom.csv", "type": "blob"},
+            {"path": "src/main.py", "type": "blob"},
+            {"path": "docs/bill_of_materials.xlsx", "type": "blob"},
+            {"path": "hardware", "type": "tree"},  # directories ignored
+        ]
+        result = _detect_bom_files(entries)
+        assert result == ["docs/bill_of_materials.xlsx", "hardware/bom.csv"]
 
 
 # ---------------------------------------------------------------
