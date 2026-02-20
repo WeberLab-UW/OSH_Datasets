@@ -1,0 +1,55 @@
+[project]
+name = "osh-datasets"
+version = "0.1.0"
+description = "Collect, clean, classify, and unify Open Source Hardware project metadata"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+    "polars>=1.0",
+    "orjson>=3.9",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "ghapi>=1.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+scrape = [
+    "selenium>=4.15",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.12",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "types-requests>=2.31",
+    "types-beautifulsoup4>=4.12",
+    "types-PyYAML>=6.0",
+    "types-tqdm>=4.66",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/osh_datasets"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
