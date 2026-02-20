@@ -8,7 +8,6 @@ No authentication is required for the OAI-PMH method.
 """
 
 import re
-import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -76,7 +75,9 @@ def _parse_dc_record(record: ET.Element) -> dict[str, object]:
                 fields.setdefault(tag, []).append(elem.text.strip())
 
     dataset_id = ""
-    m = re.search(r"datasets/([a-zA-Z0-9]+)", identifier)
+    # GetRecord: "oai:data.mendeley.com/XXXX.V"
+    # ListRecords: "oai:data.mendeley.com:datasets/XXXX"
+    m = re.search(r"data\.mendeley\.com[:/](?:datasets/)?([a-zA-Z0-9]+)", identifier)
     if m:
         dataset_id = m.group(1)
 
@@ -85,6 +86,8 @@ def _parse_dc_record(record: ET.Element) -> dict[str, object]:
         if ident.startswith("10."):
             doi = ident
             break
+    if not doi and dataset_id:
+        doi = f"10.17632/{dataset_id}"
 
     return {
         "oai_identifier": identifier,
@@ -170,7 +173,10 @@ class MendeleyScraper(BaseScraper):
         self,
         target_ids: set[str],
     ) -> list[dict[str, object]]:
-        """Harvest OAI-PMH records matching target dataset IDs.
+        """Fetch OAI-PMH records for each target dataset ID.
+
+        Uses ``GetRecord`` per dataset for direct lookup instead of
+        scanning the entire repository with ``ListRecords``.
 
         Args:
             target_ids: Set of Mendeley dataset IDs to find.
@@ -179,54 +185,51 @@ class MendeleyScraper(BaseScraper):
             List of parsed metadata dicts for matching records.
         """
         session = build_session()
-        remaining = set(target_ids)
         results: list[dict[str, object]] = []
-        resumption_token: str | None = None
+        failed = 0
 
-        while remaining:
-            params = "metadataPrefix=oai_dc"
-            if resumption_token:
-                params = f"resumptionToken={resumption_token}"
-
-            url = f"{_OAI_BASE}?verb=ListRecords&{params}"
+        for i, did in enumerate(sorted(target_ids), 1):
+            oai_id = f"oai:data.mendeley.com:datasets/{did}"
+            url = (
+                f"{_OAI_BASE}?verb=GetRecord"
+                f"&metadataPrefix=oai_dc"
+                f"&identifier={oai_id}"
+            )
 
             try:
                 resp = rate_limited_get(session, url, delay=1.0)
                 root = ET.fromstring(resp.content)
             except Exception:
-                logger.exception("OAI-PMH request failed")
-                break
+                logger.warning("Request failed for dataset %s", did)
+                failed += 1
+                continue
 
-            # Check for OAI error
             error = root.find(".//oai:error", _NS)
             if error is not None:
                 code = error.get("code", "")
-                if code == "noRecordsMatch":
-                    logger.info("No more records in OAI repository")
-                else:
-                    logger.warning("OAI error: %s - %s", code, error.text)
-                break
+                logger.debug(
+                    "OAI error for %s: %s - %s", did, code, error.text
+                )
+                failed += 1
+                continue
 
-            for record in root.findall(".//oai:record", _NS):
-                header = record.find(".//oai:header", _NS)
-                if header is not None and header.get("status") == "deleted":
-                    continue
+            record = root.find(".//oai:record", _NS)
+            if record is None:
+                failed += 1
+                continue
 
-                parsed = _parse_dc_record(record)
-                did = parsed.get("dataset_id", "")
-                if isinstance(did, str) and did in remaining:
-                    results.append(parsed)
-                    remaining.discard(did)
-                    logger.info(
-                        "Found dataset %s (%d remaining)", did, len(remaining)
-                    )
+            header = record.find(".//oai:header", _NS)
+            if header is not None and header.get("status") == "deleted":
+                failed += 1
+                continue
 
-            # Check for resumption token
-            rt_el = root.find(".//oai:resumptionToken", _NS)
-            if rt_el is not None and rt_el.text:
-                resumption_token = rt_el.text
-                time.sleep(1.0)
-            else:
-                break
+            parsed = _parse_dc_record(record)
+            results.append(parsed)
+
+            if i % 20 == 0:
+                logger.info(
+                    "Progress: %d/%d fetched (%d found, %d failed)",
+                    i, len(target_ids), len(results), failed,
+                )
 
         return results

@@ -151,6 +151,87 @@ class TestOhxLoader:
         assert row[0] > 0
 
 
+class TestMendeleyLoader:
+    """Tests for Mendeley Data loader."""
+
+    def test_loads_from_scraped_json(
+        self, db_path: Path, tmp_path: Path
+    ) -> None:
+        """Mendeley loader parses OAI-PMH records into projects."""
+        import orjson
+
+        from osh_datasets.loaders.mendeley import MendeleyLoader
+
+        raw_dir = tmp_path / "raw" / "mendeley"
+        raw_dir.mkdir(parents=True)
+        records = [
+            {
+                "oai_identifier": "oai:data.mendeley.com/abc123def.2",
+                "dataset_id": "",
+                "datestamp": "2024-01-15T10:00:00Z",
+                "doi": "",
+                "title": "Test Dataset",
+                "creator": ["Alice", "Bob"],
+                "description": "A test dataset for OSH",
+                "subject": ["hardware", "sensors"],
+                "publisher": "Mendeley Data",
+                "date": "2024-01-15T10:00:00Z",
+                "type": "Dataset",
+                "format": [],
+                "rights": "CC BY 4.0",
+                "mendeley_url": "",
+            }
+        ]
+        (raw_dir / "mendeley_datasets.json").write_bytes(
+            orjson.dumps(records)
+        )
+
+        loader = MendeleyLoader(data_dir=tmp_path)
+        count = loader.load(db_path)
+        assert count == 1
+
+        conn = open_connection(db_path)
+
+        # Project created with derived fields
+        row = conn.execute(
+            "SELECT name, author, url FROM projects "
+            "WHERE source = 'mendeley'"
+        ).fetchone()
+        assert row is not None
+        assert row[0] == "Test Dataset"
+        assert row[1] == "Alice; Bob"
+        assert "abc123def" in str(row[2])
+
+        # License
+        lic = conn.execute(
+            "SELECT license_name FROM licenses WHERE project_id = 1"
+        ).fetchone()
+        assert lic is not None
+        assert "CC BY" in str(lic[0])
+
+        # Tags
+        tags = conn.execute(
+            "SELECT tag FROM tags WHERE project_id = 1 ORDER BY tag"
+        ).fetchall()
+        assert [t[0] for t in tags] == ["hardware", "sensors"]
+
+        # Publication with derived DOI
+        pub = conn.execute(
+            "SELECT doi FROM publications WHERE project_id = 1"
+        ).fetchone()
+        assert pub is not None
+        assert pub[0] == "10.17632/abc123def"
+
+        conn.close()
+
+    def test_skips_missing_json(self, db_path: Path, tmp_path: Path) -> None:
+        """Returns 0 when no JSON file exists."""
+        from osh_datasets.loaders.mendeley import MendeleyLoader
+
+        loader = MendeleyLoader(data_dir=tmp_path)
+        assert loader.load(db_path) == 0
+
+
 class TestHardwareioBomLoader:
     """Tests for Hardware.io BOM normalization and loading."""
 
