@@ -340,6 +340,40 @@ class TestGitLabScraper:
 
 
 # ---------------------------------------------------------------
+# Mendeley
+# ---------------------------------------------------------------
+
+
+class TestMendeleyScraper:
+    """Test Mendeley scraper output format."""
+
+    def test_empty_when_no_urls(self, output_dir: Path) -> None:
+        """Should produce empty JSON when no URL file exists."""
+        from osh_datasets.scrapers.mendeley import MendeleyScraper
+
+        scraper = MendeleyScraper(output_dir=output_dir / "mendeley")
+        result = scraper.run()
+
+        data = orjson.loads(result.read_bytes())
+        assert data == []
+
+    def test_extract_dataset_id(self) -> None:
+        """Should parse dataset IDs from various URL formats."""
+        from osh_datasets.scrapers.mendeley import _extract_dataset_id
+
+        assert _extract_dataset_id(
+            "https://data.mendeley.com/datasets/abc123"
+        ) == "abc123"
+        assert _extract_dataset_id(
+            "https://doi.org/10.17632/xyz456.2"
+        ) == "xyz456"
+        assert _extract_dataset_id(
+            "http://dx.doi.org/10.17632/def789.1"
+        ) == "def789"
+        assert _extract_dataset_id("not-a-url") is None
+
+
+# ---------------------------------------------------------------
 # scrape_all
 # ---------------------------------------------------------------
 

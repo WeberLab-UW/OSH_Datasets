@@ -8,6 +8,7 @@ from osh_datasets.loaders.hackaday import HackadayLoader
 from osh_datasets.loaders.hardwareio import HardwareioLoader
 from osh_datasets.loaders.joh import JohLoader
 from osh_datasets.loaders.kitspace import KitspaceLoader
+from osh_datasets.loaders.mendeley import MendeleyLoader
 from osh_datasets.loaders.ohr import OhrLoader
 from osh_datasets.loaders.ohx import OhxLoader
 from osh_datasets.loaders.osf import OsfLoader
@@ -23,6 +24,7 @@ ALL_LOADERS = [
     KitspaceLoader,
     HardwareioLoader,
     OhxLoader,
+    MendeleyLoader,
     OsfLoader,
     PlosLoader,
     JohLoader,

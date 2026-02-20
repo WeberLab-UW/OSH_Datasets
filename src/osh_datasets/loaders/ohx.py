@@ -88,7 +88,7 @@ class OhxLoader(BaseLoader):
         Returns:
             Number of projects loaded.
         """
-        ohx_path = self.data_dir / "ohx_allPubs_extract.json"
+        ohx_path = self.data_dir / "cleaned" / "ohx_allPubs_extract.json"
         with open(ohx_path, "rb") as fh:
             ohx_items: list[dict[str, object]] = orjson.loads(fh.read())
 

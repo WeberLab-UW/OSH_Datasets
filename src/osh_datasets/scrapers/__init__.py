@@ -5,6 +5,7 @@ from osh_datasets.scrapers.gitlab import GitLabScraper
 from osh_datasets.scrapers.hackaday import HackadayScraper
 from osh_datasets.scrapers.hardwareio import HardwareioScraper
 from osh_datasets.scrapers.kitspace import KitspaceScraper
+from osh_datasets.scrapers.mendeley import MendeleyScraper
 from osh_datasets.scrapers.ohr import OhrScraper
 from osh_datasets.scrapers.ohx import OhxScraper
 from osh_datasets.scrapers.openalex import OpenAlexScraper
@@ -19,6 +20,7 @@ ALL_SCRAPERS = [
     KitspaceScraper,
     HardwareioScraper,
     OhxScraper,
+    MendeleyScraper,
     OsfScraper,
     PlosScraper,
     OpenAlexScraper,
@@ -33,6 +35,7 @@ __all__ = [
     "HackadayScraper",
     "HardwareioScraper",
     "KitspaceScraper",
+    "MendeleyScraper",
     "OhrScraper",
     "OhxScraper",
     "OpenAlexScraper",

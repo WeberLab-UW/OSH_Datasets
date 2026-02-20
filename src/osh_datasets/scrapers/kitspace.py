@@ -191,10 +191,16 @@ def _discover_urls_selenium() -> list[str]:
     """Discover all project URLs using Selenium infinite scroll."""
     try:
         from selenium import webdriver  # type: ignore[import-not-found]
-        from selenium.webdriver.chrome.options import Options  # type: ignore[import-not-found]
+        from selenium.webdriver.chrome.options import (
+            Options,  # type: ignore[import-not-found]
+        )
         from selenium.webdriver.common.by import By  # type: ignore[import-not-found]
-        from selenium.webdriver.support import expected_conditions as EC  # type: ignore[import-not-found]
-        from selenium.webdriver.support.ui import WebDriverWait  # type: ignore[import-not-found]
+        from selenium.webdriver.support import (
+            expected_conditions as EC,  # type: ignore[import-not-found]
+        )
+        from selenium.webdriver.support.ui import (
+            WebDriverWait,  # type: ignore[import-not-found]
+        )
     except ImportError:
         logger.error(
             "Selenium not installed. Install with: "
