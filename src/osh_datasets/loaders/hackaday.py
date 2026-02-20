@@ -8,6 +8,7 @@ from pathlib import Path
 import polars as pl
 
 from osh_datasets.db import (
+    insert_bom_component,
     insert_metric,
     insert_tags,
     transaction,
@@ -76,6 +77,12 @@ class HackadayLoader(BaseLoader):
                 tags = _parse_string_list(row.get("tags"))
                 if tags:
                     insert_tags(conn, project_id, tags)
+
+                components = _parse_string_list(row.get("components"))
+                for comp in components:
+                    insert_bom_component(
+                        conn, project_id, component_name=comp,
+                    )
 
                 for metric_name, col in [
                     ("views", "viewsCount"),

@@ -62,6 +62,21 @@ class TestHackadayLoader:
         assert row is not None
         assert row[0] > 0
 
+    def test_has_components(self, db_path: Path) -> None:
+        """Hackaday projects with components populate bom_components."""
+        data_file = DATA_DIR / "cleaned" / "hackaday" / "hackaday_cleaned.csv"
+        _skip_if_missing(data_file)
+
+        from osh_datasets.loaders.hackaday import HackadayLoader
+
+        HackadayLoader().run(db_path)
+
+        conn = open_connection(db_path)
+        row = conn.execute("SELECT COUNT(*) FROM bom_components").fetchone()
+        conn.close()
+        assert row is not None
+        assert row[0] > 1000
+
 
 class TestOshwaLoader:
     """Test OSHWA loader with real data."""

@@ -53,12 +53,16 @@ def load_all(db_path: Path = DB_PATH) -> dict[str, int]:
     logger.info("All loaders complete: %d total projects", total)
 
     # Post-processing enrichment
+    from osh_datasets.component_normalizer import (
+        add_component_normalized_column,
+    )
     from osh_datasets.dedup import find_cross_references
     from osh_datasets.enrich_ohx_dois import backfill_dois
     from osh_datasets.enrichment.github import enrich_from_github
     from osh_datasets.license_normalizer import add_normalized_column
 
     add_normalized_column(db_path)
+    add_component_normalized_column(db_path)
     backfill_dois(db_path)
     find_cross_references(db_path)
     enrich_from_github(db_path)
