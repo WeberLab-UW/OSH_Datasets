@@ -1,5 +1,6 @@
 """SQLite database schema and connection management."""
 
+import re
 import sqlite3
 from collections.abc import Generator
 from contextlib import contextmanager
@@ -124,6 +125,19 @@ CREATE TABLE IF NOT EXISTS bom_file_paths (
     UNIQUE(project_id, file_path)
 );
 
+CREATE TABLE IF NOT EXISTS component_prices (
+    id                INTEGER PRIMARY KEY,
+    bom_component_id  INTEGER NOT NULL REFERENCES bom_components(id),
+    matched_mpn       TEXT,
+    distributor       TEXT,
+    unit_price        REAL,
+    currency          TEXT    DEFAULT 'USD',
+    quantity_break    INTEGER DEFAULT 1,
+    price_date        TEXT    NOT NULL,
+    price_source      TEXT    NOT NULL,
+    UNIQUE(bom_component_id, distributor, quantity_break)
+);
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_projects_source ON projects(source);
 CREATE INDEX IF NOT EXISTS idx_projects_name   ON projects(name);
@@ -140,6 +154,7 @@ CREATE INDEX IF NOT EXISTS idx_pubs_doi        ON publications(doi);
 CREATE INDEX IF NOT EXISTS idx_contribs_proj   ON contributors(project_id);
 CREATE INDEX IF NOT EXISTS idx_repo_metrics    ON repo_metrics(project_id);
 CREATE INDEX IF NOT EXISTS idx_bom_paths_proj  ON bom_file_paths(project_id);
+CREATE INDEX IF NOT EXISTS idx_comp_prices_bom ON component_prices(bom_component_id);
 """
 
 
@@ -342,6 +357,43 @@ def insert_metric(
     )
 
 
+_GARBAGE_MPN = frozenset({
+    "", "?", "-", "~", "custom", "ebay", "aliexpress",
+    "n/a", "na", "null", "none", "tbd", "tba",
+})
+
+_GARBAGE_MPN_RE = re.compile(
+    r"https?://"
+    r"|^\$\d"
+    r"|\.(?:com|org|io|net|cn)(?:/|\s|$)",
+    re.IGNORECASE,
+)
+
+
+def sanitize_part_number(raw: str | None) -> str | None:
+    """Sanitize a manufacturer part number, returning None for garbage.
+
+    Filters empty strings, single characters, placeholder values,
+    URLs, price-like strings, and domain names.
+
+    Args:
+        raw: Raw part number string from source data.
+
+    Returns:
+        Cleaned part number string, or None if invalid.
+    """
+    if raw is None:
+        return None
+    cleaned = raw.strip()
+    if len(cleaned) <= 1:
+        return None
+    if cleaned.lower() in _GARBAGE_MPN:
+        return None
+    if _GARBAGE_MPN_RE.search(cleaned):
+        return None
+    return cleaned
+
+
 def insert_bom_component(
     conn: sqlite3.Connection,
     project_id: int,
@@ -355,6 +407,9 @@ def insert_bom_component(
 ) -> None:
     """Insert a single BOM component.
 
+    Sanitizes ``part_number`` to convert garbage values (empty strings,
+    URLs, placeholders, price strings) to NULL before insertion.
+
     Args:
         conn: Active database connection.
         project_id: The ``projects.id``.
@@ -365,6 +420,7 @@ def insert_bom_component(
         manufacturer: Manufacturer name.
         part_number: Manufacturer part number.
     """
+    part_number = sanitize_part_number(part_number)
     conn.execute(
         """\
         INSERT INTO bom_components
@@ -557,4 +613,50 @@ def insert_contributor(
         VALUES (?, ?, ?, ?)
         """,
         (project_id, name, role, permission),
+    )
+
+
+def upsert_component_price(
+    conn: sqlite3.Connection,
+    bom_component_id: int,
+    *,
+    matched_mpn: str | None = None,
+    distributor: str | None = None,
+    unit_price: float | None = None,
+    currency: str = "USD",
+    quantity_break: int = 1,
+    price_date: str,
+    price_source: str,
+) -> None:
+    """Insert or update a component price record.
+
+    Args:
+        conn: Active database connection.
+        bom_component_id: The ``bom_components.id``.
+        matched_mpn: Manufacturer part number matched via API.
+        distributor: Distributor name (e.g. ``"DigiKey"``).
+        unit_price: Per-unit price.
+        currency: ISO 4217 currency code.
+        quantity_break: Quantity tier for this price.
+        price_date: Date the price was fetched (ISO 8601).
+        price_source: Source of pricing data (e.g. ``"nexar"``).
+    """
+    conn.execute(
+        """\
+        INSERT INTO component_prices
+            (bom_component_id, matched_mpn, distributor, unit_price,
+             currency, quantity_break, price_date, price_source)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(bom_component_id, distributor, quantity_break)
+        DO UPDATE SET
+            matched_mpn  = excluded.matched_mpn,
+            unit_price   = excluded.unit_price,
+            currency     = excluded.currency,
+            price_date   = excluded.price_date,
+            price_source = excluded.price_source
+        """,
+        (
+            bom_component_id, matched_mpn, distributor, unit_price,
+            currency, quantity_break, price_date, price_source,
+        ),
     )

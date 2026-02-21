@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "partstable": {
+      "type": "url",
+      "url": "https://mcp.partstable.com/mcp"
+    }
+  }
+}

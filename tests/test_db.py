@@ -14,6 +14,7 @@ from osh_datasets.db import (
     insert_publication,
     insert_tags,
     open_connection,
+    sanitize_part_number,
     transaction,
     upsert_project,
     upsert_repo_metrics,
@@ -176,7 +177,7 @@ class TestRelatedTables:
             )
         conn = open_connection(db_path)
         row = conn.execute(
-            "SELECT reference, quantity, unit_cost"
+            "SELECT reference, quantity, unit_cost, part_number"
             " FROM bom_components WHERE project_id = ?",
             (pid,),
         ).fetchone()
@@ -185,6 +186,54 @@ class TestRelatedTables:
         assert row[0] == "R1"
         assert row[1] == 10
         assert abs(row[2] - 0.05) < 1e-6
+        assert row[3] == "RC0805FR-074K7L"
+
+    def test_insert_bom_sanitizes_garbage_mpn(
+        self, db_path: Path,
+    ) -> None:
+        """Garbage part_number values are converted to NULL."""
+        with transaction(db_path) as conn:
+            pid = upsert_project(conn, source="t", source_id="1", name="P")
+            for garbage in [
+                "", "?", "-", "eBay", "Custom", "$0.00",
+                "https://lcsc.com/product/123",
+                "N/A", "wamoyer.com",
+            ]:
+                insert_bom_component(
+                    conn, pid,
+                    component_name=f"Part for {garbage}",
+                    part_number=garbage,
+                )
+        conn = open_connection(db_path)
+        rows = conn.execute(
+            "SELECT part_number FROM bom_components WHERE project_id = ?",
+            (pid,),
+        ).fetchall()
+        conn.close()
+        assert all(row[0] is None for row in rows)
+
+    def test_insert_bom_preserves_valid_mpn(
+        self, db_path: Path,
+    ) -> None:
+        """Valid part numbers pass through sanitization unchanged."""
+        valid_mpns = [
+            "LM7805", "ATmega328P", "WS2812B", "NRF24L01",
+            "RC0805FR-074K7L", "10K",
+        ]
+        with transaction(db_path) as conn:
+            pid = upsert_project(conn, source="t", source_id="1", name="P")
+            for mpn in valid_mpns:
+                insert_bom_component(
+                    conn, pid, component_name="Part", part_number=mpn,
+                )
+        conn = open_connection(db_path)
+        rows = conn.execute(
+            "SELECT part_number FROM bom_components "
+            "WHERE project_id = ? ORDER BY id",
+            (pid,),
+        ).fetchall()
+        conn.close()
+        assert [row[0] for row in rows] == valid_mpns
 
     def test_insert_publication(self, db_path: Path) -> None:
         """Publication is inserted with OpenAlex-like fields."""
@@ -263,3 +312,45 @@ class TestRelatedTables:
             "hardware/bom.csv",
             "pcb/BOM_v2.xlsx",
         ]
+
+
+class TestSanitizePartNumber:
+    """Tests for part number sanitization."""
+
+    @pytest.mark.parametrize(
+        ("raw", "expected"),
+        [
+            (None, None),
+            ("", None),
+            ("  ", None),
+            ("?", None),
+            ("-", None),
+            ("~", None),
+            ("Custom", None),
+            ("custom", None),
+            ("eBay", None),
+            ("AliExpress", None),
+            ("N/A", None),
+            ("n/a", None),
+            ("null", None),
+            ("none", None),
+            ("TBD", None),
+            ("$0.00", None),
+            ("$1.23", None),
+            ("https://lcsc.com/product/123", None),
+            ("http://example.org/part", None),
+            ("AliExpress: https://ali.com/item", None),
+            ("wamoyer.com", None),
+            ("shop.ebay.com/part", None),
+            ("LM7805", "LM7805"),
+            ("ATmega328P", "ATmega328P"),
+            ("  WS2812B  ", "WS2812B"),
+            ("RC0805FR-074K7L", "RC0805FR-074K7L"),
+            ("10K", "10K"),
+            ("NRF24L01", "NRF24L01"),
+            ("1N4148", "1N4148"),
+        ],
+    )
+    def test_sanitize(self, raw: str | None, expected: str | None) -> None:
+        """Sanitize filters garbage and preserves valid MPNs."""
+        assert sanitize_part_number(raw) == expected
