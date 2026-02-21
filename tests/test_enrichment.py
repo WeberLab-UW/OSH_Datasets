@@ -91,8 +91,10 @@ class TestGitHubEnrichment:
                 "file_tree": {"total_files": 120, "truncated": False},
             }
         ]
-        json_path = tmp_path / "github_repos.json"
-        json_path.write_bytes(orjson.dumps(scraped))
+        json_path = tmp_path / "github_repos.jsonl"
+        json_path.write_bytes(
+            b"\n".join(orjson.dumps(r) for r in scraped) + b"\n"
+        )
 
         count = enrich_from_github(db_path, json_path)
         assert count == 1
@@ -184,8 +186,10 @@ class TestGitHubEnrichment:
                 "file_tree": {"total_files": 0},
             }
         ]
-        json_path = tmp_path / "github_repos.json"
-        json_path.write_bytes(orjson.dumps(scraped))
+        json_path = tmp_path / "github_repos.jsonl"
+        json_path.write_bytes(
+            b"\n".join(orjson.dumps(r) for r in scraped) + b"\n"
+        )
 
         count = enrich_from_github(db_path, json_path)
         assert count == 0

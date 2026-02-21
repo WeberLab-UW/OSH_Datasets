@@ -10,7 +10,6 @@ Includes file-tree scanning and BOM (Bill of Materials) detection.
 import re
 import sqlite3
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import orjson
@@ -54,12 +53,17 @@ def _extract_owner_repo(url: str) -> tuple[str, str] | None:
         ``(owner, repo)`` tuple, or None if unparseable.
     """
     url = url.strip().rstrip("/")
-    m = re.search(r"github\.com/([^/]+)/([^/]+)", url, re.IGNORECASE)
+    m = re.search(
+        r"github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)",
+        url,
+        re.IGNORECASE,
+    )
     if m:
         repo = m.group(2)
         if repo.endswith(".git"):
             repo = repo[:-4]
-        return m.group(1), repo
+        if repo:
+            return m.group(1), repo
     return None
 
 
@@ -136,7 +140,7 @@ class GitHubScraper(BaseScraper):
     :func:`generate_repo_urls`.
 
     Requires ``GITHUB_TOKEN`` in the environment.
-    Output: ``data/raw/github/github_repos.json``
+    Output: ``data/raw/github/github_repos.jsonl``
     """
 
     source_name = "github"
@@ -145,7 +149,7 @@ class GitHubScraper(BaseScraper):
         """Read URLs and fetch metadata.
 
         Returns:
-            Path to the output JSON file.
+            Path to the output JSONL file.
         """
         url_file = self.output_dir / "repos.txt"
         if not url_file.exists():
@@ -155,8 +159,8 @@ class GitHubScraper(BaseScraper):
             urls = generate_repo_urls()
             if not urls:
                 logger.warning("No GitHub URLs in database, skipping")
-                out = self.output_dir / "github_repos.json"
-                out.write_bytes(orjson.dumps([]))
+                out = self.output_dir / "github_repos.jsonl"
+                out.write_bytes(b"")
                 return out
             url_file.write_text("\n".join(urls) + "\n")
             logger.info("Wrote %d URLs to %s", len(urls), url_file)
@@ -180,27 +184,63 @@ class GitHubScraper(BaseScraper):
     ) -> Path:
         """Fetch metadata for the given ``(owner, repo)`` pairs.
 
+        Each result is appended to a JSONL file immediately so partial
+        progress is never lost. On restart, already-fetched repos are
+        skipped automatically.
+
         Args:
             repos: List of ``(owner, repo)`` tuples.
             max_workers: Concurrent request threads.
 
         Returns:
-            Path to the output JSON file.
+            Path to the output JSONL file.
         """
+        out = self.output_dir / "github_repos.jsonl"
         tm = TokenManager(env_var="GITHUB_TOKEN")
-        results: list[dict[str, object]] = []
 
+        # Resume: scan existing lines for already-fetched repos
+        done: set[str] = set()
+        if out.exists():
+            with open(out, "rb") as f:
+                for raw_line in f:
+                    raw_line = raw_line.strip()
+                    if not raw_line:
+                        continue
+                    try:
+                        item = orjson.loads(raw_line)
+                    except orjson.JSONDecodeError:
+                        logger.warning("Skipping corrupt JSONL line")
+                        continue
+                    if isinstance(item, dict):
+                        r = item.get("repository")
+                        if isinstance(r, dict):
+                            key = f"{r.get('owner')}/{r.get('name')}"
+                            done.add(key.lower())
+            if done:
+                logger.info("Resumed with %d existing results", len(done))
+
+        fetched = 0
+        skipped = 0
         for i, (owner, repo) in enumerate(repos):
-            logger.info("[%d/%d] Fetching %s/%s", i + 1, len(repos), owner, repo)
+            if f"{owner}/{repo}".lower() in done:
+                continue
+            logger.info(
+                "[%d/%d] Fetching %s/%s",
+                i + 1, len(repos), owner, repo,
+            )
             data = _fetch_repo(tm, owner, repo, max_workers)
             if data:
-                results.append(data)
+                with open(out, "ab") as f:
+                    f.write(orjson.dumps(data) + b"\n")
+                fetched += 1
+            else:
+                skipped += 1
             time.sleep(0.5)
 
-        logger.info("Fetched %d/%d repos", len(results), len(repos))
-
-        out = self.output_dir / "github_repos.json"
-        out.write_bytes(orjson.dumps(results, option=orjson.OPT_INDENT_2))
+        logger.info(
+            "Done: %d fetched, %d skipped, %d already done",
+            fetched, skipped, len(done),
+        )
         return out
 
 
@@ -217,7 +257,7 @@ def _get_json(
     url: str,
     retries: int = 3,
 ) -> dict[str, object] | list[object] | None:
-    """GET with retry and token rotation on rate limit."""
+    """GET with retry, token rotation, and rate limit waiting."""
     for attempt in range(retries):
         try:
             session = _make_session(tm)
@@ -227,9 +267,22 @@ def _get_json(
             if resp.status_code == 404:
                 return None
             if resp.status_code in (403, 429):
-                remaining = int(resp.headers.get("X-RateLimit-Remaining", "0"))
+                remaining = int(
+                    resp.headers.get("X-RateLimit-Remaining", "0")
+                )
                 if remaining == 0 or "rate limit" in resp.text.lower():
                     tm.rotate()
+                    # Wait for reset if all tokens exhausted
+                    reset_ts = int(
+                        resp.headers.get("X-RateLimit-Reset", "0")
+                    )
+                    if reset_ts > 0:
+                        wait = max(reset_ts - int(time.time()), 0) + 5
+                        logger.info(
+                            "Rate limited, waiting %d seconds for reset",
+                            wait,
+                        )
+                        time.sleep(wait)
                     continue
             if resp.status_code == 401:
                 tm.rotate()
@@ -240,6 +293,7 @@ def _get_json(
             logger.debug("Request error (attempt %d): %s", attempt + 1, exc)
             if attempt < retries - 1:
                 time.sleep(2**attempt)
+    logger.error("All %d retries exhausted for %s", retries, url)
     return None
 
 
@@ -263,6 +317,7 @@ def _fetch_repo(
     base = f"https://api.github.com/repos/{owner}/{repo}"
     repo_data = _get_json(tm, base)
     if not isinstance(repo_data, dict):
+        logger.warning("Skipping %s/%s: base metadata unavailable", owner, repo)
         return None
 
     default_branch = repo_data.get("default_branch", "main")
@@ -282,17 +337,12 @@ def _fetch_repo(
     }
 
     raw: dict[str, object] = {}
-    with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        futures = {
-            pool.submit(_get_json, tm, url): key
-            for key, url in endpoints.items()
-        }
-        for future in as_completed(futures):
-            key = futures[future]
-            try:
-                raw[key] = future.result()
-            except Exception:
-                raw[key] = None
+    for key, url in endpoints.items():
+        try:
+            raw[key] = _get_json(tm, url)
+        except Exception:
+            logger.warning("Error fetching %s for %s/%s", key, owner, repo)
+            raw[key] = None
 
     def _as_list(val: object) -> list[object]:
         return val if isinstance(val, list) else []

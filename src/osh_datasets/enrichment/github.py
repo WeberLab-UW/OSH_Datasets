@@ -1,6 +1,6 @@
 """Enrich database projects with scraped GitHub repository metadata.
 
-Reads ``data/raw/github/github_repos.json`` (produced by
+Reads ``data/raw/github/github_repos.jsonl`` (produced by
 :class:`~osh_datasets.scrapers.github.GitHubScraper`) and updates
 matching projects with repo metrics, contributors, topics, licenses,
 and BOM file paths.
@@ -90,21 +90,32 @@ def enrich_from_github(
 
     Args:
         db_path: Path to the SQLite database.
-        json_path: Path to ``github_repos.json``. Defaults to
-            ``data/raw/github/github_repos.json``.
+        json_path: Path to ``github_repos.jsonl``. Defaults to
+            ``data/raw/github/github_repos.jsonl``.
 
     Returns:
         Number of projects enriched.
     """
     if json_path is None:
-        json_path = RAW_DIR / "github" / "github_repos.json"
+        json_path = RAW_DIR / "github" / "github_repos.jsonl"
 
     if not json_path.exists():
         logger.warning("No GitHub data at %s, skipping enrichment", json_path)
         return 0
 
+    records: list[dict[str, object]] = []
     with open(json_path, "rb") as fh:
-        records: list[dict[str, object]] = orjson.loads(fh.read())
+        for raw_line in fh:
+            raw_line = raw_line.strip()
+            if not raw_line:
+                continue
+            try:
+                item = orjson.loads(raw_line)
+            except orjson.JSONDecodeError:
+                logger.warning("Skipping corrupt JSONL line in %s", json_path)
+                continue
+            if isinstance(item, dict):
+                records.append(item)
 
     if not records:
         logger.info("Empty GitHub data file, nothing to enrich")
