@@ -1,0 +1,45 @@
+Bill of Materials for a Smart Plant Watering System 
+ 
+ 
+1. ESP 32 – for wifi connectivity  
+ https://www.amazon.in/RoboThings-ESP-32S-Development-Dual-Mode
+Bluetooth/dp/B0DMZZ5DS3/ref=sr_1_1_sspa?crid=C4JVSAMCXEAN&dib=eyJ2IjoiMSJ9.uKRq9I1113H9GI2IfhEVWB4
+ S2xstkkBL3QWiZOoU68L0L2mqYtksC-RECJ6LXss_EUlzN
+ur78RuTGQtFYFFJaJ_2zxtzz2Dtvj77brZXVFLPEpTUzOZN
+8pu6CuvxI2cfEtFnVKNzMoOTpW0wOjZmIsfL7Sm4tNYnX6Eq77xz9kYLloghDENHI0W2RKuYmUXejnD4e6QKOPeJP-9hNpjevh9verasJVwOj9cCVKDtM.P5crOlqu_M7d
+fM16119L8dQLxa7xiP8FpCXuP8_Lrg&dib_tag=se&keywords=esp32+with+cable&qid=1745836207&sprefix=esp32+with
+ +cabl%2Caps%2C240&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1 
+2. Soil Moisture Sensor
+No preference for sensor type
+
+Can be capacitive or resistive
+
+https://www.amazon.in/Electronic-Spices-Channel-Compatible-Microcontroller/dp/B0BJF1T1LB/
+
+3. Water Pump (12V)
+https://www.amazon.in/Submersible-Pump-Mini-Water-Kit/dp/B0DV44T46X/
+
+4. Relay Module (12V)
+https://www.amazon.in/Electronic-Spices-Channel-Compatible-Microcontroller/dp/B0BJF1T1LB/
+
+5. Pipe
+6. Power Supply Adapter
+Micro USB Adapter
+
+7. Water Tubing
+Silicone or PVC pipe
+8. Water Reservoir
+9. Jumper Wires
+10. Breadboard
+With power rails
+
+Standard 400-point breadboard
+
+11. Resistors
+12. LEDs
+Red, Green
+
+13. External Casing
+Waterproof
+
+14. Push Button 

@@ -1,0 +1,15 @@
+References	Qty	Description
+C1	1	CP 10uf C Radial D5 L6 P2.5
+C2	1	CP 100uf C Radial D8 L11.5 P3.5
+C3	1	C Small Disc D3 P2.5
+D1	1	D-RESCUE-esp8266 D Diode DO-41 SOD81 Horizontal RM10
+J1	1	Screw Terminal 1x02-RESCUE-esp8266 1x02 bornier2
+J2	1	Screw Terminal 1x03 bornier3
+JP1	1	JUMPER NO Small TEST POINT 2PADS
+P1	1	CONN 02X04 Socket Strip Straight 2x04
+P2	1	CONN 01X03 Pin Header Straight 1x03
+P3, P4, P5, P6	4	CONN 01X03 Socket Strip Straight 1x03
+PROG1, RESET1	2	SW PUSH 6mm
+R2, R1	2	R 2.2k Resistor Horizontal RM10mm
+R3	1	R 4.7k Resistor Horizontal RM10mm
+U1	1	LD1117S33TR TO-220 Neutral123 Vertical

@@ -1,0 +1,11 @@
+name,qty,source
+hobbyServo:mg92b,16,https://www.aliexpress.us/item/3256801883704529.html?spm=a2g0o.detail.1000014.1.7a771b29SLCuHw
+chamferedScrew:M3x16,31,https://www.mcmaster.com/91294A134/
+smallKatElectronics:motherboard,1,https://github.com/OperationSmallKat/SmallKat-Motherboard
+smallKatElectronics:batteryInterface,1,https://github.com/OperationSmallKat/DJI_Battery_Baord
+PhillipsRoundedHeadThreadFormingScrews:M2x8,56,https://www.mcmaster.com/90380A327/
+squareNut:M3,70,https://www.mcmaster.com/97259A101/
+PhillipsRoundedHeadThreadFormingScrews:M3x6,6,https://www.mcmaster.com/99461A939/
+capScrew:M3x16,2,https://www.mcmaster.com/91290A120/
+conePointSetScrew:M3x8,32,https://www.mcmaster.com/91210A101/
+smallKatElectronics:dji-mavic-pro-battery,1,https://www.aliexpress.us/item/3256803158664022.html?spm=a2g0o.productlist.main.35.2f0b2192nAw7fe

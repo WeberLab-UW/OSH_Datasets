@@ -1,0 +1,10 @@
+﻿ID	Name	Designator	Footprint	Quantity	Manufacturer Part	Manufacturer	Supplier	Supplier Part	Price
+"1"	"22n"	"C1"	"C_0603_S"	"1"	"CL10B223KB8NNNC"	"SAMSUNG"	"LCSC"	"C21122"	"0.006"
+"2"	"10u"	"C2"	"C_0603_S"	"1"	"0603X106K160NT"	"FH"	"LCSC"	"C70225"	"0.044"
+"3"	"22u"	"C3,C4"	"C_0603_S"	"2"	"C0603X5R226M160NT"	"SANYEAR(叁叶源)"	"LCSC"	"C2835567"	"0.139"
+"4"	"PINS"	"J1"	"210S-3X1/2.54"	"1"	"Header2.54mm 1*3P"	"BOOMELE"	"LCSC"	"C49257"	"0.015"
+"5"	"4.7uH"	"L1"	"L_0850"	"1"	"PSPMAA0805-4R7M-ANP"	"PROD Tech"	"LCSC"	"C2962882"	"0.219"
+"6"	"110k"	"R1"	"R_0603_S"	"1"	"0603WAF1103T5E"	"UniOhm"	"LCSC"	"C25805"	"0.001"
+"7"	"15k"	"R2"	"R_0603_S"	"1"	"0603WAF1502T5E"	"UniOhm"	"LCSC"	"C22809"	"0.001"
+"8"	"100k"	"R3"	"R_0603_S"	"1"	"0603WAF1003T5E"	"UniOhm"	"LCSC"	"C25803"	"0.001"
+"9"	"SD8942"	"U2"	"SOT-23-6"	"1"	"SD8942"	"SHOUDING"	"LCSC"	"C250795"	"0.21"

@@ -1,0 +1,12 @@
+Item,Qty,Reference(s),Value,Distributor,Distributor Part #,Unit Cost,Cost,Ordered
+1,2,"D1, D2",SK53A,Digikey,SK53A-LTPMSCT-ND,0.36,0.72,
+2,2,"D3, D4",SMF6.0A,Digikey,F5749CT-ND,0.45,0.9,
+3,1,J1,Contactor Power,Digikey,900-2125280200-ND,1.13,1.13,
+4,1,J3,Contactor 1 Coil,Digikey,900-2125280200-ND,1.13,1.13,
+5,1,J4,Contactor 2 Coil,Digikey,900-2125280200-ND,1.13,1.13,
+6,1,J5,Switch 1,Digikey,900-2125280200-ND,1.13,1.13,
+7,1,J6,Switch 2,Digikey,900-2125280200-ND,1.13,1.13,
+8,2,"Q1, Q2",DMG3418L,Digikey,DMG3418L-7DICT-ND,0.43,0.86,
+9,2,"R1, R2",1k,Digikey,311-1KMCT-ND,0.1,0.2,
+10,2,"R3, R4",10k,Digikey,RNCP0805FTD10K0CT-ND,0.1,0.2,
+,,,,,,,8.53,

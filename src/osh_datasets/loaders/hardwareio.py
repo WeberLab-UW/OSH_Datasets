@@ -12,6 +12,18 @@ from pathlib import Path
 import orjson
 import polars as pl
 
+from osh_datasets.bom_parser import (
+    COST_COLS,
+    FOOTPRINT_COLS,
+    MFR_COLS,
+    MPN_COLS,
+    NAME_COLS,
+    QTY_COLS,
+    REFERENCE_COLS,
+    coalesce_cols,
+    infer_quantity,
+    safe_float_str,
+)
 from osh_datasets.config import get_logger
 from osh_datasets.db import (
     insert_bom_component,
@@ -24,102 +36,6 @@ from osh_datasets.db import (
 from osh_datasets.loaders.base import BaseLoader
 
 logger = get_logger(__name__)
-
-# Column name variants mapped to canonical BOM fields.
-# Order matters: earlier columns are preferred in coalescing.
-_REFERENCE_COLS = (
-    "Designator", "Reference", "Ref", "RefDes", "References",
-    "ref", "Designation", "Part/Designator", "Ref Name (REFDES)",
-    "REFERENCE",
-)
-_NAME_COLS = (
-    "Value", "Description", "Device", "Name", "Part", "Comment",
-    "Component", "DESCRIPTION", "value", "value5", "VALUE",
-)
-_QTY_COLS = (
-    "Qty", "Quantity", "Qnty", "Count", "QTY", "QTY:",
-    "Quantity Per PCB",
-)
-_MFR_COLS = (
-    "Manufacturer", "MF", "Vendor", "Manufacturer 1",
-    "Manufacturer (AVL)",
-)
-_MPN_COLS = (
-    "MPN", "Manufacturer Part", "PartNumber", "Manufacturer P/N",
-    "mpn", "PARTNO", "Part Number", "Part No",
-    "Manufacture Part Number", "Manufacturer Part Number 1",
-    "PART NO AND DESCRIPTION",
-)
-_COST_COLS = (
-    "Cost", "Price", "Unit price $", "Cost/Pcs", "Price/part",
-    "Cost (Feb-16)", "Price (Ex. VAT)",
-)
-
-
-def _coalesce_cols(
-    df: pl.DataFrame,
-    candidates: tuple[str, ...],
-    alias: str,
-) -> pl.Expr:
-    """Build a ``pl.coalesce`` expression for columns that exist.
-
-    Args:
-        df: Source dataframe (used to check column existence).
-        candidates: Ordered column names to coalesce.
-        alias: Output column alias.
-
-    Returns:
-        A polars expression producing the coalesced value.
-    """
-    present = [c for c in candidates if c in df.columns]
-    if not present:
-        return pl.lit(None).alias(alias)
-    exprs = [
-        pl.when(pl.col(c) != "").then(pl.col(c))
-        for c in present
-    ]
-    return pl.coalesce(exprs).alias(alias)
-
-
-def _safe_int_str(val: str | None) -> int | None:
-    """Parse a string to int, returning None on failure.
-
-    Args:
-        val: String value to parse.
-
-    Returns:
-        Parsed integer or None.
-    """
-    if not val:
-        return None
-    # Strip whitespace and common formatting
-    cleaned = val.strip().replace(",", "").replace(" ", "")
-    if not cleaned:
-        return None
-    try:
-        return int(float(cleaned))
-    except (ValueError, OverflowError):
-        return None
-
-
-def _safe_float_str(val: str | None) -> float | None:
-    """Parse a string to float, returning None on failure.
-
-    Args:
-        val: String value to parse.
-
-    Returns:
-        Parsed float or None.
-    """
-    if not val:
-        return None
-    cleaned = val.strip().replace(",", "").replace("$", "").replace(" ", "")
-    if not cleaned:
-        return None
-    try:
-        return float(cleaned)
-    except (ValueError, OverflowError):
-        return None
 
 
 def _build_name_lookup(
@@ -170,12 +86,13 @@ def load_hardwareio_bom(
     # Coalesce variant columns into canonical schema
     normalized = df.select(
         pl.col("project_name"),
-        _coalesce_cols(df, _REFERENCE_COLS, "reference"),
-        _coalesce_cols(df, _NAME_COLS, "component_name"),
-        _coalesce_cols(df, _QTY_COLS, "quantity_raw"),
-        _coalesce_cols(df, _MFR_COLS, "manufacturer"),
-        _coalesce_cols(df, _MPN_COLS, "part_number"),
-        _coalesce_cols(df, _COST_COLS, "unit_cost_raw"),
+        coalesce_cols(df, REFERENCE_COLS, "reference"),
+        coalesce_cols(df, NAME_COLS, "component_name"),
+        coalesce_cols(df, QTY_COLS, "quantity_raw"),
+        coalesce_cols(df, MFR_COLS, "manufacturer"),
+        coalesce_cols(df, MPN_COLS, "part_number"),
+        coalesce_cols(df, COST_COLS, "unit_cost_raw"),
+        coalesce_cols(df, FOOTPRINT_COLS, "footprint"),
     )
 
     # Drop rows where all BOM fields are null (no usable data)
@@ -207,10 +124,13 @@ def load_hardwareio_bom(
                 project_id,
                 reference=row["reference"],
                 component_name=row["component_name"],
-                quantity=_safe_int_str(row["quantity_raw"]),
-                unit_cost=_safe_float_str(row["unit_cost_raw"]),
+                quantity=infer_quantity(
+                    row["reference"], row["quantity_raw"],
+                ),
+                unit_cost=safe_float_str(row["unit_cost_raw"]),
                 manufacturer=row["manufacturer"],
                 part_number=row["part_number"],
+                footprint=row["footprint"],
             )
             inserted += 1
 

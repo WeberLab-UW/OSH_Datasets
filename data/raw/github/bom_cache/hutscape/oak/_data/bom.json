@@ -1,0 +1,20 @@
+{
+  "bom-uniq": 31,
+  "bom-total": 83,
+  "bom-total-populate": 52,
+  "bom-cost": 111.2,
+  "currency": "SGD",
+  "vendor-names": [
+    "Element14",
+    "LCSC",
+    "AliExpress",
+    "Mouser",
+    "CDTop",
+    "Waveshare"
+  ],
+  "vendors": 6,
+  "bom-pending": 1,
+  "bom-pending-names": [
+    "ORANGE LED"
+  ]
+}

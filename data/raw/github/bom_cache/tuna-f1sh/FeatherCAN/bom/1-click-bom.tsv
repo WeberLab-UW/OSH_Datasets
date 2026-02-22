@@ -1,0 +1,25 @@
+References	Qty	Characteristics	Config	Description	MFN	MPN	Notes	SKU	Vendor
+BT1	1				Linx Technologies	BAT-HLD-012-SMT-TR		BAT-HLD-012-SMTCT-ND	Digikey
+C1, C2	2	X5R 20V							
+C3, C4	2	NPO 6V							
+C5, C6	2	X7R 6V							
+D1	1	Orange		Orange 605nm LED Indication - Discrete 1.8V 2mA 0603 (1608 Metric)	Kingbright	APT1608LSECK/J4-PRV 		754-1931-1-ND 	Digikey
+D2	1	Orange		Orange 605nm LED Indication - Discrete 1.8V 2mA 0603 (1608 Metric) 	Kingbright	APT1608LSECK/J4-PRV 		754-1931-1-ND 	Digikey
+D3	1	Green		Green 525nm LED Indication - Discrete 2.65V 2mA 0603 (1608 Metric)	Kingbright	APT1608LZGCK		754-1934-1-ND 	Digikey
+D4	1	40V 200mA		Diode Schottky 40V 200mA (DC) Surface Mount 0603 (1608 Metric)	AVX Corporation	SD0603S040S0R2	Don't allow back powering bus and reverse polarity protect	478-7798-1-ND	Digikey
+J1	1		nofit						
+J2	1		nofit						
+J3	1		nofit						
+J4	1				Molex	53261-0471		WM7622CT-ND	Digikey
+JP1	1		nofit				Link to bring termination resistor in circuit		
+JP2	1		nofit				Cut to remove INT connection to Feather		
+JP3, JP4, JP5	3		nofit				Cut to remove INT connection to Feather		
+R1	1	1%		Rterm					
+R2	1						Rext controls mode and slew rate. GND = high-speed, 10 μA < -IRS < 200 μA slope control 		
+R3, R4, R5, R8	4								
+R6, R7	2								
+U1	1				Maxim	DS3231MZ+		DS3231MZ+-ND 	Digikey
+U2	1				Microchip Technology	MCP2515T-I/ST		MCP2515T-I/STCT-ND	Digikey
+U3	1			IC TRANSCEIVER HALF 1/1 8SOIC	Texas Instruments	SN65HVD230DR	MCP2551 drop in replacement	296-11654-1-ND	Digikey
+U4	1			5 V LDO	Microchip Technology	MCP1703T-5002E/CB		MCP1703T-5002E/CBCT-ND	Digikey
+Y1	1			9pF	Epson	TSX-3225 16.0000MF18X-AC0		SER4070CT-ND	Digikey

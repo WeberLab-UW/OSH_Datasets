@@ -1,0 +1,8 @@
+Reference Designator,Description,Manufacturer,Manufacturer Part Number,Suppliers,Package,Quantity,Capacitance,Is Generic,Category,Dc Forward Current,Forward Voltage,Package Description,Led Colour,Size / Dimension,Verified Pad Assignment,Verified Pin Names,Verified Attributes,Verified Geometry,Features,Resistance,Category Db391633E8F300Fe,Mounting Type,Category 8Ce341E9Bf4C5724,Contacts Type,Category A9A064Aa9A0A7267
+C1,CAP CER 0.1UF 50V Y5V 0805,"Samsung Electro-Mechanics America, Inc.",CL21F104ZBCNNNC,,0805 (2012 metric),1,1e-07F,true,,,,,,,,,,,,,,,,,
+D1,"SMT Top Mount Chip LED, Blue",Avago,HSMR-C170,,0805,1,,,Light Sources and Emitters,20mA,3.4V (typical),SM LED; 2 Flat Leads,Blue,,,,,,,,,,,,
+D2 D3,LED RED DIFFUSED 0805 SMD,OSRAM Opto Semiconductors Inc.,LH R974-LP-1,,0805,2,,,,20mA,1.8V,,,2.00mm L x 1.25mm W,,,,,,,,,,,
+J1,ICSP AVR Programming Header (2x3 shrouded header connector),Wurth Electronics Inc,61200621621,,Generic,1,,,,,,,,,false,false,false,false,Polarizing Key,,,,,,
+R1,Generic Resistor (10000),Generic,Resistor (10000),,0805 (2012 metric),1,,true,,,,,,,,,,,,10000,,,,,
+R4 R3 R2,Generic Resistor (200),Generic,Resistor (200),,0805 (2012 metric),3,,true,,,,,,,,,,,,200,,,,,
+S1,Tact Switch SMT,E-Switch,TL3342F160QG,Newark 15N9531/Digi-Key EG2531CT-ND/Digi-Key EG2531DKR-ND/Digi-Key EG2531TR-ND,SMD_SWITCH,1,,,,,,,,,true,true,true,true,,,Industrial Control,surface mount,Switches,SPST,Tactile / Jog

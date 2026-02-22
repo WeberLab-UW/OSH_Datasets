@@ -1,0 +1,8 @@
+ID,Name,Designator,Footprint,Quantity
+1,Male header 1x10,J1,H10-2.54,1       
+2,CR2032 holder,B2,CR2032 SMD HOLDER,1       
+3,Capacitor 10uF,C1,CAP5X7,1       
+4,Capacitor 220uF,C2,CAP-D6.3XF2.5,1       
+5,Arduino Pro Mini,U1,ARDUINO_PRO_MINI ,1       
+6,SI7021,S1,SI7021 MODULE,1       
+7,AS01-ML01S,MK1,NRF24L01_SMD+,1       

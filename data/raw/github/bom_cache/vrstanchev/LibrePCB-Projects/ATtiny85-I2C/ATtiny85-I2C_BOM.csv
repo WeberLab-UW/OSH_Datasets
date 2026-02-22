@@ -1,0 +1,4 @@
+Quantity,Designators,Value,Device,Package
+1,AT1,ATTiny85,ATTINY-85-PU,ATTINY-85-PU
+1,AT2,,ATTINY-85-PU,ATTINY-85-PU
+2,"R1, R2",,Resistor 0402 (01005),RESC0402 (01005)

@@ -1,0 +1,4 @@
+Reference,Quantity,Identifier,footprint,Value,Tolerance,Voltage,Current,Power,PN
+J1,1,,pi-bridge:PinSocket_2x20_P2.54mm_Vertical_1_04mm,-,,,,,SSQ-120-03-F-D
+J2,1,,pi-bridge:PinSocket_2x20_P2.54mm_Vertical_1_04mm,-,,,,,SSQ-120-03-F-D
+

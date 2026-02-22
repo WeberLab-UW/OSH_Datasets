@@ -69,7 +69,8 @@ CREATE TABLE IF NOT EXISTS bom_components (
     quantity        INTEGER,
     unit_cost       REAL,
     manufacturer    TEXT,
-    part_number     TEXT
+    part_number     TEXT,
+    footprint       TEXT
 );
 
 CREATE TABLE IF NOT EXISTS publications (
@@ -121,10 +122,12 @@ CREATE TABLE IF NOT EXISTS repo_metrics (
 );
 
 CREATE TABLE IF NOT EXISTS bom_file_paths (
-    id            INTEGER PRIMARY KEY,
-    project_id    INTEGER NOT NULL REFERENCES projects(id),
-    repo_url      TEXT    NOT NULL DEFAULT '',
-    file_path     TEXT    NOT NULL,
+    id              INTEGER PRIMARY KEY,
+    project_id      INTEGER NOT NULL REFERENCES projects(id),
+    repo_url        TEXT    NOT NULL DEFAULT '',
+    file_path       TEXT    NOT NULL,
+    processed       INTEGER NOT NULL DEFAULT 0,
+    component_count INTEGER,
     UNIQUE(project_id, repo_url, file_path)
 );
 
@@ -152,6 +155,9 @@ CREATE INDEX IF NOT EXISTS idx_tags_tag        ON tags(tag);
 CREATE INDEX IF NOT EXISTS idx_licenses_proj   ON licenses(project_id);
 CREATE INDEX IF NOT EXISTS idx_metrics_proj    ON metrics(project_id);
 CREATE INDEX IF NOT EXISTS idx_bom_proj        ON bom_components(project_id);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_bom_comp_dedup
+    ON bom_components(project_id, reference, part_number)
+    WHERE reference IS NOT NULL AND part_number IS NOT NULL;
 CREATE INDEX IF NOT EXISTS idx_pubs_proj       ON publications(project_id);
 CREATE INDEX IF NOT EXISTS idx_pubs_doi        ON publications(doi);
 CREATE INDEX IF NOT EXISTS idx_contribs_proj   ON contributors(project_id);
@@ -408,11 +414,14 @@ def insert_bom_component(
     unit_cost: float | None = None,
     manufacturer: str | None = None,
     part_number: str | None = None,
+    footprint: str | None = None,
 ) -> None:
-    """Insert a single BOM component.
+    """Insert a single BOM component, skipping duplicates.
 
     Sanitizes ``part_number`` to convert garbage values (empty strings,
     URLs, placeholders, price strings) to NULL before insertion.
+    Rows with the same (project_id, reference, part_number) are
+    silently ignored when both fields are non-NULL.
 
     Args:
         conn: Active database connection.
@@ -423,14 +432,15 @@ def insert_bom_component(
         unit_cost: Per-unit cost.
         manufacturer: Manufacturer name.
         part_number: Manufacturer part number.
+        footprint: Component footprint/package.
     """
     part_number = sanitize_part_number(part_number)
     conn.execute(
         """\
-        INSERT INTO bom_components
+        INSERT OR IGNORE INTO bom_components
             (project_id, reference, component_name, quantity,
-             unit_cost, manufacturer, part_number)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+             unit_cost, manufacturer, part_number, footprint)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             project_id,
@@ -440,6 +450,7 @@ def insert_bom_component(
             unit_cost,
             manufacturer,
             part_number,
+            footprint,
         ),
     )
 

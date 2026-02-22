@@ -1,0 +1,4 @@
+﻿ID;Name;Designator;Footprint;Quantity;Manufacturer Part;Manufacturer;Supplier;Supplier Part;Price
+1;100nF;C1;C0603;1;CL10B104KC8NNNC;SAMSUNG(三星);LCSC;C15725;0.006
+2;49.9Ω;R1;R0603;1;0603WAF499JT5E;UNI-ROYAL(厚声);LCSC;C23185;0.001
+3;SiPM 6MM;D1;MICROFC−60035−SMT;1;;ON Semiconductor;Mouser;863-MFC60035SMTTR1;

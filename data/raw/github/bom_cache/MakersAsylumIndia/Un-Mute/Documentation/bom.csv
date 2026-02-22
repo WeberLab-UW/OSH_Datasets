@@ -1,0 +1,12 @@
+Item,Description,Qty,Notes
+Microcontroller,ESP32,3,Handles sensor input, processing, and audio output
+Flex Sensors,2.2" or 4.5" bend/flex sensor (like Spectra Symbol),10,One for each finger
+IMU Sensor,MPU6050 or MPU9250 (Gyro + Accelerometer),2,For wrist motion tracking
+Speaker,Small 8Ω 1W speaker,2,For audio output
+Audio Amp Module,PAM8403 or MAX98357 I2S amplifier,1,Boosts audio from ESP32 to speaker
+Power Source,USB Phone Power Bank (5V output),1,Easily powers ESP32 via USB port; safer and rechargeable
+Resistors,10kΩ,10,Voltage divider for flex sensors
+Breadboard/PCB,Custom PCB or small perfboard,1,Mount electronics
+Glove,Tight-fitting glove (cotton/spandex),2,Mounting platform
+Hook-up Wire,Silicone wire (26 AWG),2m,Flexible and durable
+Enclosure,3D printed or project box,1,For housing ESP32 and wiring on wrist

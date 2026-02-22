@@ -1,0 +1,25 @@
+Bill Of Materials,,,,
+,,,,
+C1,,,0.1 uF,0805
+C2,,,0.1 uF,0805
+C3,,,1 uF,0805
+IC1,,,INA125,SO-16
+IC2,,,INA125,SO-16
+J1,,,Phoenix MPT 2.54 4-pole,
+J2,,,Phoenix MPT 2.54 4-pole,
+J3,,,"2.54 mm header, 7 position",
+J4,,,"2.54 mm header, 6 position",
+J5,,,"2.54 mm header, 10 position",
+J6,,,"2.54 mm header, 8 position",
+J7,,,Barrel Jack CP-002A-ND or equivalent,
+RV1,,,Bourns 3296Y Potentiometer,
+RV2,,,Bourns 3296Y Potentiometer,
+TP1,,,"2.54 mm header, 2 position",
+TP2,,,"2.54 mm header, 2 position",
+TP3,,,"2.54 mm header, 2 position",
+TP4,,,"2.54 mm header, 2 position",
+TP5,,,"2.54 mm header, 2 position",
+TP6,,,"2.54 mm header, 2 position",
+TP7,,,"2.54 mm header, 2 position",
+TP8,,,"2.54 mm header, 2 position",
+U1,,,LM7805,

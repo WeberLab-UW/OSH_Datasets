@@ -1,0 +1,10 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;",,,,,";"buzzardLabel";6;"";;;
+2;"FD1";"FIDUCIAL_23";1;"FIDUCIAL";;;
+3;"G***";"Symbol-Front-Joystick";1;"LOGO";;;
+4;"REF**,REF**";"Logo-Back-SolderedFULL-20mm";2;"Logo-Front-SolderedFULL-20mm";;;
+5;"H1,H3,H2,H4";"HOLE_3.2mm";4;"HOLE_3.2mm";;;
+6;"G***";"Logo-Back-OSH-3.5mm";1;"LOGO";;;
+7;"K1";"joystick";1;"Joystick";;;
+8;"REF**";"Version1.1.1.";1;"Version1.1.1.";;;
+9;"K2";"HEADER_MALE_5X1";1;"HEADER_MALE_5X1";;;

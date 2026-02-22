@@ -1,0 +1,22 @@
+References	Qty	Description	Part Number	Manufacturer	Mouser	Digikey	Other Supplier
+R1	1	22K 1206	RC1206FR-0722KL	Yageo	603-RC1206FR-0722KL	311-22.0KFRCT-ND	
+R2	1	22K 1206	RC1206FR-0722KL	Yageo	603-RC1206FR-0722KL	311-22.0KFRCT-ND	
+R3	1	22K 1206	RC1206FR-0722KL	Yageo	603-RC1206FR-0722KL	311-22.0KFRCT-ND	
+R4	1	22K 1206	RC1206FR-0722KL	Yageo	603-RC1206FR-0722KL	311-22.0KFRCT-ND	
+R5	1	1K 1206	RC1206FR-071KL	Yageo	603-RC1206FR-071KL	311-1.00KFRCT-ND	
+R6	2	1K 1206	RC1206FR-071KL	Yageo	603-RC1206FR-071KL	311-1.00KFRCT-ND	
+IC1	1	CMOS 4051					
+IC2	1	PT8211					
+D1 mini Pro	1	D1 mini Pro ESP8266 dev board					
+LED Power (red)	1	TOP-led (3528 package)	AA3528SURSK	Kingbright	604-AA3528SURSK	754-1537-1-ND	
+LED Signal (blue)	1	TOP-led (3528 package)	AA3528QBS/D	Kingbright	604-AA3528QBS/D		
+Pot	2	10k lin Potentiometer, 16mm (6mm shaft dia, 15mm shaft length)	P160KN-0QC15B10K	BI Technologies / TT Electronics	858-P160KN-0QC15B10K		
+Pot-Wheel	2	10k lin Wheel Potentiometer					
+							
+Better to source on ali / taobao							
+NEO pixel	1	NEO pixel 10-pack (SK6812)	1655	Adafruit 	485-1655		
+Jack1	2	Mini-Jack female 3.5mm	SJ1-3525NG	CUI	490-SJ1-3525NG		https://www.aliexpress.com/item/1000pcs-Phone-Jack-3-5mm-5-pin-stereo-audio-socket-for-3-poles-earphone-plug-through/32664057697.html?spm=2114.search0104.3.72.rdLXHn&ws_ab_test=searchweb0_0,searchweb201602_1_5130011_10152_10065_10151_10344_10068_10345_10342_10343_51102_10340_10341_5000011_10541_10084_10083_10307_5080011_10134_10539_10312_10059_10313_10314_10534_100031_10604_10603_10103_10605_10594_10596_5060011_10142_10107,searchweb201603_14,ppcSwitch_5&algo_expid=c4b3e359-9eee-4db4-86ea-45377047605b-10&algo_pvid=c4b3e359-9eee-4db4-86ea-45377047605b&rmStoreLevelAB=0
+But1	2	Tactile Switches	1571621-1	TE Connectivity / Alcoswitch	506-1571621-1		
+SW1	1	Push Switch					https://www.aliexpress.com/item/Free-shipping-200pcs-DC-30V-1A-Black-On-Off-Mini-Push-Button-Switch-for-Electric-Torch/32567227670.html?spm=a2g0s.9042311.0.0.kGKR16
+Jack3	2	Mini-Jack female 3.5mm					
+Knob	2	from Taide					http://www.taydaelectronics.com/catalogsearch/result/?q=Black+Plastic+Knob+with

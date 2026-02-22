@@ -1,0 +1,9 @@
+References	Qty	Description	Manufacturer1	MPN	manufacturer2	MPN			Digikey	RS
+C1, C2	2	CP Small 100µf Polarized capacitor, small symbol Radial D10.0mm P5.00mm	Panasonic	ECA-1CM101 	Nichicon	UPS1E101MED 			P5138-ND 	519-4059
+J1	1	Barrel Jack MountingPin DC with a mounting pin BarrelJack Horizontal	CUI devices	PJ-037A 	Wuerth electronic	694106301002			CP-037A-ND	122-4879
+J2, J3, J4	3	coaxial connector (BNC) BNC Amphenol B6252HB-NPP3G-50 Horizontal	Amphenol	031-5431-10RFX 					ARF1690-ND 	144-0890
+R1, R2, R5, R3, R4	5	R 10k Resistor Axial DIN0414 L11.9mm D4.5mm P20.32mm Horizontal	Stackpole electronics	RNF14FTD10K0	TE connectivity	LR1F10K			RNF14FTD10K0CT-ND 	125-1164
+R7, R6	2	R 1k Resistor Axial DIN0414 L11.9mm D4.5mm P20.32mm Horizontal	Stackpole electronics	RNF14FTD1K00 	TE connectivity	LR1F1K0			RNF14FTD1K00CT-ND 	125-1159
+SW1, SW2	2	SW SPDT in1 on/off Switch, single pole double throw TO-3P-3 Vertical	CW industries	GRS-4012-0026 	Carling technologies	LRR112-2B-JN 			SW304-ND 	881-1530
+U1	1	LM324 Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14 DIP-14 W7.62mm Socket	Texas instruments	LM324NE3 	Texas instruments	LM324N/NOPB			296-27903-5-ND 	197-7250 
+U1A	1	DIP Socket 14 pin	Assman components	A 14-LC-TT 					AE9989-ND 	674-2438

@@ -1,0 +1,14 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25,D26,D27";"LED-0805";27;"LED";;;
+2;"J3,J1,J2,J4,J5";"pad_smd_1mm";5;"Conn_01x01";;;
+3;"R3,R2,R4,R5,R6,R7,R8,R9,R10";"R_0805";9;"300";;;
+4;"C2";"C_0805";1;"10nF";;;
+5;"J6,J8,J10,J12,J14,J16,J18,J20,J22,J24,J26,J28";"pad_3x2mm_smd";12;"Conn_01x01";;;
+6;"BT1";"9V_clip_968";1;"9V";;;
+7;"J7,J9,J11,J13,J15,J17,J19,J21,J23,J25,J27,J29";"pad_2x2mm";12;"Conn_01x01";;;
+8;"U1";"SOIC-8_3.9x4.9mm_Pitch1.27mm";1;"LM555";;;
+9;"U2";"SOIC-16_3.9x9.9mm_Pitch1.27mm";1;"4020";;;
+10;"J30,J31,J32,J33,J34,J35";"Plated_Hole_d1.0mm";6;"Conn_01x01";;;
+11;"G1";"Logo-WL3";1;"Logo-WL3";;;
+12;"C1";"C_0805";1;"10uF";;;
+13;"R1";"R_0805";1;"33k";;;

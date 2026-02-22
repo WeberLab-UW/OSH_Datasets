@@ -1,0 +1,9 @@
+Refs,Quantity,Manufacturer,MPN,datasheet,footprint,value
+"C1, C2",2,Samsung,CL21B104KBCNNNC,,Capacitors_SMD:C_0805,0.1uF
+"FB1, FB2",2,Würth Elektronik,742792040,,Resistors_SMD:R_0805,FERRITE
+"J4, J6",2,Samtec,SFM-120-02-L-D-A,,Sci-Bots:SFM-120-02-XXX-D-A,SFM-120-02-L-D-A
+J5,1,Samtec,SFM-125-02-L-D-A,,Sci-Bots:SFM-125-02-XXX-D-A,SFM-125-02-L-D-A
+P1-P4,4,Mill-Max,823-22-034-10-000101,,Sci-Bots:Pogo_Pin_Header_Straight_2x17_Pitch2.54mm,Conn_02x17_Odd_Even
+P5-P8,4,DNP,DNP,,Mounting_Holes:MountingHole_3.2mm_M3_Pad,CONN_01X01
+R1,1,Yageo,RC0805FR-0710KL,,Resistors_SMD:R_0805,10k
+U1,1,onsemi,CAT24C02TDI-GT3A,,TO_SOT_Packages_SMD:TSOT-23-5,CAT24C02TDI

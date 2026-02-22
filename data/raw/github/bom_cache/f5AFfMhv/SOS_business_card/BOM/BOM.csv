@@ -1,0 +1,25 @@
+﻿Reference,Value,Datasheet,Footprint,Qty,DNP,Description,Digikey link,Digikey price
+BT1,Battery_Cell,~,Battery:BatteryHolder_Keystone_3034_1x20mm,1,,Single-cell battery,https://www.digikey.lt/en/products/detail/keystone-electronics/3034/4499289,0.37
+"C1,C2,C3,C4,C5,C6,C7",100n,~,Capacitor_SMD:C_0805_2012Metric,7,,"Unpolarized capacitor, small symbol",,0.1
+C8,10n,~,Capacitor_SMD:C_0805_2012Metric,1,,"Unpolarized capacitor, small symbol",,0.1
+C9,330n,~,Capacitor_SMD:C_0805_2012Metric,1,,"Unpolarized capacitor, small symbol",,0.1
+D1,LED,~,LED_SMD:LED_1206_3216Metric,1,,Light emitting diode,,0.18
+D2,MBRS540T3G,https://www.onsemi.com/pdf/datasheet/mbrs540t3-d.pdf,Diode_SMD:D_SMC,1,,"40V 5A Schottky Barrier Rectifier Diode, SMC",https://www.digikey.lt/en/products/detail/onsemi/MBRS540T3G/918647?s=N4IgTCBcDaILICEBKBlArAFgAwBUDMA4iALoC%2BQA,0.59
+J1,USB_C_Receptacle_PowerOnly_6P,https://www.usb.org/sites/default/files/documents/usb_type-c.zip,Connector_USB:USB_C_Receptacle_GCT_USB4125-xx-x_6P_TopMnt_Horizontal,1,,USB Power-Only 6P Type-C Receptacle connector,https://www.digikey.lt/en/products/detail/jae-electronics/DX07B024JJ2R1500/5395887,1.78
+"J2,J5",GND,~,MountingHole:MountingHole_2.5mm_Pad_TopBottom,2,,"Generic connector, single row, 01x01, script generated",,
+J3,V_OUT,~,MountingHole:MountingHole_2.5mm_Pad_TopBottom,1,,"Generic connector, single row, 01x01, script generated",,
+J4,V_IN,~,MountingHole:MountingHole_2.5mm_Pad_TopBottom,1,,"Generic connector, single row, 01x01, script generated",,
+"Q1,Q3",BSS138,https://www.onsemi.com/pub/Collateral/BSS138-D.PDF,Package_TO_SOT_SMD:SOT-23,2,,"50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23",https://www.digikey.lt/en/products/detail/evvo/BSS138/22482090,0.15
+Q2,IRF5305,https://www.infineon.com/dgdl/Infineon-IRF5305-DataSheet-v01_01-EN.pdf?fileId=5546d462533600a4015355e370101993,my:TO-220-3_Horizontal_TabDown_2,1,,"P-MOSFET transistor, gate/drain/source, drain connected to mounting plane",https://www.digikey.lt/en/products/detail/infineon-technologies/IRF5305PBF/811987,1.38
+R1,10k,~,Resistor_SMD:R_0805_2012Metric,1,,Resistor,,0.1
+R2,1M,~,Resistor_SMD:R_0805_2012Metric,1,,Resistor,,0.1
+"R3,R4",5.1k,~,Resistor_SMD:R_0805_2012Metric,2,,Resistor,,0.1
+R5,100,~,Resistor_SMD:R_0805_2012Metric,1,,Resistor,,0.1
+"R6,R7",100k,~,Resistor_SMD:R_0805_2012Metric,2,,Resistor,,0.1
+SW1,SW_SPDT,~,Button_Switch_SMD:SW_SPDT_PCM12,1,,"Switch, single pole double throw",https://www.digikey.lt/en/products/detail/c-k/PCM12SMTR/1640112,1.06
+U1,SN74LV04A,http://www.ti.com/lit/gpn/sn74LV04a,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,1,,Hex Inverter,https://www.digikey.lt/en/products/detail/texas-instruments/SN74LV04ADR/1590868,0.54
+"U2,U3,U4",SN74HC21QDRQ1,https://www.ti.com/lit/ds/symlink/sn74hc21-q1.pdf,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,3,,Dual 4-input AND,https://www.digikey.lt/en/products/detail/texas-instruments/SN74HC21QDRQ1/1570862?s=N4IgTCBcDaIMoDkDsAWAEgYTARgIoBEAlXbEAXQF8g,0.59
+U5,SN74HCS4075,https://www.ti.com/cn/lit/ds/symlink/sn74hcs4075.pdf,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,1,,Triple Or 3 inputs,https://www.digikey.lt/en/products/detail/texas-instruments/SN74HCS4075DR/12696017,0.35
+U6,TLC555,https://www.ti.com/lit/ds/symlink/tlc555.pdf,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,1,,"Single LinCMOS Timer, 555 compatible, SOIC-8",https://www.digikey.lt/en/products/detail/texas-instruments/TLC555CDR/276979,0.81
+U7,74HC590A,http://www.ti.com/lit/ds/symlink/sn74hc590a.pdf,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm,1,,"8-bit Binary Counter with Output Register 3-State Outputs, DIP-16/SOIC-16/SOIC-16W",https://www.digikey.lt/en/products/detail/texas-instruments/SN74HC590ADW/376755,0.92
+

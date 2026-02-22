@@ -1,0 +1,28 @@
+Reference,Value,Footprint,Count,Datasheet,Function,Comment
+SW1;SW2;SW3;SW4;SW5;SW8;SW9;SW10;SW11;SW12,SW_PUSH,gamegirl-v02:rubber_pad,10,,Conductive button,Not a Component
+SW6;SW7,SW_PUSH,gamegirl-v02:SW_DOME_4x4.6_SMD,2,,Buttons,
+R1;R2;R3;R4;R10;R16,1k,Resistors_SMD:R_0805_HandSoldering,6,,,+/- 10-20%
+R5,680,Resistors_SMD:R_0805_HandSoldering,1,,,+/- 10-20%
+SP1,SPEAKER,gamegirl-v02:CDM-20008,1,,Speaker solder point,Not a component
+C1;C2;C3,100nF,Capacitors_SMD:C_0805_HandSoldering,3,,,X5R or X7R
+R6;R7;R8;R9,330,Resistors_SMD:R_0805_HandSoldering,4,,,+/- 10-20%
+P1,PI-ZERO,gamegirl-v02:raspberry-zero,1,,System-On-Module,User Supplied
+U2,PAM8302A,Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm,1,https://cdn-shop.adafruit.com/datasheets/PAM8302A.pdf,Audio Amp,
+C4;C7;C8,10uF,Capacitors_SMD:C_0805_HandSoldering,3,,,X5R or X7R
+U3,MCP73831-2ACI,TO_SOT_Packages_SMD:SOT-23-5,1,http://www.mouser.com/ds/2/268/20001984g-846362.pdf,LiPo Charger,
+BT1,Battery,Connectors_JST:JST_SH_BM02B-SRSS-TB_02x1.00mm_Straight,1,JST-SH 2pin 1.0MM pitch,Battery,Include 50-100MM pigtail
+C6;C5;C9,4.7uF,Capacitors_SMD:C_0805_HandSoldering,3,,,X5R or X7R
+D5,LED_Orange,LEDs:LED_0805,1,,Charging LED,
+R11,2k,Resistors_SMD:R_0805_HandSoldering,1,,,+/- 10%
+RV1,POT/10K,gamegirl-v02:Potentiometer_3386P,1,10K,Volume control,Do not assemble
+R13;R12,10k,Resistors_SMD:R_0805_HandSoldering,2,,,+/- 10%
+U4,MCP1640B,TO_SOT_Packages_SMD:SOT-23-6,1,http://ww1.microchip.com/downloads/en/DeviceDoc/22234B.pdf,5V Booster,
+L1,10uH,Resistors_SMD:R_0805_HandSoldering,1,,Inductor,uH +/- 10% (iSAT >0.7)(Low DCR)
+R14,976k,Resistors_SMD:R_0805_HandSoldering,1,,,+/- 1-10%
+R15,309k,Resistors_SMD:R_0805_HandSoldering,1,,,+/- 1-10%
+Q1,Q_PMOS_GSD,TO_SOT_Packages_SMD:SOT-23_Handsoldering,1,,Backlight switch,
+SW13,Switch_SPDT_x2,Buttons_Switches_SMD:SW_SPDT_PCM12,1,,,
+U1,ER-TFT024-3,gamegirl-v02:ER-CON50HT-1,1,http://www.buydisplay.com/download/connector/ER-CON50HT-1.pdf,Display connector,
+D1;D2;D3;D4;D6;D7;D8;D9;D10;D11;D12;D13,D,Diodes_SMD:SOD-323,12,,Button matrix,"General Purpose, Switching"
+D14,LED_Green,LEDs:LED_0805,1,PWR,Power LED,
+,,,1,http://www.buydisplay.com/download/manual/ER-TFT024-3_Datasheet.pdf,Display,

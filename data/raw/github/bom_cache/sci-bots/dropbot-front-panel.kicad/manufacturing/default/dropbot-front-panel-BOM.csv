@@ -1,0 +1,20 @@
+Refs,Quantity,MPN,Manufacturer,datasheet,footprint,value
+C1-C4,4,CL21B104KBCNNNC,Samsung,,Capacitors_SMD:C_0805,0.1uF
+D1,1,MMSZ5240BS-7-F,Diodes Inc.,,Diodes_SMD:D_SOD-323,10V
+JP1,1,RC0805JR-070RL,Yageo,,Resistors_SMD:R_0805,JUMPER
+JP2,1,DNP,DNP,,Resistors_SMD:R_0805,JUMPER
+JP3,1,DNP,DNP,,Resistors_SMD:R_0603,A0
+JP4,1,DNP,DNP,,Resistors_SMD:R_0603,A1
+JP5,1,DNP,DNP,,Resistors_SMD:R_0603,A2
+L2,1,RN242-6-02-1M8,Schaffner,,Sci-Bots:RN242-X-02-XXX,1.8mH
+P1,1,SFM-105-02-L-D-A,Samtec,,Sci-Bots:SFM-105-02-XXX-D-A,SFM-105-02-L-D-A
+P10,1,DNP,DNP,,Connect:bornier2,Conn_01x02
+"P8, P13-P15",4,SFM-125-02-L-D-A,Samtec,,Connect:1pin,Conn_01x01
+"P2, P4, P6",3,TFM-120-01-L-D-RA,Samtec,,Sci-Bots:SFM-125-02-XXX-D-A,SFM-125-02-L-D-A
+"P3, P7",2,TFM-125-01-L-D-RA,Samtec,,Sci-Bots:TFM-120-01-XXX-D-RA,TFM-120-01-L-D-RA
+P5,1,DNP,DNP,,Sci-Bots:TFM-125-01-XXX-D-RA,TFM-125-01-L-D-RA
+P9,1,DNP,DNP,,Pin_Headers:Pin_Header_Straight_1x03,Conn_01x03
+Q1,1,IRF9388TRPBF,Infineon,,Power_Integrations:SO-8,IRF9388TRPBF
+"R1, R7",2,RC0805FR-0710KL,Yageo,,Resistors_SMD:R_0805,10k
+U1,1,M24C02-DRDW8TP/K,STMicroelectronics,,Housings_SSOP:TSSOP-8_4.4x3mm_Pitch0.65mm,CAT24C__
+U2,1,D24V22F3,Pololu,,Sci-Bots:D24V22F,D24V22F3

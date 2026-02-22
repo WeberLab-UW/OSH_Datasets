@@ -1,0 +1,54 @@
+,,,,,,
+Item,Reference(s),Qty,Value,Footprint,Supplier,Supplier part number
+Battery holder,BT1,1,Battery_Cell,Battery:BatteryHolder_Keystone_3000_1x12mm,LCSC,C964819
+CAP ceramic,"C1, C5",2,22u,Capacitor_SMD:C_0805_2012Metric,LCSC,
+CAP ceramic,"C2, C13, C14, C15, C16, C20",6,100n,Capacitor_SMD:C_0603_1608Metric,LCSC,C1591
+CAP ceramic,"C3, C4, C17, C18",4,10u,Capacitor_SMD:C_0805_2012Metric,LCSC,C386019
+CAP ceramic,"C6, C21",2,4.7u,Capacitor_SMD:C_0805_2012Metric,LCSC,C98192
+CAP ceramic,"C7, C8, C9, C10, C11, C12",6,1u,Capacitor_SMD:C_0603_1608Metric,LCSC,C5673
+CAP ceramic,C19,1,10n,Capacitor_SMD:C_0603_1608Metric,LCSC,C100042
+LED SMD BLUE 0603,,,,LED_SMD:LED_0603_1608Metric,LCSC,
+LED SMD BLUE 0603,,,,LED_SMD:LED_0603_1608Metric,LCSC,
+LED SMD BLUE 0603,"D1, D2, D4, D5, D6, D7, D10, D12",8,,LED_SMD:LED_0603_1608Metric,LCSC,C99290
+Diode schottky,"D3, D8, D9",3,,Diode_SMD:D_SMA,LCSC,C85098
+Diode BAS70-05,D11,1,,Package_TO_SOT_SMD:SOT-23,LCSC,C131857
+RGB SMD LED WS2812B,D14,1,,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,LCSC,
+Generic diode CD4148W,D15,1,,Diode_SMD:D_0805_2012Metric,LCSC,
+Fuse,F1,1,,Fuse:Fuse_1206_3216Metric,LCSC,C553921
+Header male 2x1 p2.54,J2,1,,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,LCSC,C180247
+Connector JST XH 2x1 p2.5,"J1,J3, J18, J19",4,,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,LCSC,
+Connector JST XH 3x1 p2.5,"J4,J5,J11",3,,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,LCSC,
+Connector JST XH 4x1 p2.5,"J6,J7,J10",1,,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,LCSC,C37815
+Solder Jumper,"J8,J13,JP1",3,,Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,,
+Solder Jumper,"J9,J14,JP2",3,,Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels,,
+USB micro b,J12,1,,Connector_USB:USB_Micro-B_Amphenol_10118194_Horizontal,LCSC,C132563
+Micro SD holder push push,J15,1,,IoWLabsConnectors:microSD_push_push,LCSC,
+Connector UFL SMD,J17,1,,Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical,LCSC,C88374
+Inductance SMD,L1,1,22u,Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm,LCSC,
+PMOS transistor,"Q1, Q2",2,,Package_TO_SOT_SMD:SOT-23,LCSC,C518789
+LMBT3904 Dual NPN transistor ,Q3,1,,Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering,LCSC,C131781
+PMOS transistor BSS138,Q4,1,,Package_TO_SOT_SMD:SOT-23,LCSC,C400505
+RES SMD,"R1, R10, R11, R12, R23,R4, R6",7,1k,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,R2,1,100,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,R3,1,1K2,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,R5,1,7K5,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,R7,1,12K,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,R8,1,470,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,R9,1,30K,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,R15,1,4.7K,Resistor_SMD:R_0603_1608Metric,LCSC,C99782
+RES SMD,R16,1,120,Resistor_SMD:R_0603_1608Metric,LCSC,
+RES SMD,"R17, R18, R19, R20, R37,R13, R14, R22, R24, R25, R26,21",12,10k,Resistor_SMD:R_0603_1608Metric,LCSC,C25804
+RES SMD,R27,1,330,Resistor_SMD:R_0603_1608Metric,LCSC,C105881
+RES SMD,"R28, R29, R30, R31, R32",5,3.3k,Resistor_SMD:R_0603_1608Metric,LCSC,C25995
+RES SMD,"R33, R34",2,100k,Resistor_SMD:R_0603_1608Metric,LCSC,C2907088
+Switch button smd,"SW1, SW2, SW3",3,,IoWLabs:SMD_SWITCH,LCSC,C128941
+53,U1,1,DW01,Package_TO_SOT_SMD:SOT-23-6,LCSC,
+54,U2,1,TP4056,IoWLabs:TP4056_SOP-8-PP,LCSC,
+55,U3,1,MT3608,Package_TO_SOT_SMD:SOT-23-6,LCSC,
+56,U4,1,FS8205A,Package_TO_SOT_SMD:SOT-23-6,LCSC,
+LDO 3.3V AP2112K-3.3,"U5, U6, U8",3,,Package_TO_SOT_SMD:SOT-23-5,LCSC,C150742
+58,U7,1,MAX3485,Package_SO:SOP-8_3.9x4.9mm_P1.27mm,LCSC,
+CH340 usb to serial,U9,1,CH340C,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,LCSC,C84681
+ESP32,U10,1,,RF_Module:ESP32-WROOM-32,LCSC,C473012
+RTC RV-8803,U11,1,RV-8803,IoWLabs:SON-8,LCSC,C2846926
+LORA RFM95W-915S2 module 915hz,U12,1,RFM95W-915S2,RF_Module:HOPERF_RFM69HW,LCSC,C2844473

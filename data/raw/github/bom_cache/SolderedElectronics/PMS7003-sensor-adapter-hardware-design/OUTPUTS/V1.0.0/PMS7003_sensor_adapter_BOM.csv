@@ -1,0 +1,14 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"G***";"Logo-Back-OSH-3.5mm";1;"LOGO";;;
+2;"REF**";"Logo-Front-SolderedFULL-15mm";1;"Logo-Front-SolderedFULL-15mm";;;
+3;"REF**";"Logo-Back-SolderedFULL-15mm";1;"Logo-Front-SolderedFULL-15mm";;;
+4;"Ref**";"Version1.0.0.";1;"Val**";;;
+5;",,,,,,,";"buzzardLabel";8;"";;;
+6;"U1";"tps613222a";1;"TPS613222A";;;
+7;"L1";"0806L";1;"DFE201612E-2R2M=P2";;;
+8;"C3";"0805C";1;"C1608X7S1A475K080AC";;;
+9;"C2,C1";"0805C";2;"CL10A226MPCNUBE";;;
+10;"FD1";"FIDUCIAL_23";1;"FIDUCIAL";;;
+11;"H2,H1";"HOLE_3.2mm";2;"HOLE_3.2mm";;;
+12;"K1";"HEADER_MALE_6X1";1;"HEADER_MALE_6X1";;;
+13;"K2";"HEADER_FEMALE_5x2_1.27mm_SMD";1;"HEADER_FEMALE_5x2_1.27mm_SMD";;;

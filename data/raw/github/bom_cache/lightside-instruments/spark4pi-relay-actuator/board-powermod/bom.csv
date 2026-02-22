@@ -1,0 +1,13 @@
+Reference,Quantity,Identifier,footprint,Value,Tolerance,Voltage,Current,Power,PN,
+U1,1,,Package_TO_SOT_SMD:SOT-23-6,TPS54202,,,,,TPS54202DDCR,
+C1,1,,Capacitor_SMD:C_0603_1608Metric,10uF,,,,,CL10A106MA8NRNC,
+L1,1,,Inductor_SMD:L_Taiyo-Yuden_MD-5050,15uH,,,,,SWPA5040S150MT,
+C5;C4,2,,Capacitor_SMD:C_0805_2012Metric,22uF,,,,,CL21A226MAYNNNE,
+R5,1,,Resistor_SMD:R_0402_1005Metric,105K,,,,,0402WGF1053TCE,
+R1,1,,Resistor_SMD:R_0402_1005Metric,49.9,,,,,0402WGF499JTCE,
+R2,1,,Resistor_SMD:R_0402_1005Metric,100K,,,,,0402WGF1003TCE,
+R3,1,,Resistor_SMD:R_0402_1005Metric,13.3K,,,,,AC0402FR-0713K3L,
+C2;C3,2,,Capacitor_SMD:C_0402_1005Metric,0.1uF,,,,,CC0402KRX7R9BB101,
+C6,1,,Capacitor_SMD:C_0402_1005Metric,75pF,,,,,CC0402KRX7R9BB101,100pF not 75
+R4,1,,Capacitor_SMD:C_0402_1005Metric,511K,,,,,0402WGF5113TCE,
+J1;J2,2,,Connector_PinHeader_2.00mm:PinHeader_2x06_P2.00mm_Vertical_SMD,Conn_02x06_Odd_Even,,,,,X4621WVS-2x06I-C40D64,

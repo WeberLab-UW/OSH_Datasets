@@ -1,0 +1,12 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"G***";"Symbol-Front-Magnetic-Field";1;"LOGO";;;
+2;"G***";"Logo-Back-OSH-3.5mm";1;"LOGO";;;
+3;"G***";"Logo-Back-SolderedVERTICAL-10mm";1;"LOGO";;;
+4;"";"Version1.0.0.";1;"";;;
+5;",,,,";"buzzardLabel";5;"";;;
+6;"REF**";"Logo-Front-SolderedFULL-13mm";1;"Logo-Front-SolderedFULL-13mm";;;
+7;"U1";"SOT-23-3";1;"SI7201-B-06-IV";;;
+8;"K1";"HEADER_MALE_3X1";1;"HEADER_MALE_3X1";;;
+9;"H2,H1";"HOLE_3.2mm";2;"HOLE_3.2mm";;;
+10;"FD1";"FIDUCIAL_1MM_PASTE";1;"Fiducial_Stencil";;;
+11;"C1";"0603C";1;"0.1uF";;;

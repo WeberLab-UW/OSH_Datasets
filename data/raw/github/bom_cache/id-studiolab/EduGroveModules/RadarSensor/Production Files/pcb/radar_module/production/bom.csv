@@ -1,0 +1,11 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+C1,0805,1,4.7uF,
+C2,0805,1,22uF,
+D1,2114,1,schottky 1a 40v,
+J1,SEEED_110990030,1,110990030,
+J3,PinHeader_1x05_P2.54mm_Vertical,1,Conn_01x05_Pin,
+J4,PinSocket_2x04_P2.00mm_Vertical,1,Conn_02x04_Odd_Even,
+L1,L_TDK_SLF6045,1,4.7 uH,
+R1,0805,1,5.62k,
+R2,0805,1,1.87k,
+U1,TSOT-23-5_D5_MCH,1,MIC2288YD5-TR,

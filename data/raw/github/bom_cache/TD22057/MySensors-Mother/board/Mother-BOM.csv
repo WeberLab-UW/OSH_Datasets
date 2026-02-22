@@ -1,0 +1,49 @@
+Part,Value,Device,Package,Description,Link
+C1,0.1uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/SMD-0805-0-1UF-50V-capacitor-100NF-104K-X7R-10-100pcs/32330657462.html
+C2,10uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/Free-shipping-0805-10UF-50V-106K-10-X7R-100pcs/32333829597.html
+C3,0.1uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/SMD-0805-0-1UF-50V-capacitor-100NF-104K-X7R-10-100pcs/32330657462.html
+C4,0.1uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/SMD-0805-0-1UF-50V-capacitor-100NF-104K-X7R-10-100pcs/32330657462.html
+C5,0.1uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/SMD-0805-0-1UF-50V-capacitor-100NF-104K-X7R-10-100pcs/32330657462.html
+C6,0.1uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/SMD-0805-0-1UF-50V-capacitor-100NF-104K-X7R-10-100pcs/32330657462.html
+C7,10uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/Free-shipping-0805-10UF-50V-106K-10-X7R-100pcs/32333829597.html
+C8,0.1uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/SMD-0805-0-1UF-50V-capacitor-100NF-104K-X7R-10-100pcs/32330657462.html
+C9,10uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/Free-shipping-0805-10UF-50V-106K-10-X7R-100pcs/32333829597.html
+C10,0.1uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/SMD-0805-0-1UF-50V-capacitor-100NF-104K-X7R-10-100pcs/32330657462.html
+C11,10uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/Free-shipping-0805-10UF-50V-106K-10-X7R-100pcs/32333829597.html
+C12,10uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/Free-shipping-0805-10UF-50V-106K-10-X7R-100pcs/32333829597.html
+C13,10uF,Capacitor X7R 50V,805,,http://www.aliexpress.com/item/Free-shipping-0805-10UF-50V-106K-10-X7R-100pcs/32333829597.html
+D1,,1N4148 Diode,SOD323,,http://www.aliexpress.com/item/Free-shipping-100PCS-1N4148-SMD-IN4148-0805-SOD-323-Switching-Diode/1578916085.html
+H1,,M2.5 mounting hole,,,"http://www.aliexpress.com/item/100pcs-lot-DIN7985-M2-5-5mm-Stainless-Steel-A2-Pan-Head-Phillips-Cross-recessed-pan-head/940264374.html?spm=2114.30010308.3.91.xidEEd&ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10014_10001_10002_10016_10017_10010_10005_10006_10011_10003_10004_10009_10008,searchweb201560_3,searchweb1451318400_-1,searchweb1451318411_6450&btsid=b9274c03-095c-4156-8654-386760f47608"
+H2,,M2.5 mounting hole,,,"http://www.aliexpress.com/item/100pcs-lot-DIN7985-M2-5-5mm-Stainless-Steel-A2-Pan-Head-Phillips-Cross-recessed-pan-head/940264374.html?spm=2114.30010308.3.91.xidEEd&ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10014_10001_10002_10016_10017_10010_10005_10006_10011_10003_10004_10009_10008,searchweb201560_3,searchweb1451318400_-1,searchweb1451318411_6450&btsid=b9274c03-095c-4156-8654-386760f47608"
+I2C,,"2 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+IC_IN,,MM74HC589,SO16,Input shift register with SPI support,https://www.digikey.com/product-detail/en/MC74HC589ADG/MC74HC589ADGOS-ND/1480105
+IC_OUT,,74HC595,SO16,Output shift register,http://www.aliexpress.com/item/Free-shipping-50pcs-74HC595D-74HC595-SOP16/910702058.html
+J3V1,,"4 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+J5V,,"4 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+JGN1,,"4 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+JGN2,,"3 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+JINP,,"2 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+LED,,"2 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+LED_SYS,,SMD LED,805,,http://www.aliexpress.com/item/Free-Shipping-100PCS-0805-Ultra-Bright-SMD-R-G-B-W-Y-LEDs-yellow-blue-White/1596620234.html
+PIEZO,,"2 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+R1,10K,Resistor,805,,http://www.aliexpress.com/item/0805-SMD-Resistors-10k-10K-ohm-1-8W-5-0805-SMD-Resistors-0805-Chip-resistor-500pcs/852348196.html
+R2,1K,Resistor,805,,http://www.aliexpress.com/item/0805-SMD-Resistors-1k-1K-ohm-1-8W-5-0805-SMD-Resistors-0805-Chip-resistor-500pcs/852303271.html
+R3,4.7K,Resistor,805,,http://www.aliexpress.com/item/0805-SMD-Resistors-4K7-4-7K-ohm-1-8W-5-0805-SMD-Resistors-0805-Chip-resistor/852419496.html
+R4,10K,Resistor,805,,http://www.aliexpress.com/item/0805-SMD-Resistors-10k-10K-ohm-1-8W-5-0805-SMD-Resistors-0805-Chip-resistor-500pcs/852348196.html
+R5,1K,Resistor,805,,http://www.aliexpress.com/item/0805-SMD-Resistors-1k-1K-ohm-1-8W-5-0805-SMD-Resistors-0805-Chip-resistor-500pcs/852303271.html
+R6,47,Resistor,805,,http://www.aliexpress.com/store/product/0805-SMD-Resistors-47R-47-ohm-1-8W-5-0805-SMD-Resistors-0805-Chip-resistor-500pcs/821060_851435603.html
+SPI,,"3 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+SWITCH,,"2 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+U$1,,"9 pin, male 90 deg pins",,,http://www.aliexpress.com/item/10PCS-1x40-Pin-2-54mm-Right-Angle-Single-Row-Male-Pin-Header-Connector/32403777838.html
+U$3,,"9 pin, male 90 deg pins",,,http://www.aliexpress.com/item/10PCS-1x40-Pin-2-54mm-Right-Angle-Single-Row-Male-Pin-Header-Connector/32403777838.html
+U$4,,"9 pin, male pins",,,http://www.aliexpress.com/item/10pcs-Connector-2-54mm-40-Pin-Male-Single-Row-silver-Pin-Header-Strip-Brand-New/32417455102.html
+U1,,EEPROM memory,SO-08,512K flash memory,https://www.digikey.com/product-detail/en/AT25DF512C-SSHN-B/1265-1179-5-ND/4901487
+U2,,ATSHA204A,SOT23-3,Crypto chip,https://www.digikey.com/product-detail/en/ATSHA204A-STUCZ-T/ATSHA204A-STUCZ-TCT-ND/4814557
+U3,,3.3V Arduino Pro Mini Clone,PRO_MINI_CLONE_NO_PROG,ABK Pro-Mini Arduino Clone,http://www.aliexpress.com/item/Free-Shipping-1pcs-pro-mini-atmega328-Pro-Mini-328-Mini-ATMEGA328-3-3V-8MHz-for-Arduino/32340942669.html
+U4,,AMS1117 3.3V,SOT223,,http://www.aliexpress.com/item/50pcs-AMS1117-3-3-AMS1117-LM1117-1117-3-3V-1A-Voltage-Regulator/32347685609.html
+U5,,RFM69W radio,,,http://www.ebay.com/itm/181170695434?_trksid=p2057872.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT
+,,,,,
+Miscellaneous Items,,,,,
+Case,,,,,http://www.aliexpress.com/item/Wholesale-electrical-junction-box-10pcs-105-65-40mm-plastic-instrument-box-plastic-box-electronic-project-box/1986580384.html
+Antenna,,,,,http://www.aliexpress.com/item/20pcs-lot-helical-antenna-SW915-TH12-915MHz-12-5mm-Copper-spring-antenna-for-wireless-RF-module/2043535002.html
+Piezo,,3V buzzer,,,http://www.ebay.com/itm/181502256974?_trksid=p2057872.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT

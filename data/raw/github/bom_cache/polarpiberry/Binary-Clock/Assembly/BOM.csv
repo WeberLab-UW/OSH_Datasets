@@ -1,0 +1,15 @@
+Label,Name
+SW1,12x12mm tactile switch
+SW2,12x12mm tactile switch
+C1,0.1uF Ceramic
+C2,0.1uF Ceramic
+R1,10k
+R2,10k
+R3,1k
+R4,2k
+R5,3.3k
+1N1,1N4148 Signal Diode
+1N2,1N4148 Signal Diode
+BT1,The battery holder provided
+M1,The alarm motor
+Q1,PN2222 NPN transistor

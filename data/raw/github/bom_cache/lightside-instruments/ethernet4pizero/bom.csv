@@ -1,0 +1,17 @@
+Reference,Quantity,Identifier,footprint,Value,Tolerance,Voltage,Current,Power,PN
+"C1, C2, C5, C6, C7, C8, ",6,,Capacitor_SMD:C_0402_1005Metric,100 nF,,,,,885012205037
+"C3, ",1,,Capacitor_SMD:C_0402_1005Metric,0.01uF,,,,,885012205012
+"C4, ",1,,Capacitor_SMD:C_0402_1005Metric,10uF,,,,,ZRB15XR61A106ME01D
+"J1, ",1,,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,Conn_02x03,,,,,TSW-103-23-F-D
+"J2, ",1,,ice4pi:PinSocket_2x20_P2.54mm_Vertical_1_04mm,Raspberry_Pi_2_3,,,,,SSQ-120-03-T-D
+"J3, ",1,,Connector_USB:USB_C_Receptacle_GCT_885012205012P_TopMnt_Horizontal,USB_C_Receptacle_USB2.0,,,,,USB4105-GF-A 
+"J4, ",1,,Connector_RJ:RJ45_Amphenol_RJMG1BD3B8K1ANR,RJ45_Amphenol_RJMG1BD3B8K1ANR,,,,,RJMG1BD3B8K1ANR 
+"L1, ",1,,Inductor_SMD:L_1210_3225Metric,L,,,,,MI1210K600R-10
+"R1, R2, R3, R4, ",4,,Resistor_SMD:R_0402_1005Metric,50,,,,,RC0402JR-0750RL
+"R5, ",1,,Resistor_SMD:R_0402_1005Metric,0,,,,,RC0402JR-100RL
+"R6, R7, ",2,,Resistor_SMD:R_0402_1005Metric,1K,,,,,ERJ-2GEJ102X 
+"R8, ",1,,Capacitor_SMD:C_0402_1005Metric,10K,,,,,ERJ-2GEJ103X
+"R9, ",1,,Resistor_SMD:R_0402_1005Metric,5.1K,,,,,ERJ-2RKF5101X
+"R10, ",1,,Resistor_SMD:R_0402_1005Metric,2.32K,,,,,ERJ-2RKF2321X
+"U1, ",1,,Package_SO:SSOP-28_5.3x10.2mm_P0.65mm,ENC28J60x-SS,,,,,ENC28J60x-SS
+"U2, ",1,,Oscillator:Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm,DSC1001DE1-025.0000,,,,,DSC1001DE1-025.0000

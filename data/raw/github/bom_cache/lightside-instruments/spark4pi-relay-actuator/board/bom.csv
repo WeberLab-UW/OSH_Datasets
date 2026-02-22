@@ -1,0 +1,12 @@
+Reference,Quantity,Identifier,footprint,Value,Tolerance,Voltage,Current,Power,PN,Mfr Part #,
+J10,1,,spark:PJ1-021-SMT-TR,Barrel_Jack,,,,,PJ1-021-SMT-TR,PJ1-021-SMT-TR,
+SW1,1,,Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx83-2LFS,SW_Push,,,,,,PTS645VK582LFS,
+J101;J102;J103;J201;J202;J301;J302;J203;J303,9,,spark:banana-plug-horizontal-black,Conn_01x01,,,,,,73099-2,
+K101;K201;K301,3,,Relay_THT:Relay_SPDT_Omron-G5LE-1,G5LE-1,,,,,,G5LE-1-DC12,
+Q101;Q201;Q301,3,,Package_TO_SOT_SMD:SOT-23,BS870,,,,,,NX138BKR,SQ2364EES-T1_GE3
+R101;R201;R301,3,,Resistor_SMD:R_0402_1005Metric,10K,,,,,,CRCW040210K0FKEDC,
+D101;D201;D301,3,,Diode_SMD:D_0603_1608Metric,D_Schottky,,,,,,CDBU0520,
+R102;R202;R302;R103;R203;R303,6,,Resistor_SMD:R_0402_1005Metric,1K,,,,,,RR0510P-102-D,
+J3;J4,2,,spark:Socket_Strip_SMD_2x6_Pitch2mm,Conn_02x06_Odd_Even,,,,,,M20-7810645,
+P5,1,,spark:PinHeader_2x20_P2.54mm_Vertical_1_04mm,Raspberry_Pi_2_3,,,,,,10129381-940002BLF,
+D102;D202;D302,3,,Diode_SMD:D_0603_1608Metric,LED,,,,,,150060VS55040,

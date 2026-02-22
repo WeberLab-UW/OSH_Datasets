@@ -1,0 +1,7 @@
+References	Qty	Description
+BT1	1	Battery Multiple-cell battery BatteryHolder MPD BC2003 1x2032
+D1, D4, D2, D5, D3, D6, D7, D8, D9, D10, D11, D12	12	LED Light emitting diode 0805 2012Metric Pad1.15x1.40mm HandSolder
+R1	1	R 10k Resistor 0805 2012Metric Pad1.15x1.40mm HandSolder
+R2, R3, R4, R5	4	R 100 Resistor 0805 2012Metric Pad1.15x1.40mm HandSolder
+SW1	1	SW Push button switch, generic, two pins SPST B3SL-1002P
+U1	1	ATtiny85-20SU-MCU Microchip ATtiny ATtiny85-20SU SOIJ-8 5.3x5.3mm P1.27mm

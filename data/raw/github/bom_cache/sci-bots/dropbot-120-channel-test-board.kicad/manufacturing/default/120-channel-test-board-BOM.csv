@@ -1,0 +1,4 @@
+Refs,Quantity,MPN,Manufacturer,datasheet,footprint,value
+C1-C120,120,CC1206JKNPOCBN100,YAGEO,~,Capacitors_SMD:C_1206,C
+"P1-P120, P122-P137",136,DNP,DNP,,Sci-Bots:1.9mm_DMF_Electrode,CONN_01X01
+"P121, P138",2,DNP,DNP,,Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm,CONN_01X01

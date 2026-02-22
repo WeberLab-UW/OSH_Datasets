@@ -1,0 +1,22 @@
+"ESP8266 Breakout Board, Bill of Materials",,,,,,,,,,,,
+,,,,,,,,,,,,
+Id,Designator,Package,Quantity,Designation,Description,Mfr. Package,Mfr.,Mfr. P/N,Dist.,Dist P/N,Price/1,Link
+1,"C1,C2",Capacitor5x6RM2.5,2,10uF,CAP ALUM 10UF 20% 25V RADIAL,"Pitch : 0.098"" (2.50mm)
+0.157"" Dia (4.00mm) x 0.276"" Height (7.00mm)",Panasonic Electronic Components,EEA-GA1E100H,Digikey,P15799CT-ND,0.35,http://www.digikey.com/product-detail/en/EEA-GA1E100H/P15799CT-ND/3831166
+2,D1,LED-3MM,1,LED,LED 3MM HI-EFF RED DIFFUSED,"Round with Domed Top, 3mm (T-1), 3.00mm",Lite-On Inc,LTL-4221N,Digikey,160-1139-ND,0.33,http://www.digikey.com/product-detail/en/LTL-4221N/160-1139-ND/214530
+3,P1,Pin_Header_Straight_1x03,1,V_SEL,"CONN HEADER .100"" SNGL STR 10POS","Pitch=0.100"" (2.54mm)
+Number of Rows=1
+Through Hole",Sullins Connector Solutions,PRPC010SAAN-RC,Digikey,S1011EC-10-ND,0.3,http://www.digikey.com/product-detail/en/PRPC010SAAN-RC/S1011EC-10-ND/2775244
+4,P2,Pin_Header_Straight_1x06,1,FTDI,As above,,,,,,,
+5,P4,Pin_Header_Straight_1x03,1,TX_SEL,As above,,,,,,,
+6,P3,Pin_Header_Straight_2x04,1,ESP-01,CONN HEADER 8POS .100 STR TIN,"Pitch=0.100"" (2.54mm)
+Number of Rows=2
+Row Spacing=0.100"" (2.54mm)
+Through Hole",FCI,67996-408HLF,Digikey,609-3391-ND,0.32,http://www.digikey.com/product-detail/en/67996-408HLF/609-3391-ND/1487877
+7,R1,Resistor_Horizontal_RM10mm,1,1k,RES 1K OHM 1/4W 5% CARBON FILM,"0.091"" Dia x 0.256"" L (2.30mm x 6.50mm)",Stackpole Electronics Inc,CF14JT1K00,Digikey,CF14JT1K00CT-ND,0.1,http://www.digikey.com/product-detail/en/CF14JT1K00/CF14JT1K00CT-ND/1830350
+8,"R2,R3,R4,R5",Resistor_Horizontal_RM10mm,4,10k,RES 10K OHM 1/4W 5% CARBON FILM,"0.091"" Dia x 0.256"" L (2.30mm x 6.50mm)",Stackpole Electronics Inc,CF14JT10K0,Digikey,CF14JT10K0CT-ND,0.1,http://www.digikey.com/product-detail/en/CF14JT10K0/CF14JT10K0CT-ND/1830374
+9,R6,Resistor_Horizontal_RM10mm,1,1k8,RES 1.8K OHM 1/4W 5% CARBON FILM,"0.091"" Dia x 0.256"" L (2.30mm x 6.50mm)",Stackpole Electronics Inc,CF14JT1K80,Digikey,CF14JT1K80CT-ND,0.1,http://www.digikey.com/product-detail/en/CF14JT1K80/CF14JT1K80CT-ND/1830356
+10,SW1,SW_PUSH_SMALL,1,RST,SWITCH TACTILE SPST-NO 0.05A 24V,6.00mm x 6.00mm,TE Connectivity Alcoswitch Switches,1825910-7,Digikey,450-1804-ND,0.1,http://www.digikey.com/product-detail/en/1825910-7/450-1804-ND/1731414
+11,SW2,SW_PUSH_SMALL,1,GIPO0,SWITCH TACTILE SPST-NO 0.05A 24V,6.00mm x 6.00mm,TE Connectivity Alcoswitch Switches,1825910-7,Digikey,450-1804-ND,0.1,http://www.digikey.com/product-detail/en/1825910-7/450-1804-ND/1731414
+12,U1,A1117,1,AP1117D33,IC REG LDO 3.3V 0.8A TO220AB,TO-220-3,STMicroelectronics,LD1117V33,Digikey,497-1491-5-ND,0.62,http://www.digikey.com/product-detail/en/LD1117V33/497-1491-5-ND/586012
+13,-,"Shorting Links, Jumpers",2,--,"SHUNT JUMPER .1"" BLACK GOLD","(1 x 2), Pitch=0.100"" (2.54mm)",3M,969102-0000-DA,Digikey,3M9580-ND,0.1,http://www.digikey.com/product-detail/en/969102-0000-DA/3M9580-ND/2071621

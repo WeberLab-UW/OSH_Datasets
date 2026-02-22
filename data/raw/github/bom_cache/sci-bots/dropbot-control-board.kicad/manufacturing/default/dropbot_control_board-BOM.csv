@@ -1,0 +1,66 @@
+Refs,Quantity,MPN,Manufacturer,datasheet,footprint,value
+C1,1,T494D106M025AT,KEMET,,Capacitors_Tantalum_SMD:TantalC_SizeD_EIA-7343_Reflow,10uF
+"C11, C15",2,CC0805KKX7R9BB105,Yageo,,Capacitors_SMD:C_0805,1uF
+C12,1,CL21C100JECNNWC,Samsung,,Capacitors_SMD:C_0805,10pF
+"C13, C19-C21",4,CL21C101JECNNWC,Samsung,,Capacitors_SMD:C_0805,100pF
+C14,1,CL21C471JDFNNWG,Samsung,,Capacitors_SMD:C_0805,470pF
+C16,1,08053C154JAT2A,KYOCERA AVX,,Capacitors_SMD:C_0805,0.15uF
+"C2, C3, C5, C8, C9, C17, C18, C22, C26, C33, C36-C39",14,CL21B104KBCNNNC,Samsung,,Capacitors_SMD:C_0805,0.1uF
+"C23, C25, C28-C31",6,CL21C151JBANNNC,Samsung,,Capacitors_SMD:C_0805,150pF
+C24,1,501R15W102KV4E,Johanson,,Capacitors_SMD:C_0805,1000pF
+"C27, C34",2,CC0805KRX7R9BB103,Yageo,,Capacitors_SMD:C_0805,0.01uF
+C32,1,T491D336K020AT,KEMET,,Sci-Bots:SM2917,33uF
+C35,1,DNP,DNP,,Capacitors_SMD:C_1206,C
+"C4, C10",2,C1210C104KCRACTU,KEMET,,Capacitors_SMD:C_1210,"100n,500V"
+C6,1,T491X107K025AT,KEMET,,Capacitors_Tantalum_SMD:TantalC_SizeE_EIA-7360_Reflow,100uF
+C7,1,EEV-EB2G3R3Q,Panasonic,,Capacitors_SMD:c_elec_10x10,"3.3uF,400V"
+D1,1,VS-4EGU06-M3/5BT,Vishay,,Diodes_SMD:SMC_Standard,"400V, 4A, <50ns"
+"D2, D3",2,US1J-13-F,Diodes Inc.,,Diodes_SMD:SMA_Standard,D
+D4,1,"TBAV99,LM",Toshiba,,TO_SOT_Packages_SMD:SOT-23,BAV99
+D5,1,824015,Würth Elektronik,,Sci-Bots:wurth-WE-TVS_SOT23-6L,WE-TVS_824015
+F1,1,B59773B0120A070,EPCOS,,Resistors_ThroughHole:Resistor_Vertical_RM5mm,PTC
+F2,1,B59807A0090A062,EPCOS,,Resistors_SMD:R_1210,PTC 15mA
+FB1-FB8,8,742792040,Würth Elektronik,,Resistors_SMD:R_0805,FERRITE
+L1,1,SRR1210-470M,Bourns,,footprints:SRR1210,"47uH,3.8A"
+L2,1,744231091,Würth Elektronik,,Sci-Bots:wurth-WE-CNSW_0805,90 Ohm@100MHz
+LED1,1,150080BS75000,Würth Elektronik,,LEDs:LED_0805,+3.3V
+LED2,1,150080BS75000,Würth Elektronik,,LEDs:LED_0805,+12V
+"P1, P2, P5",3,DNP,DNP,,Connect:1pin,CONN_01X01
+P10,1,DNP,DNP,,Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm,CONN_01X01
+P11,1,TFM-105-02-L-DH,Samtec,,Sci-Bots:TFM-105-02-X-DH,TFM-105-02-X-DH
+P3,1,DNP,DNP,,Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm,CONN_01X03
+P4,1,DNP,DNP,,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,CONN_01X02
+P6,1,1734346-1,TE Connectivity,,Sci-Bots:1734346-1,USB_B
+P7,1,DNP,DNP,,Pin_Headers:Pin_Header_Straight_1x04,CONN_01X04
+P8,1,DNP,DNP,,Pin_Headers:Pin_Header_Straight_1x03,CONN_01X03
+P9,1,AU-Y1006,ASSMANN WSW Components,,Sci-Bots:AU-Y1006,USB_A
+Q1,1,STP33N65M2,STMicroelectronics,,TO_SOT_Packages_THT:TO-220_Neutral123_Horizontal_LargePads,STP33N65M2
+"Q5, Q6",2,IRF740BPBF,Vishay,,TO_SOT_Packages_THT:TO-220_Neutral123_Horizontal_LargePads,IRF740BPBF
+R1,1,RC0805FR-071KL,Yageo,,Resistors_SMD:R_0805,1k
+"R10, R13, R31, R32, R34-R36, R55",8,RC0805FR-075K1L,Yageo,,Resistors_SMD:R_0805,5.1k
+"R11, R12, R24, R28-R30, R54, R56",8,RC0805FR-07100RL,Yageo,,Resistors_SMD:R_0805,100
+R14,1,ERJ-6DQJ1R0V,Panasonic,,Resistors_SMD:R_0805,1
+"R15, R17",2,RC0805FR-0751KL,Yageo,,Resistors_SMD:R_0805,51k
+"R16, R27, R33",3,RC0805FR-07100KL,Yageo,,Resistors_SMD:R_0805,100k
+"R18, R21, R37-R39",5,RC0805FR-0710RL,Yageo,,Resistors_SMD:R_0805,10
+"R23, R53",2,RC0805FR-071ML,Yageo,,Resistors_SMD:R_0805,1Meg
+R26,1,RC0805FR-072K2L,Yageo,,Resistors_SMD:R_0805,2.2k
+"R2-R4, R19, R20",5,RC0805FR-072KL,Yageo,,Resistors_SMD:R_0805,2k
+"R40, R41, R48-R51",6,RC0805FR-07150RL,Yageo,,Resistors_SMD:R_0805,150
+R42-R47,6,RC0805FR-0751RL,Yageo,,Resistors_SMD:R_0805,51
+R5,1,CSR2512C0R03F,Riedon,,Resistors_SMD:R_2512,30m
+R52,1,RC0805JR-070RL,Yageo,,Resistors_SMD:R_0805,0R
+"R6, R8, R22",3,HVCB1206KDL2M00,Stackpole Electronics,,Resistors_SMD:R_1206,2M
+R7,1,RC0805FR-079K1L,Yageo,,Resistors_SMD:R_0805,9.1k
+R25,1,RC0805FR-0710KL,Yageo,,Resistors_SMD:R_0805,10k
+R9,1,RC0805FR-0720KL,Yageo,,Resistors_SMD:R_0805,20k
+SW1,1,PTS840 GK SMTR LFS,C&K Components,,Sci-Bots:PTS840_GK_SMTR_LFS,PROG
+U1,1,DNP,DNP,,Sci-Bots:Teensy-3.2,Teensy_3.2
+U10,1,IS25LP064A-JBLE,ISSI,https://www.winbond.com/resource-files/w25q64fv%20revq%2006142016.pdf,Sci-Bots:SSO-8_5.2x5.2mm_Pitch1.27mm,IS25LP064A-JBLE
+U11,1,ED08DT,On Shore Technology,,Housings_DIP:DIP-8_W7.62mm,MCP6022
+U2,1,MAX1771ESA+ ,Maxim Integrated,,Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm,MAX1771
+U3,1,CAT5171TBI-50GT3,onsemi,http://www.onsemi.com/pub_link/Collateral/CAT5171-D.PDF,Sci-Bots:SOT-23-8,CAT5171
+U4,1,HV7802MG-G,Microchip,,footprints:MSOP-8,HV7802
+"U5, U7, U8, U12",4,"TLP227G-2(TP1,N,F)",Toshiba,,SMD_Packages:DIP-8_SMD,"DPST (2 Form A), 350V"
+U6,1,NCP5304DR2G,onsemi,,SMD_Packages:SOIC-8-N,NCP5304
+U9,1,"74AHC1G32GW,125",Nexperia,http://www.nxp.com/documents/data_sheet/74AHC_AHCT1G32.pdf,TO_SOT_Packages_SMD:SOT-353,74AHC1G32

@@ -1,0 +1,9 @@
+Comment,Designator,Footprint,LCSC
+10k,"R1,R2",R_0805_2012Metric,C17414
+CD74HC4067M,"U1,U2",SOIC-24W_7.5x15.4mm_P1.27mm,C496123
+0.1uf,"C1,C2",C_0805_2012Metric,C49678
+74HC595,U3,SOIC-16_3.9x9.9mm_P1.27mm,C5947
+Conn_01x04_Male,J4,SMD_Pad_1x4,
+Conn_01x10_Male,J3,SMD_Pad_1x10,
+Screw_Terminal_01x03,J2,PinHeader_1x03_P2.54mm_Vertical,
+Screw_Terminal_01x02,J1,PinHeader_1x02_P2.54mm_Vertical,
