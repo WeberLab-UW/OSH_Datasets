@@ -108,8 +108,8 @@ def run_pipeline() -> None:
 
     # Check a specific enriched repo
     sample = conn.execute(
-        "SELECT rm.stars, rm.forks, rm.has_bom, rm.primary_language, "
-        "rm.community_health, rm.total_files "
+        "SELECT rm.repo_url, rm.stars, rm.forks, rm.has_bom, "
+        "rm.primary_language, rm.community_health, rm.total_files "
         "FROM repo_metrics rm "
         "JOIN projects p ON p.id = rm.project_id "
         "ORDER BY rm.stars DESC LIMIT 5"
@@ -120,9 +120,9 @@ def run_pipeline() -> None:
         print("  Top repos by stars:")
         for r in sample:
             print(
-                f"    stars={r[0]}, forks={r[1]}, "
-                f"has_bom={bool(r[2])}, lang={r[3]}, "
-                f"health={r[4]}, files={r[5]}"
+                f"    {r[0]}: stars={r[1]}, forks={r[2]}, "
+                f"has_bom={bool(r[3])}, lang={r[4]}, "
+                f"health={r[5]}, files={r[6]}"
             )
 
     # Check bom_file_paths
@@ -134,13 +134,13 @@ def run_pipeline() -> None:
 
     if bom_count > 0:
         bom_samples = conn.execute(
-            "SELECT p.name, bf.file_path "
+            "SELECT p.name, bf.repo_url, bf.file_path "
             "FROM bom_file_paths bf "
             "JOIN projects p ON p.id = bf.project_id "
             "LIMIT 5"
         ).fetchall()
         for b in bom_samples:
-            print(f"    {b[0]}: {b[1]}")
+            print(f"    {b[0]} ({b[1]}): {b[2]}")
 
     conn.close()
 

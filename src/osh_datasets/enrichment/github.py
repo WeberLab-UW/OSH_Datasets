@@ -187,9 +187,12 @@ def enrich_from_github(
             if not isinstance(file_tree, dict):
                 file_tree = {}
 
+            repo_url = f"https://github.com/{owner}/{repo_name}"
+
             upsert_repo_metrics(
                 conn,
                 project_id,
+                repo_url,
                 stars=_safe_int(metrics.get("stars")),
                 forks=_safe_int(metrics.get("forks")),
                 watchers=_safe_int(metrics.get("watchers")),
@@ -225,7 +228,9 @@ def enrich_from_github(
             if isinstance(bom_files, list):
                 for fp in bom_files:
                     if isinstance(fp, str) and fp:
-                        insert_bom_file_path(conn, project_id, fp)
+                        insert_bom_file_path(
+                            conn, project_id, repo_url, fp,
+                        )
 
             # License from GitHub
             gh_license = str(repo_info.get("license") or "").strip()

@@ -9,6 +9,7 @@
 # Usage: nohup bash scripts/run_github_overnight.sh &
 
 set -euo pipefail
+trap 'kill 0' EXIT
 cd "$(dirname "$0")/.."
 
 LOG="data/raw/github/overnight.log"

@@ -278,10 +278,15 @@ class TestRelatedTables:
 
     def test_upsert_repo_metrics(self, db_path: Path) -> None:
         """Repo metrics are inserted and updated on conflict."""
+        url = "https://github.com/test/repo"
         with transaction(db_path) as conn:
             pid = upsert_project(conn, source="t", source_id="1", name="P")
-            upsert_repo_metrics(conn, pid, stars=100, forks=20, has_bom=True)
-            upsert_repo_metrics(conn, pid, stars=150, forks=25, has_bom=False)
+            upsert_repo_metrics(
+                conn, pid, url, stars=100, forks=20, has_bom=True,
+            )
+            upsert_repo_metrics(
+                conn, pid, url, stars=150, forks=25, has_bom=False,
+            )
         conn = open_connection(db_path)
         row = conn.execute(
             "SELECT stars, forks, has_bom FROM repo_metrics "
@@ -294,13 +299,33 @@ class TestRelatedTables:
         assert row[1] == 25
         assert row[2] == 0  # updated from True to False
 
-    def test_insert_bom_file_path(self, db_path: Path) -> None:
-        """BOM file paths are inserted and duplicates are ignored."""
+    def test_upsert_repo_metrics_multi_repo(self, db_path: Path) -> None:
+        """Two repos for one project produce two repo_metrics rows."""
+        url_a = "https://github.com/owner/repo-a"
+        url_b = "https://github.com/owner/repo-b"
         with transaction(db_path) as conn:
             pid = upsert_project(conn, source="t", source_id="1", name="P")
-            insert_bom_file_path(conn, pid, "hardware/bom.csv")
-            insert_bom_file_path(conn, pid, "hardware/bom.csv")  # dup
-            insert_bom_file_path(conn, pid, "pcb/BOM_v2.xlsx")
+            upsert_repo_metrics(conn, pid, url_a, stars=10, forks=1)
+            upsert_repo_metrics(conn, pid, url_b, stars=20, forks=2)
+        conn = open_connection(db_path)
+        rows = conn.execute(
+            "SELECT repo_url, stars, forks FROM repo_metrics "
+            "WHERE project_id = ? ORDER BY repo_url",
+            (pid,),
+        ).fetchall()
+        conn.close()
+        assert len(rows) == 2
+        assert tuple(rows[0]) == (url_a, 10, 1)
+        assert tuple(rows[1]) == (url_b, 20, 2)
+
+    def test_insert_bom_file_path(self, db_path: Path) -> None:
+        """BOM file paths are inserted and duplicates are ignored."""
+        url = "https://github.com/test/repo"
+        with transaction(db_path) as conn:
+            pid = upsert_project(conn, source="t", source_id="1", name="P")
+            insert_bom_file_path(conn, pid, url, "hardware/bom.csv")
+            insert_bom_file_path(conn, pid, url, "hardware/bom.csv")  # dup
+            insert_bom_file_path(conn, pid, url, "pcb/BOM_v2.xlsx")
         conn = open_connection(db_path)
         rows = conn.execute(
             "SELECT file_path FROM bom_file_paths "

@@ -266,7 +266,7 @@ def _load_bom_file_paths(
                 continue
             file_name = str(row["file_name"] or "").strip()
             if file_name:
-                insert_bom_file_path(conn, project_id, file_name)
+                insert_bom_file_path(conn, project_id, "", file_name)
                 inserted += 1
 
     return inserted

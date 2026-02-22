@@ -49,7 +49,8 @@ CREATE TABLE IF NOT EXISTS contributors (
     project_id    INTEGER NOT NULL REFERENCES projects(id),
     name          TEXT    NOT NULL,
     role          TEXT,
-    permission    TEXT
+    permission    TEXT,
+    UNIQUE(project_id, name)
 );
 
 CREATE TABLE IF NOT EXISTS metrics (
@@ -95,6 +96,7 @@ CREATE TABLE IF NOT EXISTS cross_references (
 CREATE TABLE IF NOT EXISTS repo_metrics (
     id                  INTEGER PRIMARY KEY,
     project_id          INTEGER NOT NULL REFERENCES projects(id),
+    repo_url            TEXT    NOT NULL DEFAULT '',
     stars               INTEGER,
     forks               INTEGER,
     watchers            INTEGER,
@@ -115,14 +117,15 @@ CREATE TABLE IF NOT EXISTS repo_metrics (
     total_files         INTEGER,
     archived            INTEGER,
     pushed_at           TEXT,
-    UNIQUE(project_id)
+    UNIQUE(project_id, repo_url)
 );
 
 CREATE TABLE IF NOT EXISTS bom_file_paths (
     id            INTEGER PRIMARY KEY,
     project_id    INTEGER NOT NULL REFERENCES projects(id),
+    repo_url      TEXT    NOT NULL DEFAULT '',
     file_path     TEXT    NOT NULL,
-    UNIQUE(project_id, file_path)
+    UNIQUE(project_id, repo_url, file_path)
 );
 
 CREATE TABLE IF NOT EXISTS component_prices (
@@ -153,6 +156,7 @@ CREATE INDEX IF NOT EXISTS idx_pubs_proj       ON publications(project_id);
 CREATE INDEX IF NOT EXISTS idx_pubs_doi        ON publications(doi);
 CREATE INDEX IF NOT EXISTS idx_contribs_proj   ON contributors(project_id);
 CREATE INDEX IF NOT EXISTS idx_repo_metrics    ON repo_metrics(project_id);
+CREATE INDEX IF NOT EXISTS idx_repo_metrics_url ON repo_metrics(repo_url);
 CREATE INDEX IF NOT EXISTS idx_bom_paths_proj  ON bom_file_paths(project_id);
 CREATE INDEX IF NOT EXISTS idx_comp_prices_bom ON component_prices(bom_component_id);
 """
@@ -478,6 +482,7 @@ def insert_publication(
 def upsert_repo_metrics(
     conn: sqlite3.Connection,
     project_id: int,
+    repo_url: str,
     *,
     stars: int | None = None,
     forks: int | None = None,
@@ -500,11 +505,12 @@ def upsert_repo_metrics(
     archived: bool | None = None,
     pushed_at: str | None = None,
 ) -> None:
-    """Insert or replace repo metrics for a project.
+    """Insert or replace repo metrics for a specific repository.
 
     Args:
         conn: Active database connection.
         project_id: The ``projects.id``.
+        repo_url: Canonical GitHub URL (e.g. ``https://github.com/owner/repo``).
         stars: GitHub star count.
         forks: Fork count.
         watchers: Watcher count.
@@ -529,13 +535,14 @@ def upsert_repo_metrics(
     conn.execute(
         """\
         INSERT INTO repo_metrics
-            (project_id, stars, forks, watchers, open_issues, total_issues,
-             open_prs, closed_prs, total_prs, releases_count, branches_count,
-             tags_count, contributors_count, community_health,
-             primary_language, has_bom, has_readme, repo_size_kb,
-             total_files, archived, pushed_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ON CONFLICT(project_id) DO UPDATE SET
+            (project_id, repo_url, stars, forks, watchers,
+             open_issues, total_issues,
+             open_prs, closed_prs, total_prs, releases_count,
+             branches_count, tags_count, contributors_count,
+             community_health, primary_language, has_bom, has_readme,
+             repo_size_kb, total_files, archived, pushed_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(project_id, repo_url) DO UPDATE SET
             stars = excluded.stars,
             forks = excluded.forks,
             watchers = excluded.watchers,
@@ -558,7 +565,8 @@ def upsert_repo_metrics(
             pushed_at = excluded.pushed_at
         """,
         (
-            project_id, stars, forks, watchers, open_issues, total_issues,
+            project_id, repo_url,
+            stars, forks, watchers, open_issues, total_issues,
             open_prs, closed_prs, total_prs, releases_count, branches_count,
             tags_count, contributors_count, community_health,
             primary_language,
@@ -574,19 +582,21 @@ def upsert_repo_metrics(
 def insert_bom_file_path(
     conn: sqlite3.Connection,
     project_id: int,
+    repo_url: str,
     file_path: str,
 ) -> None:
-    """Record a BOM file path found in a project's repository.
+    """Record a BOM file path found in a specific repository.
 
     Args:
         conn: Active database connection.
         project_id: The ``projects.id``.
+        repo_url: Canonical GitHub URL for the repo.
         file_path: Relative path to the BOM file in the repo.
     """
     conn.execute(
         "INSERT OR IGNORE INTO bom_file_paths "
-        "(project_id, file_path) VALUES (?, ?)",
-        (project_id, file_path),
+        "(project_id, repo_url, file_path) VALUES (?, ?, ?)",
+        (project_id, repo_url, file_path),
     )
 
 
@@ -598,7 +608,7 @@ def insert_contributor(
     role: str | None = None,
     permission: str | None = None,
 ) -> None:
-    """Insert a contributor for a project.
+    """Insert or update a contributor for a project.
 
     Args:
         conn: Active database connection.
@@ -611,6 +621,9 @@ def insert_contributor(
         """\
         INSERT INTO contributors (project_id, name, role, permission)
         VALUES (?, ?, ?, ?)
+        ON CONFLICT(project_id, name) DO UPDATE SET
+            role = excluded.role,
+            permission = excluded.permission
         """,
         (project_id, name, role, permission),
     )

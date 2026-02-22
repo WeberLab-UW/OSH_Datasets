@@ -103,17 +103,18 @@ class TestGitHubEnrichment:
 
         # Check repo_metrics
         row = conn.execute(
-            "SELECT stars, forks, has_bom, primary_language, "
+            "SELECT repo_url, stars, forks, has_bom, primary_language, "
             "community_health, total_files "
             "FROM repo_metrics WHERE project_id = 1"
         ).fetchone()
         assert row is not None
-        assert row[0] == 42  # stars
-        assert row[1] == 7   # forks
-        assert row[2] == 1   # has_bom = True
-        assert row[3] == "Python"
-        assert row[4] == 85  # community health
-        assert row[5] == 120  # total files
+        assert row[0] == "https://github.com/testowner/testrepo"
+        assert row[1] == 42  # stars
+        assert row[2] == 7   # forks
+        assert row[3] == 1   # has_bom = True
+        assert row[4] == "Python"
+        assert row[5] == 85  # community health
+        assert row[6] == 120  # total files
 
         # Check BOM file paths
         bom_rows = conn.execute(
