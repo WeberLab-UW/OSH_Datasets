@@ -27,7 +27,7 @@ uv run python -m osh_datasets.scrape_all
 # Scrape specific sources
 uv run python -m osh_datasets.scrape_all oshwa ohr hackaday
 
-# Load cleaned data into SQLite
+# Load cleaned data into SQLite (includes Track 1 doc quality scoring)
 uv run python -m osh_datasets.load_all
 
 # GitHub enrichment pipeline (requires GITHUB_TOKEN in .env)
@@ -35,6 +35,21 @@ uv run python -m osh_datasets.load_all
 uv run python -m osh_datasets.scrape_all github
 # 2. Enrich: loads scraped JSON back into DB (also runs as part of load_all)
 uv run python -m osh_datasets.enrichment.github
+
+# Documentation quality scoring (Track 1 -- runs as part of load_all)
+uv run python -m osh_datasets.enrichment.doc_quality
+
+# GitHub README + file tree fetching (Track 2 prerequisite, requires GITHUB_TOKEN)
+uv run python -m osh_datasets.enrichment.github_readme_tree --limit 100
+
+# LLM evaluation via Gemini Batch API (Track 2, requires GEMINI_API_KEY)
+uv run python -m osh_datasets.enrichment.llm_readme_eval prepare
+uv run python -m osh_datasets.enrichment.llm_readme_eval submit
+uv run python -m osh_datasets.enrichment.llm_readme_eval poll
+uv run python -m osh_datasets.enrichment.llm_readme_eval ingest
+
+# One-time migration for new doc quality tables
+uv run python scripts/migrate_doc_quality.py
 ```
 
 ## Architecture
@@ -46,10 +61,14 @@ The pipeline has three stages: **scrape** (raw JSON) -> **clean** (standardized 
 - `config.py` -- paths (`DATA_DIR`, `RAW_DIR`, `CLEANED_DIR`, `DB_PATH`), logging via `get_logger()`, env vars via `require_env()`
 - `http.py` -- `build_session()` (retry + backoff) and `rate_limited_get()`. All scrapers share these.
 - `token_manager.py` -- `TokenManager` for rotating API tokens (GitHub, GitLab, Hackaday). Loads from YAML files or env vars.
-- `db.py` -- SQLite schema (10 tables), `open_connection()` with WAL/FK pragmas, `upsert_project()`, insert helpers for child tables
+- `db.py` -- SQLite schema (15 tables), `open_connection()` with WAL/FK pragmas, `upsert_project()`, insert helpers for child tables
 - `scrapers/` -- 12 scraper modules, each subclassing `BaseScraper` (ABC in `base.py`). Registered in `__init__.py:ALL_SCRAPERS`.
 - `loaders/` -- 10 loader modules, each subclassing `BaseLoader` (ABC in `base.py`). Registered in `load_all.py:ALL_LOADERS`.
-- `enrichment/` -- post-scrape enrichment modules that update existing DB records. `github.py` reads scraped JSON and updates projects with repo metrics, BOM file paths, contributors, topics, and licenses.
+- `enrichment/` -- post-scrape enrichment modules that update existing DB records:
+  - `github.py` -- reads scraped JSON and updates projects with repo metrics, BOM file paths, contributors, topics, and licenses
+  - `doc_quality.py` -- Track 1: computes 4 metadata-based doc quality scores (completeness, coverage, depth, open-o-meter) for all projects
+  - `github_readme_tree.py` -- fetches README content and file trees from GitHub API for Track 2 LLM evaluation
+  - `llm_readme_eval.py` -- Track 2: Gemini Batch API evaluation of README + file tree across 12 dimensions (prepare/submit/poll/ingest workflow)
 - `scrape_all.py` -- orchestrator that runs all or filtered scrapers
 - `load_all.py` -- orchestrator that inits DB, runs all loaders, then post-processing (dedup, DOI enrichment, license normalization, GitHub enrichment)
 - `dedup.py` -- cross-source deduplication via repo URL matching -> `cross_references` table
@@ -58,7 +77,7 @@ The pipeline has three stages: **scrape** (raw JSON) -> **clean** (standardized 
 
 ### Database
 
-SQLite at `data/osh_datasets.db`. 10 tables: `projects` (core), `licenses`, `tags`, `contributors`, `metrics`, `bom_components`, `publications`, `cross_references`, `repo_metrics`, `bom_file_paths`. All child tables FK to `projects(id)`. Projects uniquely keyed on `(source, source_id)` with UPSERT semantics. `repo_metrics` stores GitHub API data (stars, forks, community health, BOM detection, etc.) keyed UNIQUE on `project_id`. `bom_file_paths` records detected BOM file paths per project.
+SQLite at `data/osh_datasets.db`. 15 tables: `projects` (core), `licenses`, `tags`, `contributors`, `metrics`, `bom_components`, `publications`, `cross_references`, `repo_metrics`, `bom_file_paths`, `component_prices`, `doc_quality_scores`, `readme_contents`, `repo_file_trees`, `llm_evaluations`. All child tables FK to `projects(id)`. Projects uniquely keyed on `(source, source_id)` with UPSERT semantics. `repo_metrics` stores GitHub API data (stars, forks, community health, BOM detection, etc.) keyed UNIQUE on `project_id`. `bom_file_paths` records detected BOM file paths per project. `doc_quality_scores` stores 4 Track 1 scores per project. `readme_contents` and `repo_file_trees` store GitHub data for LLM evaluation. `llm_evaluations` stores Track 2 LLM results (raw JSON + 30+ extracted fields) keyed on `(project_id, prompt_version)`.
 
 ### Data directory
 
@@ -66,6 +85,7 @@ SQLite at `data/osh_datasets.db`. 10 tables: `projects` (core), `licenses`, `tag
 data/
   raw/<source>/       # Scraper output (JSON)
   cleaned/<source>/   # Standardized CSV for loaders
+  batch/              # Gemini batch input/output JSONL files
   osh_datasets.db     # Unified SQLite database
 ```
 
@@ -93,11 +113,31 @@ The scraper auto-generates `repos.txt` from the database if the file doesn't exi
 - API keys in `.env`, loaded via `config.require_env()`
 - `orjson` for JSON, `polars` for dataframes (never stdlib `json` or `pandas`)
 
+### Documentation quality scoring
+
+Two-track system grounded in 5 OSH documentation standards (Open-o-Meter, DIN SPEC 3105, OSHWA, Open Know-How, HardwareX):
+
+**Track 1 (metadata-based, all projects):** 4 scores computed from structured DB fields:
+- **Completeness** (0-100): weighted artifact presence checks
+- **Coverage** (0-100): breadth across 12 documentation categories
+- **Depth** (0-100): continuous signals for documentation investment (mean of non-null)
+- **Open-o-Meter** (0-8): exact reproduction of Bonvoisin & Mies (2018)
+
+Runs automatically as part of `load_all.py` after GitHub enrichment. Stored in `doc_quality_scores` table.
+
+**Track 2 (LLM-based, ~8,000 GitHub projects):** Gemini 3 Flash batch evaluation of README + file tree across 12 dimensions. Three-phase workflow:
+1. `prepare`: reads README + tree from DB, builds JSONL batch input with prompt from `prompt_evaluation/test_8/revised_long_prompt.md`
+2. `submit`: uploads to Gemini Files API, creates batch job
+3. `ingest`: downloads results, parses JSON, stores raw + extracted fields in `llm_evaluations`
+
+Input truncation guards (README: 10K chars, tree: 500 entries / 12K chars) preserve the JSON schema at the end of the prompt.
+
 ### Other directories
 
 - `EDA/` -- exploratory data analysis outputs (reports, visualizations)
+- `EDA/doc_quality_plan.md` -- comprehensive plan for the documentation quality metric system
 - `ohr_classifier/` -- hardware vs. non-hardware classifier; `final_classifications.csv` used by `loaders/ohr.py`
-- `Prompt Evaluation/` -- LLM-based README metadata extraction experiments
+- `prompt_evaluation/` -- LLM-based README metadata extraction experiments; `test_8/revised_long_prompt.md` is the production prompt
 
 ---
 

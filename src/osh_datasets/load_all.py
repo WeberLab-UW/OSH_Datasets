@@ -71,6 +71,10 @@ def load_all(db_path: Path = DB_PATH) -> dict[str, int]:
     enrich_pricing(db_path)
     add_historical_prices(db_path)
 
+    from osh_datasets.enrichment.doc_quality import score_doc_quality
+
+    score_doc_quality(db_path)
+
     return results
 
 

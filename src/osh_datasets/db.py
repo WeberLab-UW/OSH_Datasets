@@ -144,6 +144,76 @@ CREATE TABLE IF NOT EXISTS component_prices (
     UNIQUE(bom_component_id, distributor, quantity_break)
 );
 
+CREATE TABLE IF NOT EXISTS doc_quality_scores (
+    id                  INTEGER PRIMARY KEY,
+    project_id          INTEGER NOT NULL REFERENCES projects(id),
+    completeness_score  INTEGER NOT NULL,
+    coverage_score      INTEGER NOT NULL,
+    depth_score         INTEGER NOT NULL,
+    open_o_meter_score  INTEGER NOT NULL,
+    scored_at           TEXT    NOT NULL,
+    UNIQUE(project_id)
+);
+
+CREATE TABLE IF NOT EXISTS readme_contents (
+    id          INTEGER PRIMARY KEY,
+    project_id  INTEGER NOT NULL REFERENCES projects(id),
+    repo_url    TEXT    NOT NULL,
+    content     TEXT,
+    size_bytes  INTEGER,
+    fetched_at  TEXT    NOT NULL,
+    UNIQUE(project_id)
+);
+
+CREATE TABLE IF NOT EXISTS repo_file_trees (
+    id          INTEGER PRIMARY KEY,
+    project_id  INTEGER NOT NULL REFERENCES projects(id),
+    file_path   TEXT    NOT NULL,
+    file_type   TEXT    NOT NULL,  -- 'blob' or 'tree'
+    size_bytes  INTEGER,
+    UNIQUE(project_id, file_path)
+);
+
+CREATE TABLE IF NOT EXISTS llm_evaluations (
+    id              INTEGER PRIMARY KEY,
+    project_id      INTEGER NOT NULL REFERENCES projects(id),
+    prompt_version  TEXT    NOT NULL,
+    model_id        TEXT    NOT NULL,
+    raw_response    TEXT    NOT NULL,
+    project_type    TEXT,
+    structure_quality TEXT,
+    doc_location    TEXT,
+    license_present INTEGER,
+    license_type    TEXT,
+    license_name    TEXT,
+    contributing_present INTEGER,
+    contributing_level   INTEGER,
+    bom_present     INTEGER,
+    bom_completeness TEXT,
+    bom_component_count INTEGER,
+    assembly_present INTEGER,
+    assembly_detail  TEXT,
+    assembly_step_count INTEGER,
+    hw_design_present INTEGER,
+    hw_editable_source INTEGER,
+    mech_design_present INTEGER,
+    mech_editable_source INTEGER,
+    sw_fw_present   INTEGER,
+    sw_fw_type      TEXT,
+    sw_fw_doc_level TEXT,
+    testing_present INTEGER,
+    testing_detail  TEXT,
+    cost_mentioned  INTEGER,
+    suppliers_referenced INTEGER,
+    part_numbers_present INTEGER,
+    maturity_stage  TEXT,
+    hw_license_name  TEXT,
+    sw_license_name  TEXT,
+    doc_license_name TEXT,
+    evaluated_at    TEXT    NOT NULL,
+    UNIQUE(project_id, prompt_version)
+);
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_projects_source ON projects(source);
 CREATE INDEX IF NOT EXISTS idx_projects_name   ON projects(name);
@@ -165,6 +235,10 @@ CREATE INDEX IF NOT EXISTS idx_repo_metrics    ON repo_metrics(project_id);
 CREATE INDEX IF NOT EXISTS idx_repo_metrics_url ON repo_metrics(repo_url);
 CREATE INDEX IF NOT EXISTS idx_bom_paths_proj  ON bom_file_paths(project_id);
 CREATE INDEX IF NOT EXISTS idx_comp_prices_bom ON component_prices(bom_component_id);
+CREATE INDEX IF NOT EXISTS idx_dqs_project     ON doc_quality_scores(project_id);
+CREATE INDEX IF NOT EXISTS idx_readme_project  ON readme_contents(project_id);
+CREATE INDEX IF NOT EXISTS idx_rft_project     ON repo_file_trees(project_id);
+CREATE INDEX IF NOT EXISTS idx_llm_project     ON llm_evaluations(project_id);
 """
 
 
@@ -682,5 +756,239 @@ def upsert_component_price(
         (
             bom_component_id, matched_mpn, distributor, unit_price,
             currency, quantity_break, price_date, price_source,
+        ),
+    )
+
+
+def upsert_doc_quality_score(
+    conn: sqlite3.Connection,
+    project_id: int,
+    *,
+    completeness_score: int,
+    coverage_score: int,
+    depth_score: int,
+    open_o_meter_score: int,
+    scored_at: str,
+) -> None:
+    """Insert or update documentation quality scores for a project.
+
+    Args:
+        conn: Active database connection.
+        project_id: The ``projects.id``.
+        completeness_score: Weighted artifact presence score (0-100).
+        coverage_score: Documentation breadth score (0-100).
+        depth_score: Documentation investment depth score (0-100).
+        open_o_meter_score: Bonvoisin & Mies openness score (0-8).
+        scored_at: Timestamp when scores were computed (ISO 8601).
+    """
+    conn.execute(
+        """\
+        INSERT INTO doc_quality_scores
+            (project_id, completeness_score, coverage_score,
+             depth_score, open_o_meter_score, scored_at)
+        VALUES (?, ?, ?, ?, ?, ?)
+        ON CONFLICT(project_id) DO UPDATE SET
+            completeness_score = excluded.completeness_score,
+            coverage_score     = excluded.coverage_score,
+            depth_score        = excluded.depth_score,
+            open_o_meter_score = excluded.open_o_meter_score,
+            scored_at          = excluded.scored_at
+        """,
+        (
+            project_id, completeness_score, coverage_score,
+            depth_score, open_o_meter_score, scored_at,
+        ),
+    )
+
+
+def upsert_readme_content(
+    conn: sqlite3.Connection,
+    project_id: int,
+    *,
+    repo_url: str,
+    content: str | None,
+    size_bytes: int | None,
+    fetched_at: str,
+) -> None:
+    """Insert or update README content for a project.
+
+    Args:
+        conn: Active database connection.
+        project_id: The ``projects.id``.
+        repo_url: GitHub repository URL.
+        content: Raw README markdown text.
+        size_bytes: Size of README in bytes.
+        fetched_at: Timestamp when README was fetched (ISO 8601).
+    """
+    conn.execute(
+        """\
+        INSERT INTO readme_contents
+            (project_id, repo_url, content, size_bytes, fetched_at)
+        VALUES (?, ?, ?, ?, ?)
+        ON CONFLICT(project_id) DO UPDATE SET
+            repo_url   = excluded.repo_url,
+            content    = excluded.content,
+            size_bytes = excluded.size_bytes,
+            fetched_at = excluded.fetched_at
+        """,
+        (project_id, repo_url, content, size_bytes, fetched_at),
+    )
+
+
+def insert_repo_file_tree_entries(
+    conn: sqlite3.Connection,
+    project_id: int,
+    entries: list[tuple[str, str, int | None]],
+) -> None:
+    """Bulk insert file tree entries for a project, replacing prior data.
+
+    Deletes all existing tree entries for the project before inserting,
+    ensuring the tree reflects the latest fetch.
+
+    Args:
+        conn: Active database connection.
+        project_id: The ``projects.id``.
+        entries: List of ``(file_path, file_type, size_bytes)`` tuples.
+            ``file_type`` is ``'blob'`` or ``'tree'``.
+    """
+    conn.execute(
+        "DELETE FROM repo_file_trees WHERE project_id = ?",
+        (project_id,),
+    )
+    conn.executemany(
+        """\
+        INSERT INTO repo_file_trees
+            (project_id, file_path, file_type, size_bytes)
+        VALUES (?, ?, ?, ?)
+        """,
+        [(project_id, fp, ft, sz) for fp, ft, sz in entries],
+    )
+
+
+def upsert_llm_evaluation(
+    conn: sqlite3.Connection,
+    project_id: int,
+    *,
+    prompt_version: str,
+    model_id: str,
+    raw_response: str,
+    evaluated_at: str,
+    extracted: dict[str, int | str | None] | None = None,
+) -> None:
+    """Insert or update an LLM evaluation for a project.
+
+    Args:
+        conn: Active database connection.
+        project_id: The ``projects.id``.
+        prompt_version: Prompt version identifier (e.g. ``"test_8"``).
+        model_id: LLM model identifier (e.g. ``"gemini-3-flash-preview"``).
+        raw_response: Full JSON response text from the LLM.
+        evaluated_at: Timestamp of evaluation (ISO 8601).
+        extracted: Dict of extracted field values to store alongside
+            raw response. Keys must match ``llm_evaluations`` columns.
+            If None, all extracted columns are set to NULL.
+    """
+    fields = extracted or {}
+    conn.execute(
+        """\
+        INSERT INTO llm_evaluations
+            (project_id, prompt_version, model_id, raw_response,
+             project_type, structure_quality, doc_location,
+             license_present, license_type, license_name,
+             contributing_present, contributing_level,
+             bom_present, bom_completeness, bom_component_count,
+             assembly_present, assembly_detail, assembly_step_count,
+             hw_design_present, hw_editable_source,
+             mech_design_present, mech_editable_source,
+             sw_fw_present, sw_fw_type, sw_fw_doc_level,
+             testing_present, testing_detail,
+             cost_mentioned, suppliers_referenced,
+             part_numbers_present, maturity_stage,
+             hw_license_name, sw_license_name, doc_license_name,
+             evaluated_at)
+        VALUES (
+            ?, ?, ?, ?,
+            ?, ?, ?,
+            ?, ?, ?,
+            ?, ?,
+            ?, ?, ?,
+            ?, ?, ?,
+            ?, ?,
+            ?, ?,
+            ?, ?, ?,
+            ?, ?,
+            ?, ?,
+            ?, ?,
+            ?, ?, ?,
+            ?
+        )
+        ON CONFLICT(project_id, prompt_version) DO UPDATE SET
+            model_id             = excluded.model_id,
+            raw_response         = excluded.raw_response,
+            project_type         = excluded.project_type,
+            structure_quality    = excluded.structure_quality,
+            doc_location         = excluded.doc_location,
+            license_present      = excluded.license_present,
+            license_type         = excluded.license_type,
+            license_name         = excluded.license_name,
+            contributing_present = excluded.contributing_present,
+            contributing_level   = excluded.contributing_level,
+            bom_present          = excluded.bom_present,
+            bom_completeness     = excluded.bom_completeness,
+            bom_component_count  = excluded.bom_component_count,
+            assembly_present     = excluded.assembly_present,
+            assembly_detail      = excluded.assembly_detail,
+            assembly_step_count  = excluded.assembly_step_count,
+            hw_design_present    = excluded.hw_design_present,
+            hw_editable_source   = excluded.hw_editable_source,
+            mech_design_present  = excluded.mech_design_present,
+            mech_editable_source = excluded.mech_editable_source,
+            sw_fw_present        = excluded.sw_fw_present,
+            sw_fw_type           = excluded.sw_fw_type,
+            sw_fw_doc_level      = excluded.sw_fw_doc_level,
+            testing_present      = excluded.testing_present,
+            testing_detail       = excluded.testing_detail,
+            cost_mentioned       = excluded.cost_mentioned,
+            suppliers_referenced = excluded.suppliers_referenced,
+            part_numbers_present = excluded.part_numbers_present,
+            maturity_stage       = excluded.maturity_stage,
+            hw_license_name      = excluded.hw_license_name,
+            sw_license_name      = excluded.sw_license_name,
+            doc_license_name     = excluded.doc_license_name,
+            evaluated_at         = excluded.evaluated_at
+        """,
+        (
+            project_id, prompt_version, model_id, raw_response,
+            fields.get("project_type"),
+            fields.get("structure_quality"),
+            fields.get("doc_location"),
+            fields.get("license_present"),
+            fields.get("license_type"),
+            fields.get("license_name"),
+            fields.get("contributing_present"),
+            fields.get("contributing_level"),
+            fields.get("bom_present"),
+            fields.get("bom_completeness"),
+            fields.get("bom_component_count"),
+            fields.get("assembly_present"),
+            fields.get("assembly_detail"),
+            fields.get("assembly_step_count"),
+            fields.get("hw_design_present"),
+            fields.get("hw_editable_source"),
+            fields.get("mech_design_present"),
+            fields.get("mech_editable_source"),
+            fields.get("sw_fw_present"),
+            fields.get("sw_fw_type"),
+            fields.get("sw_fw_doc_level"),
+            fields.get("testing_present"),
+            fields.get("testing_detail"),
+            fields.get("cost_mentioned"),
+            fields.get("suppliers_referenced"),
+            fields.get("part_numbers_present"),
+            fields.get("maturity_stage"),
+            fields.get("hw_license_name"),
+            fields.get("sw_license_name"),
+            fields.get("doc_license_name"),
+            evaluated_at,
         ),
     )

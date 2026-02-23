@@ -9,3 +9,4 @@ test_outputs/
 *.db
 *.db-wal
 *.db-shm
+data/batch/

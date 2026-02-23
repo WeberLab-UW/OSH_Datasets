@@ -23,6 +23,9 @@ dependencies = [
 scrape = [
     "selenium>=4.15",
 ]
+llm = [
+    "google-genai>=1.0",
+]
 dev = [
     "pytest>=8.0",
     "pytest-mock>=3.12",

@@ -1,0 +1,120 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "mixed",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "README explicitly states Apache License 2.0 with full license text and copyright notice",
+    "present": true,
+    "type": "explicit",
+    "name": "Apache License 2.0",
+    "evidence": "Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0",
+    "confidence": 0.95
+  },
+  "contributing": {
+    "reasoning": "README includes a 'How to contribute' section with a bulleted list of contribution types but no detailed step-by-step process or commands",
+    "present": true,
+    "level": 1,
+    "evidence": "Thank you for your interest in contributing to this project! Here are some of the many ways in which you can help: * Report bugs * Suggest improvements * Audit the source code * Submit PRs to fix bugs or implement features * Test new releases and updates * Record videos and post on other platforms * Spread the word about this project * Write and edit the documentation",
+    "confidence": 0.80
+  },
+  "bom": {
+    "reasoning": "BOM files (bom.csv) exist in hardware/v1/ and hardware/v2/ directories but contents are unverifiable from directory structure alone; no inline BOM in README",
+    "present": true,
+    "completeness": "partial",
+    "component_count": 0,
+    "components": [],
+    "evidence": "hardware/v1/bom.csv and hardware/v2/bom.csv files detected in directory structure; README mentions 'ESP32 Lolin Lite' and 'analog components' but no detailed component list provided",
+    "confidence": 0.70
+  },
+  "assembly": {
+    "reasoning": "README references external Wiki for instructions but provides no inline assembly steps and no direct link to a dedicated assembly document",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "Please take a look at the [Wiki](https://github.com/kamilsss655/ESPRI/wiki) section for instructions, tips and more.",
+    "confidence": 0.75
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "Directory structure contains hardware/v1/ and hardware/v2/ with gerbers.zip and schematic.pdf files; export-only formats with no editable source files present",
+      "present": true,
+      "types": [
+        "PCB_Layout",
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".pdf",
+        ".zip"
+      ],
+      "has_editable_source": false,
+      "evidence": "hardware/v1/gerbers.zip, hardware/v1/schematic.pdf, hardware/v2/gerbers.zip, hardware/v2/schematic.pdf; README shows schematic image reference",
+      "confidence": 0.90
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files (.step, .stl, .scad, .f3d, .FCStd, .dxf, .dwg) found in directory structure; project is primarily PCB-based",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": "No mechanical design directories or files detected in provided directory structure",
+      "confidence": 0.85
+    }
+  },
+  "software_firmware": {
+    "reasoning": "Firmware source code present (.c, .h files) with ESP-IDF v5.2.1 explicitly specified; build and flash instructions provided with esptool.py and Docker methods documented",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "ESP-IDF"
+    ],
+    "documentation_level": "basic",
+    "evidence": "main/CMakeLists.txt, main/app/, main/board.c, main/main.c, main/idf_component.yml; README states 'This firmware uses: * Espressif IoT Development Framework (ESP-IDF) `v5.2.1`'; flash instructions: 'esptool.py write_flash 0x0 espri.bin'; Docker build method documented with 'make docker' and 'make flash' commands",
+    "confidence": 0.85
+  },
+  "testing": {
+    "reasoning": "No testing procedures, validation steps, or test documentation found in README or directory structure",
+    "present": false,
+    "detail_level": "none",
+    "evidence": "No references to testing, validation, calibration, or verification procedures in README or test-related files in directory structure",
+    "confidence": 0.80
+  },
+  "cost_sourcing": {
+    "reasoning": "No estimated project cost mentioned; no supplier links provided; cpl.csv files in hardware directories indicate PCBA sourcing capability but no sourcing guide provided",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": true,
+    "evidence": "hardware/v1/cpl.csv and hardware/v2/cpl.csv files present in directory structure indicating component placement lists for automated assembly; README mentions 'ESP32 Lolin Lite' but no supplier links or pricing",
+    "confidence": 0.75
+  },
+  "project_maturity": {
+    "reasoning": "README explicitly references 'V1' and 'V2.2' board versions with multiple hardware iterations shown; no explicit maturity keywords (stable, production, beta, prototype, WIP, deprecated) found",
+    "stage": "unstated",
+    "evidence": "V1 board and V2.2 board versions mentioned with images; roadmap section lists 'implemented' and 'roadmap/in progress' features but no explicit maturity stage keyword present",
+    "confidence": 0.70
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": "Apache License 2.0 is a software license, not a hardware-specific license; no CERN-OHL, TAPR-OHL, or Solderpad license mentioned",
+      "confidence": 0.90
+    },
+    "software": {
+      "present": true,
+      "name": "Apache License 2.0",
+      "evidence": "Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0",
+      "confidence": 0.95
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": "No documentation-specific license (CC BY, CC BY-SA, GFDL) mentioned; Apache License 2.0 applies to all project materials",
+      "confidence": 0.85
+    }
+  }
+}
+```

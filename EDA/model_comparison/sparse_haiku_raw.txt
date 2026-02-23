@@ -1,0 +1,112 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "unclear",
+    "structure_quality": "poor",
+    "documentation_location": "redirect"
+  },
+  "license": {
+    "reasoning": "README contains only a redirect message with no license information; no license files or references are present in the minimal directory structure.",
+    "present": false,
+    "type": "none",
+    "name": null,
+    "evidence": "README.md contains only: '# Moved to different location: https://github.com/Marcelh1/fanx'",
+    "confidence": 0.95
+  },
+  "contributing": {
+    "reasoning": "README provides no contributing guidelines, only a redirect to another repository.",
+    "present": false,
+    "level": 0,
+    "evidence": "No contributing information present; README only contains redirect message.",
+    "confidence": 0.95
+  },
+  "bom": {
+    "reasoning": "No bill of materials information is present in the README or directory structure.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": "README contains only redirect; no BOM files detected in directory structure.",
+    "confidence": 0.95
+  },
+  "assembly": {
+    "reasoning": "No assembly instructions are present in the README or directory structure.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "README contains only redirect; no assembly documentation detected.",
+    "confidence": 0.95
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "No hardware design files are present in the minimal directory structure.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": "Directory structure contains only README.md; no hardware design files detected.",
+      "confidence": 0.95
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files are present in the minimal directory structure.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": "Directory structure contains only README.md; no mechanical design files detected.",
+      "confidence": 0.95
+    }
+  },
+  "software_firmware": {
+    "reasoning": "No software or firmware files are present in the README or directory structure.",
+    "present": false,
+    "type": "none",
+    "frameworks": [],
+    "documentation_level": "none",
+    "evidence": "README contains only redirect; no software or firmware files detected in directory structure.",
+    "confidence": 0.95
+  },
+  "testing": {
+    "reasoning": "No testing or validation procedures are present in the README or directory structure.",
+    "present": false,
+    "detail_level": "none",
+    "evidence": "README contains only redirect; no testing documentation detected.",
+    "confidence": 0.95
+  },
+  "cost_sourcing": {
+    "reasoning": "No cost, sourcing, or supplier information is present in the README or directory structure.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": "README contains only redirect; no cost or sourcing information detected.",
+    "confidence": 0.95
+  },
+  "project_maturity": {
+    "reasoning": "README provides no explicit maturity keywords; only a redirect message is present with no version information or development stage indicators.",
+    "stage": "unstated",
+    "evidence": "README contains only: '# Moved to different location: https://github.com/Marcelh1/fanx'; no version numbers, release information, or maturity keywords present.",
+    "confidence": 0.95
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": "No hardware license information present in README or directory structure.",
+      "confidence": 0.95
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": "No software license information present in README or directory structure.",
+      "confidence": 0.95
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": "No documentation license information present in README or directory structure.",
+      "confidence": 0.95
+    }
+  }
+}
+```

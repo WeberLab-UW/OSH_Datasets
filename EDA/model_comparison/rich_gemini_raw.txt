@@ -1,0 +1,120 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "mixed",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "The project is explicitly licensed under the Apache License 2.0, as stated in the README and the root LICENSE file.",
+    "present": true,
+    "type": "explicit",
+    "name": "Apache License 2.0",
+    "evidence": "Licensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License. ",
+    "confidence": 1.0
+  },
+  "contributing": {
+    "reasoning": "The README contains a 'How to contribute' section that lists several ways to help, though it lacks a detailed technical process or specific commands.",
+    "present": true,
+    "level": 1,
+    "evidence": "## How to contribute\n\nThank you for your interest in contributing to this project! Here are some of the many ways in which you can help:\n\n* Report bugs\n* Suggest improvements\n* Audit the source code\n* Submit PRs to fix bugs or implement features",
+    "confidence": 0.9
+  },
+  "bom": {
+    "reasoning": "BOM files (bom.csv) are present in the hardware directory for both v1 and v2 versions, but their contents cannot be verified from the directory tree alone.",
+    "present": true,
+    "completeness": "partial",
+    "component_count": 0,
+    "components": [],
+    "evidence": "hardware/v1/bom.csv\nhardware/v2/bom.csv",
+    "confidence": 0.9
+  },
+  "assembly": {
+    "reasoning": "The README provides a schematic and mentions hardware requirements but does not provide 3+ specific assembly steps or a direct link to a dedicated assembly manual; the wiki link is general.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "Please take a look at the [Wiki](https://github.com/kamilsss655/ESPRI/wiki) section for instructions, tips and more.",
+    "confidence": 0.8
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "The repository contains PCB layout files (Gerbers) and circuit schematics in PDF format, but no editable source files like KiCad or Eagle projects are visible.",
+      "present": true,
+      "types": [
+        "PCB_Layout",
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".zip",
+        ".pdf"
+      ],
+      "has_editable_source": false,
+      "evidence": "hardware/v1/gerbers.zip\nhardware/v1/schematic.pdf\nhardware/v2/gerbers.zip\nhardware/v2/schematic.pdf",
+      "confidence": 0.95
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files (STEP, STL, etc.) were found in the directory structure or mentioned in the README.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 1.0
+    }
+  },
+  "software_firmware": {
+    "reasoning": "The project provides firmware source code, specifies the ESP-IDF version, and includes detailed build and flash instructions using both Docker and local toolchains.",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "ESP-IDF"
+    ],
+    "documentation_level": "complete",
+    "evidence": "This firmware uses:\n* Espressif IoT Development Framework (ESP-IDF) `v5.2.1` ... To flash with `esptool.py`:\n\n`esptool.py write_flash 0x0 espri.bin`",
+    "confidence": 0.95
+  },
+  "testing": {
+    "reasoning": "There are no specific testing or validation procedures for the hardware or integrated system described in the README.",
+    "present": false,
+    "detail_level": "none",
+    "evidence": null,
+    "confidence": 0.8
+  },
+  "cost_sourcing": {
+    "reasoning": "The README recommends a specific ESP32 board, and the directory structure contains cpl.csv files which typically include part numbers for automated PCB assembly.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": true,
+    "evidence": "hardware/v1/cpl.csv\nhardware/v2/cpl.csv\nESP32 Lolin Lite (recommended, confirmed to work, lipo charger built-in)",
+    "confidence": 0.9
+  },
+  "project_maturity": {
+    "reasoning": "While the project shows multiple versions (v1, v2.2) and lists implemented features versus a roadmap, it does not use explicit maturity keywords like 'stable', 'prototype', or 'production ready'.",
+    "stage": "unstated",
+    "evidence": "V1 board connected to UV-K5 radio ... V2.2 board ... roadmap/in progress",
+    "confidence": 0.9
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": true,
+      "name": "Apache License 2.0",
+      "evidence": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+      "confidence": 0.9
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```
