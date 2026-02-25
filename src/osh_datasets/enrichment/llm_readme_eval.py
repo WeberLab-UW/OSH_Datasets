@@ -1,34 +1,47 @@
-"""Track 2: LLM-based README evaluation via Gemini Batch API.
+"""Track 2: LLM-based README evaluation via Gemini API.
 
-Three-phase workflow for evaluating open-source hardware documentation
-quality using Google Gemini 3 Flash in batch mode:
+Supports two execution modes:
 
-    1. **Prepare**: Build JSONL batch input from README + file tree data.
-    2. **Submit**: Upload JSONL and submit to Gemini Batch API.
-    3. **Ingest**: Download results and store in database.
+**Batch mode** (prepare -> submit -> ingest):
+    For large runs using the Gemini Batch API. Prepares JSONL,
+    submits in chunks, and ingests results.
+
+**Realtime mode**:
+    Synchronous per-project API calls. Useful when the Batch API
+    is unavailable or for incremental processing.
 
 Uses the few-shot prompt from ``prompt_evaluation/test_8/revised_long_prompt.md``
 which evaluates 12 documentation dimensions with calibrated scoring.
 
 Usage::
 
-    # Phase 1: Prepare batch input
+    # Realtime: evaluate all pending projects
+    uv run python -m osh_datasets.enrichment.llm_readme_eval realtime
+
+    # Realtime: evaluate 100 projects, 50 concurrent threads
+    uv run python -m osh_datasets.enrichment.llm_readme_eval realtime \\
+        --limit 100 --model gemini-2.5-flash-lite --workers 50
+
+    # Batch Phase 1: Prepare batch input
     uv run python -m osh_datasets.enrichment.llm_readme_eval prepare
 
-    # Phase 2: Submit to Gemini Batch API
+    # Batch Phase 2: Submit chunks (run repeatedly, non-blocking)
     uv run python -m osh_datasets.enrichment.llm_readme_eval submit
 
-    # Phase 3: Ingest results after batch completes
+    # Batch Phase 3: Ingest results into database
     uv run python -m osh_datasets.enrichment.llm_readme_eval ingest
 """
 
 import argparse
+import concurrent.futures
 import re
+import threading
 import time
 from datetime import UTC, datetime
 from pathlib import Path
 
 import orjson
+from tqdm import tqdm
 
 from osh_datasets.config import DB_PATH, get_logger, require_env
 from osh_datasets.db import open_connection, upsert_llm_evaluation
@@ -36,10 +49,18 @@ from osh_datasets.db import open_connection, upsert_llm_evaluation
 logger = get_logger(__name__)
 
 _MODEL_ID = "gemini-3-flash-preview"
+_DEFAULT_REALTIME_MODEL = "gemini-2.5-flash-lite"
 _MAX_README_CHARS = 10_000
 _MAX_TREE_ENTRIES = 500
 _MAX_TREE_CHARS = 12_000
 _MAX_OUTPUT_TOKENS = 8192
+_COMMIT_INTERVAL = 50
+_API_TIMEOUT_SECONDS = 60
+_DEFAULT_WORKERS = 20
+_MAX_RETRIES = 3
+_INPUT_TOKENS_PER_MINUTE = 3_500_000  # Under 4M paid tier limit
+_TOKEN_BUDGET = 2_800_000  # Under tier-1 3M enqueued-token limit
+_CHARS_PER_TOKEN = 4
 
 _PROMPT_DIR = Path(__file__).resolve().parents[3] / "prompt_evaluation" / "test_8"
 _BATCH_DIR = Path(__file__).resolve().parents[3] / "data" / "batch"
@@ -154,8 +175,32 @@ def _build_user_prompt(
     return filled.replace("{{", "{").replace("}}", "}")
 
 
+def _fix_invalid_escapes(json_str: str) -> str:
+    r"""Escape backslashes that precede non-JSON-escape characters.
+
+    LLMs sometimes emit invalid JSON escapes like ``\*`` (from
+    markdown bold) or ``\c`` (from pasted shell commands). Valid
+    JSON escapes are: ``\" \\ \/ \b \f \n \r \t \uXXXX``.
+    This replaces any ``\X`` where X is not a valid JSON escape
+    leader with ``\\X``.
+
+    Args:
+        json_str: Raw JSON string that may contain invalid escapes.
+
+    Returns:
+        Sanitized JSON string safe for strict parsers.
+    """
+    return re.sub(r'\\(?!["\\/bfnrtu])', r"\\\\", json_str)
+
+
 def parse_response(raw: str) -> dict[str, object] | None:
-    """Extract JSON block from LLM response text.
+    """Extract the outermost JSON object from LLM response text.
+
+    Uses brace-depth counting with string-literal awareness to
+    correctly handle JSON containing triple backticks in string
+    values (e.g., evidence fields quoting README code blocks).
+    Applies escape sanitization to tolerate LLM outputs with
+    invalid JSON escape sequences.
 
     Args:
         raw: Raw LLM response text, possibly with markdown fences.
@@ -163,28 +208,56 @@ def parse_response(raw: str) -> dict[str, object] | None:
     Returns:
         Parsed dict, or None if JSON extraction fails.
     """
-    # Try to extract from markdown code fence
-    json_match = re.search(r"```json\s*(.*?)```", raw, re.DOTALL)
-    if json_match:
-        json_str = json_match.group(1).strip()
-    else:
-        # Try to find raw JSON object
-        brace_match = re.search(r"\{.*\}", raw, re.DOTALL)
-        if brace_match:
-            json_str = brace_match.group(0)
-        else:
-            logger.warning("No JSON found in response")
-            return None
-
-    try:
-        parsed = orjson.loads(json_str.encode("utf-8"))
-        if not isinstance(parsed, dict):
-            logger.warning("Response JSON is not a dict")
-            return None
-        return parsed
-    except orjson.JSONDecodeError as exc:
-        logger.warning("JSON parse error: %s", exc)
+    start = raw.find("{")
+    if start == -1:
+        logger.warning("No JSON found in response")
         return None
+
+    depth = 0
+    in_string = False
+    escape_next = False
+
+    for i in range(start, len(raw)):
+        ch = raw[i]
+        if escape_next:
+            escape_next = False
+            continue
+        if ch == "\\" and in_string:
+            escape_next = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                json_str = raw[start : i + 1]
+                try:
+                    parsed = orjson.loads(
+                        json_str.encode("utf-8")
+                    )
+                except orjson.JSONDecodeError:
+                    json_str = _fix_invalid_escapes(json_str)
+                    try:
+                        parsed = orjson.loads(
+                            json_str.encode("utf-8")
+                        )
+                    except orjson.JSONDecodeError as exc:
+                        logger.warning(
+                            "JSON parse error: %s", exc
+                        )
+                        return None
+                if not isinstance(parsed, dict):
+                    logger.warning("Response JSON is not a dict")
+                    return None
+                return parsed
+
+    logger.warning("Unterminated JSON object in response")
+    return None
 
 
 def extract_fields(
@@ -305,6 +378,355 @@ def extract_fields(
     return fields
 
 
+# ── Realtime execution ────────────────────────────────────────────
+
+
+class _TokenBucket:
+    """Thread-safe token-bucket rate limiter.
+
+    Limits throughput to ``tokens_per_second`` on average, with
+    a burst capacity equal to one second of tokens.
+
+    Args:
+        tokens_per_second: Sustained refill rate.
+    """
+
+    def __init__(self, tokens_per_second: float) -> None:
+        self._rate = tokens_per_second
+        self._capacity = tokens_per_second  # 1-second burst
+        self._tokens = tokens_per_second
+        self._last = time.monotonic()
+        self._lock = threading.Lock()
+
+    def acquire(self, count: int) -> None:
+        """Block until ``count`` tokens are available."""
+        while True:
+            with self._lock:
+                now = time.monotonic()
+                elapsed = now - self._last
+                self._tokens = min(
+                    self._capacity,
+                    self._tokens + elapsed * self._rate,
+                )
+                self._last = now
+                if self._tokens >= count:
+                    self._tokens -= count
+                    return
+            time.sleep(0.1)
+
+
+def _call_gemini_realtime(
+    client: object,
+    model_id: str,
+    system_prompt: str,
+    user_prompt: str,
+    rate_limiter: _TokenBucket | None = None,
+    est_input_tokens: int = 0,
+) -> tuple[str, int, int] | None:
+    """Call Gemini API with timeout and retry on rate-limit errors.
+
+    Retries up to ``_MAX_RETRIES`` times on 429 errors with
+    exponential backoff. Uses ``rate_limiter`` to throttle requests
+    proactively before hitting the API.
+
+    Args:
+        client: Initialized ``genai.Client`` instance.
+        model_id: Gemini model identifier.
+        system_prompt: System instruction text.
+        user_prompt: Filled user prompt text.
+        rate_limiter: Optional token-bucket for rate limiting.
+        est_input_tokens: Estimated input tokens for rate limiting.
+
+    Returns:
+        Tuple of ``(response_text, input_tokens, output_tokens)``
+        or ``None`` if the call fails after all retries.
+    """
+    try:
+        from google.genai import types as genai_types
+    except ImportError as exc:
+        raise ImportError(
+            "google-genai package required. Install with: "
+            "uv pip install 'google-genai'"
+        ) from exc
+
+    config = genai_types.GenerateContentConfig(
+        system_instruction=system_prompt,
+        temperature=0,
+        max_output_tokens=_MAX_OUTPUT_TOKENS,
+        automatic_function_calling=(
+            genai_types.AutomaticFunctionCallingConfig(
+                disable=True,
+            )
+        ),
+    )
+
+    for attempt in range(_MAX_RETRIES):
+        if rate_limiter and est_input_tokens > 0:
+            rate_limiter.acquire(est_input_tokens)
+
+        def _do_call() -> tuple[str, int, int]:
+            resp = client.models.generate_content(  # type: ignore[attr-defined]
+                model=model_id,
+                contents=user_prompt,
+                config=config,
+            )
+            text = resp.text or ""
+            usage = resp.usage_metadata
+            in_tok = (
+                usage.prompt_token_count if usage else 0
+            )
+            out_tok = (
+                usage.candidates_token_count if usage else 0
+            )
+            return text, in_tok, out_tok
+
+        with concurrent.futures.ThreadPoolExecutor(
+            max_workers=1,
+        ) as pool:
+            future = pool.submit(_do_call)
+            try:
+                return future.result(
+                    timeout=_API_TIMEOUT_SECONDS,
+                )
+            except concurrent.futures.TimeoutError:
+                logger.error(
+                    "Gemini API timed out after %ds",
+                    _API_TIMEOUT_SECONDS,
+                )
+                return None
+            except Exception as exc:
+                exc_str = str(exc)
+                if "429" in exc_str or "RESOURCE_EXHAUSTED" in exc_str:
+                    wait = 2 ** (attempt + 1)
+                    logger.warning(
+                        "Rate limited (attempt %d/%d), "
+                        "retrying in %ds",
+                        attempt + 1,
+                        _MAX_RETRIES,
+                        wait,
+                    )
+                    time.sleep(wait)
+                    continue
+                logger.error(
+                    "Gemini API call failed: %s", exc,
+                )
+                return None
+
+    logger.error("Gemini API exhausted %d retries", _MAX_RETRIES)
+    return None
+
+
+def run_realtime(
+    db_path: Path = DB_PATH,
+    prompt_version: str = "test_8",
+    model_id: str = _DEFAULT_REALTIME_MODEL,
+    limit: int = 0,
+    max_workers: int = _DEFAULT_WORKERS,
+) -> None:
+    """Evaluate projects via concurrent real-time Gemini API calls.
+
+    Pre-fetches all candidate data (README + file tree), builds
+    prompts, then fires up to ``max_workers`` concurrent API calls.
+    DB writes happen on the main thread as futures complete.
+
+    Args:
+        db_path: Path to the SQLite database file.
+        prompt_version: Prompt version identifier.
+        model_id: Gemini model identifier.
+        limit: Maximum projects to process (0 = all).
+        max_workers: Concurrent API call threads.
+
+    Raises:
+        ImportError: If ``google-genai`` is not installed.
+    """
+    try:
+        from google import genai
+    except ImportError as exc:
+        raise ImportError(
+            "google-genai package required. Install with: "
+            "uv pip install 'google-genai'"
+        ) from exc
+
+    api_key = require_env("GEMINI_API_KEY")
+    client = genai.Client(api_key=api_key)
+    system_prompt, user_template = _load_prompt_template()
+
+    conn = open_connection(db_path)
+    try:
+        query = """\
+            SELECT rc.project_id, rc.content
+            FROM readme_contents rc
+            WHERE rc.content IS NOT NULL
+              AND EXISTS (
+                  SELECT 1 FROM repo_file_trees rft
+                  WHERE rft.project_id = rc.project_id
+              )
+              AND NOT EXISTS (
+                  SELECT 1 FROM llm_evaluations le
+                  WHERE le.project_id = rc.project_id
+                    AND le.prompt_version = ?
+              )
+            ORDER BY rc.project_id
+        """
+        params: tuple[str, ...] | tuple[str, int] = (
+            prompt_version,
+        )
+        if limit > 0:
+            query += "\n            LIMIT ?"
+            params = (prompt_version, limit)
+        candidates = conn.execute(query, params).fetchall()
+
+        if not candidates:
+            logger.info("No candidates for realtime evaluation")
+            return
+
+        total = len(candidates)
+        logger.info(
+            "Starting realtime evaluation: %d projects, "
+            "model=%s, prompt=%s, workers=%d",
+            total,
+            model_id,
+            prompt_version,
+            max_workers,
+        )
+
+        # Pre-build all prompts (I/O from DB, CPU for formatting)
+        work_items: list[tuple[int, str]] = []
+        for row in tqdm(
+            candidates,
+            desc="Building prompts",
+            unit="project",
+        ):
+            project_id: int = row[0]
+            readme_content: str = row[1]
+            tree_rows = conn.execute(
+                """\
+                SELECT file_path, file_type, size_bytes
+                FROM repo_file_trees
+                WHERE project_id = ?
+                ORDER BY file_path
+                """,
+                (project_id,),
+            ).fetchall()
+            tree_entries: list[tuple[str, str, int | None]] = [
+                (r[0], r[1], r[2]) for r in tree_rows
+            ]
+            tree_text = format_directory_tree(tree_entries)
+            user_prompt = _build_user_prompt(
+                user_template, readme_content, tree_text,
+            )
+            work_items.append((project_id, user_prompt))
+
+        success_count = 0
+        fail_count = 0
+        parse_fail_count = 0
+        total_input_tokens = 0
+        total_output_tokens = 0
+        now = datetime.now(UTC).isoformat()
+        writes_since_commit = 0
+
+        # Rate limiter: 3.5M tokens/min = ~58k tokens/sec
+        bucket = _TokenBucket(
+            _INPUT_TOKENS_PER_MINUTE / 60.0,
+        )
+
+        # Fire concurrent API calls, write results on main thread
+        with concurrent.futures.ThreadPoolExecutor(
+            max_workers=max_workers,
+        ) as pool:
+            future_to_pid: dict[
+                concurrent.futures.Future[
+                    tuple[str, int, int] | None
+                ],
+                int,
+            ] = {
+                pool.submit(
+                    _call_gemini_realtime,
+                    client,
+                    model_id,
+                    system_prompt,
+                    prompt,
+                    bucket,
+                    len(prompt) // _CHARS_PER_TOKEN,
+                ): pid
+                for pid, prompt in work_items
+            }
+
+            progress = tqdm(
+                concurrent.futures.as_completed(future_to_pid),
+                total=total,
+                desc="Evaluating (0 ok, 0 fail)",
+                unit="project",
+            )
+            for future in progress:
+                pid = future_to_pid[future]
+                result = future.result()
+
+                if result is None:
+                    fail_count += 1
+                    logger.warning(
+                        "API failed: project_id=%d", pid,
+                    )
+                    progress.set_description(
+                        f"Evaluating ({success_count} ok, "
+                        f"{fail_count} fail)"
+                    )
+                    continue
+
+                raw_text, in_tok, out_tok = result
+                total_input_tokens += in_tok
+                total_output_tokens += out_tok
+
+                parsed = parse_response(raw_text)
+                if parsed is None:
+                    parse_fail_count += 1
+                    logger.warning(
+                        "JSON parse failed: project_id=%d",
+                        pid,
+                    )
+                    progress.set_description(
+                        f"Evaluating ({success_count} ok, "
+                        f"{fail_count} fail)"
+                    )
+                    continue
+
+                extracted = extract_fields(parsed)
+                upsert_llm_evaluation(
+                    conn,
+                    pid,
+                    prompt_version=prompt_version,
+                    model_id=model_id,
+                    raw_response=raw_text,
+                    evaluated_at=now,
+                    extracted=extracted,
+                )
+                success_count += 1
+                writes_since_commit += 1
+
+                progress.set_description(
+                    f"Evaluating ({success_count} ok, "
+                    f"{fail_count} fail)"
+                )
+
+                if writes_since_commit >= _COMMIT_INTERVAL:
+                    conn.commit()
+                    writes_since_commit = 0
+
+        conn.commit()
+    finally:
+        conn.close()
+
+    print(
+        f"\n--- Realtime Evaluation Complete ---\n"
+        f"Total:       {total}\n"
+        f"Success:     {success_count}\n"
+        f"API failed:  {fail_count}\n"
+        f"Parse failed:{parse_fail_count}\n"
+        f"Tokens:      {total_input_tokens:,} in / "
+        f"{total_output_tokens:,} out"
+    )
+
+
 # ── Phase 1: Prepare ─────────────────────────────────────────────
 
 
@@ -406,20 +828,120 @@ def prepare_batch(
     return output_path
 
 
-# ── Phase 2: Submit ──────────────────────────────────────────────
+# ── Phase 2: Submit (non-blocking, chunked) ─────────────────────
+
+_STATE_FILE = _BATCH_DIR / "batch_state.json"
+
+
+def _estimate_request_tokens(line: bytes) -> int:
+    """Estimate input token count for one JSONL request line.
+
+    Args:
+        line: Raw JSONL line bytes.
+
+    Returns:
+        Estimated token count (chars / 4).
+    """
+    obj = orjson.loads(line)
+    req = obj.get("request", {})
+    sys_parts = req.get("system_instruction", {}).get("parts") or [{}]
+    contents = req.get("contents") or [{}]
+    user_parts = contents[0].get("parts") or [{}]
+    sys_text = sys_parts[0].get("text", "") if sys_parts else ""
+    user_text = user_parts[0].get("text", "") if user_parts else ""
+    return (len(sys_text) + len(user_text)) // _CHARS_PER_TOKEN
+
+
+def _split_jsonl(input_path: Path) -> list[Path]:
+    """Split batch JSONL into chunks within the enqueued token budget.
+
+    Only writes chunk files that don't already exist.
+
+    Args:
+        input_path: Path to the full batch JSONL file.
+
+    Returns:
+        Ordered list of chunk file paths.
+    """
+    chunks: list[Path] = []
+    buf: list[bytes] = []
+    buf_tokens = 0
+    idx = 0
+
+    with open(input_path, "rb") as f:
+        for raw in f:
+            raw = raw.strip()
+            if not raw:
+                continue
+            tokens = _estimate_request_tokens(raw)
+            if buf_tokens + tokens > _TOKEN_BUDGET and buf:
+                chunk_path = _BATCH_DIR / f"batch_chunk_{idx:03d}.jsonl"
+                if not chunk_path.exists():
+                    chunk_path.write_bytes(b"\n".join(buf) + b"\n")
+                chunks.append(chunk_path)
+                idx += 1
+                buf = []
+                buf_tokens = 0
+            buf.append(raw)
+            buf_tokens += tokens
+
+    if buf:
+        chunk_path = _BATCH_DIR / f"batch_chunk_{idx:03d}.jsonl"
+        if not chunk_path.exists():
+            chunk_path.write_bytes(b"\n".join(buf) + b"\n")
+        chunks.append(chunk_path)
+
+    logger.info("Split into %d chunks", len(chunks))
+    return chunks
+
+
+_COMPLETED_STATES = frozenset({
+    "JOB_STATE_SUCCEEDED",
+    "JOB_STATE_FAILED",
+    "JOB_STATE_CANCELLED",
+    "JOB_STATE_EXPIRED",
+})
+
+
+def _load_state() -> dict[str, object]:
+    """Load batch processing state from disk.
+
+    Returns:
+        State dict with ``chunk_idx``, ``job_name``, and
+        ``total_chunks`` keys, or empty dict if no state exists.
+    """
+    if _STATE_FILE.exists():
+        return orjson.loads(_STATE_FILE.read_bytes())  # type: ignore[no-any-return]
+    return {}
+
+
+def _save_state(state: dict[str, object]) -> None:
+    """Persist batch processing state to disk.
+
+    Args:
+        state: State dict to save.
+    """
+    _STATE_FILE.write_bytes(orjson.dumps(state))
 
 
 def submit_batch(
     input_path: Path | None = None,
-) -> str:
-    """Upload JSONL and submit to Gemini Batch API.
+) -> None:
+    """Non-blocking batch submission with state tracking.
+
+    Each invocation performs one action and exits:
+
+    - If no active job: splits JSONL (if needed) and submits the
+      next chunk. Exits immediately after submission.
+    - If active job is still running: reports status and exits.
+    - If active job succeeded: downloads results, then submits
+      the next chunk (or merges all results if all chunks done).
+    - If active job failed: logs error and advances to next chunk.
+
+    Run repeatedly (manually or via cron) until all chunks are done.
 
     Args:
-        input_path: Path to the JSONL batch file. Defaults to
-            standard location.
-
-    Returns:
-        Batch job name/ID for polling.
+        input_path: Path to the full JSONL batch file.
 
     Raises:
         ImportError: If ``google-genai`` is not installed.
@@ -440,109 +962,139 @@ def submit_batch(
     if input_path is None:
         input_path = _BATCH_DIR / "gemini_batch_input.jsonl"
     if not input_path.exists():
-        raise FileNotFoundError(
-            f"Batch input file not found: {input_path}"
-        )
+        raise FileNotFoundError(f"Batch input not found: {input_path}")
 
-    logger.info("Uploading %s to Gemini Files API", input_path)
-    uploaded_file = client.files.upload(
-        file=str(input_path),
+    # Split (idempotent -- skips existing chunk files)
+    chunks = _split_jsonl(input_path)
+    if not chunks:
+        logger.error("No chunks produced from input")
+        return
+
+    state = _load_state()
+
+    # Check active job if one exists
+    active_job: str | None = state.get("job_name")  # type: ignore[assignment]
+    active_idx: int = state.get("chunk_idx", 0)  # type: ignore[assignment]
+
+    if active_job:
+        batch_job = client.batches.get(name=active_job)
+        job_state = ""
+        if batch_job.state is not None:
+            job_state = batch_job.state.name
+
+        if job_state not in _COMPLETED_STATES:
+            print(
+                f"[Chunk {active_idx}/{len(chunks)}] "
+                f"Job {active_job} is {job_state}. "
+                f"Run submit again later."
+            )
+            return
+
+        # Job finished -- handle result
+        if job_state == "JOB_STATE_SUCCEEDED":
+            output_path = _BATCH_DIR / f"batch_output_{active_idx:03d}.jsonl"
+            if batch_job.dest and batch_job.dest.file_name:
+                logger.info(
+                    "[Chunk %d] Downloading results", active_idx,
+                )
+                content = client.files.download(
+                    file=batch_job.dest.file_name,
+                )
+                output_path.write_bytes(content)
+                print(
+                    f"[Chunk {active_idx}/{len(chunks)}] "
+                    f"Complete. Saved to {output_path.name}"
+                )
+            else:
+                logger.error(
+                    "[Chunk %d] Succeeded but no output file",
+                    active_idx,
+                )
+        else:
+            logger.error(
+                "[Chunk %d] Job ended with: %s", active_idx, job_state,
+            )
+
+        active_idx += 1
+        active_job = None
+
+    # Find next chunk to submit (skip already-downloaded)
+    while active_idx < len(chunks):
+        output_path = _BATCH_DIR / f"batch_output_{active_idx:03d}.jsonl"
+        if output_path.exists() and output_path.stat().st_size > 0:
+            active_idx += 1
+            continue
+        break
+
+    if active_idx >= len(chunks):
+        _merge_results(len(chunks))
+        _STATE_FILE.unlink(missing_ok=True)
+        return
+
+    # Submit next chunk
+    chunk_path = chunks[active_idx]
+    logger.info(
+        "[Chunk %d/%d] Uploading %s",
+        active_idx, len(chunks), chunk_path.name,
+    )
+    uploaded = client.files.upload(
+        file=str(chunk_path),
         config=types.UploadFileConfig(
-            display_name="osh-readme-eval-batch",
+            display_name=f"osh-eval-chunk-{active_idx:03d}",
             mime_type="jsonl",
         ),
     )
-
-    file_resource = uploaded_file.name
+    file_resource = uploaded.name
     if not file_resource:
-        raise RuntimeError("File upload returned no resource name")
+        logger.error("[Chunk %d] Upload returned no resource name", active_idx)
+        return
 
-    logger.info("Submitting batch job for model %s", _MODEL_ID)
+    logger.info("[Chunk %d/%d] Submitting batch job", active_idx, len(chunks))
     batch_job = client.batches.create(
         model=_MODEL_ID,
         src=file_resource,
-        config={"display_name": "osh-readme-eval"},
+        config={"display_name": f"osh-eval-chunk-{active_idx:03d}"},
     )
-
     job_name = batch_job.name
     if not job_name:
-        raise RuntimeError("Batch job returned no job name")
-    logger.info("Batch job submitted: %s", job_name)
+        logger.error("[Chunk %d] No job name returned", active_idx)
+        return
 
-    # Save job name for later polling
-    job_file = _BATCH_DIR / "batch_job_name.txt"
-    job_file.write_text(job_name)
+    _save_state({
+        "chunk_idx": active_idx,
+        "job_name": job_name,
+        "total_chunks": len(chunks),
+    })
 
-    return job_name
+    print(
+        f"[Chunk {active_idx}/{len(chunks)}] "
+        f"Submitted: {job_name}\n"
+        f"Run 'submit' again later to check status and continue."
+    )
 
 
-def poll_batch(
-    job_name: str | None = None,
-    poll_interval: int = 60,
-) -> Path | None:
-    """Poll batch job until complete, then download results.
+def _merge_results(total_chunks: int) -> None:
+    """Merge all chunk output files into a single results JSONL.
 
     Args:
-        job_name: Batch job name/ID. If None, reads from saved file.
-        poll_interval: Seconds between status checks.
-
-    Returns:
-        Path to downloaded results JSONL, or None if job failed.
+        total_chunks: Total number of chunks to merge.
     """
-    try:
-        from google import genai
-    except ImportError as exc:
-        raise ImportError(
-            "google-genai package required. Install with: "
-            "uv pip install 'google-genai'"
-        ) from exc
-
-    api_key = require_env("GEMINI_API_KEY")
-    client = genai.Client(api_key=api_key)
-
-    if job_name is None:
-        job_file = _BATCH_DIR / "batch_job_name.txt"
-        if not job_file.exists():
-            logger.error("No batch job name found")
-            return None
-        job_name = job_file.read_text().strip()
-
-    completed_states = {
-        "JOB_STATE_SUCCEEDED",
-        "JOB_STATE_FAILED",
-        "JOB_STATE_CANCELLED",
-        "JOB_STATE_EXPIRED",
-    }
-
-    logger.info("Polling batch job: %s", job_name)
-    state = ""
-    while True:
-        batch_job = client.batches.get(name=job_name)
-        if batch_job.state is not None:
-            state = batch_job.state.name
-        logger.info("Job state: %s", state)
-
-        if state in completed_states:
-            break
-        time.sleep(poll_interval)
-
-    if state != "JOB_STATE_SUCCEEDED":
-        logger.error("Batch job ended with state: %s", state)
-        return None
-
-    # Download results
-    if batch_job.dest is None or not batch_job.dest.file_name:
-        logger.error("No output file in completed batch job")
-        return None
-    result_file_name: str = batch_job.dest.file_name
-    logger.info("Downloading results from %s", result_file_name)
-    content = client.files.download(file=result_file_name)
-
-    output_path = _BATCH_DIR / "gemini_batch_output.jsonl"
-    output_path.write_bytes(content)
-    logger.info("Results saved to %s", output_path)
-
-    return output_path
+    merged_path = _BATCH_DIR / "gemini_batch_output.jsonl"
+    count = 0
+    with open(merged_path, "wb") as out:
+        for i in range(total_chunks):
+            chunk_output = _BATCH_DIR / f"batch_output_{i:03d}.jsonl"
+            if chunk_output.exists():
+                data = chunk_output.read_bytes()
+                out.write(data)
+                if not data.endswith(b"\n"):
+                    out.write(b"\n")
+                count += 1
+    print(
+        f"All {count}/{total_chunks} chunks complete. "
+        f"Merged results: {merged_path}\n"
+        f"Run 'ingest' to load results into the database."
+    )
 
 
 # ── Phase 3: Ingest ──────────────────────────────────────────────
@@ -659,11 +1211,47 @@ def ingest_batch_results(
 
 
 def main() -> None:
-    """CLI entry point with subcommands: prepare, submit, ingest."""
+    """CLI entry point: prepare, submit, ingest, realtime."""
     parser = argparse.ArgumentParser(
-        description="LLM-based README evaluation via Gemini Batch API"
+        description=(
+            "LLM-based README evaluation via "
+            "Gemini Batch or Realtime API"
+        ),
     )
     sub = parser.add_subparsers(dest="command", required=True)
+
+    rt = sub.add_parser(
+        "realtime",
+        help="Evaluate via real-time Gemini API calls",
+    )
+    rt.add_argument(
+        "--model",
+        default=_DEFAULT_REALTIME_MODEL,
+        help=(
+            "Gemini model ID "
+            f"(default: {_DEFAULT_REALTIME_MODEL})"
+        ),
+    )
+    rt.add_argument(
+        "--limit",
+        type=int,
+        default=0,
+        help="Max projects to process (default: 0 = all)",
+    )
+    rt.add_argument(
+        "--prompt-version",
+        default="test_8",
+        help="Prompt version (default: test_8)",
+    )
+    rt.add_argument(
+        "--workers",
+        type=int,
+        default=_DEFAULT_WORKERS,
+        help=(
+            "Concurrent API threads "
+            f"(default: {_DEFAULT_WORKERS})"
+        ),
+    )
 
     prep = sub.add_parser("prepare", help="Build JSONL batch input")
     prep.add_argument(
@@ -672,15 +1260,9 @@ def main() -> None:
         help="Prompt version (default: test_8)",
     )
 
-    sub.add_parser("submit", help="Submit batch job to Gemini")
-
-    poll = sub.add_parser("poll", help="Poll batch job and download results")
-    poll.add_argument("--job-name", default=None, help="Batch job name")
-    poll.add_argument(
-        "--interval",
-        type=int,
-        default=60,
-        help="Poll interval in seconds (default: 60)",
+    sub.add_parser(
+        "submit",
+        help="Submit next chunk / check active job (non-blocking)",
     )
 
     ing = sub.add_parser("ingest", help="Ingest batch results to DB")
@@ -697,23 +1279,20 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    if args.command == "prepare":
+    if args.command == "realtime":
+        run_realtime(
+            prompt_version=args.prompt_version,
+            model_id=args.model,
+            limit=args.limit,
+            max_workers=args.workers,
+        )
+
+    elif args.command == "prepare":
         path = prepare_batch(prompt_version=args.prompt_version)
         print(f"Batch input written to: {path}")
 
     elif args.command == "submit":
-        job_name = submit_batch()
-        print(f"Batch job submitted: {job_name}")
-
-    elif args.command == "poll":
-        result_path = poll_batch(
-            job_name=args.job_name,
-            poll_interval=args.interval,
-        )
-        if result_path:
-            print(f"Results downloaded to: {result_path}")
-        else:
-            print("Batch job did not succeed.")
+        submit_batch()
 
     elif args.command == "ingest":
         results_path = (

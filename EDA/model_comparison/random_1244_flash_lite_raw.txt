@@ -1,0 +1,119 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "hardware",
+    "structure_quality": "basic",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "No license information is explicitly mentioned in the README or present as a file in the directory structure.",
+    "present": false,
+    "type": "none",
+    "name": null,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "contributing": {
+    "reasoning": "There are no mentions of contributing guidelines or processes in the README or directory structure.",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "bom": {
+    "reasoning": "The README mentions potentiometers and a Teensy board, but does not provide a structured Bill of Materials with quantities or specifications.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": "Controller PCB - connects 8 potentiometers to a Teensy 3.2 / 3.2 / 4.0 with audio shield to realise a version of the Drone & Drama instrument.",
+    "confidence": 0.5
+  },
+  "assembly": {
+    "reasoning": "The README provides notes about design changes (v4) but does not contain any specific assembly steps or links to assembly instructions.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "The directory structure contains Gerber files (.zip) and NC drill files (.nc) for PCB manufacturing, which are export-only formats.",
+      "present": true,
+      "types": [
+        "PCB_Layout"
+      ],
+      "formats": [
+        ".zip",
+        ".nc"
+      ],
+      "has_editable_source": false,
+      "evidence": "D&D_Teensy PCB : Gerber/\n  D&D_Teensy_v4_2 pot_2020-11-26.zip\n  D&D_Teensy_v4_2020-09-06.zip\n  D&D_Teensy_v4_bottom.nc\n  D&D_Teensy_v4_top.nc",
+      "confidence": 0.90
+    },
+    "mechanical": {
+      "reasoning": "The directory structure contains PNG images of the PCB and schematic, but no CAD files for mechanical design.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  },
+  "software_firmware": {
+    "reasoning": "The directory structure contains Arduino sketch files (.ino) and zip archives that may contain firmware, indicating firmware is present.",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "Arduino"
+    ],
+    "documentation_level": "none",
+    "evidence": "D&D_Teensy_sketches/\n  D_D_Teensy_v6_5.ino\n  D_D_teensy_v6_bc.ino\n  THROB_v5_2_SAWVERSION.zip\n  THROB_v5_4_harm.zip\nD_D_teensy_v6_bc.ino",
+    "confidence": 0.80
+  },
+  "testing": {
+    "reasoning": "There is no mention of testing, validation, or calibration procedures in the README or directory structure.",
+    "present": false,
+    "detail_level": "none",
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "cost_sourcing": {
+    "reasoning": "The README mentions potentiometers and a Teensy board, but provides no cost estimates, supplier links, or part numbers.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "project_maturity": {
+    "reasoning": "The README mentions 'v4' and provides notes on design changes, suggesting a developed prototype, but lacks explicit maturity keywords like 'prototype', 'production', or 'deprecated'.",
+    "stage": "unstated",
+    "evidence": "Notes\nv4",
+    "confidence": 0.4
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```

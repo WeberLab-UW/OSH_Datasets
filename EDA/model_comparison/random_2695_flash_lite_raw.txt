@@ -1,0 +1,121 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "hardware",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "A LICENSE file is present in the root directory, indicating explicit license information.",
+    "present": true,
+    "type": "file reference",
+    "name": null,
+    "evidence": "LICENSE",
+    "confidence": 0.90
+  },
+  "contributing": {
+    "reasoning": "There are no explicit mentions or files related to contributing guidelines.",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 0.10
+  },
+  "bom": {
+    "reasoning": "The README mentions experimental operating conditions for VCC and V_LED, but does not provide a structured Bill of Materials with component quantities or sourcing information.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": "Experimentally observed operating conditions\n--------------------------------------------\n\n| Pins | Conditions |\n| :--- | :--- |\n| VCC | Voltage: **4.2-5.2V**, Current consumption: **7-10mA**|\n| CHARx_CLK, DATA | Logic high: **3.3-5.2V**, Logic low: **<1.2V**|\n| V_LED | Voltage: **3.3-5.2**, Current consumption: **0-0.4A** depending on number of lit pixels and the CHARx_BR pins|\n| CHARx_BR | Should be modulated at voltages **4.2-5.2V** to ensure uniform current flow through all ICs/characters|",
+    "confidence": 0.50
+  },
+  "assembly": {
+    "reasoning": "The README provides a detailed explanation of how to load pixel data and mentions a 'bruteforcer' and 'demo' setup, with breadboard schematics in 'breadboards.pdf', but lacks explicit step-by-step assembly instructions for the GPD340 display itself.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "Sources for both the bruteforcer and six display demo could be found in the src directory. The breadboard schematics could be found in breadboards.pdf.",
+    "confidence": 0.40
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "The 'kicad' directory contains KiCad project files (.kicad_sch, .kicad_pcb, .kicad_pro) which are editable source formats for schematics and PCB layouts.",
+      "present": true,
+      "types": [
+        "Circuit_Schematic",
+        "PCB_Layout"
+      ],
+      "formats": [
+        ".kicad_sch",
+        ".kicad_pcb",
+        ".kicad_pro"
+      ],
+      "has_editable_source": true,
+      "evidence": "kicad/\n  demo.kicad_sch\n  gpd350_re_schematics.kicad_pcb\n  gpd350_re_schematics.kicad_prl\n  gpd350_re_schematics.kicad_pro\n  gpd350_re_schematics.kicad_sch",
+      "confidence": 0.95
+    },
+    "mechanical": {
+      "reasoning": "There are no files with mechanical design extensions (.step, .stl, .scad, etc.) or directories explicitly for mechanical design.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.10
+    }
+  },
+  "software_firmware": {
+    "reasoning": "The 'src' directory contains C source files and CMakeLists.txt, and the README provides instructions for building and running firmware for the Raspberry Pi Pico using the Pico SDK and toolchain.",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "Pico SDK"
+    ],
+    "documentation_level": "complete",
+    "evidence": "# Building Raspberry Pi pico bruteforcer/demo firmware\n### Prerequisites \nGenerally, refer to the official [Getting started guide](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)\nYou'll need to have:\n- ARM embedded gcc toolchain\n- GDB (gdb-multiarch)\n- Pico SDK\n- Pico probe\n- Pico OpenOCD\nThe following environment constant should be defined:\n```\nPICO_SDK_PATH=/* Path to the root of pico-sdk directory */\n```\n### Configuring and building\n```\ncd src\nmkdir build\ncd build\cmake -DCMAKE_BUILD_TYPE=Debug ..\n\nmake\n```\n### Running and debugging\nConnect the picoprobe to the target pico/pico_w board according to the \"getting started guide\", then run the following:\n```\ncd [Pico OpenOCD source directory]\nsudo src/openocd -f interface/picoprobe.cfg -f target/rp2040.cfg -s tcl\n```\nIt should start a GDB server on the default port 3333.\nTo flash and run/debug the firmware navigate to the project's directory and run the following: \n```\ncd build\n\n# to run the demo\ngdb-multiarch ./demo.elf\n\n# to run the bruteforcer\ngdb-multiarch ./bruteforcer.elf\n```\nOnce GDB started:\n```\ntarget remote :3333\nload\nmonitor init reset\ncont\n```",
+    "confidence": 0.95
+  },
+  "testing": {
+    "reasoning": "The README describes the 'Reverse engineering process and test setups', including a 'Bruteforcing setup' with an INA219 current sensor and mentions manual experimenting to figure out the serial protocol, which constitutes basic testing procedures.",
+    "present": true,
+    "detail_level": "basic",
+    "evidence": "Reverse engineering process and test setups\n===========================================\n\nInitial study\n-------------\nEvery pin pair combination was carefully probed with a current limited power supply and a precision ammeter to determine which pins are VCC and GND.\nAs it turns out, only one combination of pins draws significant current of 7-8mA and no more than that. These pins were 5(GND) and 6(VCC).\n\nGiven the low count of pins(just 8), it was assumed that the display has to utilize some serial protocol to load pixel data into internal registers.\nThus, it should have at least one serial clock input and at least one serial data input and the other pins could be chip-selects, output-enables, etc.\n\n\nBruteforcing setup\n------------------\nAfter some unsuccessful attempts to manually determine the controlling pins and serial protocol, it was decided to build a breadboard contraption that would automatically\ngo through all combinations of the remaining 6 pins, sequentially assign them the roles of serial clock, serial data and \"fixed pins\". And attempt to load\nsome data patterns according to the assigned roles and monitor and log the current while doing all this.\n\nThe contraption was built based on a Raspberry Pi pico and an INA219 current sensor module.\nWhile going through the combinations, the current monitoring data from INA219 is written to UART0 which is read from minicom on the connected PC,\nthe log from minicom is stored in a file for further analysis.\n![bruteforcer](images/bruteforcer_breadboard01.jpg)\n\nThe setup was run at 4.2 volts and with a limited supply current to avoid potential overcurrent of the subjected GPD340 and/or damage of the pico's GPIOs.\nAfter a few minutes of running, some random pixels on the GPD340 begin to glow dimly, which was a good sign.\nThen, after a full run and analysis of the collected current monitor log - it was clearly visible which combination of pins caused the current to surge.\nAfter that, it was very easy to see which pin is which.\n\nFurther figuring out the serial protocol was done by manual experimenting on the same breadboard.",
+    "confidence": 0.85
+  },
+  "cost_sourcing": {
+    "reasoning": "The README mentions experimental operating conditions for VCC and V_LED with voltage and current ranges, which are related to sourcing but not explicit cost or supplier references.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": "Experimentally observed operating conditions\n--------------------------------------------\n\n| Pins | Conditions |\n| :--- | :--- |\n| VCC | Voltage: **4.2-5.2V**, Current consumption: **7-10mA**|\n| CHARx_CLK, DATA | Logic high: **3.3-5.2V**, Logic low: **<1.2V**|\n| V_LED | Voltage: **3.3-5.2**, Current consumption: **0-0.4A** depending on number of lit pixels and the CHARx_BR pins|\n| CHARx_BR | Should be modulated at voltages **4.2-5.2V** to ensure uniform current flow through all ICs/characters|",
+    "confidence": 0.40
+  },
+  "project_maturity": {
+    "reasoning": "The README describes the project as a result of a 'successful attempt to reverse engineer' and aims to make displays 'useful in hobby projects', indicating a prototype stage.",
+    "stage": "prototype",
+    "evidence": "Since there is little to no information available on the internet about this display, this repo is the result of a successful attempt to reverse engineer the pinout and driving scheme in order to make these displays useful in hobby projects and such.",
+    "confidence": 0.70
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```

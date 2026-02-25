@@ -1,0 +1,126 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "mixed",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "The README explicitly states the project is released under GNU GPLv3 and CC BY-SA 4.0, and a LICENSE file is present in the root directory.",
+    "present": true,
+    "type": "explicit",
+    "name": "GNU GPLv3 and Creative Commons Attribution-ShareAlike 4.0 International",
+    "evidence": "I hereby release my work under the GNU GPLv3 where applicable. The complete license text, if not included, can be read at `https://www.gnu.org/licenses/gpl-3.0.txt`. Where the GPLv3 isn't applicable, the work is released under the Creative Commons Attribution-ShareAlike 4.0 International.",
+    "confidence": 1.0
+  },
+  "contributing": {
+    "reasoning": "There are no instructions or files related to contributing to the project.",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 1.0
+  },
+  "bom": {
+    "reasoning": "While components like the Raspberry Pi Zero, OLED, and ESP8266 are mentioned, there is no structured list or file providing quantities and specifications.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": null,
+    "confidence": 0.9
+  },
+  "assembly": {
+    "reasoning": "The README contains software setup and configuration steps but lacks physical hardware assembly instructions.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": null,
+    "confidence": 0.9
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "The repository contains KiCad project files including schematics and PCB layouts in multiple versions.",
+      "present": true,
+      "types": [
+        "PCB_Layout",
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".kicad_pcb",
+        ".sch",
+        ".pro"
+      ],
+      "has_editable_source": true,
+      "evidence": "kicad/hardpass-pcb/hardpass-pcb.kicad_pcb\nkicad/hardpass-pcb/hardpass-pcb.sch\nkicad/hardpass-sci-pcb/hsci024-test-sec1210-pcbfab.kicad_pcb",
+      "confidence": 1.0
+    },
+    "mechanical": {
+      "reasoning": "The directory structure includes 3D design files in both editable (STEP, FreeCAD) and export (STL) formats.",
+      "present": true,
+      "types": [
+        "CAD",
+        "3D_Printable"
+      ],
+      "formats": [
+        ".STEP",
+        ".fcstd",
+        ".stl"
+      ],
+      "has_editable_source": true,
+      "evidence": "kicad/hardpass-pcb/hardpass.3dshapes/SKQGAF.STEP\nkicad/hardpass-pcb/hardpass.3dshapes/linkconn_sim_holder.fcstd\nkicad/hardpass-pcb/hardpass.3dshapes/sim_holder.stl",
+      "confidence": 1.0
+    }
+  },
+  "software_firmware": {
+    "reasoning": "The project includes C/C++ source code for OLED menus and HID functionality, along with build instructions (Makefiles) and driver installation steps.",
+    "present": true,
+    "type": "control_software",
+    "frameworks": [],
+    "documentation_level": "basic",
+    "evidence": "USB HID progam `scan` with examples in `./send_hid` ... OLED menu system in `./oled` ... git clone https://github.com/al177/esp8089.git\nmake && sudo make install",
+    "confidence": 0.9
+  },
+  "testing": {
+    "reasoning": "A test script for the password functionality is present in the oled directory, and the README mentions an OLED demo.",
+    "present": true,
+    "detail_level": "basic",
+    "evidence": "oled/pass-test.sh\nOLED (demo)",
+    "confidence": 0.7
+  },
+  "cost_sourcing": {
+    "reasoning": "No cost estimates, supplier links, or specific part numbers are provided in the documentation.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": null,
+    "confidence": 0.9
+  },
+  "project_maturity": {
+    "reasoning": "The README explicitly identifies the project as a 'Prototype' and uses version 'v.2'.",
+    "stage": "prototype",
+    "evidence": "# Hardpass Prototype, v.2",
+    "confidence": 1.0
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": true,
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "evidence": "Where the GPLv3 isn't applicable, the work is released under the Creative Commons Attribution-ShareAlike 4.0 International.",
+      "confidence": 0.9
+    },
+    "software": {
+      "present": true,
+      "name": "GNU GPLv3",
+      "evidence": "I hereby release my work under the GNU GPLv3 where applicable.",
+      "confidence": 0.9
+    },
+    "documentation": {
+      "present": true,
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "evidence": "Where the GPLv3 isn't applicable, the work is released under the Creative Commons Attribution-ShareAlike 4.0 International.",
+      "confidence": 0.9
+    }
+  }
+}
+```

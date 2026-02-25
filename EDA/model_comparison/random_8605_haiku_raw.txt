@@ -1,0 +1,118 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "hardware",
+    "structure_quality": "well_structured",
+    "documentation_location": "external_repo"
+  },
+  "license": {
+    "reasoning": "README explicitly references LICENSE.md file for license information but does not state the specific license name inline",
+    "present": true,
+    "type": "referenced",
+    "name": null,
+    "evidence": "Please review the LICENSE.md file for license information.",
+    "confidence": 0.85
+  },
+  "contributing": {
+    "reasoning": "No contributing guidelines, process, or CONTRIBUTING.md file are mentioned in the README or directory structure",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 0.95
+  },
+  "bom": {
+    "reasoning": "No bill of materials is provided in the README or directory structure; only external references to user guides and configuration utilities are mentioned",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": null,
+    "confidence": 0.90
+  },
+  "assembly": {
+    "reasoning": "Assembly instructions are referenced via an external Hookup Guide link and Official User Guide PDF, but no inline assembly steps or dedicated assembly document link is provided in this repository",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": null,
+    "confidence": 0.85
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "Directory structure contains Eagle design files (.brd, .sch) in both Hardware/ and Production/ directories, which are editable source formats",
+      "present": true,
+      "types": [
+        "PCB_Layout",
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".brd",
+        ".sch"
+      ],
+      "has_editable_source": true,
+      "evidence": "Hardware/tsunami.brd, Hardware/tsunami.sch, Hardware/deprecated/Tapestry.brd, Hardware/deprecated/Tapestry.sch, Production/13240-tsunami-panel.v11.brd",
+      "confidence": 0.95
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files (.step, .stp, .stl, .scad, .f3d, .FCStd, .dxf, .dwg) are present in the directory structure",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.95
+    }
+  },
+  "software_firmware": {
+    "reasoning": "README mentions firmware updates and configuration utility available from external downloads page, but no firmware source files, build instructions, or toolchain information are provided in this repository",
+    "present": false,
+    "type": "none",
+    "frameworks": [],
+    "documentation_level": "none",
+    "evidence": null,
+    "confidence": 0.80
+  },
+  "testing": {
+    "reasoning": "No testing, validation, calibration, or verification procedures are mentioned in the README or directory structure",
+    "present": false,
+    "detail_level": "none",
+    "evidence": null,
+    "confidence": 0.95
+  },
+  "cost_sourcing": {
+    "reasoning": "No estimated cost, supplier links, part numbers, or sourcing information are provided in the README or directory structure",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": null,
+    "confidence": 0.95
+  },
+  "project_maturity": {
+    "reasoning": "README explicitly states this is for v1.1 and references a newer v1.2 version in a separate repository, indicating a stable production release with version history",
+    "stage": "production",
+    "evidence": "This repository is for the Tsunami Super WAV Trigger v1.1. For v1.2, check out the [Tsunami Super WAV Trigger (Qwiic) v1.2 GitHub repository]; [Initial production Release](https://github.com/sparkfun/tsunami/commit/f42b14d72773535e83374cde73f2ca3f25164abb) - V11 hardware revision.",
+    "confidence": 0.90
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```

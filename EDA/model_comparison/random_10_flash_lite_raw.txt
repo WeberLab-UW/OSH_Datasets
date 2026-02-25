@@ -1,0 +1,127 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "mixed",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "The README explicitly states the project is released under GNU GPLv3 and Creative Commons Attribution-ShareAlike 4.0 International, with a link to the GPLv3 text.",
+    "present": true,
+    "type": "explicit",
+    "name": "GNU GPLv3, CC BY-SA 4.0",
+    "evidence": "I hereby release my work under the GNU GPLv3 where applicable. The complete license text, if not included, can be read at https://www.gnu.org/licenses/gpl-3.0.txt. Where the GPLv3 isn't applicable, the work is released under the Creative Commons Attribution-ShareAlike 4.0 International.",
+    "confidence": 0.95
+  },
+  "contributing": {
+    "reasoning": "There is no mention of contributing guidelines in the README or directory structure.",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "bom": {
+    "reasoning": "The README mentions components like OLED and ESP8266 but does not provide a structured Bill of Materials with quantities or sourcing information. No BOM files are present in the directory structure.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": "This repository contains: * USB HID progam `scan` with examples in `./send_hid` * OLED menu system in `./oled`, using the `ArduiPi_OLED` driver from http://hallard.me",
+    "confidence": 0.50
+  },
+  "assembly": {
+    "reasoning": "The README provides instructions for setting up kernel modules and a systemd unit file, but no specific hardware assembly steps or links to dedicated assembly guides are present.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": null,
+    "confidence": 0.30
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "The directory structure contains multiple KiCad project files (.kicad_pcb, .kicad_sch, .pro) which are editable source formats for hardware design.",
+      "present": true,
+      "types": [
+        "PCB_Layout",
+        "Circuit_Schematic",
+        "Electronic_Component"
+      ],
+      "formats": [
+        ".kicad_pcb",
+        ".kicad_sch",
+        ".pro",
+        ".kicad_mod"
+      ],
+      "has_editable_source": true,
+      "evidence": "kicad/hardpass-pcb/hardpass-pcb.kicad_pcb\nkicad/hardpass-pcb/hardpass-pcb.sch\nkicad/hardpass-sci-pcb/hsci024-test-sec1210-pcbfab.kicad_pcb",
+      "confidence": 0.95
+    },
+    "mechanical": {
+      "reasoning": "The directory structure contains STEP files (.STEP) and FreeCAD files (.fcstd) which are editable source formats for mechanical design.",
+      "present": true,
+      "types": [
+        "CAD",
+        "Other"
+      ],
+      "formats": [
+        ".step",
+        ".fcstd"
+      ],
+      "has_editable_source": true,
+      "evidence": "kicad/hardpass-pcb/hardpass.3dshapes/SKQGAF-realcolors.STEP\nkicad/hardpass-pcb/hardpass.3dshapes/linkconn_sim_holder.fcstd",
+      "confidence": 0.90
+    }
+  },
+  "software_firmware": {
+    "reasoning": "The repository contains C++ source files for an OLED menu system and a USB HID program, along with a Makefile, indicating firmware/control software development.",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [],
+    "documentation_level": "basic",
+    "evidence": "./oled/oled_clear.cpp\n./oled/oled_menu.cpp\n./send_hid/main.c\n./send_hid/Makefile",
+    "confidence": 0.80
+  },
+  "testing": {
+    "reasoning": "The README mentions 'USB HID send keys progam' and the directory structure includes files like 'pass-test.sh' and 'hardpass-demo.sh', suggesting some level of testing or demonstration.",
+    "present": true,
+    "detail_level": "basic",
+    "evidence": "./pass/pass-test.sh\n./send_hid/hardpass-demo.sh",
+    "confidence": 0.60
+  },
+  "cost_sourcing": {
+    "reasoning": "The README mentions the ESP8266 and OLED, which are components, but does not provide cost estimates or supplier references.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": null,
+    "confidence": 0.30
+  },
+  "project_maturity": {
+    "reasoning": "The README explicitly states 'Hardpass Prototype, v.2', indicating a prototype stage.",
+    "stage": "prototype",
+    "evidence": "Hardpass Prototype, v.2",
+    "confidence": 0.95
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": true,
+      "name": "GNU GPLv3",
+      "evidence": "I hereby release my work under the GNU GPLv3 where applicable. The complete license text, if not included, can be read at https://www.gnu.org/licenses/gpl-3.0.txt.",
+      "confidence": 0.95
+    },
+    "documentation": {
+      "present": true,
+      "name": "CC BY-SA 4.0",
+      "evidence": "Where the GPLv3 isn't applicable, the work is released under the Creative Commons Attribution-ShareAlike 4.0 International.",
+      "confidence": 0.95
+    }
+  }
+}
+```

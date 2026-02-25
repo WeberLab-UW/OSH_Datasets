@@ -17,6 +17,7 @@ from osh_datasets.enrichment.llm_readme_eval import (
     ingest_batch_results,
     parse_response,
     prepare_batch,
+    run_realtime,
 )
 
 
@@ -446,6 +447,211 @@ class TestIngestBatchResults:
         ).fetchone()[0]
         conn.close()
         assert total == 1
+
+
+class TestRunRealtime:
+    """Tests for realtime Gemini evaluation."""
+
+    @pytest.fixture()
+    def tmp_db(self, tmp_path: Path) -> Path:
+        """Create temp DB with two projects that have README + tree."""
+        db_path = tmp_path / "test.db"
+        init_db(db_path)
+        conn = open_connection(db_path)
+
+        cols = {
+            r[1]
+            for r in conn.execute(
+                "PRAGMA table_info(licenses)"
+            ).fetchall()
+        }
+        if "license_normalized" not in cols:
+            conn.execute(
+                "ALTER TABLE licenses "
+                "ADD COLUMN license_normalized TEXT"
+            )
+
+        for idx in range(2):
+            cursor = conn.execute(
+                "INSERT INTO projects "
+                "(source, source_id, name, repo_url) "
+                "VALUES (?, ?, ?, ?)",
+                (
+                    "test",
+                    f"rt_{idx}",
+                    f"Realtime Test {idx}",
+                    f"https://github.com/t/r{idx}",
+                ),
+            )
+            pid = cursor.lastrowid
+            conn.execute(
+                "INSERT INTO readme_contents "
+                "(project_id, repo_url, content, "
+                "size_bytes, fetched_at) "
+                "VALUES (?, ?, ?, ?, ?)",
+                (
+                    pid,
+                    f"https://github.com/t/r{idx}",
+                    f"# Test README {idx}\nSome content.",
+                    30,
+                    "2025-01-01T00:00:00Z",
+                ),
+            )
+            conn.execute(
+                "INSERT INTO repo_file_trees "
+                "(project_id, file_path, file_type, "
+                "size_bytes) VALUES (?, ?, ?, ?)",
+                (pid, "README.md", "blob", 30),
+            )
+
+        conn.commit()
+        conn.close()
+        return db_path
+
+    @patch(
+        "osh_datasets.enrichment.llm_readme_eval"
+        "._call_gemini_realtime"
+    )
+    @patch(
+        "osh_datasets.enrichment.llm_readme_eval"
+        "._load_prompt_template"
+    )
+    def test_success_stores_evaluation(
+        self,
+        mock_prompt: object,
+        mock_call: object,
+        tmp_db: Path,
+    ) -> None:
+        """Successful API call stores evaluation in DB."""
+        mock_prompt.return_value = (  # type: ignore[union-attr]
+            "system",
+            "{readme_content} {directory_structure}",
+        )
+
+        response_json = {
+            "metadata": {"project_type": "hardware"},
+            "license": {
+                "present": True,
+                "type": "explicit",
+                "name": "MIT",
+            },
+        }
+        raw = orjson.dumps(response_json).decode()
+        mock_call.return_value = (raw, 100, 50)  # type: ignore[union-attr]
+
+        run_realtime(
+            db_path=tmp_db,
+            prompt_version="test_rt",
+            model_id="test-model",
+            limit=1,
+            max_workers=1,
+        )
+
+        conn = open_connection(tmp_db)
+        row = conn.execute(
+            "SELECT model_id, project_type "
+            "FROM llm_evaluations LIMIT 1"
+        ).fetchone()
+        conn.close()
+        assert row is not None
+        assert row[0] == "test-model"
+        assert row[1] == "hardware"
+
+    @patch(
+        "osh_datasets.enrichment.llm_readme_eval"
+        "._call_gemini_realtime"
+    )
+    @patch(
+        "osh_datasets.enrichment.llm_readme_eval"
+        "._load_prompt_template"
+    )
+    def test_failure_continues(
+        self,
+        mock_prompt: object,
+        mock_call: object,
+        tmp_db: Path,
+    ) -> None:
+        """API failure logs warning and does not crash."""
+        mock_prompt.return_value = (  # type: ignore[union-attr]
+            "system",
+            "{readme_content} {directory_structure}",
+        )
+        mock_call.return_value = None  # type: ignore[union-attr]
+
+        run_realtime(
+            db_path=tmp_db,
+            prompt_version="test_rt",
+            model_id="test-model",
+            limit=1,
+            max_workers=1,
+        )
+
+        conn = open_connection(tmp_db)
+        count = conn.execute(
+            "SELECT COUNT(*) FROM llm_evaluations"
+        ).fetchone()[0]
+        conn.close()
+        assert count == 0
+
+    @patch(
+        "osh_datasets.enrichment.llm_readme_eval"
+        "._call_gemini_realtime"
+    )
+    @patch(
+        "osh_datasets.enrichment.llm_readme_eval"
+        "._load_prompt_template"
+    )
+    def test_skip_already_evaluated(
+        self,
+        mock_prompt: object,
+        mock_call: object,
+        tmp_db: Path,
+    ) -> None:
+        """Projects with existing evaluations are skipped."""
+        mock_prompt.return_value = (  # type: ignore[union-attr]
+            "system",
+            "{readme_content} {directory_structure}",
+        )
+
+        response_json = {
+            "metadata": {"project_type": "hardware"},
+            "license": {"present": False, "type": "none"},
+        }
+        raw = orjson.dumps(response_json).decode()
+        mock_call.return_value = (raw, 100, 50)  # type: ignore[union-attr]
+
+        # First run evaluates both projects
+        run_realtime(
+            db_path=tmp_db,
+            prompt_version="test_rt",
+            model_id="test-model",
+            max_workers=1,
+        )
+
+        conn = open_connection(tmp_db)
+        count_after_first = conn.execute(
+            "SELECT COUNT(*) FROM llm_evaluations"
+        ).fetchone()[0]
+        conn.close()
+
+        # Reset call count, run again
+        mock_call.reset_mock()  # type: ignore[union-attr]
+        run_realtime(
+            db_path=tmp_db,
+            prompt_version="test_rt",
+            model_id="test-model",
+            max_workers=1,
+        )
+
+        # Should not have called the API again
+        mock_call.assert_not_called()  # type: ignore[union-attr]
+
+        conn = open_connection(tmp_db)
+        count_after_second = conn.execute(
+            "SELECT COUNT(*) FROM llm_evaluations"
+        ).fetchone()[0]
+        conn.close()
+        assert count_after_first == count_after_second == 2
 
 
 class TestInputTruncation:

@@ -1,0 +1,170 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "hardware",
+    "structure_quality": "basic",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "LICENSE.md file is present in directory structure but no license content or type is mentioned in the README text.",
+    "present": true,
+    "type": "referenced",
+    "name": null,
+    "evidence": "LICENSE.md file present in root directory",
+    "confidence": 0.60
+  },
+  "contributing": {
+    "reasoning": "No contributing guidelines, CONTRIBUTING.md file, or contribution instructions are present in the README or directory structure.",
+    "present": false,
+    "level": 0,
+    "evidence": "No contributing section found in README; no CONTRIBUTING.md file in directory structure",
+    "confidence": 0.95
+  },
+  "bom": {
+    "reasoning": "README contains a detailed parts list with component names, quantities, and module specifications organized by category (Parts and Modules), meeting the criteria for a basic bill of materials.",
+    "present": true,
+    "completeness": "basic",
+    "component_count": 12,
+    "components": [
+      {
+        "name": "Arduino UNO or NANO",
+        "qty": "1",
+        "specs": "Microcontroller"
+      },
+      {
+        "name": "Antenna and Audio cable",
+        "qty": "1",
+        "specs": "Connectivity"
+      },
+      {
+        "name": "Push Button",
+        "qty": "2",
+        "specs": "Input control"
+      },
+      {
+        "name": "SPDT switch",
+        "qty": "1",
+        "specs": "Mode selection"
+      },
+      {
+        "name": "Speakers",
+        "qty": "2",
+        "specs": "~8ohms"
+      },
+      {
+        "name": "10Kohms resistors",
+        "qty": "2",
+        "specs": "I2C pull-up"
+      },
+      {
+        "name": "SSD1306 I2C 0.96\" 128X64 OLED LCD Display Module",
+        "qty": "1",
+        "specs": "J1 - Display"
+      },
+      {
+        "name": "TEA5767 Radio module",
+        "qty": "1",
+        "specs": "J2 - FM tuner"
+      },
+      {
+        "name": "ICStation DIY Kit 3V-12V LM386 Super MINI Audio Amplifier module Board",
+        "qty": "1",
+        "specs": "J3 - Audio amplification"
+      },
+      {
+        "name": "KA2284 5-Level LED Audio Indicator Board Module DIY KIT",
+        "qty": "1",
+        "specs": "J4 - Audio level indicator"
+      }
+    ],
+    "evidence": "Parts. * Arduino UNO or NANO * Antenna and Audio cable * 2 x Push Button * SPDT switch. * 2 x Speakers(~8ohms) * 2 x 10Kohms resistors( I2C pull-up) Modules. * SSD1306 I2C 0.96\" 128X64 OLED LCD Display Module. J1 * TEA5767 Radio module J2. * ICStation DIY Kit 3V-12V LM386 Super MINI Audio Amplifier module Board. J3 * KA2284 5-Level LED Audio Indicator Board Module DIY KIT. J4",
+    "confidence": 0.85
+  },
+  "assembly": {
+    "reasoning": "README mentions schematic and eagle diagram location but provides no numbered assembly steps or direct link to a dedicated assembly document; only general functional descriptions of how components work together.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "See eagle diagram and schematic in \"doc\" subfolder. See image folder for images of modules used in \"doc\" subfolder.",
+    "confidence": 0.80
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "Directory structure contains Eagle schematic file (fm_radio.sch) and schematic image (fm_radio.png); these are circuit design files in export-only format (PNG) and proprietary editable format (Eagle SCH).",
+      "present": true,
+      "types": [
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".sch",
+        ".png"
+      ],
+      "has_editable_source": true,
+      "evidence": "doc/eagle/fm_radio.sch and doc/eagle/fm_radio.png files present in directory structure",
+      "confidence": 0.90
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files (.step, .stp, .stl, .scad, .f3d, .FCStd, .dxf, .dwg) or mechanical design folders are present in the directory structure.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": "No mechanical design files or folders detected in directory structure",
+      "confidence": 0.95
+    }
+  },
+  "software_firmware": {
+    "reasoning": "Arduino firmware file (fm_radio.ino) is present with external library dependencies listed in README, but no toolchain version, build commands, or flashing instructions are provided.",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "Arduino"
+    ],
+    "documentation_level": "basic",
+    "evidence": "src/fm_radio/fm_radio.ino file present; README lists libraries: <TEA5767.h> <Button.h> <Adafruit_SSD1306.h> <Adafruit_GFX.h> with version numbers 1.0.0, 1.1.2, v 1.2.2",
+    "confidence": 0.75
+  },
+  "testing": {
+    "reasoning": "README mentions current consumption measurements at different volume levels but provides no formal testing procedures, validation steps, or calibration instructions.",
+    "present": true,
+    "detail_level": "basic",
+    "evidence": "Current Consumption: 1. 60mA, low volume. 2. 80-100mA, Medium volume, all audio lights on Level indicator lighting. 3. 120mA to 140mA, Maximum volume.",
+    "confidence": 0.55
+  },
+  "cost_sourcing": {
+    "reasoning": "README includes two supplier URLs (ICStation and a blog image link) for specific modules but no overall project cost estimate or part numbers.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": true,
+    "part_numbers_present": false,
+    "evidence": "ICStation DIY Kit 3V-12V LM386 Super MINI Audio Amplifier module Board. J3 [URL](http://www.icstation.com/icstation-lm386-super-mini-amplifier-board-p-5025.html) KA2284 5-Level LED Audio Indicator Board Module DIY KIT. J4 [URL]( http://3.bp.blogspot.com/-eO-9YtigXEs/T4lbYAR8BqI/AAAAAAAAAmM/sgNGqV6qTJo/s1600/5-LED-Vu-meter-circuit-using-KA2284.png)",
+    "confidence": 0.75
+  },
+  "project_maturity": {
+    "reasoning": "No explicit maturity keywords (prototype, beta, WIP, production, stable, deprecated, archived) are present in the README or directory structure; CHANGELOG.md exists but provides no version information.",
+    "stage": "unstated",
+    "evidence": "No explicit maturity keywords found in README; CHANGELOG.md file present but content not provided",
+    "confidence": 0.85
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": "No hardware-specific license mentioned in README; LICENSE.md file referenced but content not provided",
+      "confidence": 0.70
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": "No software-specific license mentioned in README; LICENSE.md file referenced but content not provided",
+      "confidence": 0.70
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": "No documentation-specific license mentioned in README; LICENSE.md file referenced but content not provided",
+      "confidence": 0.70
+    }
+  }
+}
+```

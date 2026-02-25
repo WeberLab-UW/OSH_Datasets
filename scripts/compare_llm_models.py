@@ -277,7 +277,11 @@ def call_gemini(system: str, user: str) -> LLMResult | None:
 
 
 def extract_json(raw: str) -> dict | None:
-    """Extract the first JSON block from LLM response text.
+    """Extract the outermost JSON object from LLM response text.
+
+    Uses brace-depth counting with string-literal awareness to
+    correctly handle JSON containing triple backticks in string
+    values (e.g., evidence fields quoting README code blocks).
 
     Args:
         raw: Raw LLM response text.
@@ -285,18 +289,39 @@ def extract_json(raw: str) -> dict | None:
     Returns:
         Parsed dict or None on failure.
     """
-    match = re.search(r"```json\s*\n(.*?)```", raw, re.DOTALL)
-    if match:
-        try:
-            return orjson.loads(match.group(1))
-        except orjson.JSONDecodeError:
-            pass
-    match = re.search(r"\{.*\}", raw, re.DOTALL)
-    if match:
-        try:
-            return orjson.loads(match.group(0))
-        except orjson.JSONDecodeError:
-            pass
+    start = raw.find("{")
+    if start == -1:
+        return None
+
+    depth = 0
+    in_string = False
+    escape_next = False
+
+    for i in range(start, len(raw)):
+        ch = raw[i]
+        if escape_next:
+            escape_next = False
+            continue
+        if ch == "\\" and in_string:
+            escape_next = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                json_str = raw[start : i + 1]
+                try:
+                    return orjson.loads(json_str)
+                except orjson.JSONDecodeError:
+                    pass
+                return None
+
     return None
 
 

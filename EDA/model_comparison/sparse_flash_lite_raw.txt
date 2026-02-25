@@ -1,0 +1,112 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "unclear",
+    "structure_quality": "poor",
+    "documentation_location": "redirect"
+  },
+  "license": {
+    "reasoning": "The README explicitly states the project has been moved to a different location, and no license information is present in the current README or directory structure.",
+    "present": false,
+    "type": "none",
+    "name": null,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "contributing": {
+    "reasoning": "There is no information regarding contributing guidelines in the provided README or directory structure.",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "bom": {
+    "reasoning": "No Bill of Materials or component lists are present in the README or directory structure.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "assembly": {
+    "reasoning": "No assembly instructions are provided in the README or directory structure.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "No hardware design files (schematics, PCB layouts) are present in the README or directory structure.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files (CAD, 3D models) are present in the README or directory structure.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  },
+  "software_firmware": {
+    "reasoning": "No software or firmware files, build instructions, or dependencies are mentioned in the README or directory structure.",
+    "present": false,
+    "type": "none",
+    "frameworks": [],
+    "documentation_level": "none",
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "testing": {
+    "reasoning": "No testing or validation procedures are mentioned in the README or directory structure.",
+    "present": false,
+    "detail_level": "none",
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "cost_sourcing": {
+    "reasoning": "No information regarding cost, suppliers, or part numbers is present in the README or directory structure.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": null,
+    "confidence": 0.0
+  },
+  "project_maturity": {
+    "reasoning": "The README explicitly states the project has been moved to a different location, but no explicit maturity keywords (like prototype, production, deprecated) are present.",
+    "stage": "unstated",
+    "evidence": "README.md content: '# Moved to different location:'",
+    "confidence": 0.50
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```

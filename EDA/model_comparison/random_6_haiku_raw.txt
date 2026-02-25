@@ -1,0 +1,119 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "mixed",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "A LICENSE file is present in the directory structure but its contents are not readable from the provided information, so classification is based on file reference only.",
+    "present": true,
+    "type": "referenced",
+    "name": null,
+    "evidence": "LICENSE file present in root directory",
+    "confidence": 0.70
+  },
+  "contributing": {
+    "reasoning": "No contributing guidelines, CONTRIBUTING.md file, or contribution instructions are present in the README or directory structure.",
+    "present": false,
+    "level": 0,
+    "evidence": "No contributing section found in README or CONTRIBUTING.md file in directory structure",
+    "confidence": 0.95
+  },
+  "bom": {
+    "reasoning": "No bill of materials, component lists, or BOM files are present in the README or directory structure; only general hardware descriptions are provided.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": "The Hardware section describes the test jig board components (CH559, CH552, CH446Q switch matrix, LEDs, MOSFET) but provides no structured BOM with quantities or sourcing information.",
+    "confidence": 0.90
+  },
+  "assembly": {
+    "reasoning": "No assembly instructions with 3+ specific steps are provided inline in the README, and no direct link to a dedicated assembly document exists.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "The Hardware section describes the test jig board design but contains no assembly steps. The README focuses on how the test jig works rather than how to assemble it.",
+    "confidence": 0.85
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "A PDF schematic file is present in the PCB directory, which is an export-only format with no editable source files detected.",
+      "present": true,
+      "types": [
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".pdf"
+      ],
+      "has_editable_source": false,
+      "evidence": "PCB/CH552_autoTest_v2.pdf",
+      "confidence": 0.90
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files (.step, .stp, .stl, .scad, .f3d, .FCStd, .dxf, .dwg) are present in the directory structure.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": "No mechanical design files found in directory structure",
+      "confidence": 0.95
+    }
+  },
+  "software_firmware": {
+    "reasoning": "Firmware source code (.ino, .c, .h files) and Python control software are present with build/upload instructions and toolchain references (Arduino IDE, vnproch551 tool).",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "Arduino"
+    ],
+    "documentation_level": "basic",
+    "evidence": "arduino/controller_ch559_sketch/controller_ch559_sketch.ino with supporting .c and .h files; README states 'The master test script uses Arduino Cli tool to compile all examples into hex files'; vnproch551 tool mentioned for uploading hex files; python/run_arduino_test.py and python/selfhost_runner_test.py for test automation",
+    "confidence": 0.85
+  },
+  "testing": {
+    "reasoning": "Extensive test scripts with specific validation procedures are present in the python/sketchTestCode directory, with detailed testing methodology described in the README.",
+    "present": true,
+    "detail_level": "detailed",
+    "evidence": "README provides detailed testing procedure example: 'If the P2.5 of CH559 gets 2 toggles and the timing is between 0.95 and 1.05 seconds, the test is considered successful.' Multiple test scripts present: jig_test_Blink.py, jig_test_AnalogInput.py, jig_test_Button.py, jig_test_Calibration.py, and 40+ other test scripts in python/sketchTestCode/ directory with expected validation criteria",
+    "confidence": 0.92
+  },
+  "cost_sourcing": {
+    "reasoning": "No estimated project cost, supplier links, part numbers, or sourcing information are provided in the README or directory structure.",
+    "present": false,
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": "No cost estimates, supplier links, or part numbers found in README or directory structure",
+    "confidence": 0.95
+  },
+  "project_maturity": {
+    "reasoning": "No explicit maturity keywords (stable, production ready, beta, prototype, WIP, deprecated, archived) are present in the README or directory structure.",
+    "stage": "unstated",
+    "evidence": "README describes the project as a regression test tool and integration with GitHub Actions but contains no explicit maturity stage keywords",
+    "confidence": 0.85
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": "LICENSE file referenced but contents not readable; no hardware-specific license explicitly mentioned in README",
+      "confidence": 0.50
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": "LICENSE file referenced but contents not readable; no software-specific license explicitly mentioned in README",
+      "confidence": 0.50
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": "LICENSE file referenced but contents not readable; no documentation-specific license explicitly mentioned in README",
+      "confidence": 0.50
+    }
+  }
+}
+```

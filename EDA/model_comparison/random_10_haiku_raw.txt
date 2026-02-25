@@ -1,0 +1,135 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "hardware",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "README explicitly states dual licensing with GPLv3 for applicable work and CC-BY-SA 4.0 for other work, with direct reference to license text URL",
+    "present": true,
+    "type": "explicit",
+    "name": "GNU GPLv3 and Creative Commons Attribution-ShareAlike 4.0 International",
+    "evidence": "I hereby release my work under the GNU GPLv3 where applicable. The complete license text, if not included, can be read at `https://www.gnu.org/licenses/gpl-3.0.txt`. Where the GPLv3 isn't applicable, the work is released under the Creative Commons Attribution-ShareAlike 4.0 International.",
+    "confidence": 0.95
+  },
+  "contributing": {
+    "reasoning": "No contributing guidelines, process, or CONTRIBUTING.md file found in README or directory structure",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 0.95
+  },
+  "bom": {
+    "reasoning": "No bill of materials, component lists, or BOM files (e.g., bom.csv) are present in the README or directory structure; only vague references to components in context of ESP8266 driver installation",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": null,
+    "confidence": 0.90
+  },
+  "assembly": {
+    "reasoning": "No assembly instructions, numbered steps, or dedicated assembly documentation links are provided in the README; project is described as prototype with TODO items but no assembly guidance",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": null,
+    "confidence": 0.90
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "Directory structure contains extensive KiCAD PCB design files (.kicad_pcb, .sch, .kicad_pro) and schematic libraries in editable source formats across hardpass-pcb and hardpass-sci-pcb directories",
+      "present": true,
+      "types": [
+        "PCB_Layout",
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".kicad_pcb",
+        ".sch",
+        ".kicad_pro",
+        ".dcm",
+        ".lib",
+        ".net"
+      ],
+      "has_editable_source": true,
+      "evidence": "kicad/hardpass-pcb/hardpass-pcb.kicad_pcb, hardpass-pcb.sch, hardpass-pcb.kicad_pro, hardpass-oled.lib, hardpass-oled.dcm; kicad/hardpass-sci-pcb/hardpass-pcb.kicad_pcb, hardpass-pcb.sch, hardpass-pcb.kicad_pro",
+      "confidence": 0.95
+    },
+    "mechanical": {
+      "reasoning": "Directory structure contains 3D model files in both editable source formats (.fcstd, .scad) and export formats (.stl, .wrl, .blend, .wings) in the hardpass.3dshapes directories",
+      "present": true,
+      "types": [
+        "CAD",
+        "3D_Printable"
+      ],
+      "formats": [
+        ".fcstd",
+        ".scad",
+        ".stl",
+        ".wrl",
+        ".blend",
+        ".wings",
+        ".step"
+      ],
+      "has_editable_source": true,
+      "evidence": "kicad/hardpass-pcb/hardpass.3dshapes/linkconn_sim_holder.fcstd, sim_holder.stl, ssd1306.blend, ssd1306.wings, ssd1306.wrl, SKQGAF.STEP; kicad/kicad-ESP8266/ESP8266.3dshapes/ESP-07v2.scad, ESP-07v2.stl, ESP-12.scad, ESP-12.stl",
+      "confidence": 0.95
+    }
+  },
+  "software_firmware": {
+    "reasoning": "Directory structure contains firmware source files (.cpp, .c, .sh), build configuration (Makefile), and references to Arduino-based OLED driver; documentation level is basic with some build/flash instructions but missing explicit toolchain versions",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "Arduino"
+    ],
+    "documentation_level": "basic",
+    "evidence": "oled/oled_clear.cpp, oled_menu.cpp, oled_passwd.cpp, oled/Makefile, send_hid/main.c, send_hid/Makefile; README states 'OLED menu system in ./oled, using the ArduiPi_OLED driver from http://hallard.me'; 'USB HID progam `scan` with examples in `./send_hid`'",
+    "confidence": 0.80
+  },
+  "testing": {
+    "reasoning": "Directory structure contains test script (pass-test.sh) and shell scripts suggesting testing capability, but no detailed testing procedures, expected results, or validation documentation in README",
+    "present": true,
+    "detail_level": "basic",
+    "evidence": "oled/pass-test.sh; oled/run.sh; send_hid/hardpass-demo.sh",
+    "confidence": 0.55
+  },
+  "cost_sourcing": {
+    "reasoning": "No estimated project cost, supplier links, part numbers, or sourcing information provided in README; no CPL files or part number references in directory structure",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": null,
+    "confidence": 0.90
+  },
+  "project_maturity": {
+    "reasoning": "README explicitly states 'Hardpass Prototype, v.2' indicating prototype stage; TODO section lists incomplete features confirming work-in-progress status",
+    "stage": "prototype",
+    "evidence": "# Hardpass Prototype, v.2; ## TODO - OLED: Menu program - WiFi: compile & install driver - Button Matrix (same program as OLED)",
+    "confidence": 0.95
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": true,
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "evidence": "Where the GPLv3 isn't applicable, the work is released under the Creative Commons Attribution-ShareAlike 4.0 International.",
+      "confidence": 0.85
+    },
+    "software": {
+      "present": true,
+      "name": "GNU GPLv3",
+      "evidence": "I hereby release my work under the GNU GPLv3 where applicable.",
+      "confidence": 0.90
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```

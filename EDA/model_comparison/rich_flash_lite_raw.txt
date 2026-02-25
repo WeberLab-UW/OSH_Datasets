@@ -1,0 +1,119 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "mixed",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "The README explicitly states the project is licensed under the Apache License, Version 2.0, and provides a link to the license.",
+    "present": true,
+    "type": "explicit",
+    "name": "Apache License 2.0",
+    "evidence": "Licensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0",
+    "confidence": 0.95
+  },
+  "contributing": {
+    "reasoning": "The README provides a section on how to contribute, listing various ways to help, but does not detail a specific process or commands.",
+    "present": true,
+    "level": 1,
+    "evidence": "Thank you for your interest in contributing to this project! Here are some of the many ways in which you can help:\n\n* Report bugs\n* Suggest improvements\n* Audit the source code\n* Submit PRs to fix bugs or implement features\n* Test new releases and updates\n* Record videos and post on other platforms\n* Spread the word about this project\n* Write and edit the documentation",
+    "confidence": 0.70
+  },
+  "bom": {
+    "reasoning": "The directory structure contains 'bom.csv' files in the hardware directories, indicating the presence of Bill of Materials, but their content is not directly readable from the provided structure.",
+    "present": true,
+    "completeness": "partial",
+    "component_count": 0,
+    "components": [],
+    "evidence": "hardware/v1/bom.csv\nhardware/v2/bom.csv",
+    "confidence": 0.80
+  },
+  "assembly": {
+    "reasoning": "The README mentions a 'Manual' section that links to a Wiki, which is not a direct assembly instruction document, and no specific assembly steps are provided in the README.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "Please take a look at the [Wiki](https://github.com/kamilsss655/ESPRI/wiki) section for instructions, tips and more.",
+    "confidence": 0.50
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "The directory structure contains 'schematic.pdf' and 'gerbers.zip' files in hardware versions, which are export-only formats for hardware design.",
+      "present": true,
+      "types": [
+        "Circuit_Schematic"
+      ],
+      "formats": [
+        ".pdf",
+        ".zip"
+      ],
+      "has_editable_source": false,
+      "evidence": "hardware/v1/gerbers.zip\nhardware/v1/schematic.pdf\nhardware/v2/gerbers.zip\nhardware/v2/schematic.pdf",
+      "confidence": 0.90
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files with extensions like .step, .stl, .scad, or corresponding directories like /mechanical or /cad were found in the provided directory structure.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  },
+  "software_firmware": {
+    "reasoning": "The project uses the Espressif IoT Development Framework (ESP-IDF) and provides firmware source files (.c, .h) and build-related files like CMakeLists.txt and idf_component.yml.",
+    "present": true,
+    "type": "firmware",
+    "frameworks": [
+      "ESP-IDF"
+    ],
+    "documentation_level": "basic",
+    "evidence": "This firmware uses:\n* Espressif IoT Development Framework (ESP-IDF) `v5.2.1`\nmain/CMakeLists.txt\nmain/idf_component.yml\nmain/app/beacon.c",
+    "confidence": 0.90
+  },
+  "testing": {
+    "reasoning": "The README mentions 'AGC (Auto Gain Control) algorithm' and 'DSP Filters' as implemented features, suggesting some level of functional testing, but no specific testing procedures or results are detailed.",
+    "present": false,
+    "detail_level": "none",
+    "evidence": "Features:\n  - implemented:\n    - ...\n    - AGC (Auto Gain Control) algorithm\n    - DSP Filters",
+    "confidence": 0.30
+  },
+  "cost_sourcing": {
+    "reasoning": "The project mentions specific hardware components like the 'ESP32 Lolin Lite' and provides an image of it, but does not list a full Bill of Materials or supplier links.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": "### Hardware\n\n### ESP32 board\nESP32 Lolin Lite (recommended, confirmed to work, lipo charger built-in):",
+    "confidence": 0.40
+  },
+  "project_maturity": {
+    "reasoning": "The project has versioned hardware directories (v1/, v2/) and mentions 'roadmap/in progress' features, indicating a prototype stage.",
+    "stage": "prototype",
+    "evidence": "hardware/v1/\nhardware/v2/\n  - roadmap/in progress:",
+    "confidence": 0.70
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": true,
+      "name": "Apache License 2.0",
+      "evidence": "Licensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0",
+      "confidence": 0.95
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```

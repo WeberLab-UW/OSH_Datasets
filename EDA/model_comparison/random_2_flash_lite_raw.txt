@@ -1,0 +1,114 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "software",
+    "structure_quality": "well_structured",
+    "documentation_location": "inline"
+  },
+  "license": {
+    "reasoning": "A LICENSE file is present in the root directory, indicating explicit license information.",
+    "present": true,
+    "type": "file reference",
+    "name": null,
+    "evidence": "LICENSE",
+    "confidence": 0.90
+  },
+  "contributing": {
+    "reasoning": "There are no explicit mentions or files related to contributing guidelines.",
+    "present": false,
+    "level": 0,
+    "evidence": null,
+    "confidence": 0.10
+  },
+  "bom": {
+    "reasoning": "The README mentions features like processors and chipsets, but no explicit Bill of Materials or component lists are provided.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": null,
+    "confidence": 0.10
+  },
+  "assembly": {
+    "reasoning": "There are no specific assembly instructions or links to dedicated assembly guides provided in the README or directory structure.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": null,
+    "confidence": 0.10
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "The project is an emulator, not a hardware project, and no hardware design files are present.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "mechanical": {
+      "reasoning": "The project is an emulator, not a hardware project, and no mechanical design files are present.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  },
+  "software_firmware": {
+    "reasoning": "The project is an emulator written in Odin, with build instructions and references to libretro, indicating it's control software.",
+    "present": true,
+    "type": "control_software",
+    "frameworks": [
+      "libretro"
+    ],
+    "documentation_level": "basic",
+    "evidence": "The emulator is written in [Odin](https://odin-lang.org) and can be compiled using the included GNU Makefile. git clone https://github.com/virtualxt/virtualxt cd virtualxt make",
+    "confidence": 0.85
+  },
+  "testing": {
+    "reasoning": "A hardware validator is mentioned with a link to a Hackaday.io project and a YouTube talk, indicating external documentation for testing procedures.",
+    "present": true,
+    "detail_level": "referenced",
+    "evidence": "A hardware validator was developed to ensure proper CPU behaviour. Some additional information about that can be found [here](https://hackaday.io/project/184209-virtualxt-hardware-validator). This [talk](https://youtu.be/qatzd0niz9A?si=_NVqQu_zc1KDB8W6) by Daniel Balsom describes the process in details.",
+    "confidence": 0.80
+  },
+  "cost_sourcing": {
+    "reasoning": "There are no mentions of estimated cost, suppliers, or part numbers in the provided README or directory structure.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": null,
+    "confidence": 0.10
+  },
+  "project_maturity": {
+    "reasoning": "The README contains a warning about the project moving to Codeberg, and mentions version 1.2, suggesting it is beyond a concept stage but not explicitly production ready.",
+    "stage": "prototype",
+    "evidence": "[!WARNING] This project has moved to [Codeberg](https://codeberg.org/virtualxt) VirtualXT (v1.2) supports ISA passthrough",
+    "confidence": 0.70
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    },
+    "software": {
+      "present": true,
+      "name": null,
+      "evidence": "LICENSE",
+      "confidence": 0.90
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": null,
+      "confidence": 0.0
+    }
+  }
+}
+```

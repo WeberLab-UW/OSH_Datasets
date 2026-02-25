@@ -1,0 +1,112 @@
+```json
+{
+  "metadata": {
+    "language": "english",
+    "project_type": "software",
+    "structure_quality": "well_structured",
+    "documentation_location": "redirect"
+  },
+  "license": {
+    "reasoning": "README contains a warning that the project has moved to Codeberg; no license information is provided in the current GitHub README or visible in the directory structure.",
+    "present": false,
+    "type": "none",
+    "name": null,
+    "evidence": "WARNING: This project has moved to [Codeberg](https://codeberg.org/virtualxt); LICENSE file exists in directory but contents not provided in README",
+    "confidence": 0.85
+  },
+  "contributing": {
+    "reasoning": "No contributing guidelines, CONTRIBUTING.md file, or contribution process is documented in the README or directory structure.",
+    "present": false,
+    "level": 0,
+    "evidence": "No contributing section found in README; no CONTRIBUTING.md file in directory structure",
+    "confidence": 0.95
+  },
+  "bom": {
+    "reasoning": "This is a software emulator project with no physical hardware components to assemble; no bill of materials is applicable or present.",
+    "present": false,
+    "completeness": "none",
+    "component_count": 0,
+    "components": [],
+    "evidence": "VirtualXT is a Turbo PC/XT emulator for libretro; no physical components or BOM files present in directory structure",
+    "confidence": 0.95
+  },
+  "assembly": {
+    "reasoning": "This is a software emulator project with no physical assembly required; assembly instructions are not applicable.",
+    "present": false,
+    "detail_level": "none",
+    "step_count": 0,
+    "evidence": "VirtualXT is a software emulator; build instructions provided are for compilation only, not hardware assembly",
+    "confidence": 0.95
+  },
+  "design_files": {
+    "hardware": {
+      "reasoning": "No hardware design files (PCB layouts, schematics, Gerber files) are present in the directory structure; this is a software emulator project.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": "Directory structure contains only source code, BIOS files, and configuration files; no .kicad, .sch, .brd, .eagle, or Gerber files present",
+      "confidence": 0.95
+    },
+    "mechanical": {
+      "reasoning": "No mechanical design files (CAD, 3D models, technical drawings) are present; this is a software emulator project.",
+      "present": false,
+      "types": [],
+      "formats": [],
+      "has_editable_source": false,
+      "evidence": "Directory structure contains no .step, .stp, .stl, .scad, .f3d, .FCStd, .dxf, or .dwg files",
+      "confidence": 0.95
+    }
+  },
+  "software_firmware": {
+    "reasoning": "Software emulator written in Odin with build system (Makefile) and multiple compilation targets (libretro, Raspberry Pi, web); documentation includes build commands but lacks explicit toolchain version specifications and dependency versioning.",
+    "present": true,
+    "type": "control_software",
+    "frameworks": [],
+    "documentation_level": "basic",
+    "evidence": "The emulator is written in [Odin](https://odin-lang.org) and can be compiled using the included GNU Makefile. git clone https://github.com/virtualxt/virtualxt; cd virtualxt; make; Directory structure shows Makefile, Makefile.bat, .gitlab-ci.yml, and workflows for libretro, raspberrypi, tests, and web compilation",
+    "confidence": 0.80
+  },
+  "testing": {
+    "reasoning": "README mentions a hardware validator was developed and references a Hackaday project and YouTube talk about validation procedures, but no inline testing documentation or procedures are provided.",
+    "present": true,
+    "detail_level": "referenced",
+    "evidence": "A hardware validator was developed to ensure proper CPU behaviour. Some additional information about that can be found [here](https://hackaday.io/project/184209-virtualxt-hardware-validator). This [talk](https://youtu.be/qatzd0niz9A?si=_NVqQu_zc1KDB8W6) by Daniel Balsom describes the process in details; Directory structure shows src/tests/ directory",
+    "confidence": 0.70
+  },
+  "cost_sourcing": {
+    "reasoning": "No cost estimates, supplier links, part numbers, or sourcing information is provided; this is a software project with no physical components to source.",
+    "estimated_cost_mentioned": false,
+    "suppliers_referenced": false,
+    "part_numbers_present": false,
+    "evidence": "No cost, supplier, or part number references in README; no cpl.csv or sourcing files in directory structure",
+    "confidence": 0.95
+  },
+  "project_maturity": {
+    "reasoning": "README mentions ISA passthrough support in v1.2 indicating versioned releases; project appears actively maintained with multiple build targets and CI/CD workflows, but no explicit maturity keywords (stable, production, beta, prototype, WIP) are stated.",
+    "stage": "unstated",
+    "evidence": "VirtualXT (v1.2) supports ISA passthrough; multiple GitHub workflows present (.github/workflows/); no explicit keywords like 'stable', 'production', 'beta', 'prototype', 'WIP', or 'deprecated' found in README",
+    "confidence": 0.75
+  },
+  "specific_licenses": {
+    "hardware": {
+      "present": false,
+      "name": null,
+      "evidence": "No hardware-specific license mentioned; project is software-only",
+      "confidence": 0.95
+    },
+    "software": {
+      "present": false,
+      "name": null,
+      "evidence": "LICENSE file exists in directory structure but contents not provided in README; project has moved to Codeberg per warning notice",
+      "confidence": 0.85
+    },
+    "documentation": {
+      "present": false,
+      "name": null,
+      "evidence": "No documentation-specific license mentioned in README",
+      "confidence": 0.95
+    }
+  }
+}
+```
