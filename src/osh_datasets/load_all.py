@@ -68,6 +68,10 @@ def load_all(db_path: Path = DB_PATH) -> dict[str, int]:
     backfill_dois(db_path)
     find_cross_references(db_path)
     enrich_from_github(db_path)
+
+    from osh_datasets.enrichment.bom_normalize import enrich_bom_components
+
+    enrich_bom_components(db_path)
     enrich_pricing(db_path)
     add_historical_prices(db_path)
 
