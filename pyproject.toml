@@ -26,6 +26,10 @@ scrape = [
 llm = [
     "google-genai>=1.0",
 ]
+app = [
+    "streamlit>=1.38",
+    "plotly>=5.18",
+]
 dev = [
     "pytest>=8.0",
     "pytest-mock>=3.12",
